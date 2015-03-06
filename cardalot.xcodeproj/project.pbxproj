@@ -14,6 +14,7 @@
 		08FE1E811AAA5F570068F0C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FE1E801AAA5F570068F0C9 /* Images.xcassets */; };
 		08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08FE1E821AAA5F570068F0C9 /* LaunchScreen.xib */; };
 		08FE1E901AAA5F570068F0C9 /* cardalotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */; };
+		725180E71AAA6FAE00C446E5 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180E61AAA6FAE00C446E5 /* Stack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		08FE1E891AAA5F570068F0C9 /* cardalotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cardalotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FE1E8E1AAA5F570068F0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cardalotTests.m; sourceTree = "<group>"; };
+		725180E51AAA6FAE00C446E5 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		725180E61AAA6FAE00C446E5 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				08FE1E781AAA5F570068F0C9 /* AppDelegate.m */,
 				08FE1E7A1AAA5F570068F0C9 /* DeckCollectionViewController.h */,
 				08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */,
+				725180E51AAA6FAE00C446E5 /* Stack.h */,
+				725180E61AAA6FAE00C446E5 /* Stack.m */,
 				08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */,
 				08FE1E801AAA5F570068F0C9 /* Images.xcassets */,
 				08FE1E821AAA5F570068F0C9 /* LaunchScreen.xib */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				725180E71AAA6FAE00C446E5 /* Stack.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
 				08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
@@ -412,6 +418,7 @@
 				08FE1E951AAA5F570068F0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08FE1E961AAA5F570068F0C9 /* Build configuration list for PBXNativeTarget "cardalotTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				08FE1E981AAA5F570068F0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
