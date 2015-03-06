@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DeckCollectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+
+    DeckCollectionViewController *deckCollectionVC = [[DeckCollectionViewController alloc] init];
+
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
+    self.window.rootViewController = navVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

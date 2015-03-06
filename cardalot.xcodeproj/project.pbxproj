@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		08FE1E761AAA5F570068F0C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E751AAA5F570068F0C9 /* main.m */; };
 		08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E781AAA5F570068F0C9 /* AppDelegate.m */; };
-		08FE1E7C1AAA5F570068F0C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E7B1AAA5F570068F0C9 /* ViewController.m */; };
+		08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */; };
 		08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */; };
 		08FE1E811AAA5F570068F0C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FE1E801AAA5F570068F0C9 /* Images.xcassets */; };
 		08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08FE1E821AAA5F570068F0C9 /* LaunchScreen.xib */; };
@@ -32,8 +32,8 @@
 		08FE1E751AAA5F570068F0C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08FE1E771AAA5F570068F0C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		08FE1E781AAA5F570068F0C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		08FE1E7A1AAA5F570068F0C9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		08FE1E7B1AAA5F570068F0C9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		08FE1E7A1AAA5F570068F0C9 /* DeckCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewController.h; sourceTree = "<group>"; };
+		08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewController.m; sourceTree = "<group>"; };
 		08FE1E7E1AAA5F570068F0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08FE1E801AAA5F570068F0C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		08FE1E831AAA5F570068F0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 			children = (
 				08FE1E771AAA5F570068F0C9 /* AppDelegate.h */,
 				08FE1E781AAA5F570068F0C9 /* AppDelegate.m */,
-				08FE1E7A1AAA5F570068F0C9 /* ViewController.h */,
-				08FE1E7B1AAA5F570068F0C9 /* ViewController.m */,
+				08FE1E7A1AAA5F570068F0C9 /* DeckCollectionViewController.h */,
+				08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */,
 				08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */,
 				08FE1E801AAA5F570068F0C9 /* Images.xcassets */,
 				08FE1E821AAA5F570068F0C9 /* LaunchScreen.xib */,
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08FE1E7C1AAA5F570068F0C9 /* ViewController.m in Sources */,
+				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
 				08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
 			);

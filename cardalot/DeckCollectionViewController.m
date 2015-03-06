@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Jason Choi. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DeckCollectionViewController.h"
 
-@interface ViewController ()
+@interface DeckCollectionViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DeckCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
