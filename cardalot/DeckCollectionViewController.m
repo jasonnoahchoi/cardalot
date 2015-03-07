@@ -8,6 +8,7 @@
 
 #import "DeckCollectionViewController.h"
 #import "DeckCollectionViewDataSource.h"
+#import "DeckController.h"
 
 @interface DeckCollectionViewController () <UICollectionViewDelegate>
 
@@ -35,7 +36,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.item == 50) {
+    if (indexPath.item == [DeckController sharedInstance].decks.count) {
         NSLog(@"last cell");
         [self createNewDeckAlertController];
     } else {
@@ -48,6 +49,9 @@
     [alertController addTextFieldWithConfigurationHandler:nil];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         NSLog(@"new deck!");
+        NSString *deckTag = ((UITextField *)[alertController.textFields objectAtIndex:0]).text;
+        [[DeckController sharedInstance] addDeckWithName:deckTag];
+        [self.collectionView reloadData];
     }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
         NSLog(@"cancel");
