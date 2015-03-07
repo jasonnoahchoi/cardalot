@@ -18,6 +18,7 @@
 		725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725180E81AAA751600C446E5 /* Model.xcdatamodeld */; };
 		725180ED1AAA772900C446E5 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EC1AAA772900C446E5 /* Deck.m */; };
 		725180F01AAA772A00C446E5 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EF1AAA772A00C446E5 /* Card.m */; };
+		725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F21AAA7AFE00C446E5 /* DeckController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		725180EC1AAA772900C446E5 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		725180EE1AAA772A00C446E5 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		725180EF1AAA772A00C446E5 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		725180F11AAA7AFE00C446E5 /* DeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckController.h; sourceTree = "<group>"; };
+		725180F21AAA7AFE00C446E5 /* DeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				725180EF1AAA772A00C446E5 /* Card.m */,
 				725180EB1AAA772900C446E5 /* Deck.h */,
 				725180EC1AAA772900C446E5 /* Deck.m */,
+				725180F11AAA7AFE00C446E5 /* DeckController.h */,
+				725180F21AAA7AFE00C446E5 /* DeckController.m */,
 				08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */,
 				08FE1E801AAA5F570068F0C9 /* Images.xcassets */,
 				08FE1E821AAA5F570068F0C9 /* LaunchScreen.xib */,
@@ -243,6 +248,7 @@
 				08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */,
 				725180ED1AAA772900C446E5 /* Deck.m in Sources */,
 				725180F01AAA772A00C446E5 /* Card.m in Sources */,
+				725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
