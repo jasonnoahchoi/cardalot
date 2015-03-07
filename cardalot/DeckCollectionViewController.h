@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class MMDrawerController;
+
 @interface DeckCollectionViewController : UIViewController
+
+@property (nonatomic, strong) MMDrawerController *drawerController;
 
 @end
 

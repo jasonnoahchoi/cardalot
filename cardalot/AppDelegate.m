@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DeckCollectionViewController.h"
+#import <MMDrawerController.h>
 
 @interface AppDelegate ()
 
@@ -23,7 +24,14 @@
     DeckCollectionViewController *deckCollectionVC = [[DeckCollectionViewController alloc] init];
 
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
-    self.window.rootViewController = navVC;
+    
+    UIViewController *settingsVC = [[UIViewController alloc] init];
+    
+    MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
+    
+    deckCollectionVC.drawerController = drawerController;
+    
+    self.window.rootViewController = drawerController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

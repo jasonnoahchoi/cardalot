@@ -9,6 +9,7 @@
 #import "DeckCollectionViewController.h"
 #import "DeckCollectionViewDataSource.h"
 #import "DeckController.h"
+#import <MMDrawerController.h>
 
 @interface DeckCollectionViewController () <UICollectionViewDelegate>
 
@@ -22,6 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(open)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
+    
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
@@ -33,6 +37,13 @@
     [self.dataSource registerCollectionView:self.collectionView];
     
     self.collectionView.delegate = self;
+    
+    self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+    self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
+}
+
+- (void)open {
+    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -42,6 +53,10 @@
     } else {
         NSLog(@"some other cell");
     }
+}
+
+- (void)addItem:(id)sender {
+    NSLog(@"add new card");
 }
 
 - (void)createNewDeckAlertController {
