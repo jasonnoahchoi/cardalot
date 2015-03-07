@@ -9,7 +9,7 @@
 #import "DeckCollectionViewController.h"
 #import "DeckCollectionViewDataSource.h"
 
-@interface DeckCollectionViewController ()
+@interface DeckCollectionViewController () <UICollectionViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
@@ -30,6 +30,29 @@
     self.dataSource = [DeckCollectionViewDataSource new];
     self.collectionView.dataSource = self.dataSource;
     [self.dataSource registerCollectionView:self.collectionView];
+    
+    self.collectionView.delegate = self;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.item == 50) {
+        NSLog(@"last cell");
+        [self createNewDeckAlertController];
+    } else {
+        NSLog(@"some other cell");
+    }
+}
+
+- (void)createNewDeckAlertController {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"New Deck" message:@"Enter tag of new deck" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addTextFieldWithConfigurationHandler:nil];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        NSLog(@"new deck!");
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        NSLog(@"cancel");
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 @end
