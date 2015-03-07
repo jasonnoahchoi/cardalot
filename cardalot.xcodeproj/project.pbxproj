@@ -15,14 +15,14 @@
 		08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08FE1E821AAA5F570068F0C9 /* LaunchScreen.xib */; };
 		08FE1E901AAA5F570068F0C9 /* cardalotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */; };
 		725180E71AAA6FAE00C446E5 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180E61AAA6FAE00C446E5 /* Stack.m */; };
-<<<<<<< HEAD
+
 		725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */; };
-=======
+
 		725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725180E81AAA751600C446E5 /* Model.xcdatamodeld */; };
 		725180ED1AAA772900C446E5 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EC1AAA772900C446E5 /* Deck.m */; };
 		725180F01AAA772A00C446E5 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EF1AAA772A00C446E5 /* Card.m */; };
 		725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F21AAA7AFE00C446E5 /* DeckController.m */; };
->>>>>>> b2bb187f6b230944b335576bcfe29e3ac13a2b5c
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +51,10 @@
 		08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cardalotTests.m; sourceTree = "<group>"; };
 		725180E51AAA6FAE00C446E5 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		725180E61AAA6FAE00C446E5 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
+
 		725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewDataSource.h; sourceTree = "<group>"; };
 		725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewDataSource.m; sourceTree = "<group>"; };
-=======
+
 		725180E91AAA751600C446E5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		725180EB1AAA772900C446E5 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		725180EC1AAA772900C446E5 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		725180EF1AAA772A00C446E5 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		725180F11AAA7AFE00C446E5 /* DeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckController.h; sourceTree = "<group>"; };
 		725180F21AAA7AFE00C446E5 /* DeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckController.m; sourceTree = "<group>"; };
->>>>>>> b2bb187f6b230944b335576bcfe29e3ac13a2b5c
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,11 +255,11 @@
 			files = (
 				725180E71AAA6FAE00C446E5 /* Stack.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
-<<<<<<< HEAD
+
 				725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */,
-=======
+
 				725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */,
->>>>>>> b2bb187f6b230944b335576bcfe29e3ac13a2b5c
+
 				08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */,
 				725180ED1AAA772900C446E5 /* Deck.m in Sources */,
 				725180F01AAA772A00C446E5 /* Card.m in Sources */,
