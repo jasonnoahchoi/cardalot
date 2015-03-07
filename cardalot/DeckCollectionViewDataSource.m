@@ -7,7 +7,7 @@
 //
 
 #import "DeckCollectionViewDataSource.h"
-#import "DeckController.h"
+//#import "DeckController.h"
 
 static NSString * const cellIdentifier = @"cell";
 
@@ -20,11 +20,33 @@ static NSString * const cellIdentifier = @"cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    return cell;
+    cell.contentView.backgroundColor = [UIColor cyanColor];
+    
+    switch (indexPath.item) {
+        case 50: {
+            UILabel *lastCellLabel = [UILabel new];
+            lastCellLabel.text = @"#";
+            lastCellLabel.textAlignment = NSTextAlignmentCenter;
+            [cell.contentView addSubview:lastCellLabel];
+            [lastCellLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+            NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(lastCellLabel);
+            [cell.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[lastCellLabel]|" options:0 metrics:0 views:viewDictionary]];
+            [cell.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[lastCellLabel]|" options:0 metrics:0 views:viewDictionary]];
+            
+            return cell;
+            break;
+        }
+        default: {
+            return cell;
+        }
+    }
+//    return cell;
+    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [DeckController sharedInstance].decks.count;
+//    return [DeckController sharedInstance].decks.count;
+    return 51;
 }
 
 @end
