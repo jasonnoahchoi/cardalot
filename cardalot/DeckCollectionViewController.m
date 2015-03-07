@@ -7,8 +7,12 @@
 //
 
 #import "DeckCollectionViewController.h"
+#import "DeckCollectionViewDataSource.h"
 
 @interface DeckCollectionViewController ()
+
+@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
 
 @end
 
@@ -16,12 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.collectionView];
+    
+    self.dataSource = [DeckCollectionViewDataSource new];
+    self.collectionView.dataSource = self.dataSource;
+    [self.dataSource registerCollectionView:self.collectionView];
 }
 
 @end
