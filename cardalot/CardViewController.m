@@ -37,19 +37,13 @@
     // DataSource
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    
-    
+
     // sets background color
     self.tableView.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
     
     // adds right bar button item
     UINavigationItem *navigationSaveItem = self.navigationItem;
     navigationSaveItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissAnimated:)];     // will want to dismiss to detail card collection view
-    
-    // adjust view for keyboard
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
-
     
     // add to view
     [self.view addSubview:self.tableView];
@@ -114,22 +108,6 @@
     [self.view endEditing:YES];
 }
 
-#pragma mark - adjust view for keyboard
-- (void)keyboardDidShow:(NSNotification *)notification {
-    if ([[UIScreen mainScreen] bounds].size.height == 568) {
-        [self.view setFrame:CGRectMake(0,-100,320,560)];
-    } else {
-        [self.view setFrame:CGRectMake(0,-100,320,460)];
-    }
-}
-
--(void)keyboardDidHide:(NSNotification *)notification {
-    if ([[UIScreen mainScreen] bounds].size.height == 568) {
-        [self.view setFrame:CGRectMake(0,20,320,560)];
-    } else {
-        [self.view setFrame:CGRectMake(0,20,320,460)];
-    }
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

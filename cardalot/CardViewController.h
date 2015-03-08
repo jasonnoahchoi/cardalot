@@ -14,12 +14,6 @@
 
 @interface CardViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
 
-{
-    DeckTagCell *deckTagCell;
-    FrontTextCell *frontTextCell;
-    BackTextCell *backTextCell;
-}
-
 @property (nonatomic, strong) UITableView *cardTableView;
 
 @end
