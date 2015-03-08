@@ -27,7 +27,6 @@
         // modification
         self.backTextView.font = [UIFont boldSystemFontOfSize:16.0];
         self.backTextView.tintColor = [UIColor blackColor];
-        self.backTextView.returnKeyType = UIReturnKeyDone;
         
         
         
