@@ -36,6 +36,7 @@
         self.deckTagField.tintColor = [UIColor blackColor];
         self.deckTagField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         self.deckTagField.returnKeyType = UIReturnKeyNext;
+        self.deckTagField.borderStyle = UITextBorderStyleRoundedRect;
         
         // Add to View
         [self.contentView addSubview:self.hashTagLabel];
