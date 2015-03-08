@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F0D586E0-4D68-4F4C-BD18-7A5CD293A77B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>cardalot</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DDDEDF1D0AF734AA117EF5A3253A2C158A52B054</key>
+		<string>github.com:jasonnoahchoi/cardalot.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>cardalot.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DDDEDF1D0AF734AA117EF5A3253A2C158A52B054</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jasonnoahchoi/cardalot.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DDDEDF1D0AF734AA117EF5A3253A2C158A52B054</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DDDEDF1D0AF734AA117EF5A3253A2C158A52B054</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cardalot</string>
+		</dict>
+	</array>
+</dict>
+</plist>
