@@ -22,9 +22,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.title = @"Decktags";
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(open)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     
