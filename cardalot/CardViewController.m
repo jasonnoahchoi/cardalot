@@ -16,8 +16,6 @@
 
 @end
 
-
-
 @implementation CardViewController
 
 - (void)viewDidLoad {
