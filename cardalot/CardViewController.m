@@ -98,7 +98,7 @@
     if (indexPath.row == 0) {
         return 30;
     } else if (indexPath.row == 1) {
-        return 44;
+        return 50;
     } else if (indexPath.row == 2) {
         return 30;
     } else if (indexPath.row == 3) {
