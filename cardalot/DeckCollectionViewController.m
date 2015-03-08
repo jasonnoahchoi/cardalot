@@ -9,6 +9,8 @@
 #import "DeckCollectionViewController.h"
 #import "DeckCollectionViewDataSource.h"
 #import "DeckController.h"
+#import "DeckCollectionViewLayout.h"
+
 #import <MMDrawerController.h>
 
 @interface DeckCollectionViewController () <UICollectionViewDelegate>
@@ -29,7 +31,8 @@
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
     
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    //UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    DeckCollectionViewLayout *layout = [[DeckCollectionViewLayout alloc] init];
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
