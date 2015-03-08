@@ -8,8 +8,6 @@
 
 #import "CardViewController.h"
 
-
-
 @interface CardViewController () <UITextViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -24,7 +22,6 @@
     // Set Title of card
     self.title = @"Card View";
     
-    
     // Create Tableview
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     
@@ -33,13 +30,19 @@
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     
+    // Disable selection of cells highlighting
     self.tableView.allowsSelection = NO;
     
     // DataSource
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    self.tableView.backgroundColor = [UIColor colorWithRed:0.72 green:0.74 blue:0.7 alpha:1];
+    // sets background color
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
+    
+    // adds right bar button item
+    UINavigationItem *navigationSaveItem = self.navigationItem;
+    navigationSaveItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissAnimated:)];     // will want to dismiss to detail card collection view
     
     [self.view addSubview:self.tableView];
 }
@@ -59,21 +62,21 @@
     
     if (indexPath.row == 0) {
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell1"];
-        cell.backgroundColor = [UIColor colorWithRed:0.72 green:0.74 blue:0.7 alpha:1];
+        cell.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
         return cell;
     } else if (indexPath.row == 1) {
         DeckTagCell *cell = [[DeckTagCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
         return cell;
     } else if (indexPath.row == 2) {
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell3"];
-        cell.backgroundColor = [UIColor colorWithRed:0.72 green:0.74 blue:0.7 alpha:1];
+        cell.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
         return cell;
     } else if (indexPath.row == 3) {
         FrontTextCell *cell = [[FrontTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell4"];
         return cell;
     } else if (indexPath.row == 4) {
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell5"];
-        cell.backgroundColor = [UIColor colorWithRed:0.72 green:0.74 blue:0.7 alpha:1];
+        cell.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
         return cell;
     } else {
         BackTextCell *cell = [[BackTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell6"];
@@ -81,6 +84,7 @@
     }
 }
 
+#pragma mark - custom cell heights
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
