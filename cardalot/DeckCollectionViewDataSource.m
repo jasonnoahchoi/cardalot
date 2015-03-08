@@ -19,7 +19,7 @@ static NSString * const cellIdentifier = @"cell";
     //[collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellIdentifier];
 }
 
-- (DeckCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DeckCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
     //cell.contentView.backgroundColor = [UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0];
@@ -27,7 +27,7 @@ static NSString * const cellIdentifier = @"cell";
     
     if (indexPath.item == index) {
         //cell.subjectLabel = [[UILabel alloc] init];
-        [cell.subjectLabel setText:@"History"];
+        cell.subjectLabel.text = @"History";
         cell.subjectLabel.textAlignment = NSTextAlignmentCenter;
         [cell.contentView addSubview:cell.subjectLabel];
       //  [lastCellLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
