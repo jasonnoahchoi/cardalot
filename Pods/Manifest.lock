@@ -1,4 +1,5 @@
 PODS:
+  - JBChartView (2.8.10)
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core (= 0.5.7)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
@@ -13,9 +14,11 @@ PODS:
     - MMDrawerController/Core
 
 DEPENDENCIES:
+  - JBChartView (~> 2.8.10)
   - MMDrawerController (~> 0.5.7)
 
 SPEC CHECKSUMS:
+  JBChartView: 50b221ef68d0934f5aea417a369a5b02167848a9
   MMDrawerController: c3ab7a318ddc7e2bcd133139c3161af08c6e1197
 
 COCOAPODS: 0.35.0

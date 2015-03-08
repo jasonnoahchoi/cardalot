@@ -4,6 +4,7 @@
 target 'cardalot' do
 
 pod 'MMDrawerController', '~> 0.5.7'
+pod 'JBChartView', '~> 2.8.10'
 
 end
 
