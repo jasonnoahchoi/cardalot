@@ -52,28 +52,32 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    static NSString *CellIdentifier = @"Cell";
     
     if (indexPath.row == 0) {
-        DeckTagCell *cell = [[DeckTagCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell1"];
-        return cell;
-    } else if (indexPath.row == 1) {
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell1"];
         cell.backgroundColor = [UIColor colorWithRed:0.72 green:0.74 blue:0.7 alpha:1];
         return cell;
+    } else if (indexPath.row == 1) {
+        DeckTagCell *cell = [[DeckTagCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
+        return cell;
     } else if (indexPath.row == 2) {
-        FrontTextCell *cell = [[FrontTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell3"];
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell3"];
+        cell.backgroundColor = [UIColor colorWithRed:0.72 green:0.74 blue:0.7 alpha:1];
         return cell;
     } else if (indexPath.row == 3) {
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell4"];
+        FrontTextCell *cell = [[FrontTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell4"];
+        return cell;
+    } else if (indexPath.row == 4) {
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell5"];
         cell.backgroundColor = [UIColor colorWithRed:0.72 green:0.74 blue:0.7 alpha:1];
         return cell;
     } else {
-        BackTextCell *cell = [[BackTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell5"];
+        BackTextCell *cell = [[BackTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell6"];
         return cell;
     }
 }
@@ -81,12 +85,14 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
-        return 44;
-    } else if (indexPath.row == 1) {
         return 30;
+    } else if (indexPath.row == 1) {
+        return 44;
     } else if (indexPath.row == 2) {
-        return 100;
+        return 30;
     } else if (indexPath.row == 3) {
+        return 100;
+    } else if (indexPath.row == 4) {
         return 30;
     } else {
         return 300;
