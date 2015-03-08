@@ -22,7 +22,7 @@
         CGSize size = self.contentView.frame.size;
         
         // position/size
-        self.frontTextField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, size.width - 10.0, size.height + 30)];
+        self.frontTextField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, size.width + 30, size.height + 30)];
         
         // modification
         self.frontTextField.font = [UIFont boldSystemFontOfSize:16.0];
@@ -31,6 +31,7 @@
         self.frontTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         self.frontTextField.textAlignment = NSTextAlignmentCenter;
         self.frontTextField.returnKeyType = UIReturnKeyNext;
+        self.frontTextField.borderStyle = UITextBorderStyleRoundedRect;
         
         // add to view
         [self.contentView addSubview:self.frontTextField];
