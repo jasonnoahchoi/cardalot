@@ -8,31 +8,33 @@
 
 #import "DeckCollectionViewDataSource.h"
 #import "DeckController.h"
+#import "DeckCollectionViewCell.h"
 
 static NSString * const cellIdentifier = @"cell";
 
 @implementation DeckCollectionViewDataSource
 
 - (void)registerCollectionView:(UICollectionView *)collectionView {
-    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellIdentifier];
+    [collectionView registerNib:[UINib nibWithNibName:@"DeckCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:cellIdentifier];
+    //[collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellIdentifier];
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+- (DeckCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    DeckCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    cell.contentView.backgroundColor = [UIColor cyanColor];
+    //cell.contentView.backgroundColor = [UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0];
     NSInteger index = [DeckController sharedInstance].decks.count;
     
     if (indexPath.item == index) {
-        UILabel *lastCellLabel = [UILabel new];
-        lastCellLabel.text = @"#";
-        lastCellLabel.textAlignment = NSTextAlignmentCenter;
-        [cell.contentView addSubview:lastCellLabel];
-        [lastCellLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-        NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(lastCellLabel);
-        [cell.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[lastCellLabel]|" options:0 metrics:0 views:viewDictionary]];
-        [cell.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[lastCellLabel]|" options:0 metrics:0 views:viewDictionary]];
-    
+        //cell.subjectLabel = [[UILabel alloc] init];
+        [cell.subjectLabel setText:@"History"];
+        cell.subjectLabel.textAlignment = NSTextAlignmentCenter;
+        [cell.contentView addSubview:cell.subjectLabel];
+      //  [lastCellLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+//        NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(cell.subjectLabel);
+//        [cell.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[cell.subjectLabel]|" options:0 metrics:0 views:viewDictionary]];
+//        [cell.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[cell.subjectLabel]|" options:0 metrics:0 views:viewDictionary]];
+
         return cell;
     } else {
         return cell;

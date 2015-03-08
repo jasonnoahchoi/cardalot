@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */; };
+		0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */; };
 		08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08977A141AABCB6C00E525D0 /* AppearanceController.m */; };
 		08FE1E761AAA5F570068F0C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E751AAA5F570068F0C9 /* main.m */; };
 		08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E781AAA5F570068F0C9 /* AppDelegate.m */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0868F52D1AABDD58008CA47D /* DeckCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewCell.h; sourceTree = "<group>"; };
+		0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewCell.m; sourceTree = "<group>"; };
+		0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeckCollectionViewCell.xib; sourceTree = "<group>"; };
 		08977A131AABCB6C00E525D0 /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceController.h; sourceTree = "<group>"; };
 		08977A141AABCB6C00E525D0 /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceController.m; sourceTree = "<group>"; };
 		08FE1E701AAA5F570068F0C9 /* cardalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +121,9 @@
 				08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */,
 				725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */,
 				725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */,
+				0868F52D1AABDD58008CA47D /* DeckCollectionViewCell.h */,
+				0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */,
+				0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */,
 				725180E51AAA6FAE00C446E5 /* Stack.h */,
 				725180E61AAA6FAE00C446E5 /* Stack.m */,
 				725180E81AAA751600C446E5 /* Model.xcdatamodeld */,
@@ -259,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */,
+				0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */,
 				08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */,
 				08FE1E811AAA5F570068F0C9 /* Images.xcassets in Resources */,
 			);
@@ -321,6 +330,7 @@
 				725180F01AAA772A00C446E5 /* Card.m in Sources */,
 				725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
+				0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
