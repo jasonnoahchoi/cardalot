@@ -64,21 +64,21 @@
     }
 }
 
--(void)textViewDidBeginEditing:(UITextView *)textView {
-    if ([textView.text isEqualToString:@”TextView Placeholder Text”]) {
-        textView.text = @”“;
-        textView.textColor = [UIColor lightGrayColor];
-    }
-    [textView becomeFirstResponder];
-}
-
--(void)textViewDidEndEditing:(UITextView *)textView {
-    if ([textView.text isEqualToString:@”“]) {
-        textView.text = @”TextView Placeholder Text”;
-        textView.textColor = [UIColor lightGrayColor];
-    }
-    [textView resignFirstResponder];
-}
+//-(void)textViewDidBeginEditing:(UITextView *)textView {
+//    if ([textView.text isEqualToString:@”TextView Placeholder Text”]) {
+//        textView.text = @”“;
+//        textView.textColor = [UIColor lightGrayColor];
+//    }
+//    [textView becomeFirstResponder];
+//}
+//
+//-(void)textViewDidEndEditing:(UITextView *)textView {
+//    if ([textView.text isEqualToString:@”“]) {
+//        textView.text = @”TextView Placeholder Text”;
+//        textView.textColor = [UIColor lightGrayColor];
+//    }
+//    [textView resignFirstResponder];
+//}
 
 
 @end
