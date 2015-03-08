@@ -10,6 +10,7 @@
 		0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */; };
 		0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */; };
 		08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08977A141AABCB6C00E525D0 /* AppearanceController.m */; };
+		08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */; };
 		08FE1E761AAA5F570068F0C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E751AAA5F570068F0C9 /* main.m */; };
 		08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E781AAA5F570068F0C9 /* AppDelegate.m */; };
 		08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */; };
@@ -42,6 +43,8 @@
 		0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeckCollectionViewCell.xib; sourceTree = "<group>"; };
 		08977A131AABCB6C00E525D0 /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceController.h; sourceTree = "<group>"; };
 		08977A141AABCB6C00E525D0 /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceController.m; sourceTree = "<group>"; };
+		08D8F8CC1AACE7670015A4BD /* DeckCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewLayout.h; sourceTree = "<group>"; };
+		08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewLayout.m; sourceTree = "<group>"; };
 		08FE1E701AAA5F570068F0C9 /* cardalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FE1E741AAA5F570068F0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FE1E751AAA5F570068F0C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +93,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08D8F8CB1AACE7290015A4BD /* DeckCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				08FE1E7A1AAA5F570068F0C9 /* DeckCollectionViewController.h */,
+				08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */,
+				725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */,
+				725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */,
+				0868F52D1AABDD58008CA47D /* DeckCollectionViewCell.h */,
+				0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */,
+				0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */,
+				08D8F8CC1AACE7670015A4BD /* DeckCollectionViewLayout.h */,
+				08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */,
+			);
+			name = DeckCollectionView;
+			sourceTree = "<group>";
+		};
 		08FE1E671AAA5F570068F0C9 = {
 			isa = PBXGroup;
 			children = (
@@ -117,13 +136,7 @@
 				08FE1E781AAA5F570068F0C9 /* AppDelegate.m */,
 				08977A131AABCB6C00E525D0 /* AppearanceController.h */,
 				08977A141AABCB6C00E525D0 /* AppearanceController.m */,
-				08FE1E7A1AAA5F570068F0C9 /* DeckCollectionViewController.h */,
-				08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */,
-				725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */,
-				725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */,
-				0868F52D1AABDD58008CA47D /* DeckCollectionViewCell.h */,
-				0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */,
-				0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */,
+				08D8F8CB1AACE7290015A4BD /* DeckCollectionView */,
 				725180E51AAA6FAE00C446E5 /* Stack.h */,
 				725180E61AAA6FAE00C446E5 /* Stack.m */,
 				725180E81AAA751600C446E5 /* Model.xcdatamodeld */,
@@ -329,6 +342,7 @@
 				725180ED1AAA772900C446E5 /* Deck.m in Sources */,
 				725180F01AAA772A00C446E5 /* Card.m in Sources */,
 				725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */,
+				08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
 				0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */,
 			);

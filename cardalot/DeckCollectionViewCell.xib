@@ -13,10 +13,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hashtag 4" translatesAutoresizingMaskIntoConstraints="NO" id="8z7-Dv-iLu">
-                        <rect key="frame" x="4" y="0.0" width="34" height="32"/>
+                        <rect key="frame" x="6" y="6" width="34" height="32"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5R0-yR-HMd">
-                        <rect key="frame" x="8" y="29" width="72" height="31"/>
+                        <rect key="frame" x="8" y="34" width="72" height="31"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -26,6 +26,9 @@
             </view>
             <color key="backgroundColor" red="0.2156862745" green="0.50196078430000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <size key="customSize" width="88" height="84"/>
+            <connections>
+                <outlet property="subjectLabel" destination="5R0-yR-HMd" id="lSr-fV-qUB"/>
+            </connections>
             <point key="canvasLocation" x="280" y="285"/>
         </collectionViewCell>
     </objects>
