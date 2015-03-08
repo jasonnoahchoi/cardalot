@@ -1,5 +1,5 @@
 //
-//  CardTableViewCell.h
+//  BackTextCell.h
 //  cardalot
 //
 //  Created by Ross McIlwaine on 3/6/15.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CardTableViewCell : UITableViewCell
+@interface BackTextCell : UITableViewCell
+
+@property (nonatomic, strong) UITextView *backTextView;
 
 @end

@@ -15,6 +15,13 @@
 		08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08FE1E821AAA5F570068F0C9 /* LaunchScreen.xib */; };
 		08FE1E901AAA5F570068F0C9 /* cardalotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */; };
 		725180E71AAA6FAE00C446E5 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180E61AAA6FAE00C446E5 /* Stack.m */; };
+		FF3F9A921AAA76C5004F386F /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3F9A911AAA76C5004F386F /* CardViewController.m */; };
+		FF3F9A9F1AAA9687004F386F /* FrontTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3F9A9D1AAA9687004F386F /* FrontTextCell.m */; };
+		FF3F9AA01AAA9687004F386F /* FrontTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3F9A9E1AAA9687004F386F /* FrontTextCell.xib */; };
+		FF3F9AA41AAA96A6004F386F /* BackTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3F9AA21AAA96A6004F386F /* BackTextCell.m */; };
+		FF3F9AA51AAA96A6004F386F /* BackTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3F9AA31AAA96A6004F386F /* BackTextCell.xib */; };
+		FF3F9AAA1AAAA6B3004F386F /* DeckTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3F9AA81AAAA6B3004F386F /* DeckTagCell.m */; };
+		FF3F9AAB1AAAA6B3004F386F /* DeckTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3F9AA91AAAA6B3004F386F /* DeckTagCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +50,17 @@
 		08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cardalotTests.m; sourceTree = "<group>"; };
 		725180E51AAA6FAE00C446E5 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		725180E61AAA6FAE00C446E5 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		FF3F9A901AAA76C5004F386F /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		FF3F9A911AAA76C5004F386F /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		FF3F9A9C1AAA9687004F386F /* FrontTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontTextCell.h; sourceTree = "<group>"; };
+		FF3F9A9D1AAA9687004F386F /* FrontTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontTextCell.m; sourceTree = "<group>"; };
+		FF3F9A9E1AAA9687004F386F /* FrontTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrontTextCell.xib; sourceTree = "<group>"; };
+		FF3F9AA11AAA96A6004F386F /* BackTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackTextCell.h; sourceTree = "<group>"; };
+		FF3F9AA21AAA96A6004F386F /* BackTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackTextCell.m; sourceTree = "<group>"; };
+		FF3F9AA31AAA96A6004F386F /* BackTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackTextCell.xib; sourceTree = "<group>"; };
+		FF3F9AA71AAAA6B3004F386F /* DeckTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckTagCell.h; sourceTree = "<group>"; };
+		FF3F9AA81AAAA6B3004F386F /* DeckTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckTagCell.m; sourceTree = "<group>"; };
+		FF3F9AA91AAAA6B3004F386F /* DeckTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeckTagCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +106,7 @@
 				08FE1E781AAA5F570068F0C9 /* AppDelegate.m */,
 				08FE1E7A1AAA5F570068F0C9 /* DeckCollectionViewController.h */,
 				08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */,
+				FF3F9A961AAA8AC6004F386F /* Card View Controller */,
 				725180E51AAA6FAE00C446E5 /* Stack.h */,
 				725180E61AAA6FAE00C446E5 /* Stack.m */,
 				08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */,
@@ -122,6 +141,32 @@
 				08FE1E8E1AAA5F570068F0C9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF3F9A961AAA8AC6004F386F /* Card View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF3F9A901AAA76C5004F386F /* CardViewController.h */,
+				FF3F9A911AAA76C5004F386F /* CardViewController.m */,
+				FF3F9AA61AAA9709004F386F /* UIClass Cells */,
+			);
+			name = "Card View Controller";
+			sourceTree = "<group>";
+		};
+		FF3F9AA61AAA9709004F386F /* UIClass Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FF3F9AA71AAAA6B3004F386F /* DeckTagCell.h */,
+				FF3F9AA81AAAA6B3004F386F /* DeckTagCell.m */,
+				FF3F9AA91AAAA6B3004F386F /* DeckTagCell.xib */,
+				FF3F9A9C1AAA9687004F386F /* FrontTextCell.h */,
+				FF3F9A9D1AAA9687004F386F /* FrontTextCell.m */,
+				FF3F9A9E1AAA9687004F386F /* FrontTextCell.xib */,
+				FF3F9AA11AAA96A6004F386F /* BackTextCell.h */,
+				FF3F9AA21AAA96A6004F386F /* BackTextCell.m */,
+				FF3F9AA31AAA96A6004F386F /* BackTextCell.xib */,
+			);
+			name = "UIClass Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +251,9 @@
 			files = (
 				08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */,
 				08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */,
+				FF3F9AA01AAA9687004F386F /* FrontTextCell.xib in Resources */,
+				FF3F9AAB1AAAA6B3004F386F /* DeckTagCell.xib in Resources */,
+				FF3F9AA51AAA96A6004F386F /* BackTextCell.xib in Resources */,
 				08FE1E811AAA5F570068F0C9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF3F9AAA1AAAA6B3004F386F /* DeckTagCell.m in Sources */,
+				FF3F9AA41AAA96A6004F386F /* BackTextCell.m in Sources */,
+				FF3F9A9F1AAA9687004F386F /* FrontTextCell.m in Sources */,
+				FF3F9A921AAA76C5004F386F /* CardViewController.m in Sources */,
 				725180E71AAA6FAE00C446E5 /* Stack.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
 				08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DeckCollectionViewController.h"
+#import "CardViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,10 +21,14 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
-    DeckCollectionViewController *deckCollectionVC = [[DeckCollectionViewController alloc] init];
-
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
-    self.window.rootViewController = navVC;
+//    DeckCollectionViewController *deckCollectionVC = [[DeckCollectionViewController alloc] init];
+//    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
+//    self.window.rootViewController = navVC;
+    
+    CardViewController *cardViewController = [CardViewController new];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:cardViewController];
+    self.window.rootViewController = navigationController;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

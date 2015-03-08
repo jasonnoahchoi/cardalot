@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DeckTagCell.h"
+#import "FrontTextCell.h"
+#import "BackTextCell.h"
 
-@interface CardViewController : UIViewController
+
+@interface CardViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+{
+    DeckTagCell *deckTagCell;
+    FrontTextCell *frontTextCell;
+    BackTextCell *backTextCell;
+}
+
+@property (nonatomic, strong) UITableView *cardTableView;
 
 @end
