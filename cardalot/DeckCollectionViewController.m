@@ -10,13 +10,17 @@
 #import "DeckCollectionViewDataSource.h"
 #import "DeckController.h"
 #import "DeckCollectionViewLayout.h"
+#import "DeckCollectionViewCell.h"
 
 #import <MMDrawerController.h>
+
+static NSString * const cellIdentifier = @"cell";
 
 @interface DeckCollectionViewController () <UICollectionViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
+@property (nonatomic, strong) DeckCollectionViewLayout *deckLayout;
 
 @end
 
@@ -31,10 +35,9 @@
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
     
-    //UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    DeckCollectionViewLayout *layout = [[DeckCollectionViewLayout alloc] init];
-    
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
+    self.deckLayout = [[DeckCollectionViewLayout alloc] init];
+
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:self.deckLayout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.collectionView];
     
@@ -70,8 +73,10 @@
     [alertController addTextFieldWithConfigurationHandler:nil];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         NSLog(@"new deck!");
-        NSString *deckTag = ((UITextField *)[alertController.textFields objectAtIndex:0]).text;
-        [[DeckController sharedInstance] addDeckWithName:deckTag];
+        self.deckTitle = ((UITextField *)[alertController.textFields objectAtIndex:0]).text;
+        [[DeckController sharedInstance] addDeckWithName:self.deckTitle];
+        [[DeckController sharedInstance] save];
+
         [self.collectionView reloadData];
     }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {

@@ -13,6 +13,7 @@
 @interface DeckCollectionViewController : UIViewController
 
 @property (nonatomic, strong) MMDrawerController *drawerController;
+@property (nonatomic, strong) NSString *deckTitle;
 
 @end
 
