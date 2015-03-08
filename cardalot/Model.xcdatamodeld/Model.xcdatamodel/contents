@@ -9,18 +9,18 @@
         <attribute name="nameTag" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Card" inverseName="decks" inverseEntity="Card" syncable="YES"/>
     </entity>
-    <entity name="Quiz" syncable="YES">
+    <entity name="Quiz" representedClassName="Quiz" syncable="YES">
         <attribute name="left" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="right" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="Study" syncable="YES">
+    <entity name="Study" representedClassName="Study" syncable="YES">
         <attribute name="left" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="right" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Deck" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="Card" positionX="-54" positionY="-9" width="128" height="88"/>
-        <element name="Study" positionX="-36" positionY="9" width="128" height="73"/>
+        <element name="Deck" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="Quiz" positionX="-18" positionY="27" width="128" height="75"/>
+        <element name="Study" positionX="-36" positionY="9" width="128" height="75"/>
     </elements>
 </model>
