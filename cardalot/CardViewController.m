@@ -22,6 +22,7 @@
     [super viewDidLoad];
     
     // Set Title of card
+    self.title = @"Card View";
     
     
     // Create Tableview
