@@ -52,18 +52,7 @@
     return YES;
 }
 
-    // Attempt at getting content to adjust up for keyboard - not working properly 
-- (void)keyboardWasShown:(NSNotification *)notification {
-    if (self.backTextView != nil) {
-        NSDictionary *info = [notification userInfo];
-        CGRect keyboardRect = [self.backTextView convertRect:[[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue] fromView:nil];
-        CGSize keyboardSize = keyboardRect.size;
-        
-        self.backTextView.contentInset = UIEdgeInsetsMake(0, 0, keyboardSize.height, 0);
-        self.backTextView.scrollIndicatorInsets = self.backTextView.contentInset;
-    }
-}
-
+#pragma mark - textView placeholder text
 //-(void)textViewDidBeginEditing:(UITextView *)textView {
 //    if ([textView.text isEqualToString:@”TextView Placeholder Text”]) {
 //        textView.text = @”“;
