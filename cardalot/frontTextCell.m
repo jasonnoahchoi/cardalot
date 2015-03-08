@@ -22,14 +22,18 @@
         CGSize size = self.contentView.frame.size;
         
         // position/size
-        self.frontTextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, size.width - 10.0, size.height + 30)];
+        self.frontTextField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, size.width - 10.0, size.height + 30)];
         
         // modification
-        self.frontTextView.font = [UIFont boldSystemFontOfSize:16.0];
-        self.frontTextView.tintColor = [UIColor blackColor];
+        self.frontTextField.font = [UIFont boldSystemFontOfSize:16.0];
+        self.frontTextField.tintColor = [UIColor blackColor];
+        self.frontTextField.placeholder = @"front of card text";
+        self.frontTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        self.frontTextField.textAlignment = NSTextAlignmentCenter;
+        self.frontTextField.returnKeyType = UIReturnKeyNext;
         
         // add to view
-        [self.contentView addSubview:self.frontTextView];
+        [self.contentView addSubview:self.frontTextField];
     }
     return self;
 }
@@ -41,7 +45,7 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self.frontTextView resignFirstResponder];
+    [self.frontTextField resignFirstResponder];
     
     return YES;
 }

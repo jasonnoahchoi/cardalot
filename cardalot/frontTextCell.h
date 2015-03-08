@@ -10,6 +10,6 @@
 
 @interface FrontTextCell : UITableViewCell 
 
-@property (nonatomic, strong) UITextView *frontTextView;
+@property (nonatomic, strong) UITextField *frontTextField;
 
 @end
