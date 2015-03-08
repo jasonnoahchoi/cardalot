@@ -26,11 +26,13 @@
         
         // modification
         self.backTextView.font = [UIFont boldSystemFontOfSize:16.0];
-        self.backTextView.tintColor = [UIColor blackColor];
+        self.backTextView.textColor = [UIColor blackColor];
         self.backTextView.layer.borderWidth = 1.0f;
         self.backTextView.layer.cornerRadius = 8.0;
         self.backTextView.layer.borderColor = [[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1] CGColor];
         
+        // setting delegate
+        self.backTextView.delegate = self;
         
         // add to view
         [self.contentView addSubview:self.backTextView];
@@ -62,6 +64,21 @@
     }
 }
 
+-(void)textViewDidBeginEditing:(UITextView *)textView {
+    if ([textView.text isEqualToString:@”TextView Placeholder Text”]) {
+        textView.text = @”“;
+        textView.textColor = [UIColor lightGrayColor];
+    }
+    [textView becomeFirstResponder];
+}
+
+-(void)textViewDidEndEditing:(UITextView *)textView {
+    if ([textView.text isEqualToString:@”“]) {
+        textView.text = @”TextView Placeholder Text”;
+        textView.textColor = [UIColor lightGrayColor];
+    }
+    [textView resignFirstResponder];
+}
 
 
 @end

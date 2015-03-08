@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BackTextCell : UITableViewCell
+@interface BackTextCell : UITableViewCell <UITextViewDelegate>
 
 @property (nonatomic, strong) UITextView *backTextView;
 
