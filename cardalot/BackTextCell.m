@@ -22,12 +22,14 @@
         CGSize size = self.contentView.frame.size;
         
         // position/size
-        self.backTextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, size.width - 10.0, size.height + 200.0)];
+        self.backTextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, size.width + 30.0, size.height + 235.0)];
         
         // modification
         self.backTextView.font = [UIFont boldSystemFontOfSize:16.0];
         self.backTextView.tintColor = [UIColor blackColor];
-        
+        self.backTextView.layer.borderWidth = 1.0f;
+        self.backTextView.layer.cornerRadius = 8.0;
+        self.backTextView.layer.borderColor = [[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1] CGColor];
         
         
         // add to view
