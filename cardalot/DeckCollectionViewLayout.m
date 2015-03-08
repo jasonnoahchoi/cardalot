@@ -7,12 +7,13 @@
 //
 
 #import "DeckCollectionViewLayout.h"
+#import "DeckController.h"
 
 static NSString * const cellIdentifier = @"cell";
 
 @interface DeckCollectionViewLayout ()
 
-@property (nonatomic, strong) NSDictionary *layoutDictionary;
+@property (nonatomic, strong) NSDictionary *layoutInfo;
 
 @end
 
@@ -46,8 +47,8 @@ static NSString * const cellIdentifier = @"cell";
 #pragma mark - Layout
 
 - (void)prepareLayout {
-    NSMutableDictionary *newLayoutDictionary = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *cellLayoutDictionary = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *newLayoutInfo = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *cellLayoutInfo = [[NSMutableDictionary alloc] init];
 
     NSInteger sectionCount = [self.collectionView numberOfSections];
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
@@ -61,20 +62,22 @@ static NSString * const cellIdentifier = @"cell";
             UICollectionViewLayoutAttributes *itemAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
             itemAttributes.frame = [self frameForDeckAtIndexPath:indexPath];
 
-            cellLayoutDictionary[indexPath] = itemAttributes;
+            cellLayoutInfo[indexPath] = itemAttributes;
         }
     }
 
-    newLayoutDictionary[cellIdentifier] = cellLayoutDictionary;
+    newLayoutInfo[cellIdentifier] = cellLayoutInfo;
 
-    self.layoutDictionary = newLayoutDictionary;
+    self.layoutInfo = newLayoutInfo;
 }
 
 #pragma mark - Private
 
 - (CGRect)frameForDeckAtIndexPath:(NSIndexPath *)indexPath {
-    NSInteger row = indexPath.section / self.numberOfColumns;
-    NSInteger column = indexPath.section % self.numberOfColumns;
+    NSInteger row = indexPath.item / self.numberOfColumns;
+    NSInteger column = indexPath.item % self.numberOfColumns;
+    //NSInteger row = 10;
+    //NSInteger column = 2;
 
     CGFloat spacingX = self.collectionView.bounds.size.width -
     self.itemInsets.left -
@@ -91,9 +94,10 @@ static NSString * const cellIdentifier = @"cell";
 }
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
-    NSMutableArray *allAttributes = [NSMutableArray arrayWithCapacity:self.layoutDictionary.count];
 
-    [self.layoutDictionary enumerateKeysAndObjectsUsingBlock:^(NSString *elementIdentifier,
+    NSMutableArray *allAttributes = [NSMutableArray arrayWithCapacity:self.layoutInfo.count];
+
+    [self.layoutInfo enumerateKeysAndObjectsUsingBlock:^(NSString *elementIdentifier,
                                                          NSDictionary *elementsInfo,
                                                          BOOL *stop) {
         [elementsInfo enumerateKeysAndObjectsUsingBlock:^(NSIndexPath *indexPath,
@@ -109,7 +113,8 @@ static NSString * const cellIdentifier = @"cell";
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return self.layoutDictionary[cellIdentifier][indexPath];
+    //return [DeckController sharedInstance].decks[cellIdentifier][indexPath];
+    return self.layoutInfo[cellIdentifier][indexPath];
 }
 
 - (CGSize)collectionViewContentSize {
@@ -120,6 +125,10 @@ static NSString * const cellIdentifier = @"cell";
     CGFloat height = self.itemInsets.top + rowCount * self.itemSize.height + (rowCount - 1) * self.interItemSpacingY + self.itemInsets.bottom;
 
     return CGSizeMake(self.collectionView.bounds.size.width, height);
+}
+
+-(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
+    return YES;
 }
 
 @end
