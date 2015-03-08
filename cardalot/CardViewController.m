@@ -20,7 +20,7 @@
     [super viewDidLoad];
     
     // Set Title of card
-    self.title = @"Card View";
+    self.title = @"Study Card";
     
     // Create Tableview
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
