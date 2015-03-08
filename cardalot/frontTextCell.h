@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FrontTextCell : UITableViewCell
+@interface FrontTextCell : UITableViewCell 
 
 @property (nonatomic, strong) UITextView *frontTextView;
 

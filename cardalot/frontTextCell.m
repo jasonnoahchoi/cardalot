@@ -22,36 +22,16 @@
         CGSize size = self.contentView.frame.size;
         
         // position/size
-        self.frontTextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, size.width - 20.0, size.height - 20.0)];
+        self.frontTextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, size.width - 10.0, size.height + 30)];
         
         // modification
         self.frontTextView.font = [UIFont boldSystemFontOfSize:16.0];
         self.frontTextView.tintColor = [UIColor blackColor];
         
-        
-        
-        
         // add to view
         [self.contentView addSubview:self.frontTextView];
     }
     return self;
-}
-
-- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
-    if(textView.tag == 0) {
-        textView.text = @"";
-        textView.textColor = [UIColor blackColor];
-        textView.tag = 1;
-    }
-    return YES;
-}
-
-- (void)textViewDidEndEditing:(UITextView *)textView {
-    if([textView.text length] == 0) {
-        textView.text = @"front of card text here";
-        textView.textColor = [UIColor lightGrayColor];
-        textView.tag = 0;
-    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

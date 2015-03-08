@@ -22,7 +22,7 @@
         CGSize size = self.contentView.frame.size;
         
         // position/size
-        self.backTextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, size.width - 20.0, size.height - 20.0)];
+        self.backTextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, size.width - 10.0, size.height + 200.0)];
         
         // modification
         self.backTextView.font = [UIFont boldSystemFontOfSize:16.0];
@@ -47,5 +47,19 @@
     
     return YES;
 }
+
+    // Attempt at getting content to adjust up for keyboard - not working properly 
+- (void)keyboardWasShown:(NSNotification *)notification {
+    if (self.backTextView != nil) {
+        NSDictionary *info = [notification userInfo];
+        CGRect keyboardRect = [self.backTextView convertRect:[[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue] fromView:nil];
+        CGSize keyboardSize = keyboardRect.size;
+        
+        self.backTextView.contentInset = UIEdgeInsetsMake(0, 0, keyboardSize.height, 0);
+        self.backTextView.scrollIndicatorInsets = self.backTextView.contentInset;
+    }
+}
+
+
 
 @end

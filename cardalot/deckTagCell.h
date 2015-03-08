@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DeckTagCell : UITableViewCell
+@interface DeckTagCell : UITableViewCell 
 
 @property (nonatomic, strong) UILabel *hashTagLabel;
 @property (nonatomic, strong) UITextField *deckTagField;

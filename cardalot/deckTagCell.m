@@ -19,7 +19,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
-//        CGSize size = self.contentView.frame.size;
         
         // label/field position/size
         self.hashTagLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 35, 30)];
@@ -45,17 +44,11 @@
     return self;
 }
 
-
-
-
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
 }
-
-
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.deckTagField endEditing:YES];// this will do the trick
