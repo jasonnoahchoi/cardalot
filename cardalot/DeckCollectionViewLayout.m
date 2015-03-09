@@ -10,13 +10,14 @@
 #import "DeckController.h"
 #import "DeckCollectionViewDataSource.h"
 
-#define kNumberOfItemsPerPage 8
-
 static NSString * const cellIdentifier = @"cell";
+static NSUInteger const RotationCount = 32;
+static NSUInteger const RotationStride = 3;
 
 @interface DeckCollectionViewLayout () <UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSDictionary *layoutInfo;
+@property (nonatomic, strong) NSArray *rotations;
 
 @end
 
@@ -45,6 +46,26 @@ static NSString * const cellIdentifier = @"cell";
     self.itemSize = CGSizeMake(160.0f, 160.0f);
     self.interItemSpacingY = 12.0f;
     self.numberOfColumns = 2;
+
+    // create rotations at load so that they are consistent during prepareLayout
+    NSMutableArray *rotations = [NSMutableArray arrayWithCapacity:RotationCount];
+
+    CGFloat percentage = 0.0f;
+    for (NSInteger i = 0; i < RotationCount; i++) {
+        // ensure that each angle is different enough to be seen
+        CGFloat newPercentage = 0.0f;
+        do {
+            newPercentage = ((CGFloat)(arc4random() % 220) - 110) * 0.0001f;
+        } while (fabsf(percentage - newPercentage) < 0.006);
+        percentage = newPercentage;
+
+        CGFloat angle = 2 * M_PI * (1.0f + percentage);
+        CATransform3D transform = CATransform3DMakeRotation(angle, 0.0f, 0.0f, 1.0f);
+
+        [rotations addObject:[NSValue valueWithCATransform3D:transform]];
+    }
+    
+    self.rotations = rotations;
 }
 
 #pragma mark - Layout
@@ -64,6 +85,7 @@ static NSString * const cellIdentifier = @"cell";
 
             UICollectionViewLayoutAttributes *itemAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
             itemAttributes.frame = [self frameForDeckAtIndexPath:indexPath];
+            itemAttributes.transform3D = [self transformForAlbumPhotoAtIndex:indexPath];
 
             cellLayoutInfo[indexPath] = itemAttributes;
         }
@@ -124,9 +146,14 @@ static NSString * const cellIdentifier = @"cell";
     DeckCollectionViewDataSource *dataSource = [[DeckCollectionViewDataSource alloc] init];
     int numberOfItems = [dataSource collectionView:self.collectionView numberOfItemsInSection:0];
 
-    CGFloat height = (numberOfItems / 2) * (self.itemSize.height + self.interItemSpacingY + 5);
+    CGFloat height = (numberOfItems / 2) * (self.itemSize.height + self.interItemSpacingY * 2);
 
     return CGSizeMake(self.collectionView.bounds.size.width, height);
+}
+
+- (CATransform3D)transformForAlbumPhotoAtIndex:(NSIndexPath *)indexPath {
+    NSInteger offset = (indexPath.section * RotationStride + indexPath.item);
+    return [self.rotations[offset % RotationCount] CATransform3DValue];
 }
 
 //-(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
