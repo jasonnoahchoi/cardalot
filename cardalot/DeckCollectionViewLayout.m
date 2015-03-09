@@ -9,6 +9,7 @@
 #import "DeckCollectionViewLayout.h"
 #import "DeckController.h"
 #import "DeckCollectionViewDataSource.h"
+#import "DeckCollectionViewCell.h"
 
 static NSString * const cellIdentifier = @"cell";
 static NSUInteger const RotationCount = 32;
@@ -18,6 +19,7 @@ static NSUInteger const RotationStride = 3;
 
 @property (nonatomic, strong) NSDictionary *layoutInfo;
 @property (nonatomic, strong) NSArray *rotations;
+@property (nonatomic, strong) DeckCollectionViewCell *cell;
 
 @end
 
@@ -26,6 +28,7 @@ static NSUInteger const RotationStride = 3;
 - (instancetype)init {
     self = [super init];
     if (self) {
+        self.cell = [[DeckCollectionViewCell alloc] init];
         [self setup];
     }
 
@@ -43,8 +46,18 @@ static NSUInteger const RotationStride = 3;
 
 - (void)setup {
     self.itemInsets = UIEdgeInsetsMake(22.0f, 22.0f, 13.0f, 22.0f);
-    self.itemSize = CGSizeMake(160.0f, 160.0f);
-    self.interItemSpacingY = 12.0f;
+    
+    if ([[UIScreen mainScreen] bounds].size.width == 320) {
+        self.itemSize = CGSizeMake(130.0f, 130.0f);
+        self.cell.subjectLabel.font = [UIFont systemFontOfSize:12];
+    } else if ([[UIScreen mainScreen] bounds].size.width == 375) {
+        self.itemSize = CGSizeMake(150.0f, 150.0f);
+        self.cell.subjectLabel.font = [UIFont systemFontOfSize:10];
+    } else if ([[UIScreen mainScreen] bounds].size.width > 375) {
+        self.itemSize = CGSizeMake(170.0f, 170.0f);
+    }
+
+    self.interItemSpacingY = 10.0f;
     self.numberOfColumns = 2;
 
     // create rotations at load so that they are consistent during prepareLayout
@@ -101,13 +114,8 @@ static NSUInteger const RotationStride = 3;
 - (CGRect)frameForDeckAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.item / self.numberOfColumns;
     NSInteger column = indexPath.item % self.numberOfColumns;
-    //NSInteger row = 10;
-    //NSInteger column = 2;
 
-    CGFloat spacingX = self.collectionView.bounds.size.width -
-    self.itemInsets.left -
-    self.itemInsets.right -
-    (self.numberOfColumns * self.itemSize.width);
+    CGFloat spacingX = self.collectionView.bounds.size.width - self.itemInsets.left - self.itemInsets.right - (self.numberOfColumns * self.itemSize.width);
 
     if (self.numberOfColumns > 1) spacingX = spacingX / (self.numberOfColumns - 1);
 
@@ -141,10 +149,9 @@ static NSUInteger const RotationStride = 3;
     return self.layoutInfo[cellIdentifier][indexPath];
 }
 
-
 - (CGSize)collectionViewContentSize {
     DeckCollectionViewDataSource *dataSource = [[DeckCollectionViewDataSource alloc] init];
-    int numberOfItems = [dataSource collectionView:self.collectionView numberOfItemsInSection:0];
+    long numberOfItems = [dataSource collectionView:self.collectionView numberOfItemsInSection:0];
 
     CGFloat height = (numberOfItems / 2) * (self.itemSize.height + self.interItemSpacingY * 2);
 
@@ -155,9 +162,5 @@ static NSUInteger const RotationStride = 3;
     NSInteger offset = (indexPath.section * RotationStride + indexPath.item);
     return [self.rotations[offset % RotationCount] CATransform3DValue];
 }
-
-//-(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
-//    return YES;
-//}
 
 @end
