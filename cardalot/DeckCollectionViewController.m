@@ -9,12 +9,20 @@
 #import "DeckCollectionViewController.h"
 #import "DeckCollectionViewDataSource.h"
 #import "DeckController.h"
+#import "DeckCollectionViewLayout.h"
+#import "DeckCollectionViewCell.h"
+
 #import <MMDrawerController.h>
 
-@interface DeckCollectionViewController () <UICollectionViewDelegate>
+static NSString * const cellIdentifier = @"cell";
+
+@interface DeckCollectionViewController () <UICollectionViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
+@property (nonatomic, strong) DeckCollectionViewLayout *deckLayout;
+@property (nonatomic, strong) DeckCollectionViewCell *cell;
+@property (nonatomic, strong) UILongPressGestureRecognizer *longGesture;
 
 @end
 
@@ -29,9 +37,10 @@
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
     
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
+    self.deckLayout = [[DeckCollectionViewLayout alloc] init];
+//    self.cell = [[DeckCollectionViewCell alloc] init];
+
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:self.deckLayout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.collectionView];
     
@@ -40,7 +49,13 @@
     [self.dataSource registerCollectionView:self.collectionView];
     
     self.collectionView.delegate = self;
-    
+
+    self.longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(createCloseButton)];
+    self.longGesture.delegate = self;
+    self.longGesture.minimumPressDuration = 1.5;
+    self.longGesture.cancelsTouchesInView = NO;
+    [self.collectionView addGestureRecognizer:self.longGesture];
+
     self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
 }
@@ -50,6 +65,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.cell = (DeckCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
     if (indexPath.item == [DeckController sharedInstance].decks.count) {
         NSLog(@"last cell");
         [self createNewDeckAlertController];
@@ -66,9 +82,10 @@
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"New Deck" message:@"Enter tag of new deck" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:nil];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        NSLog(@"new deck!");
-        NSString *deckTag = ((UITextField *)[alertController.textFields objectAtIndex:0]).text;
-        [[DeckController sharedInstance] addDeckWithName:deckTag];
+        self.deckTitle = ((UITextField *)[alertController.textFields objectAtIndex:0]).text;
+        [[DeckController sharedInstance] addDeckWithName:self.deckTitle];
+        [[DeckController sharedInstance] save];
+
         [self.collectionView reloadData];
     }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
@@ -76,5 +93,43 @@
     }]];
     [self presentViewController:alertController animated:YES completion:nil];
 }
+
+#pragma mark - Delete Cell Methods
+
+- (void)createCloseButton {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Remove Deck" message:@"Are you sure you want to remove deck? All cards inside the deck will be erased." preferredStyle:UIAlertControllerStyleActionSheet];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Remove" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        NSIndexPath *indexPath = [self.collectionView indexPathForCell:self.cell];
+
+        Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+        [[DeckController sharedInstance] removeDeck:deck];
+        [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+
+        [self.collectionView reloadData];
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        NSLog(@"cancel");
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
+
+    // [self.collectionView.visibleCells makeObjectsPerformSelector:@selector(startJiggling)];
+    NSLog(@"Close Button");
+}
+
+//- (void)deleteItem:(int)i {
+//    [self.collectionView performBatchUpdates:^{
+////        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:[DeckController sharedInstance].decks];
+////        [array removeObjectAtIndex:i];
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
+//        Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+//        [[DeckController sharedInstance] removeDeck:deck];
+//        [self.collectionView deleteItemsAtIndexPaths:[NSArray arrayWithObject:indexPath]];
+//        NSLog(@"Delete item: %d", i);
+//    } completion:^(BOOL finished) {
+//        NSLog(@"Delete cell!");
+//    }];
+//
+//    [self.collectionView reloadData];
+//}
 
 @end

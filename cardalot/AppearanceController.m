@@ -15,6 +15,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0]}];
 
     [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0]];
+
     //[[UINavigationBar appearanceWhenContainedIn:[DeckCollectionViewController class], nil] setBarTintColor:[UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0]];
 
 //    [[UIToolbar appearance] setBarTintColor:[UIColor colorWithHue:282.0/360 saturation:.38 brightness:.84 alpha:1.0]];

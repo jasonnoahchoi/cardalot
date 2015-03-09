@@ -10,7 +10,6 @@
 
 @interface DeckCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) UILabel *subjectLabel;
-
+@property (strong, nonatomic) IBOutlet UILabel *subjectLabel;
 
 @end
