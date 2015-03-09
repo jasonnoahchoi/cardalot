@@ -9,8 +9,9 @@
 #import "CardCollectionViewController.h"
 #import "CardCollectionViewDataSource.h"
 #import <MTCardLayout/MTCardLayout.h>
+#import <MTCardLayout/UICollectionView+CardLayout.h>
 
-@interface CardCollectionViewController ()
+@interface CardCollectionViewController () <UICollectionViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) CardCollectionViewDataSource *dataSource;
@@ -31,6 +32,13 @@
     self.dataSource = [[CardCollectionViewDataSource alloc] init];
     self.collectionView.dataSource = self.dataSource;
     [self.dataSource registerCollectionView:self.collectionView];
+    
+    self.collectionView.delegate = self;
+}
+
+#pragma mark UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self.collectionView setPresenting:YES animated:YES completion:nil];
 }
 
 @end
