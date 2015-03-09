@@ -19,7 +19,6 @@ static NSUInteger const RotationStride = 3;
 
 @property (nonatomic, strong) NSDictionary *layoutInfo;
 @property (nonatomic, strong) NSArray *rotations;
-@property (nonatomic, strong) DeckCollectionViewCell *cell;
 
 @end
 
@@ -28,7 +27,6 @@ static NSUInteger const RotationStride = 3;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.cell = [[DeckCollectionViewCell alloc] init];
         [self setup];
     }
 
@@ -49,10 +47,8 @@ static NSUInteger const RotationStride = 3;
     
     if ([[UIScreen mainScreen] bounds].size.width == 320) {
         self.itemSize = CGSizeMake(130.0f, 130.0f);
-        self.cell.subjectLabel.font = [UIFont systemFontOfSize:12];
     } else if ([[UIScreen mainScreen] bounds].size.width == 375) {
         self.itemSize = CGSizeMake(150.0f, 150.0f);
-        self.cell.subjectLabel.font = [UIFont systemFontOfSize:10];
     } else if ([[UIScreen mainScreen] bounds].size.width > 375) {
         self.itemSize = CGSizeMake(170.0f, 170.0f);
     }

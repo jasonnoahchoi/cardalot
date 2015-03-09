@@ -28,22 +28,17 @@ static NSString * const cellIdentifier = @"cell";
     if (indexPath.item == index) {
         DeckCollectionViewController *deckVC = [[DeckCollectionViewController alloc] init];
         cell.subjectLabel.text = @"Insert Deck Name";
-        cell.subjectLabel.textColor = [UIColor lightGrayColor];
+        cell.subjectLabel.textColor = [UIColor whiteColor];
         NSLog(@"%@", deckVC.deckTitle);
         cell.subjectLabel.textAlignment = NSTextAlignmentCenter;
         [cell.contentView addSubview:cell.subjectLabel];
-//      //  [lastCellLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-////        NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(cell.subjectLabel);
-////        [cell.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[cell.subjectLabel]|" options:0 metrics:0 views:viewDictionary]];
-////        [cell.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[cell.subjectLabel]|" options:0 metrics:0 views:viewDictionary]];
-//
+
         return cell;
     } else {
         Deck *deck = [[DeckController sharedInstance].decks objectAtIndex:indexPath.item];
         cell.subjectLabel.text = deck.nameTag;
         NSLog(@"%@", deck.nameTag);
         cell.subjectLabel.textAlignment = NSTextAlignmentCenter;
-        //[cell.contentView addSubview:cell.subjectLabel];
 
         return cell;
     }
