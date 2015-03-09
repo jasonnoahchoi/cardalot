@@ -21,6 +21,7 @@
 		7200CEB31AACE66000E84D55 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEB21AACE66000E84D55 /* HistoryViewController.m */; };
 		7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */; };
 		7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */; };
+		7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */; };
 		725180E71AAA6FAE00C446E5 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180E61AAA6FAE00C446E5 /* Stack.m */; };
 		725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725180E81AAA751600C446E5 /* Model.xcdatamodeld */; };
 		725180ED1AAA772900C446E5 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EC1AAA772900C446E5 /* Deck.m */; };
@@ -65,6 +66,8 @@
 		7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewController.m; sourceTree = "<group>"; };
 		7200CEC31AAD1E9800E84D55 /* CardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewCell.h; sourceTree = "<group>"; };
 		7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewCell.m; sourceTree = "<group>"; };
+		7200CEC61AAD1FD000E84D55 /* CardCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewDataSource.h; sourceTree = "<group>"; };
+		7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewDataSource.m; sourceTree = "<group>"; };
 		725180E51AAA6FAE00C446E5 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		725180E61AAA6FAE00C446E5 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		725180E91AAA751600C446E5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */,
 				7200CEC31AAD1E9800E84D55 /* CardCollectionViewCell.h */,
 				7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */,
+				7200CEC61AAD1FD000E84D55 /* CardCollectionViewDataSource.h */,
+				7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */,
 				725180E51AAA6FAE00C446E5 /* Stack.h */,
 				725180E61AAA6FAE00C446E5 /* Stack.m */,
 				725180E81AAA751600C446E5 /* Model.xcdatamodeld */,
@@ -347,6 +352,7 @@
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
 				0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */,
 				7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */,
+				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
 				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,
 				7200CEB31AACE66000E84D55 /* HistoryViewController.m in Sources */,
 			);

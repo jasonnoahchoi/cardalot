@@ -7,11 +7,13 @@
 //
 
 #import "CardCollectionViewController.h"
+#import "CardCollectionViewDataSource.h"
 #import <MTCardLayout/MTCardLayout.h>
 
 @interface CardCollectionViewController ()
 
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) CardCollectionViewDataSource *dataSource;
 
 @end
 
@@ -25,6 +27,10 @@
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:cardLayout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.collectionView];
+    
+    self.dataSource = [[CardCollectionViewDataSource alloc] init];
+    self.collectionView.dataSource = self.dataSource;
+    [self.dataSource registerCollectionView:self.collectionView];
 }
 
 @end
