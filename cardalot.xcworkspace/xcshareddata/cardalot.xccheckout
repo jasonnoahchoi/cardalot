@@ -5,13 +5,21 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>F0D586E0-4D68-4F4C-BD18-7A5CD293A77B</string>
+=======
+	<string>D444A0BB-80FF-4621-906F-A5575ECB0A91</string>
+>>>>>>> feature/NewCardVC
 	<key>IDESourceControlProjectName</key>
 	<string>cardalot</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>DDDEDF1D0AF734AA117EF5A3253A2C158A52B054</key>
+<<<<<<< HEAD
 		<string>github.com:jasonnoahchoi/cardalot.git</string>
+=======
+		<string>https://github.com/rdm0423/cardalot.git</string>
+>>>>>>> feature/NewCardVC
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>cardalot.xcworkspace</string>
@@ -21,7 +29,11 @@
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
+<<<<<<< HEAD
 	<string>github.com:jasonnoahchoi/cardalot.git</string>
+=======
+	<string>https://github.com/rdm0423/cardalot.git</string>
+>>>>>>> feature/NewCardVC
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

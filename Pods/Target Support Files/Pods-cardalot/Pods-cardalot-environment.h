@@ -6,6 +6,7 @@
 // project.
 
 
+<<<<<<< HEAD
 // JBChartView
 #define COCOAPODS_POD_AVAILABLE_JBChartView
 #define COCOAPODS_VERSION_MAJOR_JBChartView 2
@@ -47,4 +48,12 @@
 #define COCOAPODS_VERSION_MAJOR_MTCardLayout 1
 #define COCOAPODS_VERSION_MINOR_MTCardLayout 0
 #define COCOAPODS_VERSION_PATCH_MTCardLayout 3
+=======
+// IQKeyboardManager
+#define COCOAPODS_POD_AVAILABLE_IQKeyboardManager
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 3.2.1.1.
+>>>>>>> feature/NewCardVC
 
