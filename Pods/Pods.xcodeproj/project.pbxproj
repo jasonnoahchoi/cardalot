@@ -7,342 +7,415 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F32E54A183161B1EAF75864 /* JBChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A42B93AC001F2D3633BD45 /* JBChartView.h */; };
-		12C9481323916FD410A72EC5 /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 2816ECBA2EA3E64B852735ED /* MMDrawerController+Subclass.h */; };
-		20CCEA9924CA4BD99B747816 /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2779EF9AF25C101911FD3FAD /* JBChartView.m */; };
-		23EFA33E909CC51313CD6192 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = E784586B91231ADF54BC04B7 /* MMDrawerController.h */; };
-		45F68920FE0B1C948D867EA2 /* Pods-cardalot-MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE567C914429226635A5B1E8 /* Pods-cardalot-MMDrawerController-dummy.m */; };
-		49BAE670B923D3EDEBAB2CC7 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B125A11087956867258C5E4 /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		536B1349EFE728BF6CB1A891 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ED4D62FEDD9063E03488C74 /* MMDrawerBarButtonItem.h */; };
-		73EC7E0E7B5328C396DCCF20 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9275973E3F9D970560419CB /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		78A2CCAA2FF264A030040DD2 /* JBBarChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = BF52923A39E502FD3B4AA682 /* JBBarChartView.h */; };
-		7B2F54A730E4175B0474A4C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37B880B879836EB52E80D62 /* Foundation.framework */; };
-		7B8D6CD6D879A4AA368BFDFF /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B51C205F7F35408D13970B5B /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		843AC44831404FB1D51039EE /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = F948BABBF349F8706B17D58D /* UIViewController+MMDrawerController.h */; };
-		910C0F6D53F53C9FEF9A4E4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37B880B879836EB52E80D62 /* Foundation.framework */; };
-		A2EF45F8B0A7638FA60F46CA /* Pods-cardalot-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7281FF3E62D061C561B609DE /* Pods-cardalot-dummy.m */; };
-		AA202D2B1C94E57AE4B24A2F /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C70F6E99982C352163EBD /* JBLineChartView.m */; };
-		AB332ED42458A43FA5B5FC41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37B880B879836EB52E80D62 /* Foundation.framework */; };
-		B395CB56ECBCF53C4AB52763 /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = 312852D8C694E8DC79EB4E04 /* MMDrawerVisualState.h */; };
-		D2400B5CA50FFEDD2769BEA4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F81CF7CD9AC4F2991916F5 /* QuartzCore.framework */; };
-		E0E87597A7C3BB94ED260D3F /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CA9E341A9380FF55A9BD17 /* JBBarChartView.m */; };
-		ED9F9B57EBEBE388B25AF585 /* Pods-cardalot-JBChartView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F249E3EF84FC3D1D04E653D /* Pods-cardalot-JBChartView-dummy.m */; };
-		F2CD45F6D063A4743AC12AF0 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC049A0243D6E905D857FD8 /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F718A8962CCB1F66F4B1D215 /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6267A699C86FA2A787CDC43F /* JBLineChartView.h */; };
+		0954133B309889473114A820 /* JBChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BDF0FC973AF81E658550FDE /* JBChartView.h */; };
+		0A87F6322EC74A5CBDA856CD /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 340B2F3BB5A035F743000163 /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0BC550A70F54E655BD72634C /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 807D4C8E64E6F0E7AAB373F9 /* JBChartView.m */; };
+		0F30811A6F3B2E2937536560 /* LSCollectionViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F64D22F532A9FED3735B7C91 /* LSCollectionViewHelper.m */; };
+		0F55BFEE40C1593EA6580567 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 76EC30758F56F25DF894F02B /* MMDrawerBarButtonItem.h */; };
+		0FC9BC5283F4DC66F5F1EE7F /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D91E1FC080FC169BB6FF7A8 /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		190ACF68ED7366858695A397 /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A8EC7E2D4C9DA1AB426E14 /* JBBarChartView.m */; };
+		1B71DCF778B0B9CA9F3F4C7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926D28EE45FC93F93E82C395 /* Foundation.framework */; };
+		27E5952FF7C779D64069D8BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926D28EE45FC93F93E82C395 /* Foundation.framework */; };
+		293365DEAD1EF01D5265B203 /* Pods-cardalot-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FF951EE151C03EAD809D0 /* Pods-cardalot-dummy.m */; };
+		2CF969B7A4D9842469A3E514 /* MTCardLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 6151F7201FC27C4FE1FA99C3 /* MTCardLayout.h */; };
+		379BFC9ED82FD9BF8AF6A97D /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 369E194245A49DC263A78649 /* MMDrawerController+Subclass.h */; };
+		3947DE663A8DCE041BE84A3F /* UICollectionView+CardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BFBDA8124CFDE94C25AD5A /* UICollectionView+CardLayout.m */; };
+		3D8700A0B2BD4EE339BDC0CB /* Pods-cardalot-MTCardLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 170F6C35C82E2041F851303A /* Pods-cardalot-MTCardLayout-dummy.m */; };
+		3EEC41ACC5CE8C5D5B3BE96F /* JBBarChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD2E88E41B9226293C172DD /* JBBarChartView.h */; };
+		4B01EE630A25023B173577B4 /* Pods-cardalot-MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A55F27B5E69B20BC03D33175 /* Pods-cardalot-MMDrawerController-dummy.m */; };
+		55DED0D09B3368A2604099BF /* UICollectionView+Draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = F2831726284E607959AD59DC /* UICollectionView+Draggable.m */; };
+		565AEA32B9361CB2F0F095C8 /* UICollectionViewLayout_Warpable.h in Headers */ = {isa = PBXBuildFile; fileRef = 457A24846FFBCC0725B48351 /* UICollectionViewLayout_Warpable.h */; };
+		5E1614E704B481BCF567FEBE /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A662D62B536CABD8BF3DC6 /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		65F26639B3FF28A6EE5D5417 /* LSCollectionViewLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3528023D9194FEACDAE6F189 /* LSCollectionViewLayoutHelper.h */; };
+		67F26CCA88ABD637C9228210 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D69B97F2454192E8B3B2A /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		69AC4222F932B75E7634B1DF /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1559069162EE631E612DF /* JBLineChartView.m */; };
+		6C67471A21D78E7CFF2D361C /* MTCollectionViewCardLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8180A7004FFEFEF8B160A771 /* MTCollectionViewCardLayoutHelper.m */; };
+		7077E7338A20F4B109D360D5 /* MTCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4E02268A1FA7B4994CFAB6 /* MTCardLayout.m */; };
+		7991F85694AA334CBD83F9FD /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0141E6491F293310CAD3A55A /* JBLineChartView.h */; };
+		892FB2B2E93F8AEFCFD1D4B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926D28EE45FC93F93E82C395 /* Foundation.framework */; };
+		8D12D9AD6F81010541E8948E /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = 8644DCE07D189D5148108BBF /* MMDrawerVisualState.h */; };
+		90D4EE3DD64176D75780FE19 /* UICollectionView+Draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = B678FF45AB91569D6BC27C9B /* UICollectionView+Draggable.h */; };
+		919BF4A870D82145D4BE44C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926D28EE45FC93F93E82C395 /* Foundation.framework */; };
+		937EED282B22CC4E3EE1DEDC /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = EBCA38E273CAD8BB44609FFC /* MMDrawerController.h */; };
+		964A0620DDFA738AF71B4514 /* MTDraggableCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3527FA131D392BD05AE1 /* MTDraggableCardLayout.m */; };
+		98035BD1BF6A2009514A50C8 /* LSCollectionViewHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 436D5D8EE9D91A4D0544A714 /* LSCollectionViewHelper.h */; };
+		9F26CF090BDFC1DC5E8868C6 /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 785C462DA3E32045EC530B00 /* UIViewController+MMDrawerController.h */; };
+		B0E7E642C58616FFD91246B2 /* MTDraggableCardLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 4860D325D1EB50A9DFB5E98B /* MTDraggableCardLayout.h */; };
+		C2C6B38EE345D5A9F6429341 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E3ED83FE550BABBF352EF1 /* QuartzCore.framework */; };
+		C49A20E63514B2C9CB10E477 /* UICollectionViewDataSource_Draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1C0A2C5519D653BED90B96 /* UICollectionViewDataSource_Draggable.h */; };
+		CF10EA8986C1AB7685B9CCC7 /* Pods-cardalot-JBChartView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AAE2A4BDE4D9897A08232A /* Pods-cardalot-JBChartView-dummy.m */; };
+		CF4E5E7E0F7F5F9904CFAC02 /* UICollectionView+CardLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF29BF71D575281EB2E3431 /* UICollectionView+CardLayout.h */; };
+		D37CAA13A1B8E02F63B5964C /* LSCollectionViewLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B835899FA21D32BC2AA3E647 /* LSCollectionViewLayoutHelper.m */; };
+		D6FFAF4014CD26BF02D8DF9A /* MTCollectionViewCardLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E1DFF4817B337724CAEF4B /* MTCollectionViewCardLayoutHelper.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		473D93A53DFAE616EB2025A8 /* PBXContainerItemProxy */ = {
+		56BDBD9054EE195062BBEC66 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4E5E10A107880F8BC9CC29F1 /* Project object */;
+			containerPortal = 0646B3232F896E1486535BB7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E4814896441ABE97E289E1F2;
+			remoteGlobalIDString = 40D0BA4F9942FACA4F73EBCF;
 			remoteInfo = "Pods-cardalot-MMDrawerController";
 		};
-		C7C48A97DD2670A08A5CF20D /* PBXContainerItemProxy */ = {
+		B06CEB3BCC4640F86F5A8A1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4E5E10A107880F8BC9CC29F1 /* Project object */;
+			containerPortal = 0646B3232F896E1486535BB7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1766F2F56F934F84D8926BC1;
+			remoteGlobalIDString = E10333CEA3177562DEAE4155;
+			remoteInfo = "Pods-cardalot-MTCardLayout";
+		};
+		EB89EE7BE3D3C76901DDF2D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0646B3232F896E1486535BB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40F64179450912F17D5EB945;
 			remoteInfo = "Pods-cardalot-JBChartView";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1ED4D62FEDD9063E03488C74 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
-		2779EF9AF25C101911FD3FAD /* JBChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JBChartView.m; path = Classes/JBChartView.m; sourceTree = "<group>"; };
-		2816ECBA2EA3E64B852735ED /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
-		312852D8C694E8DC79EB4E04 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
-		584C8B5E4B39E3A0E2278F87 /* Pods-cardalot-JBChartView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-cardalot-JBChartView-prefix.pch"; sourceTree = "<group>"; };
-		5B125A11087956867258C5E4 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
-		6267A699C86FA2A787CDC43F /* JBLineChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JBLineChartView.h; path = Classes/JBLineChartView.h; sourceTree = "<group>"; };
-		63A42B93AC001F2D3633BD45 /* JBChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JBChartView.h; path = Classes/JBChartView.h; sourceTree = "<group>"; };
-		6DBC46AA5620A4DE7403EBA8 /* Pods-cardalot-MMDrawerController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-MMDrawerController-Private.xcconfig"; sourceTree = "<group>"; };
-		7089E1AFDBB3A118B506317E /* libPods-cardalot-JBChartView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot-JBChartView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7281FF3E62D061C561B609DE /* Pods-cardalot-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-cardalot-dummy.m"; sourceTree = "<group>"; };
-		7C73180E33D2BBBFF1BAD38F /* Pods-cardalot-MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-MMDrawerController.xcconfig"; sourceTree = "<group>"; };
-		7D8C70F6E99982C352163EBD /* JBLineChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JBLineChartView.m; path = Classes/JBLineChartView.m; sourceTree = "<group>"; };
-		88CA9E341A9380FF55A9BD17 /* JBBarChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JBBarChartView.m; path = Classes/JBBarChartView.m; sourceTree = "<group>"; };
-		8B8A60732508CDCC5EE17DD9 /* Pods-cardalot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot.release.xcconfig"; sourceTree = "<group>"; };
-		8CC049A0243D6E905D857FD8 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
-		9119746A9E44FF78C3EF18DF /* libPods-cardalot-MMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot-MMDrawerController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F249E3EF84FC3D1D04E653D /* Pods-cardalot-JBChartView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-cardalot-JBChartView-dummy.m"; sourceTree = "<group>"; };
-		A37B880B879836EB52E80D62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A4FD0106504051EA5ADC4F8D /* Pods-cardalot-JBChartView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-JBChartView.xcconfig"; sourceTree = "<group>"; };
-		AF24D65C2574E27023676B6D /* Pods-cardalot-JBChartView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-JBChartView-Private.xcconfig"; sourceTree = "<group>"; };
-		B110EA85FD77ABA4B52DDC68 /* libPods-cardalot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B51C205F7F35408D13970B5B /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
-		B9B8764FF4C3712B07319DCD /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BB34C1736F4D4BA52EA4AFF9 /* Pods-cardalot-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-cardalot-resources.sh"; sourceTree = "<group>"; };
-		BEB915DF0E0043B66F038D08 /* Pods-cardalot-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-cardalot-environment.h"; sourceTree = "<group>"; };
-		BF52923A39E502FD3B4AA682 /* JBBarChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JBBarChartView.h; path = Classes/JBBarChartView.h; sourceTree = "<group>"; };
-		BF955E6CF8244747F237ADC5 /* Pods-cardalot-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-cardalot-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D2171F12EE9BE95DB67B0348 /* Pods-cardalot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot.debug.xcconfig"; sourceTree = "<group>"; };
-		D67E5239B4CCBDB651C06E54 /* Pods-cardalot-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-cardalot-acknowledgements.plist"; sourceTree = "<group>"; };
-		DE567C914429226635A5B1E8 /* Pods-cardalot-MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-cardalot-MMDrawerController-dummy.m"; sourceTree = "<group>"; };
-		E0F15CC82A47655E6FB8FD7E /* Pods-cardalot-MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-cardalot-MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
-		E784586B91231ADF54BC04B7 /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
-		F3F81CF7CD9AC4F2991916F5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		F9275973E3F9D970560419CB /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
-		F948BABBF349F8706B17D58D /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		0141E6491F293310CAD3A55A /* JBLineChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JBLineChartView.h; path = Classes/JBLineChartView.h; sourceTree = "<group>"; };
+		14FE112B78C158AC26740EB8 /* Pods-cardalot-MTCardLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-MTCardLayout.xcconfig"; sourceTree = "<group>"; };
+		16DCE994DEFCA33C7E02D6B0 /* Pods-cardalot-MTCardLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-cardalot-MTCardLayout-prefix.pch"; sourceTree = "<group>"; };
+		170F6C35C82E2041F851303A /* Pods-cardalot-MTCardLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-cardalot-MTCardLayout-dummy.m"; sourceTree = "<group>"; };
+		1FD2E88E41B9226293C172DD /* JBBarChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JBBarChartView.h; path = Classes/JBBarChartView.h; sourceTree = "<group>"; };
+		2D91E1FC080FC169BB6FF7A8 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		340B2F3BB5A035F743000163 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
+		3528023D9194FEACDAE6F189 /* LSCollectionViewLayoutHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSCollectionViewLayoutHelper.h; path = MTCardLayout/DraggableCollectionView/Helpers/LSCollectionViewLayoutHelper.h; sourceTree = "<group>"; };
+		369E194245A49DC263A78649 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		4024BC785677C458B9262F40 /* libPods-cardalot-MTCardLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot-MTCardLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42FC50758E7C4FE91EC7A5EA /* Pods-cardalot-JBChartView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-cardalot-JBChartView-prefix.pch"; sourceTree = "<group>"; };
+		433780888760C5C32A4A3C54 /* Pods-cardalot-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-cardalot-acknowledgements.markdown"; sourceTree = "<group>"; };
+		436D5D8EE9D91A4D0544A714 /* LSCollectionViewHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSCollectionViewHelper.h; path = MTCardLayout/DraggableCollectionView/Helpers/LSCollectionViewHelper.h; sourceTree = "<group>"; };
+		457A24846FFBCC0725B48351 /* UICollectionViewLayout_Warpable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UICollectionViewLayout_Warpable.h; path = MTCardLayout/DraggableCollectionView/UICollectionViewLayout_Warpable.h; sourceTree = "<group>"; };
+		47A662D62B536CABD8BF3DC6 /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
+		4860D325D1EB50A9DFB5E98B /* MTDraggableCardLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTDraggableCardLayout.h; path = MTCardLayout/MTDraggableCardLayout.h; sourceTree = "<group>"; };
+		48D8EDF2E697F503978DFF95 /* libPods-cardalot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A58EF174C3E5EBA73BC0D13 /* libPods-cardalot-JBChartView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot-JBChartView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BDF0FC973AF81E658550FDE /* JBChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JBChartView.h; path = Classes/JBChartView.h; sourceTree = "<group>"; };
+		6151F7201FC27C4FE1FA99C3 /* MTCardLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTCardLayout.h; path = MTCardLayout/MTCardLayout.h; sourceTree = "<group>"; };
+		6492046247D7D49981F6586F /* Pods-cardalot-JBChartView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-JBChartView-Private.xcconfig"; sourceTree = "<group>"; };
+		658F529B217157026DCC90A8 /* Pods-cardalot-MMDrawerController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-MMDrawerController-Private.xcconfig"; sourceTree = "<group>"; };
+		6F1C0A2C5519D653BED90B96 /* UICollectionViewDataSource_Draggable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UICollectionViewDataSource_Draggable.h; path = MTCardLayout/DraggableCollectionView/UICollectionViewDataSource_Draggable.h; sourceTree = "<group>"; };
+		70801BF58C3B29AF91C8EAD3 /* Pods-cardalot-JBChartView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-JBChartView.xcconfig"; sourceTree = "<group>"; };
+		76EC30758F56F25DF894F02B /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		7734FDA885529DC4A7CCC231 /* Pods-cardalot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot.debug.xcconfig"; sourceTree = "<group>"; };
+		785C462DA3E32045EC530B00 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		786D69B97F2454192E8B3B2A /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		7A2FF951EE151C03EAD809D0 /* Pods-cardalot-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-cardalot-dummy.m"; sourceTree = "<group>"; };
+		807D4C8E64E6F0E7AAB373F9 /* JBChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JBChartView.m; path = Classes/JBChartView.m; sourceTree = "<group>"; };
+		8180A7004FFEFEF8B160A771 /* MTCollectionViewCardLayoutHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTCollectionViewCardLayoutHelper.m; path = MTCardLayout/MTCollectionViewCardLayoutHelper.m; sourceTree = "<group>"; };
+		8644DCE07D189D5148108BBF /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
+		89AAE2A4BDE4D9897A08232A /* Pods-cardalot-JBChartView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-cardalot-JBChartView-dummy.m"; sourceTree = "<group>"; };
+		8B1C8B74270B53FD7110482C /* libPods-cardalot-MMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot-MMDrawerController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BE1559069162EE631E612DF /* JBLineChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JBLineChartView.m; path = Classes/JBLineChartView.m; sourceTree = "<group>"; };
+		8EF29BF71D575281EB2E3431 /* UICollectionView+CardLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+CardLayout.h"; path = "MTCardLayout/UICollectionView+CardLayout.h"; sourceTree = "<group>"; };
+		926D28EE45FC93F93E82C395 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A0BFBDA8124CFDE94C25AD5A /* UICollectionView+CardLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+CardLayout.m"; path = "MTCardLayout/UICollectionView+CardLayout.m"; sourceTree = "<group>"; };
+		A55F27B5E69B20BC03D33175 /* Pods-cardalot-MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-cardalot-MMDrawerController-dummy.m"; sourceTree = "<group>"; };
+		A7E1DFF4817B337724CAEF4B /* MTCollectionViewCardLayoutHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTCollectionViewCardLayoutHelper.h; path = MTCardLayout/MTCollectionViewCardLayoutHelper.h; sourceTree = "<group>"; };
+		AF5E28B17EC637B7F9394DBB /* Pods-cardalot-MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-cardalot-MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
+		B5BE3527FA131D392BD05AE1 /* MTDraggableCardLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTDraggableCardLayout.m; path = MTCardLayout/MTDraggableCardLayout.m; sourceTree = "<group>"; };
+		B678FF45AB91569D6BC27C9B /* UICollectionView+Draggable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+Draggable.h"; path = "MTCardLayout/DraggableCollectionView/UICollectionView+Draggable.h"; sourceTree = "<group>"; };
+		B835899FA21D32BC2AA3E647 /* LSCollectionViewLayoutHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSCollectionViewLayoutHelper.m; path = MTCardLayout/DraggableCollectionView/Helpers/LSCollectionViewLayoutHelper.m; sourceTree = "<group>"; };
+		BB4E02268A1FA7B4994CFAB6 /* MTCardLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTCardLayout.m; path = MTCardLayout/MTCardLayout.m; sourceTree = "<group>"; };
+		BEBCCD4219156C94FE7D162B /* Pods-cardalot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot.release.xcconfig"; sourceTree = "<group>"; };
+		C1C1C352BED72BBF76D47F03 /* Pods-cardalot-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-cardalot-resources.sh"; sourceTree = "<group>"; };
+		C5A8EC7E2D4C9DA1AB426E14 /* JBBarChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JBBarChartView.m; path = Classes/JBBarChartView.m; sourceTree = "<group>"; };
+		D31C073C8E4A50911567F06F /* Pods-cardalot-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-cardalot-acknowledgements.plist"; sourceTree = "<group>"; };
+		D3B991A80E073444B14CF14C /* Pods-cardalot-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-cardalot-environment.h"; sourceTree = "<group>"; };
+		E552F18263DA15A4226344CD /* Pods-cardalot-MTCardLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-MTCardLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		E95AA3A8FE30116A4F1B8B24 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EBCA38E273CAD8BB44609FFC /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
+		F2831726284E607959AD59DC /* UICollectionView+Draggable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+Draggable.m"; path = "MTCardLayout/DraggableCollectionView/UICollectionView+Draggable.m"; sourceTree = "<group>"; };
+		F4E3ED83FE550BABBF352EF1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		F64D22F532A9FED3735B7C91 /* LSCollectionViewHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSCollectionViewHelper.m; path = MTCardLayout/DraggableCollectionView/Helpers/LSCollectionViewHelper.m; sourceTree = "<group>"; };
+		FE0D9FC18C277D5B60DB7CA2 /* Pods-cardalot-MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-MMDrawerController.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		119780BB53539D7BCCDBB67F /* Frameworks */ = {
+		0A361CF366423AD83450D0B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB332ED42458A43FA5B5FC41 /* Foundation.framework in Frameworks */,
+				27E5952FF7C779D64069D8BF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F36CE80248AC5664C3B97F1 /* Frameworks */ = {
+		3070B5E9F5665CAF704732D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B2F54A730E4175B0474A4C7 /* Foundation.framework in Frameworks */,
-				D2400B5CA50FFEDD2769BEA4 /* QuartzCore.framework in Frameworks */,
+				919BF4A870D82145D4BE44C7 /* Foundation.framework in Frameworks */,
+				C2C6B38EE345D5A9F6429341 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6369C7A56067CD3B4A36A8A /* Frameworks */ = {
+		A07A66DA90F0D38E550BAD84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				910C0F6D53F53C9FEF9A4E4C /* Foundation.framework in Frameworks */,
+				1B71DCF778B0B9CA9F3F4C7C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD953469C908191BFB4A19C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				892FB2B2E93F8AEFCFD1D4B8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		173C2532C166395A1ED9DE8A /* iOS */ = {
+		06292F70DE1CD63F5DAB49BC /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A37B880B879836EB52E80D62 /* Foundation.framework */,
-				F3F81CF7CD9AC4F2991916F5 /* QuartzCore.framework */,
+				926D28EE45FC93F93E82C395 /* Foundation.framework */,
+				F4E3ED83FE550BABBF352EF1 /* QuartzCore.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		4D14A348271F523A6D2132DD /* Core */ = {
+		07ADD85106E31C1074D9C765 /* MMDrawerBarButtonItem */ = {
 			isa = PBXGroup;
 			children = (
-				E784586B91231ADF54BC04B7 /* MMDrawerController.h */,
-				F9275973E3F9D970560419CB /* MMDrawerController.m */,
-				2816ECBA2EA3E64B852735ED /* MMDrawerController+Subclass.h */,
-				F948BABBF349F8706B17D58D /* UIViewController+MMDrawerController.h */,
-				5B125A11087956867258C5E4 /* UIViewController+MMDrawerController.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		5753CDFE913E081332D31E54 /* Pods-cardalot */ = {
-			isa = PBXGroup;
-			children = (
-				BF955E6CF8244747F237ADC5 /* Pods-cardalot-acknowledgements.markdown */,
-				D67E5239B4CCBDB651C06E54 /* Pods-cardalot-acknowledgements.plist */,
-				7281FF3E62D061C561B609DE /* Pods-cardalot-dummy.m */,
-				BEB915DF0E0043B66F038D08 /* Pods-cardalot-environment.h */,
-				BB34C1736F4D4BA52EA4AFF9 /* Pods-cardalot-resources.sh */,
-				D2171F12EE9BE95DB67B0348 /* Pods-cardalot.debug.xcconfig */,
-				8B8A60732508CDCC5EE17DD9 /* Pods-cardalot.release.xcconfig */,
-			);
-			name = "Pods-cardalot";
-			path = "Target Support Files/Pods-cardalot";
-			sourceTree = "<group>";
-		};
-		660C38974CD336C7C2A1F3C2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B110EA85FD77ABA4B52DDC68 /* libPods-cardalot.a */,
-				7089E1AFDBB3A118B506317E /* libPods-cardalot-JBChartView.a */,
-				9119746A9E44FF78C3EF18DF /* libPods-cardalot-MMDrawerController.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		830837C17F9435BE0EF89173 /* JBChartView */ = {
-			isa = PBXGroup;
-			children = (
-				BF52923A39E502FD3B4AA682 /* JBBarChartView.h */,
-				88CA9E341A9380FF55A9BD17 /* JBBarChartView.m */,
-				63A42B93AC001F2D3633BD45 /* JBChartView.h */,
-				2779EF9AF25C101911FD3FAD /* JBChartView.m */,
-				6267A699C86FA2A787CDC43F /* JBLineChartView.h */,
-				7D8C70F6E99982C352163EBD /* JBLineChartView.m */,
-				C40056094D3BD92EBBF00590 /* Support Files */,
-			);
-			path = JBChartView;
-			sourceTree = "<group>";
-		};
-		8CE0CCFDCE291C04A7AD955E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				830837C17F9435BE0EF89173 /* JBChartView */,
-				900169612C3F3FC8D0854544 /* MMDrawerController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		900169612C3F3FC8D0854544 /* MMDrawerController */ = {
-			isa = PBXGroup;
-			children = (
-				4D14A348271F523A6D2132DD /* Core */,
-				944785D4087A55268D8A6579 /* MMDrawerBarButtonItem */,
-				FFE4FCA26AE2382E2BF358E3 /* MMDrawerVisualStates */,
-				A80B6693502B2706F4A8B74F /* Subclass */,
-				CCFBB0EAEED198C0ACF5F7C8 /* Support Files */,
-			);
-			path = MMDrawerController;
-			sourceTree = "<group>";
-		};
-		944785D4087A55268D8A6579 /* MMDrawerBarButtonItem */ = {
-			isa = PBXGroup;
-			children = (
-				1ED4D62FEDD9063E03488C74 /* MMDrawerBarButtonItem.h */,
-				B51C205F7F35408D13970B5B /* MMDrawerBarButtonItem.m */,
+				76EC30758F56F25DF894F02B /* MMDrawerBarButtonItem.h */,
+				2D91E1FC080FC169BB6FF7A8 /* MMDrawerBarButtonItem.m */,
 			);
 			name = MMDrawerBarButtonItem;
 			sourceTree = "<group>";
 		};
-		99E675619824BBFEC6038158 /* Targets Support Files */ = {
+		1492273CADC1B1B1A805AFD8 /* JBChartView */ = {
 			isa = PBXGroup;
 			children = (
-				5753CDFE913E081332D31E54 /* Pods-cardalot */,
+				1FD2E88E41B9226293C172DD /* JBBarChartView.h */,
+				C5A8EC7E2D4C9DA1AB426E14 /* JBBarChartView.m */,
+				4BDF0FC973AF81E658550FDE /* JBChartView.h */,
+				807D4C8E64E6F0E7AAB373F9 /* JBChartView.m */,
+				0141E6491F293310CAD3A55A /* JBLineChartView.h */,
+				8BE1559069162EE631E612DF /* JBLineChartView.m */,
+				FEFB3BAF1EE66D7A9A70DD2E /* Support Files */,
+			);
+			path = JBChartView;
+			sourceTree = "<group>";
+		};
+		1B3415017E42675EBB6B8106 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D58AB51E564E4EB90B04EB2 /* Pods-cardalot */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A596476B7201C3FC0CB12CA0 = {
+		1CB69AD183D06CFD6B0189FD /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B9B8764FF4C3712B07319DCD /* Podfile */,
-				D45E33BA122A3C263C1752F5 /* Frameworks */,
-				8CE0CCFDCE291C04A7AD955E /* Pods */,
-				660C38974CD336C7C2A1F3C2 /* Products */,
-				99E675619824BBFEC6038158 /* Targets Support Files */,
+				EBCA38E273CAD8BB44609FFC /* MMDrawerController.h */,
+				47A662D62B536CABD8BF3DC6 /* MMDrawerController.m */,
+				369E194245A49DC263A78649 /* MMDrawerController+Subclass.h */,
+				785C462DA3E32045EC530B00 /* UIViewController+MMDrawerController.h */,
+				786D69B97F2454192E8B3B2A /* UIViewController+MMDrawerController.m */,
 			);
+			name = Core;
 			sourceTree = "<group>";
 		};
-		A80B6693502B2706F4A8B74F /* Subclass */ = {
+		2A5B2CC32246D88C79A5BE69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1492273CADC1B1B1A805AFD8 /* JBChartView */,
+				B8BED57F7DA100E700120146 /* MMDrawerController */,
+				670CF91C8B97615C6E517208 /* MTCardLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2EACA5B70F3D453BC91C1597 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE0D9FC18C277D5B60DB7CA2 /* Pods-cardalot-MMDrawerController.xcconfig */,
+				658F529B217157026DCC90A8 /* Pods-cardalot-MMDrawerController-Private.xcconfig */,
+				A55F27B5E69B20BC03D33175 /* Pods-cardalot-MMDrawerController-dummy.m */,
+				AF5E28B17EC637B7F9394DBB /* Pods-cardalot-MMDrawerController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-cardalot-MMDrawerController";
+			sourceTree = "<group>";
+		};
+		4139B4DDFBF29C88BE14166B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				14FE112B78C158AC26740EB8 /* Pods-cardalot-MTCardLayout.xcconfig */,
+				E552F18263DA15A4226344CD /* Pods-cardalot-MTCardLayout-Private.xcconfig */,
+				170F6C35C82E2041F851303A /* Pods-cardalot-MTCardLayout-dummy.m */,
+				16DCE994DEFCA33C7E02D6B0 /* Pods-cardalot-MTCardLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-cardalot-MTCardLayout";
+			sourceTree = "<group>";
+		};
+		5F00A6B25734E9FF4CB49C73 /* Subclass */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Subclass;
 			sourceTree = "<group>";
 		};
-		C40056094D3BD92EBBF00590 /* Support Files */ = {
+		670CF91C8B97615C6E517208 /* MTCardLayout */ = {
 			isa = PBXGroup;
 			children = (
-				A4FD0106504051EA5ADC4F8D /* Pods-cardalot-JBChartView.xcconfig */,
-				AF24D65C2574E27023676B6D /* Pods-cardalot-JBChartView-Private.xcconfig */,
-				9F249E3EF84FC3D1D04E653D /* Pods-cardalot-JBChartView-dummy.m */,
-				584C8B5E4B39E3A0E2278F87 /* Pods-cardalot-JBChartView-prefix.pch */,
+				436D5D8EE9D91A4D0544A714 /* LSCollectionViewHelper.h */,
+				F64D22F532A9FED3735B7C91 /* LSCollectionViewHelper.m */,
+				3528023D9194FEACDAE6F189 /* LSCollectionViewLayoutHelper.h */,
+				B835899FA21D32BC2AA3E647 /* LSCollectionViewLayoutHelper.m */,
+				6151F7201FC27C4FE1FA99C3 /* MTCardLayout.h */,
+				BB4E02268A1FA7B4994CFAB6 /* MTCardLayout.m */,
+				A7E1DFF4817B337724CAEF4B /* MTCollectionViewCardLayoutHelper.h */,
+				8180A7004FFEFEF8B160A771 /* MTCollectionViewCardLayoutHelper.m */,
+				4860D325D1EB50A9DFB5E98B /* MTDraggableCardLayout.h */,
+				B5BE3527FA131D392BD05AE1 /* MTDraggableCardLayout.m */,
+				8EF29BF71D575281EB2E3431 /* UICollectionView+CardLayout.h */,
+				A0BFBDA8124CFDE94C25AD5A /* UICollectionView+CardLayout.m */,
+				B678FF45AB91569D6BC27C9B /* UICollectionView+Draggable.h */,
+				F2831726284E607959AD59DC /* UICollectionView+Draggable.m */,
+				6F1C0A2C5519D653BED90B96 /* UICollectionViewDataSource_Draggable.h */,
+				457A24846FFBCC0725B48351 /* UICollectionViewLayout_Warpable.h */,
+				4139B4DDFBF29C88BE14166B /* Support Files */,
+			);
+			path = MTCardLayout;
+			sourceTree = "<group>";
+		};
+		73DC874B569B4B69FAFB48EB /* MMDrawerVisualStates */ = {
+			isa = PBXGroup;
+			children = (
+				8644DCE07D189D5148108BBF /* MMDrawerVisualState.h */,
+				340B2F3BB5A035F743000163 /* MMDrawerVisualState.m */,
+			);
+			name = MMDrawerVisualStates;
+			sourceTree = "<group>";
+		};
+		81B1E2A447771A520B0F8EEE = {
+			isa = PBXGroup;
+			children = (
+				E95AA3A8FE30116A4F1B8B24 /* Podfile */,
+				E392BD6501674FF005FB5AC2 /* Frameworks */,
+				2A5B2CC32246D88C79A5BE69 /* Pods */,
+				97A1668AE9BDD6A13BF86A14 /* Products */,
+				1B3415017E42675EBB6B8106 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		97A1668AE9BDD6A13BF86A14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48D8EDF2E697F503978DFF95 /* libPods-cardalot.a */,
+				4A58EF174C3E5EBA73BC0D13 /* libPods-cardalot-JBChartView.a */,
+				8B1C8B74270B53FD7110482C /* libPods-cardalot-MMDrawerController.a */,
+				4024BC785677C458B9262F40 /* libPods-cardalot-MTCardLayout.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D58AB51E564E4EB90B04EB2 /* Pods-cardalot */ = {
+			isa = PBXGroup;
+			children = (
+				433780888760C5C32A4A3C54 /* Pods-cardalot-acknowledgements.markdown */,
+				D31C073C8E4A50911567F06F /* Pods-cardalot-acknowledgements.plist */,
+				7A2FF951EE151C03EAD809D0 /* Pods-cardalot-dummy.m */,
+				D3B991A80E073444B14CF14C /* Pods-cardalot-environment.h */,
+				C1C1C352BED72BBF76D47F03 /* Pods-cardalot-resources.sh */,
+				7734FDA885529DC4A7CCC231 /* Pods-cardalot.debug.xcconfig */,
+				BEBCCD4219156C94FE7D162B /* Pods-cardalot.release.xcconfig */,
+			);
+			name = "Pods-cardalot";
+			path = "Target Support Files/Pods-cardalot";
+			sourceTree = "<group>";
+		};
+		B8BED57F7DA100E700120146 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				1CB69AD183D06CFD6B0189FD /* Core */,
+				07ADD85106E31C1074D9C765 /* MMDrawerBarButtonItem */,
+				73DC874B569B4B69FAFB48EB /* MMDrawerVisualStates */,
+				5F00A6B25734E9FF4CB49C73 /* Subclass */,
+				2EACA5B70F3D453BC91C1597 /* Support Files */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
+		E392BD6501674FF005FB5AC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06292F70DE1CD63F5DAB49BC /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FEFB3BAF1EE66D7A9A70DD2E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				70801BF58C3B29AF91C8EAD3 /* Pods-cardalot-JBChartView.xcconfig */,
+				6492046247D7D49981F6586F /* Pods-cardalot-JBChartView-Private.xcconfig */,
+				89AAE2A4BDE4D9897A08232A /* Pods-cardalot-JBChartView-dummy.m */,
+				42FC50758E7C4FE91EC7A5EA /* Pods-cardalot-JBChartView-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-cardalot-JBChartView";
 			sourceTree = "<group>";
 		};
-		CCFBB0EAEED198C0ACF5F7C8 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7C73180E33D2BBBFF1BAD38F /* Pods-cardalot-MMDrawerController.xcconfig */,
-				6DBC46AA5620A4DE7403EBA8 /* Pods-cardalot-MMDrawerController-Private.xcconfig */,
-				DE567C914429226635A5B1E8 /* Pods-cardalot-MMDrawerController-dummy.m */,
-				E0F15CC82A47655E6FB8FD7E /* Pods-cardalot-MMDrawerController-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-cardalot-MMDrawerController";
-			sourceTree = "<group>";
-		};
-		D45E33BA122A3C263C1752F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				173C2532C166395A1ED9DE8A /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FFE4FCA26AE2382E2BF358E3 /* MMDrawerVisualStates */ = {
-			isa = PBXGroup;
-			children = (
-				312852D8C694E8DC79EB4E04 /* MMDrawerVisualState.h */,
-				8CC049A0243D6E905D857FD8 /* MMDrawerVisualState.m */,
-			);
-			name = MMDrawerVisualStates;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0854C8835F64F80A9C71BD0E /* Headers */ = {
+		4D4A03C4E09113D9274571AD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				536B1349EFE728BF6CB1A891 /* MMDrawerBarButtonItem.h in Headers */,
-				12C9481323916FD410A72EC5 /* MMDrawerController+Subclass.h in Headers */,
-				23EFA33E909CC51313CD6192 /* MMDrawerController.h in Headers */,
-				B395CB56ECBCF53C4AB52763 /* MMDrawerVisualState.h in Headers */,
-				843AC44831404FB1D51039EE /* UIViewController+MMDrawerController.h in Headers */,
+				3EEC41ACC5CE8C5D5B3BE96F /* JBBarChartView.h in Headers */,
+				0954133B309889473114A820 /* JBChartView.h in Headers */,
+				7991F85694AA334CBD83F9FD /* JBLineChartView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6A96F4D2CC1C8A4EF8404FB /* Headers */ = {
+		C284CBC39BC20B6FBE347EFB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78A2CCAA2FF264A030040DD2 /* JBBarChartView.h in Headers */,
-				0F32E54A183161B1EAF75864 /* JBChartView.h in Headers */,
-				F718A8962CCB1F66F4B1D215 /* JBLineChartView.h in Headers */,
+				0F55BFEE40C1593EA6580567 /* MMDrawerBarButtonItem.h in Headers */,
+				379BFC9ED82FD9BF8AF6A97D /* MMDrawerController+Subclass.h in Headers */,
+				937EED282B22CC4E3EE1DEDC /* MMDrawerController.h in Headers */,
+				8D12D9AD6F81010541E8948E /* MMDrawerVisualState.h in Headers */,
+				9F26CF090BDFC1DC5E8868C6 /* UIViewController+MMDrawerController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEFF058C1517341F14495921 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98035BD1BF6A2009514A50C8 /* LSCollectionViewHelper.h in Headers */,
+				65F26639B3FF28A6EE5D5417 /* LSCollectionViewLayoutHelper.h in Headers */,
+				2CF969B7A4D9842469A3E514 /* MTCardLayout.h in Headers */,
+				D6FFAF4014CD26BF02D8DF9A /* MTCollectionViewCardLayoutHelper.h in Headers */,
+				B0E7E642C58616FFD91246B2 /* MTDraggableCardLayout.h in Headers */,
+				CF4E5E7E0F7F5F9904CFAC02 /* UICollectionView+CardLayout.h in Headers */,
+				90D4EE3DD64176D75780FE19 /* UICollectionView+Draggable.h in Headers */,
+				C49A20E63514B2C9CB10E477 /* UICollectionViewDataSource_Draggable.h in Headers */,
+				565AEA32B9361CB2F0F095C8 /* UICollectionViewLayout_Warpable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1766F2F56F934F84D8926BC1 /* Pods-cardalot-JBChartView */ = {
+		40D0BA4F9942FACA4F73EBCF /* Pods-cardalot-MMDrawerController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A4C2851EF97CABA8C3689B07 /* Build configuration list for PBXNativeTarget "Pods-cardalot-JBChartView" */;
+			buildConfigurationList = 73ECEA793266A01DF7391143 /* Build configuration list for PBXNativeTarget "Pods-cardalot-MMDrawerController" */;
 			buildPhases = (
-				95039A6A2D12E00DA5CE3B24 /* Sources */,
-				119780BB53539D7BCCDBB67F /* Frameworks */,
-				E6A96F4D2CC1C8A4EF8404FB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-cardalot-JBChartView";
-			productName = "Pods-cardalot-JBChartView";
-			productReference = 7089E1AFDBB3A118B506317E /* libPods-cardalot-JBChartView.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		212D93DDDE15BAC563BF967C /* Pods-cardalot */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB493A0060A602CB948642DD /* Build configuration list for PBXNativeTarget "Pods-cardalot" */;
-			buildPhases = (
-				B68C67041165579CFCB79B42 /* Sources */,
-				B6369C7A56067CD3B4A36A8A /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				824DE6F74FC1AB733B1F0909 /* PBXTargetDependency */,
-				18F3AC8CEE5F745E77CC757E /* PBXTargetDependency */,
-			);
-			name = "Pods-cardalot";
-			productName = "Pods-cardalot";
-			productReference = B110EA85FD77ABA4B52DDC68 /* libPods-cardalot.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		E4814896441ABE97E289E1F2 /* Pods-cardalot-MMDrawerController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 536EB3B18616059BEA6B8DD6 /* Build configuration list for PBXNativeTarget "Pods-cardalot-MMDrawerController" */;
-			buildPhases = (
-				35F478DC90F82FAF9799935A /* Sources */,
-				5F36CE80248AC5664C3B97F1 /* Frameworks */,
-				0854C8835F64F80A9C71BD0E /* Headers */,
+				5C83ACF69C61AD04E0DD63A5 /* Sources */,
+				3070B5E9F5665CAF704732D5 /* Frameworks */,
+				C284CBC39BC20B6FBE347EFB /* Headers */,
 			);
 			buildRules = (
 			);
@@ -350,89 +423,190 @@
 			);
 			name = "Pods-cardalot-MMDrawerController";
 			productName = "Pods-cardalot-MMDrawerController";
-			productReference = 9119746A9E44FF78C3EF18DF /* libPods-cardalot-MMDrawerController.a */;
+			productReference = 8B1C8B74270B53FD7110482C /* libPods-cardalot-MMDrawerController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		40F64179450912F17D5EB945 /* Pods-cardalot-JBChartView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23CDA489065ECE9BFAF8B8E0 /* Build configuration list for PBXNativeTarget "Pods-cardalot-JBChartView" */;
+			buildPhases = (
+				EB2B6210F23C529256D844F6 /* Sources */,
+				A07A66DA90F0D38E550BAD84 /* Frameworks */,
+				4D4A03C4E09113D9274571AD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-cardalot-JBChartView";
+			productName = "Pods-cardalot-JBChartView";
+			productReference = 4A58EF174C3E5EBA73BC0D13 /* libPods-cardalot-JBChartView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B286F2483F3D1925421D438F /* Pods-cardalot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5317E397C0D105FF54677910 /* Build configuration list for PBXNativeTarget "Pods-cardalot" */;
+			buildPhases = (
+				0ECD6255F90B5A364417098D /* Sources */,
+				0A361CF366423AD83450D0B1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33A9E38E3E98AAD401D05B82 /* PBXTargetDependency */,
+				98CAA18E90DCA3A77D01B52D /* PBXTargetDependency */,
+				61A00C799979AE05830C821E /* PBXTargetDependency */,
+			);
+			name = "Pods-cardalot";
+			productName = "Pods-cardalot";
+			productReference = 48D8EDF2E697F503978DFF95 /* libPods-cardalot.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E10333CEA3177562DEAE4155 /* Pods-cardalot-MTCardLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C6FD71B1846153C2A725BB9 /* Build configuration list for PBXNativeTarget "Pods-cardalot-MTCardLayout" */;
+			buildPhases = (
+				1A0A14FB19AD81ED485EEF68 /* Sources */,
+				BD953469C908191BFB4A19C2 /* Frameworks */,
+				DEFF058C1517341F14495921 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-cardalot-MTCardLayout";
+			productName = "Pods-cardalot-MTCardLayout";
+			productReference = 4024BC785677C458B9262F40 /* libPods-cardalot-MTCardLayout.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4E5E10A107880F8BC9CC29F1 /* Project object */ = {
+		0646B3232F896E1486535BB7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
 			};
-			buildConfigurationList = 19B973CC8B2848B5C69637FB /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = A26CA60056B66BC74A014D78 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = A596476B7201C3FC0CB12CA0;
-			productRefGroup = 660C38974CD336C7C2A1F3C2 /* Products */;
+			mainGroup = 81B1E2A447771A520B0F8EEE;
+			productRefGroup = 97A1668AE9BDD6A13BF86A14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				212D93DDDE15BAC563BF967C /* Pods-cardalot */,
-				1766F2F56F934F84D8926BC1 /* Pods-cardalot-JBChartView */,
-				E4814896441ABE97E289E1F2 /* Pods-cardalot-MMDrawerController */,
+				B286F2483F3D1925421D438F /* Pods-cardalot */,
+				40F64179450912F17D5EB945 /* Pods-cardalot-JBChartView */,
+				40D0BA4F9942FACA4F73EBCF /* Pods-cardalot-MMDrawerController */,
+				E10333CEA3177562DEAE4155 /* Pods-cardalot-MTCardLayout */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		35F478DC90F82FAF9799935A /* Sources */ = {
+		0ECD6255F90B5A364417098D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B8D6CD6D879A4AA368BFDFF /* MMDrawerBarButtonItem.m in Sources */,
-				73EC7E0E7B5328C396DCCF20 /* MMDrawerController.m in Sources */,
-				F2CD45F6D063A4743AC12AF0 /* MMDrawerVisualState.m in Sources */,
-				45F68920FE0B1C948D867EA2 /* Pods-cardalot-MMDrawerController-dummy.m in Sources */,
-				49BAE670B923D3EDEBAB2CC7 /* UIViewController+MMDrawerController.m in Sources */,
+				293365DEAD1EF01D5265B203 /* Pods-cardalot-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95039A6A2D12E00DA5CE3B24 /* Sources */ = {
+		1A0A14FB19AD81ED485EEF68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0E87597A7C3BB94ED260D3F /* JBBarChartView.m in Sources */,
-				20CCEA9924CA4BD99B747816 /* JBChartView.m in Sources */,
-				AA202D2B1C94E57AE4B24A2F /* JBLineChartView.m in Sources */,
-				ED9F9B57EBEBE388B25AF585 /* Pods-cardalot-JBChartView-dummy.m in Sources */,
+				0F30811A6F3B2E2937536560 /* LSCollectionViewHelper.m in Sources */,
+				D37CAA13A1B8E02F63B5964C /* LSCollectionViewLayoutHelper.m in Sources */,
+				7077E7338A20F4B109D360D5 /* MTCardLayout.m in Sources */,
+				6C67471A21D78E7CFF2D361C /* MTCollectionViewCardLayoutHelper.m in Sources */,
+				964A0620DDFA738AF71B4514 /* MTDraggableCardLayout.m in Sources */,
+				3D8700A0B2BD4EE339BDC0CB /* Pods-cardalot-MTCardLayout-dummy.m in Sources */,
+				3947DE663A8DCE041BE84A3F /* UICollectionView+CardLayout.m in Sources */,
+				55DED0D09B3368A2604099BF /* UICollectionView+Draggable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B68C67041165579CFCB79B42 /* Sources */ = {
+		5C83ACF69C61AD04E0DD63A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2EF45F8B0A7638FA60F46CA /* Pods-cardalot-dummy.m in Sources */,
+				0FC9BC5283F4DC66F5F1EE7F /* MMDrawerBarButtonItem.m in Sources */,
+				5E1614E704B481BCF567FEBE /* MMDrawerController.m in Sources */,
+				0A87F6322EC74A5CBDA856CD /* MMDrawerVisualState.m in Sources */,
+				4B01EE630A25023B173577B4 /* Pods-cardalot-MMDrawerController-dummy.m in Sources */,
+				67F26CCA88ABD637C9228210 /* UIViewController+MMDrawerController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB2B6210F23C529256D844F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190ACF68ED7366858695A397 /* JBBarChartView.m in Sources */,
+				0BC550A70F54E655BD72634C /* JBChartView.m in Sources */,
+				69AC4222F932B75E7634B1DF /* JBLineChartView.m in Sources */,
+				CF10EA8986C1AB7685B9CCC7 /* Pods-cardalot-JBChartView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		18F3AC8CEE5F745E77CC757E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-cardalot-MMDrawerController";
-			target = E4814896441ABE97E289E1F2 /* Pods-cardalot-MMDrawerController */;
-			targetProxy = 473D93A53DFAE616EB2025A8 /* PBXContainerItemProxy */;
-		};
-		824DE6F74FC1AB733B1F0909 /* PBXTargetDependency */ = {
+		33A9E38E3E98AAD401D05B82 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-cardalot-JBChartView";
-			target = 1766F2F56F934F84D8926BC1 /* Pods-cardalot-JBChartView */;
-			targetProxy = C7C48A97DD2670A08A5CF20D /* PBXContainerItemProxy */;
+			target = 40F64179450912F17D5EB945 /* Pods-cardalot-JBChartView */;
+			targetProxy = EB89EE7BE3D3C76901DDF2D0 /* PBXContainerItemProxy */;
+		};
+		61A00C799979AE05830C821E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-cardalot-MTCardLayout";
+			target = E10333CEA3177562DEAE4155 /* Pods-cardalot-MTCardLayout */;
+			targetProxy = B06CEB3BCC4640F86F5A8A1A /* PBXContainerItemProxy */;
+		};
+		98CAA18E90DCA3A77D01B52D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-cardalot-MMDrawerController";
+			target = 40D0BA4F9942FACA4F73EBCF /* Pods-cardalot-MMDrawerController */;
+			targetProxy = 56BDBD9054EE195062BBEC66 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		04B6A80B9531C48A224F924B /* Debug */ = {
+		0CB724031886FB5C9984E10F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF24D65C2574E27023676B6D /* Pods-cardalot-JBChartView-Private.xcconfig */;
+			baseConfigurationReference = 7734FDA885529DC4A7CCC231 /* Pods-cardalot.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		151F86D1B9EE44819EDCFFD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6492046247D7D49981F6586F /* Pods-cardalot-JBChartView-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -457,60 +631,7 @@
 			};
 			name = Debug;
 		};
-		153DF3CF4373D404F170D291 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2171F12EE9BE95DB67B0348 /* Pods-cardalot.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		5719DED81CBDE6B23888136F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DBC46AA5620A4DE7403EBA8 /* Pods-cardalot-MMDrawerController-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-cardalot-MMDrawerController/Pods-cardalot-MMDrawerController-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		8D00891F038A2BB173CA8EF5 /* Debug */ = {
+		2117EBE0B5C18CA4FBA94885 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -546,9 +667,36 @@
 			};
 			name = Debug;
 		};
-		A97F0DC576AD4DF68BB0A8E1 /* Release */ = {
+		24DD9BC079CB33F50C5C9B5D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF24D65C2574E27023676B6D /* Pods-cardalot-JBChartView-Private.xcconfig */;
+			baseConfigurationReference = 658F529B217157026DCC90A8 /* Pods-cardalot-MMDrawerController-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-cardalot-MMDrawerController/Pods-cardalot-MMDrawerController-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		701D828D5335487EA9B9359E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6492046247D7D49981F6586F /* Pods-cardalot-JBChartView-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
@@ -575,64 +723,7 @@
 			};
 			name = Release;
 		};
-		C033621C715B24E038F031FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DBC46AA5620A4DE7403EBA8 /* Pods-cardalot-MMDrawerController-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-cardalot-MMDrawerController/Pods-cardalot-MMDrawerController-prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C0F1D74A1632A6CD807CC365 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B8A60732508CDCC5EE17DD9 /* Pods-cardalot.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D3096E8F8EE6289FDB61EA6A /* Release */ = {
+		B1193F3E8969BE1FDBFF5882 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -663,46 +754,168 @@
 			};
 			name = Release;
 		};
+		D648C8711AFF6A60F15F21F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E552F18263DA15A4226344CD /* Pods-cardalot-MTCardLayout-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-cardalot-MTCardLayout/Pods-cardalot-MTCardLayout-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E646F0FB3BCF3891D0D83C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEBCCD4219156C94FE7D162B /* Pods-cardalot.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED098A7FA364764F3D5F9411 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 658F529B217157026DCC90A8 /* Pods-cardalot-MMDrawerController-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-cardalot-MMDrawerController/Pods-cardalot-MMDrawerController-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD31E41C09E9BDA1B656279E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E552F18263DA15A4226344CD /* Pods-cardalot-MTCardLayout-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-cardalot-MTCardLayout/Pods-cardalot-MTCardLayout-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		19B973CC8B2848B5C69637FB /* Build configuration list for PBXProject "Pods" */ = {
+		23CDA489065ECE9BFAF8B8E0 /* Build configuration list for PBXNativeTarget "Pods-cardalot-JBChartView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8D00891F038A2BB173CA8EF5 /* Debug */,
-				D3096E8F8EE6289FDB61EA6A /* Release */,
+				151F86D1B9EE44819EDCFFD1 /* Debug */,
+				701D828D5335487EA9B9359E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		536EB3B18616059BEA6B8DD6 /* Build configuration list for PBXNativeTarget "Pods-cardalot-MMDrawerController" */ = {
+		5317E397C0D105FF54677910 /* Build configuration list for PBXNativeTarget "Pods-cardalot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5719DED81CBDE6B23888136F /* Debug */,
-				C033621C715B24E038F031FF /* Release */,
+				0CB724031886FB5C9984E10F /* Debug */,
+				E646F0FB3BCF3891D0D83C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A4C2851EF97CABA8C3689B07 /* Build configuration list for PBXNativeTarget "Pods-cardalot-JBChartView" */ = {
+		73ECEA793266A01DF7391143 /* Build configuration list for PBXNativeTarget "Pods-cardalot-MMDrawerController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04B6A80B9531C48A224F924B /* Debug */,
-				A97F0DC576AD4DF68BB0A8E1 /* Release */,
+				24DD9BC079CB33F50C5C9B5D /* Debug */,
+				ED098A7FA364764F3D5F9411 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB493A0060A602CB948642DD /* Build configuration list for PBXNativeTarget "Pods-cardalot" */ = {
+		8C6FD71B1846153C2A725BB9 /* Build configuration list for PBXNativeTarget "Pods-cardalot-MTCardLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				153DF3CF4373D404F170D291 /* Debug */,
-				C0F1D74A1632A6CD807CC365 /* Release */,
+				D648C8711AFF6A60F15F21F3 /* Debug */,
+				FD31E41C09E9BDA1B656279E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A26CA60056B66BC74A014D78 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2117EBE0B5C18CA4FBA94885 /* Debug */,
+				B1193F3E8969BE1FDBFF5882 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4E5E10A107880F8BC9CC29F1 /* Project object */;
+	rootObject = 0646B3232F896E1486535BB7 /* Project object */;
 }
