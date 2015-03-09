@@ -8,10 +8,13 @@
 
 #import "DeckCollectionViewLayout.h"
 #import "DeckController.h"
+#import "DeckCollectionViewDataSource.h"
+
+#define kNumberOfItemsPerPage 8
 
 static NSString * const cellIdentifier = @"cell";
 
-@interface DeckCollectionViewLayout ()
+@interface DeckCollectionViewLayout () <UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSDictionary *layoutInfo;
 
@@ -39,7 +42,7 @@ static NSString * const cellIdentifier = @"cell";
 
 - (void)setup {
     self.itemInsets = UIEdgeInsetsMake(22.0f, 22.0f, 13.0f, 22.0f);
-    self.itemSize = CGSizeMake(150.0f, 150.0f);
+    self.itemSize = CGSizeMake(160.0f, 160.0f);
     self.interItemSpacingY = 12.0f;
     self.numberOfColumns = 2;
 }
@@ -113,22 +116,21 @@ static NSString * const cellIdentifier = @"cell";
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
-    //return [DeckController sharedInstance].decks[cellIdentifier][indexPath];
     return self.layoutInfo[cellIdentifier][indexPath];
 }
 
-- (CGSize)collectionViewContentSize {
-    NSInteger rowCount = [self.collectionView numberOfSections] / self.numberOfColumns;
-    // make sure we count another row if one is only partially filled
-    if ([self.collectionView numberOfSections] % self.numberOfColumns) rowCount++;
 
-    CGFloat height = self.itemInsets.top + rowCount * self.itemSize.height + (rowCount - 1) * self.interItemSpacingY + self.itemInsets.bottom;
+- (CGSize)collectionViewContentSize {
+    DeckCollectionViewDataSource *dataSource = [[DeckCollectionViewDataSource alloc] init];
+    int numberOfItems = [dataSource collectionView:self.collectionView numberOfItemsInSection:0];
+
+    CGFloat height = (numberOfItems / 2) * (self.itemSize.height + self.interItemSpacingY + 5);
 
     return CGSizeMake(self.collectionView.bounds.size.width, height);
 }
 
--(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
-    return YES;
-}
+//-(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
+//    return YES;
+//}
 
 @end
