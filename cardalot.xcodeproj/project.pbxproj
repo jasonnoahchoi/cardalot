@@ -30,6 +30,13 @@
 		725180F01AAA772A00C446E5 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EF1AAA772A00C446E5 /* Card.m */; };
 		725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F21AAA7AFE00C446E5 /* DeckController.m */; };
 		725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */; };
+		FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0AC61AAE579A00BDD975 /* BackTextCell.m */; };
+		FF8F0AD11AAE579A00BDD975 /* BackTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8F0AC71AAE579A00BDD975 /* BackTextCell.xib */; };
+		FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0AC91AAE579A00BDD975 /* CardViewController.m */; };
+		FF8F0AD31AAE579A00BDD975 /* deckTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0ACB1AAE579A00BDD975 /* deckTagCell.m */; };
+		FF8F0AD41AAE579A00BDD975 /* deckTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8F0ACC1AAE579A00BDD975 /* deckTagCell.xib */; };
+		FF8F0AD51AAE579A00BDD975 /* frontTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0ACE1AAE579A00BDD975 /* frontTextCell.m */; };
+		FF8F0AD61AAE579A00BDD975 /* frontTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8F0ACF1AAE579A00BDD975 /* frontTextCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +93,17 @@
 		725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewDataSource.m; sourceTree = "<group>"; };
 		D497B0555BFD87161A2C78C4 /* Pods-cardalot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardalot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardalot/Pods-cardalot.debug.xcconfig"; sourceTree = "<group>"; };
 		EC8B54A570249508FE757348 /* libPods-cardalot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8F0AC51AAE579A00BDD975 /* BackTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackTextCell.h; sourceTree = "<group>"; };
+		FF8F0AC61AAE579A00BDD975 /* BackTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackTextCell.m; sourceTree = "<group>"; };
+		FF8F0AC71AAE579A00BDD975 /* BackTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackTextCell.xib; sourceTree = "<group>"; };
+		FF8F0AC81AAE579A00BDD975 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		FF8F0AC91AAE579A00BDD975 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		FF8F0ACA1AAE579A00BDD975 /* deckTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deckTagCell.h; sourceTree = "<group>"; };
+		FF8F0ACB1AAE579A00BDD975 /* deckTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = deckTagCell.m; sourceTree = "<group>"; };
+		FF8F0ACC1AAE579A00BDD975 /* deckTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = deckTagCell.xib; sourceTree = "<group>"; };
+		FF8F0ACD1AAE579A00BDD975 /* frontTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frontTextCell.h; sourceTree = "<group>"; };
+		FF8F0ACE1AAE579A00BDD975 /* frontTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = frontTextCell.m; sourceTree = "<group>"; };
+		FF8F0ACF1AAE579A00BDD975 /* frontTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = frontTextCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,20 +126,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08D8F8CB1AACE7290015A4BD /* DeckCollectionView */ = {
+		08D8F8CB1AACE7290015A4BD /* DeckCollectionView Layout */ = {
 			isa = PBXGroup;
 			children = (
-				08FE1E7A1AAA5F570068F0C9 /* DeckCollectionViewController.h */,
-				08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */,
-				725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */,
-				725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */,
-				0868F52D1AABDD58008CA47D /* DeckCollectionViewCell.h */,
-				0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */,
-				0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */,
 				08D8F8CC1AACE7670015A4BD /* DeckCollectionViewLayout.h */,
 				08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */,
 			);
-			name = DeckCollectionView;
+			name = "DeckCollectionView Layout";
 			sourceTree = "<group>";
 		};
 		08FE1E671AAA5F570068F0C9 = {
@@ -151,32 +162,14 @@
 				08FE1E781AAA5F570068F0C9 /* AppDelegate.m */,
 				08977A131AABCB6C00E525D0 /* AppearanceController.h */,
 				08977A141AABCB6C00E525D0 /* AppearanceController.m */,
-				08FE1E7A1AAA5F570068F0C9 /* DeckCollectionViewController.h */,
-				08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */,
-				725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */,
-				725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */,
-				0868F52D1AABDD58008CA47D /* DeckCollectionViewCell.h */,
-				0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */,
-				0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */,
+				FF8F0AD81AAE592200BDD975 /* Deck Collection View */,
+				FF8F0AD91AAE594000BDD975 /* Card Collection View */,
+				FF8F0AC41AAE577F00BDD975 /* Card Entry View */,
 				7200CEB11AACE66000E84D55 /* HistoryViewController.h */,
 				7200CEB21AACE66000E84D55 /* HistoryViewController.m */,
-				7200CEC01AAD1D9A00E84D55 /* CardCollectionViewController.h */,
-				7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */,
-				7200CEC31AAD1E9800E84D55 /* CardCollectionViewCell.h */,
-				7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */,
-				7200CEC61AAD1FD000E84D55 /* CardCollectionViewDataSource.h */,
-				7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */,
-				08D8F8CB1AACE7290015A4BD /* DeckCollectionView */,
-				08D8F8CB1AACE7290015A4BD /* DeckCollectionView */,
-				725180E51AAA6FAE00C446E5 /* Stack.h */,
-				725180E61AAA6FAE00C446E5 /* Stack.m */,
-				725180E81AAA751600C446E5 /* Model.xcdatamodeld */,
-				725180EE1AAA772A00C446E5 /* Card.h */,
-				725180EF1AAA772A00C446E5 /* Card.m */,
-				725180EB1AAA772900C446E5 /* Deck.h */,
-				725180EC1AAA772900C446E5 /* Deck.m */,
 				725180F11AAA7AFE00C446E5 /* DeckController.h */,
 				725180F21AAA7AFE00C446E5 /* DeckController.m */,
+				FF8F0ADA1AAE597200BDD975 /* Model */,
 				08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */,
 				08FE1E801AAA5F570068F0C9 /* Images.xcassets */,
 				08FE1E821AAA5F570068F0C9 /* LaunchScreen.xib */,
@@ -227,6 +220,74 @@
 				1E0294E2F64F78E379287CCE /* Pods-cardalot.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF8F0AC41AAE577F00BDD975 /* Card Entry View */ = {
+			isa = PBXGroup;
+			children = (
+				FF8F0AC81AAE579A00BDD975 /* CardViewController.h */,
+				FF8F0AC91AAE579A00BDD975 /* CardViewController.m */,
+				FF8F0AD71AAE57AA00BDD975 /* UI Class Cells */,
+			);
+			name = "Card Entry View";
+			sourceTree = "<group>";
+		};
+		FF8F0AD71AAE57AA00BDD975 /* UI Class Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FF8F0AC51AAE579A00BDD975 /* BackTextCell.h */,
+				FF8F0AC61AAE579A00BDD975 /* BackTextCell.m */,
+				FF8F0AC71AAE579A00BDD975 /* BackTextCell.xib */,
+				FF8F0ACA1AAE579A00BDD975 /* deckTagCell.h */,
+				FF8F0ACB1AAE579A00BDD975 /* deckTagCell.m */,
+				FF8F0ACC1AAE579A00BDD975 /* deckTagCell.xib */,
+				FF8F0ACD1AAE579A00BDD975 /* frontTextCell.h */,
+				FF8F0ACE1AAE579A00BDD975 /* frontTextCell.m */,
+				FF8F0ACF1AAE579A00BDD975 /* frontTextCell.xib */,
+			);
+			name = "UI Class Cells";
+			sourceTree = "<group>";
+		};
+		FF8F0AD81AAE592200BDD975 /* Deck Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				08FE1E7A1AAA5F570068F0C9 /* DeckCollectionViewController.h */,
+				08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */,
+				725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */,
+				725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */,
+				0868F52D1AABDD58008CA47D /* DeckCollectionViewCell.h */,
+				0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */,
+				0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */,
+				08D8F8CB1AACE7290015A4BD /* DeckCollectionView Layout */,
+			);
+			name = "Deck Collection View";
+			sourceTree = "<group>";
+		};
+		FF8F0AD91AAE594000BDD975 /* Card Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				7200CEC01AAD1D9A00E84D55 /* CardCollectionViewController.h */,
+				7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */,
+				7200CEC31AAD1E9800E84D55 /* CardCollectionViewCell.h */,
+				7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */,
+				7200CEC61AAD1FD000E84D55 /* CardCollectionViewDataSource.h */,
+				7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */,
+			);
+			name = "Card Collection View";
+			sourceTree = "<group>";
+		};
+		FF8F0ADA1AAE597200BDD975 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				725180E51AAA6FAE00C446E5 /* Stack.h */,
+				725180E61AAA6FAE00C446E5 /* Stack.m */,
+				725180E81AAA751600C446E5 /* Model.xcdatamodeld */,
+				725180EE1AAA772A00C446E5 /* Card.h */,
+				725180EF1AAA772A00C446E5 /* Card.m */,
+				725180EB1AAA772900C446E5 /* Deck.h */,
+				725180EC1AAA772900C446E5 /* Deck.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,10 +372,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8F0AD61AAE579A00BDD975 /* frontTextCell.xib in Resources */,
 				08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */,
+				FF8F0AD41AAE579A00BDD975 /* deckTagCell.xib in Resources */,
 				0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */,
 				08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */,
 				08FE1E811AAA5F570068F0C9 /* Images.xcassets in Resources */,
+				FF8F0AD11AAE579A00BDD975 /* BackTextCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,18 +430,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				725180E71AAA6FAE00C446E5 /* Stack.m in Sources */,
+				FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */,
 				08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
+				FF8F0AD51AAE579A00BDD975 /* frontTextCell.m in Sources */,
 				725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */,
 				725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */,
 				08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */,
 				725180ED1AAA772900C446E5 /* Deck.m in Sources */,
 				725180F01AAA772A00C446E5 /* Card.m in Sources */,
 				725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */,
+				FF8F0AD31AAE579A00BDD975 /* deckTagCell.m in Sources */,
 				08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
 				0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */,
 				7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */,
+				FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */,
 				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
 				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,
 				7200CEB31AACE66000E84D55 /* HistoryViewController.m in Sources */,
