@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "941AE2005B16EE7DF975BFB1"
+               BlueprintIdentifier = "F68003B0DB7676A42EE8AD80"
                BuildableName = "libPods-cardalot-JBChartView.a"
                BlueprintName = "Pods-cardalot-JBChartView"
                ReferencedContainer = "container:Pods.xcodeproj">

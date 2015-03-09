@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9A77E86058E736C88C5A1858"
+               BlueprintIdentifier = "317AF8F25FF3CD98FAC6698B"
                BuildableName = "libPods-cardalot.a"
                BlueprintName = "Pods-cardalot"
                ReferencedContainer = "container:Pods.xcodeproj">

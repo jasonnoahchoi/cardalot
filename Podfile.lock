@@ -1,5 +1,5 @@
 PODS:
-<<<<<<< HEAD
+  - IQKeyboardManager (3.2.1.1)
   - JBChartView (2.8.10)
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core (= 0.5.7)
@@ -16,22 +16,15 @@ PODS:
   - MTCardLayout (1.0.3)
 
 DEPENDENCIES:
+  - IQKeyboardManager (~> 3.2.1.1)
   - JBChartView (~> 2.8.10)
   - MMDrawerController (~> 0.5.7)
   - MTCardLayout (~> 1.0.3)
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: 4e83eef847c6f5edbd670284e50c7e3d643ebdb5
   JBChartView: 50b221ef68d0934f5aea417a369a5b02167848a9
   MMDrawerController: c3ab7a318ddc7e2bcd133139c3161af08c6e1197
   MTCardLayout: cccc3913687fe6c84007e04730e02c6c0d699995
-=======
-  - IQKeyboardManager (3.2.1.1)
-
-DEPENDENCIES:
-  - IQKeyboardManager (~> 3.2.1.1)
-
-SPEC CHECKSUMS:
-  IQKeyboardManager: 4e83eef847c6f5edbd670284e50c7e3d643ebdb5
->>>>>>> feature/NewCardVC
 
 COCOAPODS: 0.35.0

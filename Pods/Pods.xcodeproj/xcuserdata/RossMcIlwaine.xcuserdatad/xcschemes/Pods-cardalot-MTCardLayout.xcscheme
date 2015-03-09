@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CBB9F474C6AB760A80C1CF67"
-               BuildableName = "libPods-cardalot-IQKeyboardManager.a"
-               BlueprintName = "Pods-cardalot-IQKeyboardManager"
+               BlueprintIdentifier = "B11CC7AE8563785759AA351C"
+               BuildableName = "libPods-cardalot-MTCardLayout.a"
+               BlueprintName = "Pods-cardalot-MTCardLayout"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

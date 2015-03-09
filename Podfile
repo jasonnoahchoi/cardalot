@@ -3,13 +3,10 @@
 
 target 'cardalot' do
 
-<<<<<<< HEAD
 pod 'MMDrawerController', '~> 0.5.7'
 pod 'JBChartView', '~> 2.8.10'
 pod 'MTCardLayout', '~> 1.0.3'
-=======
 pod 'IQKeyboardManager', '~> 3.2.1.1'
->>>>>>> feature/NewCardVC
 
 end
 

@@ -1,926 +1,3 @@
-<<<<<<< HEAD
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		0954133B309889473114A820 /* JBChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BDF0FC973AF81E658550FDE /* JBChartView.h */; };
-		0A87F6322EC74A5CBDA856CD /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 340B2F3BB5A035F743000163 /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0BC550A70F54E655BD72634C /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 807D4C8E64E6F0E7AAB373F9 /* JBChartView.m */; };
-		0F30811A6F3B2E2937536560 /* LSCollectionViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F64D22F532A9FED3735B7C91 /* LSCollectionViewHelper.m */; };
-		0F55BFEE40C1593EA6580567 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 76EC30758F56F25DF894F02B /* MMDrawerBarButtonItem.h */; };
-		0FC9BC5283F4DC66F5F1EE7F /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D91E1FC080FC169BB6FF7A8 /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		190ACF68ED7366858695A397 /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A8EC7E2D4C9DA1AB426E14 /* JBBarChartView.m */; };
-		1B71DCF778B0B9CA9F3F4C7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926D28EE45FC93F93E82C395 /* Foundation.framework */; };
-		27E5952FF7C779D64069D8BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926D28EE45FC93F93E82C395 /* Foundation.framework */; };
-		293365DEAD1EF01D5265B203 /* Pods-cardalot-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FF951EE151C03EAD809D0 /* Pods-cardalot-dummy.m */; };
-		2CF969B7A4D9842469A3E514 /* MTCardLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 6151F7201FC27C4FE1FA99C3 /* MTCardLayout.h */; };
-		379BFC9ED82FD9BF8AF6A97D /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 369E194245A49DC263A78649 /* MMDrawerController+Subclass.h */; };
-		3947DE663A8DCE041BE84A3F /* UICollectionView+CardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BFBDA8124CFDE94C25AD5A /* UICollectionView+CardLayout.m */; };
-		3D8700A0B2BD4EE339BDC0CB /* Pods-cardalot-MTCardLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 170F6C35C82E2041F851303A /* Pods-cardalot-MTCardLayout-dummy.m */; };
-		3EEC41ACC5CE8C5D5B3BE96F /* JBBarChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD2E88E41B9226293C172DD /* JBBarChartView.h */; };
-		4B01EE630A25023B173577B4 /* Pods-cardalot-MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A55F27B5E69B20BC03D33175 /* Pods-cardalot-MMDrawerController-dummy.m */; };
-		55DED0D09B3368A2604099BF /* UICollectionView+Draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = F2831726284E607959AD59DC /* UICollectionView+Draggable.m */; };
-		565AEA32B9361CB2F0F095C8 /* UICollectionViewLayout_Warpable.h in Headers */ = {isa = PBXBuildFile; fileRef = 457A24846FFBCC0725B48351 /* UICollectionViewLayout_Warpable.h */; };
-		5E1614E704B481BCF567FEBE /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A662D62B536CABD8BF3DC6 /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		65F26639B3FF28A6EE5D5417 /* LSCollectionViewLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3528023D9194FEACDAE6F189 /* LSCollectionViewLayoutHelper.h */; };
-		67F26CCA88ABD637C9228210 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786D69B97F2454192E8B3B2A /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		69AC4222F932B75E7634B1DF /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1559069162EE631E612DF /* JBLineChartView.m */; };
-		6C67471A21D78E7CFF2D361C /* MTCollectionViewCardLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8180A7004FFEFEF8B160A771 /* MTCollectionViewCardLayoutHelper.m */; };
-		7077E7338A20F4B109D360D5 /* MTCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4E02268A1FA7B4994CFAB6 /* MTCardLayout.m */; };
-		7991F85694AA334CBD83F9FD /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0141E6491F293310CAD3A55A /* JBLineChartView.h */; };
-		892FB2B2E93F8AEFCFD1D4B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926D28EE45FC93F93E82C395 /* Foundation.framework */; };
-		8D12D9AD6F81010541E8948E /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = 8644DCE07D189D5148108BBF /* MMDrawerVisualState.h */; };
-		90D4EE3DD64176D75780FE19 /* UICollectionView+Draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = B678FF45AB91569D6BC27C9B /* UICollectionView+Draggable.h */; };
-		919BF4A870D82145D4BE44C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926D28EE45FC93F93E82C395 /* Foundation.framework */; };
-		937EED282B22CC4E3EE1DEDC /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = EBCA38E273CAD8BB44609FFC /* MMDrawerController.h */; };
-		964A0620DDFA738AF71B4514 /* MTDraggableCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3527FA131D392BD05AE1 /* MTDraggableCardLayout.m */; };
-		98035BD1BF6A2009514A50C8 /* LSCollectionViewHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 436D5D8EE9D91A4D0544A714 /* LSCollectionViewHelper.h */; };
-		9F26CF090BDFC1DC5E8868C6 /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 785C462DA3E32045EC530B00 /* UIViewController+MMDrawerController.h */; };
-		B0E7E642C58616FFD91246B2 /* MTDraggableCardLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 4860D325D1EB50A9DFB5E98B /* MTDraggableCardLayout.h */; };
-		C2C6B38EE345D5A9F6429341 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E3ED83FE550BABBF352EF1 /* QuartzCore.framework */; };
-		C49A20E63514B2C9CB10E477 /* UICollectionViewDataSource_Draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1C0A2C5519D653BED90B96 /* UICollectionViewDataSource_Draggable.h */; };
-		CF10EA8986C1AB7685B9CCC7 /* Pods-cardalot-JBChartView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AAE2A4BDE4D9897A08232A /* Pods-cardalot-JBChartView-dummy.m */; };
-		CF4E5E7E0F7F5F9904CFAC02 /* UICollectionView+CardLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF29BF71D575281EB2E3431 /* UICollectionView+CardLayout.h */; };
-		D37CAA13A1B8E02F63B5964C /* LSCollectionViewLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B835899FA21D32BC2AA3E647 /* LSCollectionViewLayoutHelper.m */; };
-		D6FFAF4014CD26BF02D8DF9A /* MTCollectionViewCardLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E1DFF4817B337724CAEF4B /* MTCollectionViewCardLayoutHelper.h */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		56BDBD9054EE195062BBEC66 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0646B3232F896E1486535BB7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 40D0BA4F9942FACA4F73EBCF;
-			remoteInfo = "Pods-cardalot-MMDrawerController";
-		};
-		B06CEB3BCC4640F86F5A8A1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0646B3232F896E1486535BB7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E10333CEA3177562DEAE4155;
-			remoteInfo = "Pods-cardalot-MTCardLayout";
-		};
-		EB89EE7BE3D3C76901DDF2D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0646B3232F896E1486535BB7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 40F64179450912F17D5EB945;
-			remoteInfo = "Pods-cardalot-JBChartView";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		0141E6491F293310CAD3A55A /* JBLineChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JBLineChartView.h; path = Classes/JBLineChartView.h; sourceTree = "<group>"; };
-		14FE112B78C158AC26740EB8 /* Pods-cardalot-MTCardLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-MTCardLayout.xcconfig"; sourceTree = "<group>"; };
-		16DCE994DEFCA33C7E02D6B0 /* Pods-cardalot-MTCardLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-cardalot-MTCardLayout-prefix.pch"; sourceTree = "<group>"; };
-		170F6C35C82E2041F851303A /* Pods-cardalot-MTCardLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-cardalot-MTCardLayout-dummy.m"; sourceTree = "<group>"; };
-		1FD2E88E41B9226293C172DD /* JBBarChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JBBarChartView.h; path = Classes/JBBarChartView.h; sourceTree = "<group>"; };
-		2D91E1FC080FC169BB6FF7A8 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
-		340B2F3BB5A035F743000163 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
-		3528023D9194FEACDAE6F189 /* LSCollectionViewLayoutHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSCollectionViewLayoutHelper.h; path = MTCardLayout/DraggableCollectionView/Helpers/LSCollectionViewLayoutHelper.h; sourceTree = "<group>"; };
-		369E194245A49DC263A78649 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
-		4024BC785677C458B9262F40 /* libPods-cardalot-MTCardLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot-MTCardLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		42FC50758E7C4FE91EC7A5EA /* Pods-cardalot-JBChartView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-cardalot-JBChartView-prefix.pch"; sourceTree = "<group>"; };
-		433780888760C5C32A4A3C54 /* Pods-cardalot-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-cardalot-acknowledgements.markdown"; sourceTree = "<group>"; };
-		436D5D8EE9D91A4D0544A714 /* LSCollectionViewHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSCollectionViewHelper.h; path = MTCardLayout/DraggableCollectionView/Helpers/LSCollectionViewHelper.h; sourceTree = "<group>"; };
-		457A24846FFBCC0725B48351 /* UICollectionViewLayout_Warpable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UICollectionViewLayout_Warpable.h; path = MTCardLayout/DraggableCollectionView/UICollectionViewLayout_Warpable.h; sourceTree = "<group>"; };
-		47A662D62B536CABD8BF3DC6 /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
-		4860D325D1EB50A9DFB5E98B /* MTDraggableCardLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTDraggableCardLayout.h; path = MTCardLayout/MTDraggableCardLayout.h; sourceTree = "<group>"; };
-		48D8EDF2E697F503978DFF95 /* libPods-cardalot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A58EF174C3E5EBA73BC0D13 /* libPods-cardalot-JBChartView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot-JBChartView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BDF0FC973AF81E658550FDE /* JBChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JBChartView.h; path = Classes/JBChartView.h; sourceTree = "<group>"; };
-		6151F7201FC27C4FE1FA99C3 /* MTCardLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTCardLayout.h; path = MTCardLayout/MTCardLayout.h; sourceTree = "<group>"; };
-		6492046247D7D49981F6586F /* Pods-cardalot-JBChartView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-JBChartView-Private.xcconfig"; sourceTree = "<group>"; };
-		658F529B217157026DCC90A8 /* Pods-cardalot-MMDrawerController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-MMDrawerController-Private.xcconfig"; sourceTree = "<group>"; };
-		6F1C0A2C5519D653BED90B96 /* UICollectionViewDataSource_Draggable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UICollectionViewDataSource_Draggable.h; path = MTCardLayout/DraggableCollectionView/UICollectionViewDataSource_Draggable.h; sourceTree = "<group>"; };
-		70801BF58C3B29AF91C8EAD3 /* Pods-cardalot-JBChartView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-JBChartView.xcconfig"; sourceTree = "<group>"; };
-		76EC30758F56F25DF894F02B /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
-		7734FDA885529DC4A7CCC231 /* Pods-cardalot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot.debug.xcconfig"; sourceTree = "<group>"; };
-		785C462DA3E32045EC530B00 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
-		786D69B97F2454192E8B3B2A /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
-		7A2FF951EE151C03EAD809D0 /* Pods-cardalot-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-cardalot-dummy.m"; sourceTree = "<group>"; };
-		807D4C8E64E6F0E7AAB373F9 /* JBChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JBChartView.m; path = Classes/JBChartView.m; sourceTree = "<group>"; };
-		8180A7004FFEFEF8B160A771 /* MTCollectionViewCardLayoutHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTCollectionViewCardLayoutHelper.m; path = MTCardLayout/MTCollectionViewCardLayoutHelper.m; sourceTree = "<group>"; };
-		8644DCE07D189D5148108BBF /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
-		89AAE2A4BDE4D9897A08232A /* Pods-cardalot-JBChartView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-cardalot-JBChartView-dummy.m"; sourceTree = "<group>"; };
-		8B1C8B74270B53FD7110482C /* libPods-cardalot-MMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot-MMDrawerController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BE1559069162EE631E612DF /* JBLineChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JBLineChartView.m; path = Classes/JBLineChartView.m; sourceTree = "<group>"; };
-		8EF29BF71D575281EB2E3431 /* UICollectionView+CardLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+CardLayout.h"; path = "MTCardLayout/UICollectionView+CardLayout.h"; sourceTree = "<group>"; };
-		926D28EE45FC93F93E82C395 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A0BFBDA8124CFDE94C25AD5A /* UICollectionView+CardLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+CardLayout.m"; path = "MTCardLayout/UICollectionView+CardLayout.m"; sourceTree = "<group>"; };
-		A55F27B5E69B20BC03D33175 /* Pods-cardalot-MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-cardalot-MMDrawerController-dummy.m"; sourceTree = "<group>"; };
-		A7E1DFF4817B337724CAEF4B /* MTCollectionViewCardLayoutHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTCollectionViewCardLayoutHelper.h; path = MTCardLayout/MTCollectionViewCardLayoutHelper.h; sourceTree = "<group>"; };
-		AF5E28B17EC637B7F9394DBB /* Pods-cardalot-MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-cardalot-MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
-		B5BE3527FA131D392BD05AE1 /* MTDraggableCardLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTDraggableCardLayout.m; path = MTCardLayout/MTDraggableCardLayout.m; sourceTree = "<group>"; };
-		B678FF45AB91569D6BC27C9B /* UICollectionView+Draggable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+Draggable.h"; path = "MTCardLayout/DraggableCollectionView/UICollectionView+Draggable.h"; sourceTree = "<group>"; };
-		B835899FA21D32BC2AA3E647 /* LSCollectionViewLayoutHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSCollectionViewLayoutHelper.m; path = MTCardLayout/DraggableCollectionView/Helpers/LSCollectionViewLayoutHelper.m; sourceTree = "<group>"; };
-		BB4E02268A1FA7B4994CFAB6 /* MTCardLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTCardLayout.m; path = MTCardLayout/MTCardLayout.m; sourceTree = "<group>"; };
-		BEBCCD4219156C94FE7D162B /* Pods-cardalot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot.release.xcconfig"; sourceTree = "<group>"; };
-		C1C1C352BED72BBF76D47F03 /* Pods-cardalot-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-cardalot-resources.sh"; sourceTree = "<group>"; };
-		C5A8EC7E2D4C9DA1AB426E14 /* JBBarChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JBBarChartView.m; path = Classes/JBBarChartView.m; sourceTree = "<group>"; };
-		D31C073C8E4A50911567F06F /* Pods-cardalot-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-cardalot-acknowledgements.plist"; sourceTree = "<group>"; };
-		D3B991A80E073444B14CF14C /* Pods-cardalot-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-cardalot-environment.h"; sourceTree = "<group>"; };
-		E552F18263DA15A4226344CD /* Pods-cardalot-MTCardLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-MTCardLayout-Private.xcconfig"; sourceTree = "<group>"; };
-		E95AA3A8FE30116A4F1B8B24 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		EBCA38E273CAD8BB44609FFC /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
-		F2831726284E607959AD59DC /* UICollectionView+Draggable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+Draggable.m"; path = "MTCardLayout/DraggableCollectionView/UICollectionView+Draggable.m"; sourceTree = "<group>"; };
-		F4E3ED83FE550BABBF352EF1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		F64D22F532A9FED3735B7C91 /* LSCollectionViewHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSCollectionViewHelper.m; path = MTCardLayout/DraggableCollectionView/Helpers/LSCollectionViewHelper.m; sourceTree = "<group>"; };
-		FE0D9FC18C277D5B60DB7CA2 /* Pods-cardalot-MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cardalot-MMDrawerController.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		0A361CF366423AD83450D0B1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27E5952FF7C779D64069D8BF /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3070B5E9F5665CAF704732D5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				919BF4A870D82145D4BE44C7 /* Foundation.framework in Frameworks */,
-				C2C6B38EE345D5A9F6429341 /* QuartzCore.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A07A66DA90F0D38E550BAD84 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B71DCF778B0B9CA9F3F4C7C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD953469C908191BFB4A19C2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				892FB2B2E93F8AEFCFD1D4B8 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		06292F70DE1CD63F5DAB49BC /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				926D28EE45FC93F93E82C395 /* Foundation.framework */,
-				F4E3ED83FE550BABBF352EF1 /* QuartzCore.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		07ADD85106E31C1074D9C765 /* MMDrawerBarButtonItem */ = {
-			isa = PBXGroup;
-			children = (
-				76EC30758F56F25DF894F02B /* MMDrawerBarButtonItem.h */,
-				2D91E1FC080FC169BB6FF7A8 /* MMDrawerBarButtonItem.m */,
-			);
-			name = MMDrawerBarButtonItem;
-			sourceTree = "<group>";
-		};
-		1492273CADC1B1B1A805AFD8 /* JBChartView */ = {
-			isa = PBXGroup;
-			children = (
-				1FD2E88E41B9226293C172DD /* JBBarChartView.h */,
-				C5A8EC7E2D4C9DA1AB426E14 /* JBBarChartView.m */,
-				4BDF0FC973AF81E658550FDE /* JBChartView.h */,
-				807D4C8E64E6F0E7AAB373F9 /* JBChartView.m */,
-				0141E6491F293310CAD3A55A /* JBLineChartView.h */,
-				8BE1559069162EE631E612DF /* JBLineChartView.m */,
-				FEFB3BAF1EE66D7A9A70DD2E /* Support Files */,
-			);
-			path = JBChartView;
-			sourceTree = "<group>";
-		};
-		1B3415017E42675EBB6B8106 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9D58AB51E564E4EB90B04EB2 /* Pods-cardalot */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		1CB69AD183D06CFD6B0189FD /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				EBCA38E273CAD8BB44609FFC /* MMDrawerController.h */,
-				47A662D62B536CABD8BF3DC6 /* MMDrawerController.m */,
-				369E194245A49DC263A78649 /* MMDrawerController+Subclass.h */,
-				785C462DA3E32045EC530B00 /* UIViewController+MMDrawerController.h */,
-				786D69B97F2454192E8B3B2A /* UIViewController+MMDrawerController.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		2A5B2CC32246D88C79A5BE69 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1492273CADC1B1B1A805AFD8 /* JBChartView */,
-				B8BED57F7DA100E700120146 /* MMDrawerController */,
-				670CF91C8B97615C6E517208 /* MTCardLayout */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		2EACA5B70F3D453BC91C1597 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FE0D9FC18C277D5B60DB7CA2 /* Pods-cardalot-MMDrawerController.xcconfig */,
-				658F529B217157026DCC90A8 /* Pods-cardalot-MMDrawerController-Private.xcconfig */,
-				A55F27B5E69B20BC03D33175 /* Pods-cardalot-MMDrawerController-dummy.m */,
-				AF5E28B17EC637B7F9394DBB /* Pods-cardalot-MMDrawerController-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-cardalot-MMDrawerController";
-			sourceTree = "<group>";
-		};
-		4139B4DDFBF29C88BE14166B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				14FE112B78C158AC26740EB8 /* Pods-cardalot-MTCardLayout.xcconfig */,
-				E552F18263DA15A4226344CD /* Pods-cardalot-MTCardLayout-Private.xcconfig */,
-				170F6C35C82E2041F851303A /* Pods-cardalot-MTCardLayout-dummy.m */,
-				16DCE994DEFCA33C7E02D6B0 /* Pods-cardalot-MTCardLayout-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-cardalot-MTCardLayout";
-			sourceTree = "<group>";
-		};
-		5F00A6B25734E9FF4CB49C73 /* Subclass */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Subclass;
-			sourceTree = "<group>";
-		};
-		670CF91C8B97615C6E517208 /* MTCardLayout */ = {
-			isa = PBXGroup;
-			children = (
-				436D5D8EE9D91A4D0544A714 /* LSCollectionViewHelper.h */,
-				F64D22F532A9FED3735B7C91 /* LSCollectionViewHelper.m */,
-				3528023D9194FEACDAE6F189 /* LSCollectionViewLayoutHelper.h */,
-				B835899FA21D32BC2AA3E647 /* LSCollectionViewLayoutHelper.m */,
-				6151F7201FC27C4FE1FA99C3 /* MTCardLayout.h */,
-				BB4E02268A1FA7B4994CFAB6 /* MTCardLayout.m */,
-				A7E1DFF4817B337724CAEF4B /* MTCollectionViewCardLayoutHelper.h */,
-				8180A7004FFEFEF8B160A771 /* MTCollectionViewCardLayoutHelper.m */,
-				4860D325D1EB50A9DFB5E98B /* MTDraggableCardLayout.h */,
-				B5BE3527FA131D392BD05AE1 /* MTDraggableCardLayout.m */,
-				8EF29BF71D575281EB2E3431 /* UICollectionView+CardLayout.h */,
-				A0BFBDA8124CFDE94C25AD5A /* UICollectionView+CardLayout.m */,
-				B678FF45AB91569D6BC27C9B /* UICollectionView+Draggable.h */,
-				F2831726284E607959AD59DC /* UICollectionView+Draggable.m */,
-				6F1C0A2C5519D653BED90B96 /* UICollectionViewDataSource_Draggable.h */,
-				457A24846FFBCC0725B48351 /* UICollectionViewLayout_Warpable.h */,
-				4139B4DDFBF29C88BE14166B /* Support Files */,
-			);
-			path = MTCardLayout;
-			sourceTree = "<group>";
-		};
-		73DC874B569B4B69FAFB48EB /* MMDrawerVisualStates */ = {
-			isa = PBXGroup;
-			children = (
-				8644DCE07D189D5148108BBF /* MMDrawerVisualState.h */,
-				340B2F3BB5A035F743000163 /* MMDrawerVisualState.m */,
-			);
-			name = MMDrawerVisualStates;
-			sourceTree = "<group>";
-		};
-		81B1E2A447771A520B0F8EEE = {
-			isa = PBXGroup;
-			children = (
-				E95AA3A8FE30116A4F1B8B24 /* Podfile */,
-				E392BD6501674FF005FB5AC2 /* Frameworks */,
-				2A5B2CC32246D88C79A5BE69 /* Pods */,
-				97A1668AE9BDD6A13BF86A14 /* Products */,
-				1B3415017E42675EBB6B8106 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		97A1668AE9BDD6A13BF86A14 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				48D8EDF2E697F503978DFF95 /* libPods-cardalot.a */,
-				4A58EF174C3E5EBA73BC0D13 /* libPods-cardalot-JBChartView.a */,
-				8B1C8B74270B53FD7110482C /* libPods-cardalot-MMDrawerController.a */,
-				4024BC785677C458B9262F40 /* libPods-cardalot-MTCardLayout.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9D58AB51E564E4EB90B04EB2 /* Pods-cardalot */ = {
-			isa = PBXGroup;
-			children = (
-				433780888760C5C32A4A3C54 /* Pods-cardalot-acknowledgements.markdown */,
-				D31C073C8E4A50911567F06F /* Pods-cardalot-acknowledgements.plist */,
-				7A2FF951EE151C03EAD809D0 /* Pods-cardalot-dummy.m */,
-				D3B991A80E073444B14CF14C /* Pods-cardalot-environment.h */,
-				C1C1C352BED72BBF76D47F03 /* Pods-cardalot-resources.sh */,
-				7734FDA885529DC4A7CCC231 /* Pods-cardalot.debug.xcconfig */,
-				BEBCCD4219156C94FE7D162B /* Pods-cardalot.release.xcconfig */,
-			);
-			name = "Pods-cardalot";
-			path = "Target Support Files/Pods-cardalot";
-			sourceTree = "<group>";
-		};
-		B8BED57F7DA100E700120146 /* MMDrawerController */ = {
-			isa = PBXGroup;
-			children = (
-				1CB69AD183D06CFD6B0189FD /* Core */,
-				07ADD85106E31C1074D9C765 /* MMDrawerBarButtonItem */,
-				73DC874B569B4B69FAFB48EB /* MMDrawerVisualStates */,
-				5F00A6B25734E9FF4CB49C73 /* Subclass */,
-				2EACA5B70F3D453BC91C1597 /* Support Files */,
-			);
-			path = MMDrawerController;
-			sourceTree = "<group>";
-		};
-		E392BD6501674FF005FB5AC2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				06292F70DE1CD63F5DAB49BC /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FEFB3BAF1EE66D7A9A70DD2E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				70801BF58C3B29AF91C8EAD3 /* Pods-cardalot-JBChartView.xcconfig */,
-				6492046247D7D49981F6586F /* Pods-cardalot-JBChartView-Private.xcconfig */,
-				89AAE2A4BDE4D9897A08232A /* Pods-cardalot-JBChartView-dummy.m */,
-				42FC50758E7C4FE91EC7A5EA /* Pods-cardalot-JBChartView-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-cardalot-JBChartView";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		4D4A03C4E09113D9274571AD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3EEC41ACC5CE8C5D5B3BE96F /* JBBarChartView.h in Headers */,
-				0954133B309889473114A820 /* JBChartView.h in Headers */,
-				7991F85694AA334CBD83F9FD /* JBLineChartView.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C284CBC39BC20B6FBE347EFB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F55BFEE40C1593EA6580567 /* MMDrawerBarButtonItem.h in Headers */,
-				379BFC9ED82FD9BF8AF6A97D /* MMDrawerController+Subclass.h in Headers */,
-				937EED282B22CC4E3EE1DEDC /* MMDrawerController.h in Headers */,
-				8D12D9AD6F81010541E8948E /* MMDrawerVisualState.h in Headers */,
-				9F26CF090BDFC1DC5E8868C6 /* UIViewController+MMDrawerController.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DEFF058C1517341F14495921 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				98035BD1BF6A2009514A50C8 /* LSCollectionViewHelper.h in Headers */,
-				65F26639B3FF28A6EE5D5417 /* LSCollectionViewLayoutHelper.h in Headers */,
-				2CF969B7A4D9842469A3E514 /* MTCardLayout.h in Headers */,
-				D6FFAF4014CD26BF02D8DF9A /* MTCollectionViewCardLayoutHelper.h in Headers */,
-				B0E7E642C58616FFD91246B2 /* MTDraggableCardLayout.h in Headers */,
-				CF4E5E7E0F7F5F9904CFAC02 /* UICollectionView+CardLayout.h in Headers */,
-				90D4EE3DD64176D75780FE19 /* UICollectionView+Draggable.h in Headers */,
-				C49A20E63514B2C9CB10E477 /* UICollectionViewDataSource_Draggable.h in Headers */,
-				565AEA32B9361CB2F0F095C8 /* UICollectionViewLayout_Warpable.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		40D0BA4F9942FACA4F73EBCF /* Pods-cardalot-MMDrawerController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 73ECEA793266A01DF7391143 /* Build configuration list for PBXNativeTarget "Pods-cardalot-MMDrawerController" */;
-			buildPhases = (
-				5C83ACF69C61AD04E0DD63A5 /* Sources */,
-				3070B5E9F5665CAF704732D5 /* Frameworks */,
-				C284CBC39BC20B6FBE347EFB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-cardalot-MMDrawerController";
-			productName = "Pods-cardalot-MMDrawerController";
-			productReference = 8B1C8B74270B53FD7110482C /* libPods-cardalot-MMDrawerController.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		40F64179450912F17D5EB945 /* Pods-cardalot-JBChartView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 23CDA489065ECE9BFAF8B8E0 /* Build configuration list for PBXNativeTarget "Pods-cardalot-JBChartView" */;
-			buildPhases = (
-				EB2B6210F23C529256D844F6 /* Sources */,
-				A07A66DA90F0D38E550BAD84 /* Frameworks */,
-				4D4A03C4E09113D9274571AD /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-cardalot-JBChartView";
-			productName = "Pods-cardalot-JBChartView";
-			productReference = 4A58EF174C3E5EBA73BC0D13 /* libPods-cardalot-JBChartView.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		B286F2483F3D1925421D438F /* Pods-cardalot */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5317E397C0D105FF54677910 /* Build configuration list for PBXNativeTarget "Pods-cardalot" */;
-			buildPhases = (
-				0ECD6255F90B5A364417098D /* Sources */,
-				0A361CF366423AD83450D0B1 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				33A9E38E3E98AAD401D05B82 /* PBXTargetDependency */,
-				98CAA18E90DCA3A77D01B52D /* PBXTargetDependency */,
-				61A00C799979AE05830C821E /* PBXTargetDependency */,
-			);
-			name = "Pods-cardalot";
-			productName = "Pods-cardalot";
-			productReference = 48D8EDF2E697F503978DFF95 /* libPods-cardalot.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		E10333CEA3177562DEAE4155 /* Pods-cardalot-MTCardLayout */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8C6FD71B1846153C2A725BB9 /* Build configuration list for PBXNativeTarget "Pods-cardalot-MTCardLayout" */;
-			buildPhases = (
-				1A0A14FB19AD81ED485EEF68 /* Sources */,
-				BD953469C908191BFB4A19C2 /* Frameworks */,
-				DEFF058C1517341F14495921 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-cardalot-MTCardLayout";
-			productName = "Pods-cardalot-MTCardLayout";
-			productReference = 4024BC785677C458B9262F40 /* libPods-cardalot-MTCardLayout.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		0646B3232F896E1486535BB7 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0610;
-			};
-			buildConfigurationList = A26CA60056B66BC74A014D78 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 81B1E2A447771A520B0F8EEE;
-			productRefGroup = 97A1668AE9BDD6A13BF86A14 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				B286F2483F3D1925421D438F /* Pods-cardalot */,
-				40F64179450912F17D5EB945 /* Pods-cardalot-JBChartView */,
-				40D0BA4F9942FACA4F73EBCF /* Pods-cardalot-MMDrawerController */,
-				E10333CEA3177562DEAE4155 /* Pods-cardalot-MTCardLayout */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		0ECD6255F90B5A364417098D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				293365DEAD1EF01D5265B203 /* Pods-cardalot-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1A0A14FB19AD81ED485EEF68 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F30811A6F3B2E2937536560 /* LSCollectionViewHelper.m in Sources */,
-				D37CAA13A1B8E02F63B5964C /* LSCollectionViewLayoutHelper.m in Sources */,
-				7077E7338A20F4B109D360D5 /* MTCardLayout.m in Sources */,
-				6C67471A21D78E7CFF2D361C /* MTCollectionViewCardLayoutHelper.m in Sources */,
-				964A0620DDFA738AF71B4514 /* MTDraggableCardLayout.m in Sources */,
-				3D8700A0B2BD4EE339BDC0CB /* Pods-cardalot-MTCardLayout-dummy.m in Sources */,
-				3947DE663A8DCE041BE84A3F /* UICollectionView+CardLayout.m in Sources */,
-				55DED0D09B3368A2604099BF /* UICollectionView+Draggable.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5C83ACF69C61AD04E0DD63A5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FC9BC5283F4DC66F5F1EE7F /* MMDrawerBarButtonItem.m in Sources */,
-				5E1614E704B481BCF567FEBE /* MMDrawerController.m in Sources */,
-				0A87F6322EC74A5CBDA856CD /* MMDrawerVisualState.m in Sources */,
-				4B01EE630A25023B173577B4 /* Pods-cardalot-MMDrawerController-dummy.m in Sources */,
-				67F26CCA88ABD637C9228210 /* UIViewController+MMDrawerController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB2B6210F23C529256D844F6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				190ACF68ED7366858695A397 /* JBBarChartView.m in Sources */,
-				0BC550A70F54E655BD72634C /* JBChartView.m in Sources */,
-				69AC4222F932B75E7634B1DF /* JBLineChartView.m in Sources */,
-				CF10EA8986C1AB7685B9CCC7 /* Pods-cardalot-JBChartView-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		33A9E38E3E98AAD401D05B82 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-cardalot-JBChartView";
-			target = 40F64179450912F17D5EB945 /* Pods-cardalot-JBChartView */;
-			targetProxy = EB89EE7BE3D3C76901DDF2D0 /* PBXContainerItemProxy */;
-		};
-		61A00C799979AE05830C821E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-cardalot-MTCardLayout";
-			target = E10333CEA3177562DEAE4155 /* Pods-cardalot-MTCardLayout */;
-			targetProxy = B06CEB3BCC4640F86F5A8A1A /* PBXContainerItemProxy */;
-		};
-		98CAA18E90DCA3A77D01B52D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-cardalot-MMDrawerController";
-			target = 40D0BA4F9942FACA4F73EBCF /* Pods-cardalot-MMDrawerController */;
-			targetProxy = 56BDBD9054EE195062BBEC66 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		0CB724031886FB5C9984E10F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7734FDA885529DC4A7CCC231 /* Pods-cardalot.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		151F86D1B9EE44819EDCFFD1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6492046247D7D49981F6586F /* Pods-cardalot-JBChartView-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-cardalot-JBChartView/Pods-cardalot-JBChartView-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		2117EBE0B5C18CA4FBA94885 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-			};
-			name = Debug;
-		};
-		24DD9BC079CB33F50C5C9B5D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 658F529B217157026DCC90A8 /* Pods-cardalot-MMDrawerController-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-cardalot-MMDrawerController/Pods-cardalot-MMDrawerController-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		701D828D5335487EA9B9359E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6492046247D7D49981F6586F /* Pods-cardalot-JBChartView-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-cardalot-JBChartView/Pods-cardalot-JBChartView-prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B1193F3E8969BE1FDBFF5882 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				STRIP_INSTALLED_PRODUCT = NO;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D648C8711AFF6A60F15F21F3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E552F18263DA15A4226344CD /* Pods-cardalot-MTCardLayout-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-cardalot-MTCardLayout/Pods-cardalot-MTCardLayout-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		E646F0FB3BCF3891D0D83C37 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEBCCD4219156C94FE7D162B /* Pods-cardalot.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		ED098A7FA364764F3D5F9411 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 658F529B217157026DCC90A8 /* Pods-cardalot-MMDrawerController-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-cardalot-MMDrawerController/Pods-cardalot-MMDrawerController-prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FD31E41C09E9BDA1B656279E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E552F18263DA15A4226344CD /* Pods-cardalot-MTCardLayout-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-cardalot-MTCardLayout/Pods-cardalot-MTCardLayout-prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		23CDA489065ECE9BFAF8B8E0 /* Build configuration list for PBXNativeTarget "Pods-cardalot-JBChartView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				151F86D1B9EE44819EDCFFD1 /* Debug */,
-				701D828D5335487EA9B9359E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5317E397C0D105FF54677910 /* Build configuration list for PBXNativeTarget "Pods-cardalot" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0CB724031886FB5C9984E10F /* Debug */,
-				E646F0FB3BCF3891D0D83C37 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		73ECEA793266A01DF7391143 /* Build configuration list for PBXNativeTarget "Pods-cardalot-MMDrawerController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				24DD9BC079CB33F50C5C9B5D /* Debug */,
-				ED098A7FA364764F3D5F9411 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8C6FD71B1846153C2A725BB9 /* Build configuration list for PBXNativeTarget "Pods-cardalot-MTCardLayout" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D648C8711AFF6A60F15F21F3 /* Debug */,
-				FD31E41C09E9BDA1B656279E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A26CA60056B66BC74A014D78 /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2117EBE0B5C18CA4FBA94885 /* Debug */,
-				B1193F3E8969BE1FDBFF5882 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 0646B3232F896E1486535BB7 /* Project object */;
-}
-=======
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -933,35 +10,153 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>02C8ECAA601EA9883AB11C9B</key>
+		<key>026494F495D9F0BDF46E436B</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>4B7DBBFB4174AD5043730E3C</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>02EAFA1FAB63B808C4299848</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>203D3AF5E4ABD95E42BA3A0A</string>
+				<string>2901F030EE9536F8FBA40411</string>
+				<string>B1C7BF8B2D56CA452B2D3546</string>
+				<string>088EE9B0939732EFE509A1B4</string>
+				<string>A20913328F3721ABF553105A</string>
+				<string>2A95094AC16F589398D08B26</string>
+				<string>A2D07FE1E68FF3EAAB3928A2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>IQKeyboardManagerConstantsInternal.h</string>
+			<string>JBChartView</string>
 			<key>path</key>
-			<string>IQKeyBoardManager/Constants/IQKeyboardManagerConstantsInternal.h</string>
+			<string>JBChartView</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0300ADAFF7A7F97027824049</key>
+		<key>03364C00C09D4A5B5E88E923</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>baseConfigurationReference</key>
+			<string>3A91C5C49B511AF9D90C6D21</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-cardalot-MTCardLayout/Pods-cardalot-MTCardLayout-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-cardalot-IQKeyboardManager-Private.xcconfig</string>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>042AE39F02020A76557E9499</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>99E1B75244C7782C9345B11B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>F68003B0DB7676A42EE8AD80</string>
+			<key>remoteInfo</key>
+			<string>Pods-cardalot-JBChartView</string>
+		</dict>
+		<key>04E7C0CF989A28B76E6AA047</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F6707E7B687334A75AB84B00</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>066F30B279B648156F8ED04F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>97F593564164CC93D2B4F48E</string>
+				<string>3D4E837D5DDACBA26E4FEB07</string>
+				<string>6AE38D293DD2B073BECADEA9</string>
+				<string>D1B3AA974B8F9184DC17719D</string>
+				<string>7B07768D91F8A6C5DCE36231</string>
+				<string>4895C08F2F5F39330C76FE8C</string>
+				<string>75DD6A490E1C33E267677806</string>
+				<string>67B55F5B1C88B853618D7BE7</string>
+				<string>689C6732F1AD38485C0A9AF8</string>
+				<string>DD571ACC18203415C6158AB9</string>
+				<string>FEB5280D965A589D39E512C9</string>
+				<string>477A7EE5DAD44E3055EAD1B4</string>
+				<string>A25BC07136546A91E941C10D</string>
+				<string>C92821E620B7435289FA6B7D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>06B05196B8B5C9D7C9D8E628</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CB5A4463D0399C6022A7D216</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0A78271FB83852E84300A9D3</key>
+		<key>088EE9B0939732EFE509A1B4</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -970,20 +165,243 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>IQUIWindow+Hierarchy.m</string>
+			<string>JBChartView.m</string>
 			<key>path</key>
-			<string>IQKeyBoardManager/Categories/IQUIWindow+Hierarchy.m</string>
+			<string>Classes/JBChartView.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0C82884D34BC06957D237B77</key>
+		<key>098F82030C2920467BCF5ABC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UICollectionViewDataSource_Draggable.h</string>
+			<key>path</key>
+			<string>MTCardLayout/DraggableCollectionView/UICollectionViewDataSource_Draggable.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>09EDA3168CFFF784272A5FE9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Pods-cardalot-MMDrawerController</string>
+			<key>target</key>
+			<string>7A203AC7536CC479DE30B367</string>
+			<key>targetProxy</key>
+			<string>616308E0C7CB15E1A604C706</string>
+		</dict>
+		<key>0C972B1563B737594E2352CD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>IQTitleBarButtonItem.m</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/IQToolbar/IQTitleBarButtonItem.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0E458D3C8A149A86BCF7ECC2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UICollectionView+CardLayout.m</string>
+			<key>path</key>
+			<string>MTCardLayout/UICollectionView+CardLayout.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FFB24A5B3433FB484033DE3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-cardalot-JBChartView.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>105048E2913215C6E8BB22A1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UICollectionView+Draggable.h</string>
+			<key>path</key>
+			<string>MTCardLayout/DraggableCollectionView/UICollectionView+Draggable.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11A376F0C57AC05467466279</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-cardalot-IQKeyboardManager.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1310FC30514E392A891ED56E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>LSCollectionViewLayoutHelper.h</string>
+			<key>path</key>
+			<string>MTCardLayout/DraggableCollectionView/Helpers/LSCollectionViewLayoutHelper.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13DBED1957CE4FA9F7C692ED</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-cardalot-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1448E7D3F4544262B48B1629</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-cardalot-MMDrawerController-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1659D1AD52E02EA27AA75CF2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MMDrawerController.m</string>
+			<key>path</key>
+			<string>MMDrawerController/MMDrawerController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>16DD3BC6EB066F17E245A346</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>IQSegmentedNextPrevious.m</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/IQSegmentedNextPrevious/IQSegmentedNextPrevious.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1AEED3A38CC74829D9E40FA7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-cardalot.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1DC1E56E7120E6D0A59F6873</key>
 		<dict>
 			<key>fileRef</key>
-			<string>02C8ECAA601EA9883AB11C9B</string>
+			<string>69AE916344AFC75207793A9B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>203D3AF5E4ABD95E42BA3A0A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JBBarChartView.h</string>
+			<key>path</key>
+			<string>Classes/JBBarChartView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>226808BFF74DC52752514FE7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MMDrawerController.h</string>
+			<key>path</key>
+			<string>MMDrawerController/MMDrawerController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2558376FFF3BBB1E66144E94</key>
+		<dict>
+			<key>fileRef</key>
+			<string>098F82030C2920467BCF5ABC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>0D7C89A84FD88578F04424D9</key>
+		<key>25C0CD426C73FE19FF5C7D1F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -998,7 +416,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>110C49F64F9FCF48DFF55609</key>
+		<key>282E97786385358A32E73E03</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1007,56 +425,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>KeyboardManager.h</string>
+			<string>UICollectionViewLayout_Warpable.h</string>
 			<key>path</key>
-			<string>IQKeyBoardManager/KeyboardManager.h</string>
+			<string>MTCardLayout/DraggableCollectionView/UICollectionViewLayout_Warpable.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>127A48FD5CC11B3ABA60D6FC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IQUIView+Hierarchy.h</string>
-			<key>path</key>
-			<string>IQKeyBoardManager/Categories/IQUIView+Hierarchy.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1350DCE3A6743A2DAB3C4205</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IQKeyboardManager.h</string>
-			<key>path</key>
-			<string>IQKeyBoardManager/IQKeyboardManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>13A673E92DF03CEA41A02BD9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-cardalot-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>16E2628F39A331843F8995E9</key>
+		<key>2901F030EE9536F8FBA40411</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1065,16 +440,356 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>IQKeyboardReturnKeyHandler.m</string>
+			<string>JBBarChartView.m</string>
 			<key>path</key>
-			<string>IQKeyBoardManager/IQKeyboardReturnKeyHandler.m</string>
+			<string>Classes/JBBarChartView.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>181DAD035D7D063DDCD5C11F</key>
+		<key>2A95094AC16F589398D08B26</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>JBLineChartView.m</string>
+			<key>path</key>
+			<string>Classes/JBLineChartView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2ACFEA7242904CFBDAA43446</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4E4B3F0A6CDADE7F040D3B63</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2CF81F269387C2FBFA2F19AD</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>6337EA29AD73F88146A27449</string>
+				<string>816950F36A8C2CB147C8A59C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>317AF8F25FF3CD98FAC6698B</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>AABB46B84C896D54DE1FD6AE</string>
+			<key>buildPhases</key>
+			<array>
+				<string>A898CDB65022026296CB1F12</string>
+				<string>7C7102ACE6B57C3229096588</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>E81C6A11D89B6FD7B53904B4</string>
+				<string>DC6B42FB76A6CE756A420C0F</string>
+				<string>09EDA3168CFFF784272A5FE9</string>
+				<string>F33BEF7E6187C897F81E154B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-cardalot</string>
+			<key>productName</key>
+			<string>Pods-cardalot</string>
+			<key>productReference</key>
+			<string>649DC610FB917DBFE8508DB1</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>3293DA60E00D6879C0D6DD1A</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>0300ADAFF7A7F97027824049</string>
+			<string>CFB228106ACB297312B5F61F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>33007334994BD2E12615686F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7987E7C30F5AC106C14009B9</string>
+				<string>CF42D9218A0AF59E2E14CA4E</string>
+				<string>920E8BE10B67C697C2455E0F</string>
+				<string>ABC6933DABEB962B40F6418E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>34FB1A3B9C3E687306703ED2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>LSCollectionViewHelper.m</string>
+			<key>path</key>
+			<string>MTCardLayout/DraggableCollectionView/Helpers/LSCollectionViewHelper.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3A91C5C49B511AF9D90C6D21</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-cardalot-MTCardLayout-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3C780A69886117F0584AB75C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-cardalot-MTCardLayout.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3C792BE71F561613EDB02C83</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4520275E02E2E9D6858DCD30</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>3D4E837D5DDACBA26E4FEB07</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9007C9C83B77E6CE5EF8A8CA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3D915D957BEB14B7F8DD3428</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-cardalot-JBChartView-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>406C9255629F0EA8E31F83DA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9375D5CCCFA762DFEF1A62CE</string>
+				<string>D2EA5AA6BF28DF703F1E310F</string>
+				<string>9D4F24BAD2F5FAF0375AA238</string>
+				<string>99989F0D7681B8AB8C1259CD</string>
+				<string>6D6875B9B14A2D067815FCF5</string>
+				<string>5EF1D7F0D6AEE4041104EB75</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>41D57116577A6FC20B9D7417</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MMDrawerBarButtonItem.h</string>
+			<key>path</key>
+			<string>MMDrawerController/MMDrawerBarButtonItem.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4492C64CA73655D28EF10A83</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MTDraggableCardLayout.m</string>
+			<key>path</key>
+			<string>MTCardLayout/MTDraggableCardLayout.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>44E157B4DD89C5CF954EEB03</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B42E89EB488D0B5F13D4C2EB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4520275E02E2E9D6858DCD30</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>IQToolbar.m</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/IQToolbar/IQToolbar.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>458708DF8702E60B5C7EC170</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IQKeyboardManagerConstantsInternal.h</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/Constants/IQKeyboardManagerConstantsInternal.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>477A7EE5DAD44E3055EAD1B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E5DCD47182187AE5A80B070D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4895C08F2F5F39330C76FE8C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C4A486752F8214C3F777938</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4AA5F4E9C87FC528BA46E27B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9B1C4F98E34FE4D5350E1036</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4B7DBBFB4174AD5043730E3C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MMDrawerBarButtonItem.m</string>
+			<key>path</key>
+			<string>MMDrawerController/MMDrawerBarButtonItem.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4BD8FF23B1AB10FEA844B4E9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3C780A69886117F0584AB75C</string>
+				<string>3A91C5C49B511AF9D90C6D21</string>
+				<string>5FF30137D69D57FE8CFCEA23</string>
+				<string>88AB0CB085EAB4A6B5A1718D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Pods-cardalot-MTCardLayout</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4C63AAAD3F0E16C83278B5D3</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1AEED3A38CC74829D9E40FA7</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -1085,8 +800,6 @@
 				<string>/tmp/xcodeproj.dst</string>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-cardalot-IQKeyboardManager/Pods-cardalot-IQKeyboardManager-prefix.pch</string>
 				<key>INSTALL_PATH</key>
 				<string>$(BUILT_PRODUCTS_DIR)</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
@@ -1121,58 +834,7 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>2103365E17EF04EC78AAF57C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>IQUIView+Hierarchy.m</string>
-			<key>path</key>
-			<string>IQKeyBoardManager/Categories/IQUIView+Hierarchy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2141ACE4E063882C8F58E18D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IQUIView+IQKeyboardToolbar.h</string>
-			<key>path</key>
-			<string>IQKeyBoardManager/IQToolbar/IQUIView+IQKeyboardToolbar.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2224E44B475207D43E315A8A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>13A673E92DF03CEA41A02BD9</string>
-				<string>82B9E6B8C141F45C453E7A78</string>
-				<string>D4EF1372D5C815359DEB625F</string>
-				<string>9BE2E0280C5918E293032B26</string>
-				<string>79B27C9B56BF3CA154A10293</string>
-				<string>4E7D2E810A17527B4F41E80B</string>
-				<string>2B50232FC0925F095BD061AD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-cardalot</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-cardalot</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>24B8A1F04382875E005445C3</key>
+		<key>4CDC221AD80E3F042DC4A6D2</key>
 		<dict>
 			<key>explicitFileType</key>
 			<string>archive.ar</string>
@@ -1181,164 +843,11 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>path</key>
-			<string>libPods-cardalot.a</string>
+			<string>libPods-cardalot-IQKeyboardManager.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>263975B00FDA362E457F113B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>70B611116ED6A46185295EDB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2B50232FC0925F095BD061AD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-cardalot.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2C1190788F92EA4A79A30B67</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IQBarButtonItem.h</string>
-			<key>path</key>
-			<string>IQKeyBoardManager/IQToolbar/IQBarButtonItem.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2E1B044FFCD2D4733EAE34DE</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>98FB5FC58F07F7BC543DB42D</string>
-				<string>579B3886AC78900AE0271EE6</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2EE430F2E37843B8B22D0629</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2C1190788F92EA4A79A30B67</string>
-				<string>46FEA714DAC7576A3DAD02DB</string>
-				<string>1350DCE3A6743A2DAB3C4205</string>
-				<string>D0A2BEE1F76275A50768873A</string>
-				<string>CA54B797839B4C72145F3FCA</string>
-				<string>02C8ECAA601EA9883AB11C9B</string>
-				<string>0D7C89A84FD88578F04424D9</string>
-				<string>16E2628F39A331843F8995E9</string>
-				<string>E2BD1E331589E96FA8BDC299</string>
-				<string>F0B147CDE906A3F43F7BA965</string>
-				<string>DCCA3CA547BCAFED77F542E6</string>
-				<string>FB2FAFC13FEC4EECE8AA4C3B</string>
-				<string>BD6C98E2D469994CC14F1469</string>
-				<string>F066E4A8A7B16C65766B3E2C</string>
-				<string>60B3C989AF2BB3630EB82FE0</string>
-				<string>D7382E42758B33F8D8507EA7</string>
-				<string>CDE4257E1188344E4AC2281B</string>
-				<string>99CA8A2DC1D8191CED0BBD30</string>
-				<string>127A48FD5CC11B3ABA60D6FC</string>
-				<string>2103365E17EF04EC78AAF57C</string>
-				<string>2141ACE4E063882C8F58E18D</string>
-				<string>F87DC96768E124A4F97C7F82</string>
-				<string>757F70E72730F7B7FE749F03</string>
-				<string>0A78271FB83852E84300A9D3</string>
-				<string>110C49F64F9FCF48DFF55609</string>
-				<string>74BED1AD98A0A3FA27F103C3</string>
-				<string>A61FC19DA3981FE859D228D2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>IQKeyboardManager</string>
-			<key>path</key>
-			<string>IQKeyboardManager</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3071F888F24999380E2F7C5B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-cardalot-IQKeyboardManager</string>
-			<key>target</key>
-			<string>467B6D41AECD0F7C9B627977</string>
-			<key>targetProxy</key>
-			<string>9F575B328E007A30489A1B5F</string>
-		</dict>
-		<key>32F0AE5E9DDD245B86C00CEC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>60B3C989AF2BB3630EB82FE0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>43146602050146702C465DD1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6F1598E273EA66BA1425EA44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>45444E6C38D8E94ED377FAF7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1350DCE3A6743A2DAB3C4205</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>467B6D41AECD0F7C9B627977</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>DDD0E3E0FCF8D53504A03C63</string>
-			<key>buildPhases</key>
-			<array>
-				<string>9EDDC50057EDCF72AF00ADE1</string>
-				<string>B400B51F571902968E8D0AA5</string>
-				<string>9DCB03B3E6B2CC4CA07E14D4</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-cardalot-IQKeyboardManager</string>
-			<key>productName</key>
-			<string>Pods-cardalot-IQKeyboardManager</string>
-			<key>productReference</key>
-			<string>A991C2074817E7530ED73014</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>46FEA714DAC7576A3DAD02DB</key>
+		<key>4E4B3F0A6CDADE7F040D3B63</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1347,29 +856,81 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>IQBarButtonItem.m</string>
+			<string>LSCollectionViewLayoutHelper.m</string>
 			<key>path</key>
-			<string>IQKeyBoardManager/IQToolbar/IQBarButtonItem.m</string>
+			<string>MTCardLayout/DraggableCollectionView/Helpers/LSCollectionViewLayoutHelper.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4A3D02CD463C475962142136</key>
+		<key>501B38DCF46C48469A7D4C5C</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B3D1770F277944302EE25B6E</string>
-			</array>
+			<key>baseConfigurationReference</key>
+			<string>EB59D24D914244B952EEB2A6</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-cardalot-JBChartView/Pods-cardalot-JBChartView-prefix.pch</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
 			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
 		</dict>
-		<key>4A9A581310AA52FDB5229F5B</key>
+		<key>51A2999927C324EC8FFCFA62</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>IQUIWindow+Hierarchy.m</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/Categories/IQUIWindow+Hierarchy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>520DCB0EFE2A5C91C26E2D4E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F87DC96768E124A4F97C7F82</string>
+			<string>1659D1AD52E02EA27AA75CF2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1378,20 +939,7 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>4E7D2E810A17527B4F41E80B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-cardalot.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>579B3886AC78900AE0271EE6</key>
+		<key>54141361A599E8A6B47FB25F</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -1453,322 +1001,7 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>5AC2425665E20D9353574980</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E2BD1E331589E96FA8BDC299</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5ECFC438392331387385BF0C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-cardalot-IQKeyboardManager-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>60B3C989AF2BB3630EB82FE0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IQTitleBarButtonItem.h</string>
-			<key>path</key>
-			<string>IQKeyBoardManager/IQToolbar/IQTitleBarButtonItem.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6BCA12D21B3BF03D8DFBC400</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D1D1555E21B94E7F841030F6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6C1F9B38FC7BB777A450C8AF</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4E7D2E810A17527B4F41E80B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>6DB4A68287341776DF8EDE71</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CDE4257E1188344E4AC2281B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6F1598E273EA66BA1425EA44</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>7085F3C4A7D066392BCE3C28</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0A78271FB83852E84300A9D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>70B611116ED6A46185295EDB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6F1598E273EA66BA1425EA44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>70CA6BD4FDBFB63A316070FE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2141ACE4E063882C8F58E18D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>74BED1AD98A0A3FA27F103C3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EFA44BF949831D7B59140324</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>757F70E72730F7B7FE749F03</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IQUIWindow+Hierarchy.h</string>
-			<key>path</key>
-			<string>IQKeyBoardManager/Categories/IQUIWindow+Hierarchy.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>75A44C465A30E1CAE0DA32E7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2224E44B475207D43E315A8A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77446CAE39DFAB0AEC74EF47</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2C1190788F92EA4A79A30B67</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>79B27C9B56BF3CA154A10293</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-cardalot-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B1548B4169A9514B01BBCAF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-cardalot-IQKeyboardManager.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7C60B078801A220301AB07FF</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>6C1F9B38FC7BB777A450C8AF</string>
-				<string>C184CE8768A1C6C03477C816</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>806FF678CCC8B0A5673FC45B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0300ADAFF7A7F97027824049</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-cardalot-IQKeyboardManager/Pods-cardalot-IQKeyboardManager-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>82B9E6B8C141F45C453E7A78</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-cardalot-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>86E834419B42173700E59524</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>8B406489F79F5435F816D8CF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DCCA3CA547BCAFED77F542E6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98FB5FC58F07F7BC543DB42D</key>
+		<key>554FAA711B21FCDFAA0E4B52</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -1835,7 +1068,86 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>99CA8A2DC1D8191CED0BBD30</key>
+		<key>56A1227A4FBB51D6CF5726E9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>581A79D8E8DB85FEA3B3654E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>EB59D24D914244B952EEB2A6</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-cardalot-JBChartView/Pods-cardalot-JBChartView-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>5D0757B6A1B769B0137B94E6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EC334A96D18EFBCE830088DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5E099B687564FF6E67AA6D8E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1844,125 +1156,263 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>IQToolbar.m</string>
+			<string>MTCollectionViewCardLayoutHelper.m</string>
 			<key>path</key>
-			<string>IQKeyBoardManager/IQToolbar/IQToolbar.m</string>
+			<string>MTCardLayout/MTCollectionViewCardLayoutHelper.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>99DF71E123A7257182355A10</key>
+		<key>5EF1D7F0D6AEE4041104EB75</key>
 		<dict>
 			<key>fileRef</key>
-			<string>110C49F64F9FCF48DFF55609</string>
+			<string>A1F2A2DA4F1093AF4B07D9C9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>9A77E86058E736C88C5A1858</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7C60B078801A220301AB07FF</string>
-			<key>buildPhases</key>
-			<array>
-				<string>4A3D02CD463C475962142136</string>
-				<string>263975B00FDA362E457F113B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>3071F888F24999380E2F7C5B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-cardalot</string>
-			<key>productName</key>
-			<string>Pods-cardalot</string>
-			<key>productReference</key>
-			<string>24B8A1F04382875E005445C3</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>9BE2E0280C5918E293032B26</key>
+		<key>5FF30137D69D57FE8CFCEA23</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>Pods-cardalot-environment.h</string>
+			<string>Pods-cardalot-MTCardLayout-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9DCB03B3E6B2CC4CA07E14D4</key>
+		<key>616308E0C7CB15E1A604C706</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>77446CAE39DFAB0AEC74EF47</string>
-				<string>45444E6C38D8E94ED377FAF7</string>
-				<string>B01C219128BD528C96DCDD4A</string>
-				<string>0C82884D34BC06957D237B77</string>
-				<string>E90222F9B7BE63DB2F5BA68A</string>
-				<string>5AC2425665E20D9353574980</string>
-				<string>8B406489F79F5435F816D8CF</string>
-				<string>A72B94727434C30F34C166FF</string>
-				<string>32F0AE5E9DDD245B86C00CEC</string>
-				<string>6DB4A68287341776DF8EDE71</string>
-				<string>C8DEE208618BCE8B4B35ADE4</string>
-				<string>70CA6BD4FDBFB63A316070FE</string>
-				<string>D19D84017DABC725116D3289</string>
-				<string>99DF71E123A7257182355A10</string>
-			</array>
+			<key>containerPortal</key>
+			<string>99E1B75244C7782C9345B11B</string>
 			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>7A203AC7536CC479DE30B367</string>
+			<key>remoteInfo</key>
+			<string>Pods-cardalot-MMDrawerController</string>
 		</dict>
-		<key>9EDDC50057EDCF72AF00ADE1</key>
+		<key>6337EA29AD73F88146A27449</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>7EE957975699B28FECDB5996</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-cardalot-IQKeyboardManager/Pods-cardalot-IQKeyboardManager-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>634051F1D5ED64B48BB9F4A4</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>D0138A785FE94CBB1D1AE34D</string>
-				<string>FFF8F330694E59D2F0043E6A</string>
-				<string>F5C7FE07234DDB5A8FC90E99</string>
-				<string>AF9627F2A7E06C3117526299</string>
-				<string>ABF635E40AF0FD8D3CB3F838</string>
-				<string>DCF4E91701333CF852563F0E</string>
-				<string>9F6B793E3EC2DC658AD6A43C</string>
-				<string>E6D98619AB53F5E13316ACB1</string>
-				<string>D6D454063836FF23A5E7A58D</string>
-				<string>4A9A581310AA52FDB5229F5B</string>
-				<string>7085F3C4A7D066392BCE3C28</string>
-				<string>ED5513AB85435B680D175B93</string>
+				<string>6C96FB2D826470CCAD66D592</string>
+				<string>2ACFEA7242904CFBDAA43446</string>
+				<string>9769AC6AEC56706FEA590CEB</string>
+				<string>FE26691C3288847D3F4ABA64</string>
+				<string>7AEF5AB88CE8B8067CF0D8A0</string>
+				<string>67A5C7E6066AA8CBA737069C</string>
+				<string>BBE5C025D3FCE1C3A626868B</string>
+				<string>978A600D0B68025C55038F9D</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>9F575B328E007A30489A1B5F</key>
+		<key>649DC610FB917DBFE8508DB1</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>C4C074CB9FAC4F23BB22F7F5</string>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
 			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>467B6D41AECD0F7C9B627977</string>
-			<key>remoteInfo</key>
-			<string>Pods-cardalot-IQKeyboardManager</string>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-cardalot.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>9F6B793E3EC2DC658AD6A43C</key>
+		<key>65453888217098587C09272D</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Subclass</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>67A5C7E6066AA8CBA737069C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D7382E42758B33F8D8507EA7</string>
+			<string>5FF30137D69D57FE8CFCEA23</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>67B55F5B1C88B853618D7BE7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF41DE9810ED46A198FF4162</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>689C6732F1AD38485C0A9AF8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7750035FD1A2A33C6C02325</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>69AE916344AFC75207793A9B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>IQKeyboardManager.m</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/IQKeyboardManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6A84A68EF59D2DE9FBF7B1EE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-cardalot-IQKeyboardManager-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6AE38D293DD2B073BECADEA9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8353B19EAAD1D378FE44BDFD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6C96FB2D826470CCAD66D592</key>
+		<dict>
+			<key>fileRef</key>
+			<string>34FB1A3B9C3E687306703ED2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6CCB72BC3DCEBEB8144E964B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A49119DBD96C26C45FE0768B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6D36E913268770B4CFDC81FF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>767332084A7870845B8C4838</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6D6875B9B14A2D067815FCF5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9F7EB07E561082D683EC4B9E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DE8AD21E5FD1E2BCF8E5F8F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>749E74354BDEA145E27B5D1D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>707B567863080A5334B1FD86</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CB90797E832E55876532319E</string>
+				<string>1DC1E56E7120E6D0A59F6873</string>
+				<string>04E7C0CF989A28B76E6AA047</string>
+				<string>BF136B3BA0905B09F93B0B33</string>
+				<string>D701AB73F141201ABCCEA679</string>
+				<string>9A5B99192899C4406D0C2517</string>
+				<string>A00E32CCE981DE8BCEA2BBAC</string>
+				<string>3C792BE71F561613EDB02C83</string>
+				<string>7192F6ED57D561CDFF93010F</string>
+				<string>8C63EABEB9464BE6E9BBD3ED</string>
+				<string>CEC4212E16C99C772CDFBE38</string>
+				<string>BE01436201213FC0F42B85DF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>7192F6ED57D561CDFF93010F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9DC2DB7FA638E0A00D09056D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1971,14 +1421,136 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>A61FC19DA3981FE859D228D2</key>
+		<key>7365664DD7E6D4FE2C7645EF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-cardalot-JBChartView-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>74504A70563CFFEFFACFAFF7</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>7B1548B4169A9514B01BBCAF</string>
-				<string>0300ADAFF7A7F97027824049</string>
-				<string>E02F8665CA5C2E88073A224D</string>
-				<string>5ECFC438392331387385BF0C</string>
+				<string>226808BFF74DC52752514FE7</string>
+				<string>1659D1AD52E02EA27AA75CF2</string>
+				<string>B0B43FFBF55790E4BA8DBE0B</string>
+				<string>A1F2A2DA4F1093AF4B07D9C9</string>
+				<string>A7AF07956F22F3C61F02C8E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Core</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>749E74354BDEA145E27B5D1D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>75DD6A490E1C33E267677806</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D88A9E14041D7DBE44913A97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>767332084A7870845B8C4838</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>7987E7C30F5AC106C14009B9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2901F030EE9536F8FBA40411</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7A203AC7536CC479DE30B367</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>CCC0AA2550F7BC2E43E6ED19</string>
+			<key>buildPhases</key>
+			<array>
+				<string>97AB85F1EE699132E7FF4CD7</string>
+				<string>DB0F12A403D08453B7A6AC6C</string>
+				<string>406C9255629F0EA8E31F83DA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-cardalot-MMDrawerController</string>
+			<key>productName</key>
+			<string>Pods-cardalot-MMDrawerController</string>
+			<key>productReference</key>
+			<string>AA64679BBB14C6B4249D0107</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>7A75D1459451C123015DA1D9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-cardalot-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7AEF5AB88CE8B8067CF0D8A0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4492C64CA73655D28EF10A83</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7B07768D91F8A6C5DCE36231</key>
+		<dict>
+			<key>fileRef</key>
+			<string>25C0CD426C73FE19FF5C7D1F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7B3FDC5B0CD1CE8DBA75A911</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11A376F0C57AC05467466279</string>
+				<string>7EE957975699B28FECDB5996</string>
+				<string>6A84A68EF59D2DE9FBF7B1EE</string>
+				<string>9F7ED635252CF22BFF53F131</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1989,93 +1561,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A72B94727434C30F34C166FF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD6C98E2D469994CC14F1469</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A991C2074817E7530ED73014</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-cardalot-IQKeyboardManager.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>ABF635E40AF0FD8D3CB3F838</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FB2FAFC13FEC4EECE8AA4C3B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>AF9627F2A7E06C3117526299</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F0B147CDE906A3F43F7BA965</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>B01C219128BD528C96DCDD4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CA54B797839B4C72145F3FCA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3D1770F277944302EE25B6E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D4EF1372D5C815359DEB625F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B400B51F571902968E8D0AA5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>43146602050146702C465DD1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B8D4CA64FBFEF810A9A1A997</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>86E834419B42173700E59524</string>
-				<string>6BCA12D21B3BF03D8DFBC400</string>
-				<string>C9BEEBFB234E40606FD3E334</string>
-				<string>CE3ED7196E4136BDC9A6BE4F</string>
-				<string>75A44C465A30E1CAE0DA32E7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD6C98E2D469994CC14F1469</key>
+		<key>7C4A486752F8214C3F777938</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2084,16 +1570,90 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>IQTextView.h</string>
+			<string>IQNSArray+Sort.h</string>
 			<key>path</key>
-			<string>IQKeyBoardManager/IQTextView/IQTextView.h</string>
+			<string>IQKeyBoardManager/Categories/IQNSArray+Sort.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C184CE8768A1C6C03477C816</key>
+		<key>7C7102ACE6B57C3229096588</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6DE8AD21E5FD1E2BCF8E5F8F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>7CBCC6175E64C4691414B8C5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF72410278F11B993604C97E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7D58B4F219EDFCF67A160171</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>99E1B75244C7782C9345B11B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>B11CC7AE8563785759AA351C</string>
+			<key>remoteInfo</key>
+			<string>Pods-cardalot-MTCardLayout</string>
+		</dict>
+		<key>7DB5BA05023D1B8EFEE3A23B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.plug-in</string>
+			<key>name</key>
+			<string>IQKeyboardManager.bundle</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/Resources/IQKeyboardManager.bundle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7EE957975699B28FECDB5996</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-cardalot-IQKeyboardManager-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8125396802DE9BFD072AFEE2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-cardalot-MMDrawerController-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>816950F36A8C2CB147C8A59C</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>2B50232FC0925F095BD061AD</string>
+			<string>7EE957975699B28FECDB5996</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -2104,6 +1664,8 @@
 				<string>/tmp/xcodeproj.dst</string>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-cardalot-IQKeyboardManager/Pods-cardalot-IQKeyboardManager-prefix.pch</string>
 				<key>INSTALL_PATH</key>
 				<string>$(BUILT_PRODUCTS_DIR)</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
@@ -2138,64 +1700,20 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>C4C074CB9FAC4F23BB22F7F5</key>
+		<key>81748C45A13B156634FC13E0</key>
 		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2E1B044FFCD2D4733EAE34DE</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C7F5AD404F2D3E183CBA61EC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>B8D4CA64FBFEF810A9A1A997</string>
-			<key>productRefGroup</key>
-			<string>CE3ED7196E4136BDC9A6BE4F</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>9A77E86058E736C88C5A1858</string>
-				<string>467B6D41AECD0F7C9B627977</string>
-			</array>
 		</dict>
-		<key>C8DEE208618BCE8B4B35ADE4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>127A48FD5CC11B3ABA60D6FC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C9BEEBFB234E40606FD3E334</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2EE430F2E37843B8B22D0629</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CA54B797839B4C72145F3FCA</key>
+		<key>8353B19EAAD1D378FE44BDFD</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2210,7 +1728,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CDE4257E1188344E4AC2281B</key>
+		<key>88AB0CB085EAB4A6B5A1718D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2218,75 +1736,33 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IQToolbar.h</string>
 			<key>path</key>
-			<string>IQKeyBoardManager/IQToolbar/IQToolbar.h</string>
+			<string>Pods-cardalot-MTCardLayout-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CE3ED7196E4136BDC9A6BE4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>24B8A1F04382875E005445C3</string>
-				<string>A991C2074817E7530ED73014</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D0138A785FE94CBB1D1AE34D</key>
+		<key>8A52BD7994EA0E6151C77B5D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>46FEA714DAC7576A3DAD02DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>D0A2BEE1F76275A50768873A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>IQKeyboardManager.m</string>
-			<key>path</key>
-			<string>IQKeyBoardManager/IQKeyboardManager.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D19D84017DABC725116D3289</key>
-		<dict>
-			<key>fileRef</key>
-			<string>757F70E72730F7B7FE749F03</string>
+			<string>1448E7D3F4544262B48B1629</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>D1D1555E21B94E7F841030F6</key>
+		<key>8B53B04142CDE5B093FAA66A</key>
 		<dict>
-			<key>children</key>
+			<key>buildConfigurations</key>
 			<array>
-				<string>6F1598E273EA66BA1425EA44</string>
+				<string>581A79D8E8DB85FEA3B3654E</string>
+				<string>501B38DCF46C48469A7D4C5C</string>
 			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>XCConfigurationList</string>
 		</dict>
-		<key>D4EF1372D5C815359DEB625F</key>
+		<key>8BF61327F6C185A21D8E4170</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2299,10 +1775,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D6D454063836FF23A5E7A58D</key>
+		<key>8C63EABEB9464BE6E9BBD3ED</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2103365E17EF04EC78AAF57C</string>
+			<string>E5C08382E94F4908765B6F0D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2311,22 +1787,20 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>D7382E42758B33F8D8507EA7</key>
+		<key>8CEA07FE3D44CC882443B75B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>IQTitleBarButtonItem.m</string>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>IQKeyBoardManager/IQToolbar/IQTitleBarButtonItem.m</string>
+			<string>Pods-cardalot-environment.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>DCCA3CA547BCAFED77F542E6</key>
+		<key>9007C9C83B77E6CE5EF8A8CA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2335,123 +1809,114 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>IQSegmentedNextPrevious.h</string>
+			<string>IQKeyboardManager.h</string>
 			<key>path</key>
-			<string>IQKeyBoardManager/IQSegmentedNextPrevious/IQSegmentedNextPrevious.h</string>
+			<string>IQKeyBoardManager/IQKeyboardManager.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>DCF4E91701333CF852563F0E</key>
+		<key>9015178EA44667BE0ED5737E</key>
 		<dict>
-			<key>fileRef</key>
-			<string>F066E4A8A7B16C65766B3E2C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>DDD0E3E0FCF8D53504A03C63</key>
-		<dict>
-			<key>buildConfigurations</key>
+			<key>children</key>
 			<array>
-				<string>806FF678CCC8B0A5673FC45B</string>
-				<string>181DAD035D7D063DDCD5C11F</string>
+				<string>74504A70563CFFEFFACFAFF7</string>
+				<string>F18B60928946481AEB9DDDA4</string>
+				<string>E1111B7D73E01E7F9C4DBDBE</string>
+				<string>65453888217098587C09272D</string>
+				<string>A31649FB9AA0D55B7934005F</string>
 			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
 			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E02F8665CA5C2E88073A224D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-cardalot-IQKeyboardManager-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E2BD1E331589E96FA8BDC299</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>IQNSArray+Sort.h</string>
+			<string>MMDrawerController</string>
 			<key>path</key>
-			<string>IQKeyBoardManager/Categories/IQNSArray+Sort.h</string>
+			<string>MMDrawerController</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E6D98619AB53F5E13316ACB1</key>
+		<key>920E8BE10B67C697C2455E0F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>99CA8A2DC1D8191CED0BBD30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>E90222F9B7BE63DB2F5BA68A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0D7C89A84FD88578F04424D9</string>
+			<string>2A95094AC16F589398D08B26</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>ED5513AB85435B680D175B93</key>
+		<key>92E3629CECCA4DD7B2042AF7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E1302E0AD8B1B0CBF5741B50</string>
+				<string>9818EFE417CCEFFC3A5585F8</string>
+				<string>9007C9C83B77E6CE5EF8A8CA</string>
+				<string>69AE916344AFC75207793A9B</string>
+				<string>8353B19EAAD1D378FE44BDFD</string>
+				<string>458708DF8702E60B5C7EC170</string>
+				<string>25C0CD426C73FE19FF5C7D1F</string>
+				<string>F6707E7B687334A75AB84B00</string>
+				<string>7C4A486752F8214C3F777938</string>
+				<string>951459B1CE3702BA0D8086CA</string>
+				<string>D88A9E14041D7DBE44913A97</string>
+				<string>16DD3BC6EB066F17E245A346</string>
+				<string>AF41DE9810ED46A198FF4162</string>
+				<string>96DE9E087D89B89AC0070329</string>
+				<string>E7750035FD1A2A33C6C02325</string>
+				<string>0C972B1563B737594E2352CD</string>
+				<string>DCBD358BC7A46E9EB78A018F</string>
+				<string>4520275E02E2E9D6858DCD30</string>
+				<string>B37FBF5157A9EF186D374302</string>
+				<string>9DC2DB7FA638E0A00D09056D</string>
+				<string>E5DCD47182187AE5A80B070D</string>
+				<string>E5C08382E94F4908765B6F0D</string>
+				<string>B0AA10419825E694C2D84A93</string>
+				<string>51A2999927C324EC8FFCFA62</string>
+				<string>CC0B9A9E334893239612A5AC</string>
+				<string>935F7A9A467A1536579F155B</string>
+				<string>7B3FDC5B0CD1CE8DBA75A911</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>IQKeyboardManager</string>
+			<key>path</key>
+			<string>IQKeyboardManager</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>935F7A9A467A1536579F155B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7DB5BA05023D1B8EFEE3A23B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9375D5CCCFA762DFEF1A62CE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E02F8665CA5C2E88073A224D</string>
+			<string>41D57116577A6FC20B9D7417</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>EFA44BF949831D7B59140324</key>
+		<key>93C0E3FB7A17946F74C1A5FA</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>B1EF245D568C29F990703A7D</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
-			<key>name</key>
-			<string>IQKeyboardManager.bundle</string>
-			<key>path</key>
-			<string>IQKeyBoardManager/Resources/IQKeyboardManager.bundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>F066E4A8A7B16C65766B3E2C</key>
+		<key>946161B0E018B880F8A14019</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>749E74354BDEA145E27B5D1D</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>IQTextView.m</string>
-			<key>path</key>
-			<string>IQKeyBoardManager/IQTextView/IQTextView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>F0B147CDE906A3F43F7BA965</key>
+		<key>951459B1CE3702BA0D8086CA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2466,10 +1931,125 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F5C7FE07234DDB5A8FC90E99</key>
+		<key>96DE9E087D89B89AC0070329</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>IQTextView.m</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/IQTextView/IQTextView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9769AC6AEC56706FEA590CEB</key>
 		<dict>
 			<key>fileRef</key>
-			<string>16E2628F39A331843F8995E9</string>
+			<string>F9F723AC6CF22FCEE3D02E46</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>978A600D0B68025C55038F9D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B89EBCF68D361333252639A7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>97AB85F1EE699132E7FF4CD7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>026494F495D9F0BDF46E436B</string>
+				<string>520DCB0EFE2A5C91C26E2D4E</string>
+				<string>F570F457770B553514CA0E25</string>
+				<string>8A52BD7994EA0E6151C77B5D</string>
+				<string>BD5F6E2DD34ABAE7ACD27788</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>97F593564164CC93D2B4F48E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E1302E0AD8B1B0CBF5741B50</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9818EFE417CCEFFC3A5585F8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>IQBarButtonItem.m</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/IQToolbar/IQBarButtonItem.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>99989F0D7681B8AB8C1259CD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>226808BFF74DC52752514FE7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>99E1B75244C7782C9345B11B</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>F8E8C43DC76F7CA5E3438570</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>EF98D3795468D1D5C3A7B5B1</string>
+			<key>productRefGroup</key>
+			<string>FA8DC0E5B91D140CBF704A18</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>317AF8F25FF3CD98FAC6698B</string>
+				<string>CBB9F474C6AB760A80C1CF67</string>
+				<string>F68003B0DB7676A42EE8AD80</string>
+				<string>7A203AC7536CC479DE30B367</string>
+				<string>B11CC7AE8563785759AA351C</string>
+			</array>
+		</dict>
+		<key>9A5B99192899C4406D0C2517</key>
+		<dict>
+			<key>fileRef</key>
+			<string>96DE9E087D89B89AC0070329</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2478,7 +2058,972 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>F87DC96768E124A4F97C7F82</key>
+		<key>9B1C4F98E34FE4D5350E1036</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MTCollectionViewCardLayoutHelper.h</string>
+			<key>path</key>
+			<string>MTCardLayout/MTCollectionViewCardLayoutHelper.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CDF9548871211DD2D6C87BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1310FC30514E392A891ED56E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D4F24BAD2F5FAF0375AA238</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B0B43FFBF55790E4BA8DBE0B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9DC2DB7FA638E0A00D09056D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>IQUIView+Hierarchy.m</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/Categories/IQUIView+Hierarchy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9F7EB07E561082D683EC4B9E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MMDrawerVisualState.h</string>
+			<key>path</key>
+			<string>MMDrawerController/MMDrawerVisualState.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9F7ED635252CF22BFF53F131</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-cardalot-IQKeyboardManager-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9FDFA4457F3D259248EDB201</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E873FE9D962D7C96C064A947</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A00E32CCE981DE8BCEA2BBAC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0C972B1563B737594E2352CD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>A0FD7F64D6C9374F531CBB00</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>FEE902A7B5388035843B1884</string>
+				<string>C88FB952B690975FCE95E690</string>
+				<string>BD5B58C50CCC4837933C3452</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A1F2A2DA4F1093AF4B07D9C9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIViewController+MMDrawerController.h</string>
+			<key>path</key>
+			<string>MMDrawerController/UIViewController+MMDrawerController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A1F9B1CAF7237250B76F92FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B42E89EB488D0B5F13D4C2EB</string>
+				<string>34FB1A3B9C3E687306703ED2</string>
+				<string>1310FC30514E392A891ED56E</string>
+				<string>4E4B3F0A6CDADE7F040D3B63</string>
+				<string>B1EF245D568C29F990703A7D</string>
+				<string>F9F723AC6CF22FCEE3D02E46</string>
+				<string>9B1C4F98E34FE4D5350E1036</string>
+				<string>5E099B687564FF6E67AA6D8E</string>
+				<string>E873FE9D962D7C96C064A947</string>
+				<string>4492C64CA73655D28EF10A83</string>
+				<string>AF72410278F11B993604C97E</string>
+				<string>0E458D3C8A149A86BCF7ECC2</string>
+				<string>105048E2913215C6E8BB22A1</string>
+				<string>B89EBCF68D361333252639A7</string>
+				<string>098F82030C2920467BCF5ABC</string>
+				<string>282E97786385358A32E73E03</string>
+				<string>4BD8FF23B1AB10FEA844B4E9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MTCardLayout</string>
+			<key>path</key>
+			<string>MTCardLayout</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A20913328F3721ABF553105A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JBLineChartView.h</string>
+			<key>path</key>
+			<string>Classes/JBLineChartView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A2592E307FB1BE18A3E87CA8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>44E157B4DD89C5CF954EEB03</string>
+				<string>9CDF9548871211DD2D6C87BB</string>
+				<string>93C0E3FB7A17946F74C1A5FA</string>
+				<string>4AA5F4E9C87FC528BA46E27B</string>
+				<string>9FDFA4457F3D259248EDB201</string>
+				<string>7CBCC6175E64C4691414B8C5</string>
+				<string>E3E3304074F66CB21833DDB1</string>
+				<string>2558376FFF3BBB1E66144E94</string>
+				<string>F81987C179F96D68733F3DF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A25BC07136546A91E941C10D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B0AA10419825E694C2D84A93</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A2D07FE1E68FF3EAAB3928A2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FFB24A5B3433FB484033DE3</string>
+				<string>EB59D24D914244B952EEB2A6</string>
+				<string>7365664DD7E6D4FE2C7645EF</string>
+				<string>3D915D957BEB14B7F8DD3428</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Pods-cardalot-JBChartView</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A31649FB9AA0D55B7934005F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FA9DE1A589F859E8BCE54EDB</string>
+				<string>C6963DAD23D232A69E057994</string>
+				<string>1448E7D3F4544262B48B1629</string>
+				<string>8125396802DE9BFD072AFEE2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Pods-cardalot-MMDrawerController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A49119DBD96C26C45FE0768B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>749E74354BDEA145E27B5D1D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A7AF07956F22F3C61F02C8E7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIViewController+MMDrawerController.m</string>
+			<key>path</key>
+			<string>MMDrawerController/UIViewController+MMDrawerController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A898CDB65022026296CB1F12</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D95D6128B94B2B3F12CE6B62</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AA64679BBB14C6B4249D0107</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-cardalot-MMDrawerController.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>AABB46B84C896D54DE1FD6AE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>3293DA60E00D6879C0D6DD1A</string>
+				<string>4C63AAAD3F0E16C83278B5D3</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>ABC6933DABEB962B40F6418E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7365664DD7E6D4FE2C7645EF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AF41DE9810ED46A198FF4162</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IQTextView.h</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/IQTextView/IQTextView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF72410278F11B993604C97E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UICollectionView+CardLayout.h</string>
+			<key>path</key>
+			<string>MTCardLayout/UICollectionView+CardLayout.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B0AA10419825E694C2D84A93</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IQUIWindow+Hierarchy.h</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/Categories/IQUIWindow+Hierarchy.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B0B43FFBF55790E4BA8DBE0B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MMDrawerController+Subclass.h</string>
+			<key>path</key>
+			<string>MMDrawerController/MMDrawerController+Subclass.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B11CC7AE8563785759AA351C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>CE80A959FF634EF705EC3A05</string>
+			<key>buildPhases</key>
+			<array>
+				<string>634051F1D5ED64B48BB9F4A4</string>
+				<string>81748C45A13B156634FC13E0</string>
+				<string>A2592E307FB1BE18A3E87CA8</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-cardalot-MTCardLayout</string>
+			<key>productName</key>
+			<string>Pods-cardalot-MTCardLayout</string>
+			<key>productReference</key>
+			<string>C0C3993348D029B3C3798BDA</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>B190D2CD9D435DEC120CB26D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-cardalot-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B1C7BF8B2D56CA452B2D3546</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>JBChartView.h</string>
+			<key>path</key>
+			<string>Classes/JBChartView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B1EF245D568C29F990703A7D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MTCardLayout.h</string>
+			<key>path</key>
+			<string>MTCardLayout/MTCardLayout.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B37FBF5157A9EF186D374302</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IQUIView+Hierarchy.h</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/Categories/IQUIView+Hierarchy.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B3F34ED25F29FE66882F06FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>92E3629CECCA4DD7B2042AF7</string>
+				<string>02EAFA1FAB63B808C4299848</string>
+				<string>9015178EA44667BE0ED5737E</string>
+				<string>A1F9B1CAF7237250B76F92FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B42E89EB488D0B5F13D4C2EB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>LSCollectionViewHelper.h</string>
+			<key>path</key>
+			<string>MTCardLayout/DraggableCollectionView/Helpers/LSCollectionViewHelper.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B89EBCF68D361333252639A7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UICollectionView+Draggable.m</string>
+			<key>path</key>
+			<string>MTCardLayout/DraggableCollectionView/UICollectionView+Draggable.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B9B1ACB41337086456981A4E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>C6963DAD23D232A69E057994</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-cardalot-MMDrawerController/Pods-cardalot-MMDrawerController-prefix.pch</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>BBE5C025D3FCE1C3A626868B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0E458D3C8A149A86BCF7ECC2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BD5B58C50CCC4837933C3452</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A20913328F3721ABF553105A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BD5F6E2DD34ABAE7ACD27788</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A7AF07956F22F3C61F02C8E7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>BE01436201213FC0F42B85DF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6A84A68EF59D2DE9FBF7B1EE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BF136B3BA0905B09F93B0B33</key>
+		<dict>
+			<key>fileRef</key>
+			<string>951459B1CE3702BA0D8086CA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>C0C3993348D029B3C3798BDA</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-cardalot-MTCardLayout.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C6963DAD23D232A69E057994</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-cardalot-MMDrawerController-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7F5AD404F2D3E183CBA61EC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>749E74354BDEA145E27B5D1D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C88FB952B690975FCE95E690</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B1C7BF8B2D56CA452B2D3546</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C92821E620B7435289FA6B7D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CC0B9A9E334893239612A5AC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CB5A4463D0399C6022A7D216</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>749E74354BDEA145E27B5D1D</string>
+				<string>767332084A7870845B8C4838</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CB90797E832E55876532319E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9818EFE417CCEFFC3A5585F8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>CBB9F474C6AB760A80C1CF67</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>2CF81F269387C2FBFA2F19AD</string>
+			<key>buildPhases</key>
+			<array>
+				<string>707B567863080A5334B1FD86</string>
+				<string>FD02CBA405B15B1E47525606</string>
+				<string>066F30B279B648156F8ED04F</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-cardalot-IQKeyboardManager</string>
+			<key>productName</key>
+			<string>Pods-cardalot-IQKeyboardManager</string>
+			<key>productReference</key>
+			<string>4CDC221AD80E3F042DC4A6D2</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>CC0B9A9E334893239612A5AC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>KeyboardManager.h</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/KeyboardManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CCC0AA2550F7BC2E43E6ED19</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E400B1C93C3E50D54E8F51A5</string>
+				<string>B9B1ACB41337086456981A4E</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>CE80A959FF634EF705EC3A05</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>03364C00C09D4A5B5E88E923</string>
+				<string>F8BAA98CABF655F32D8AA2D2</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>CEC4212E16C99C772CDFBE38</key>
+		<dict>
+			<key>fileRef</key>
+			<string>51A2999927C324EC8FFCFA62</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>CF42D9218A0AF59E2E14CA4E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>088EE9B0939732EFE509A1B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CFB228106ACB297312B5F61F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-cardalot.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1B3AA974B8F9184DC17719D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>458708DF8702E60B5C7EC170</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D2EA5AA6BF28DF703F1E310F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B0B43FFBF55790E4BA8DBE0B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D57AB6C842D1619F3B01D690</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MMDrawerVisualState.m</string>
+			<key>path</key>
+			<string>MMDrawerController/MMDrawerVisualState.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D701AB73F141201ABCCEA679</key>
+		<dict>
+			<key>fileRef</key>
+			<string>16DD3BC6EB066F17E245A346</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>D88A9E14041D7DBE44913A97</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IQSegmentedNextPrevious.h</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/IQSegmentedNextPrevious/IQSegmentedNextPrevious.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D95D6128B94B2B3F12CE6B62</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8BF61327F6C185A21D8E4170</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D97FD0715431D796B4593A57</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-cardalot-JBChartView.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>DB0F12A403D08453B7A6AC6C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F2D3263A64FC6FC3E3ACEECA</string>
+				<string>6D36E913268770B4CFDC81FF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DC6B42FB76A6CE756A420C0F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Pods-cardalot-JBChartView</string>
+			<key>target</key>
+			<string>F68003B0DB7676A42EE8AD80</string>
+			<key>targetProxy</key>
+			<string>042AE39F02020A76557E9499</string>
+		</dict>
+		<key>DCBD358BC7A46E9EB78A018F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IQToolbar.h</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/IQToolbar/IQToolbar.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DD571ACC18203415C6158AB9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DCBD358BC7A46E9EB78A018F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E1111B7D73E01E7F9C4DBDBE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9F7EB07E561082D683EC4B9E</string>
+				<string>D57AB6C842D1619F3B01D690</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MMDrawerVisualStates</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E1302E0AD8B1B0CBF5741B50</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IQBarButtonItem.h</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/IQToolbar/IQBarButtonItem.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E3E3304074F66CB21833DDB1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>105048E2913215C6E8BB22A1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E400B1C93C3E50D54E8F51A5</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>C6963DAD23D232A69E057994</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-cardalot-MMDrawerController/Pods-cardalot-MMDrawerController-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E5C08382E94F4908765B6F0D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2493,25 +3038,160 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FB2FAFC13FEC4EECE8AA4C3B</key>
+		<key>E5DCD47182187AE5A80B070D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>IQSegmentedNextPrevious.m</string>
+			<string>IQUIView+IQKeyboardToolbar.h</string>
 			<key>path</key>
-			<string>IQKeyBoardManager/IQSegmentedNextPrevious/IQSegmentedNextPrevious.m</string>
+			<string>IQKeyBoardManager/IQToolbar/IQUIView+IQKeyboardToolbar.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FFF8F330694E59D2F0043E6A</key>
+		<key>E7750035FD1A2A33C6C02325</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IQTitleBarButtonItem.h</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/IQToolbar/IQTitleBarButtonItem.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7A4EABC8EC13BB399667392</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>99E1B75244C7782C9345B11B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>CBB9F474C6AB760A80C1CF67</string>
+			<key>remoteInfo</key>
+			<string>Pods-cardalot-IQKeyboardManager</string>
+		</dict>
+		<key>E81C6A11D89B6FD7B53904B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Pods-cardalot-IQKeyboardManager</string>
+			<key>target</key>
+			<string>CBB9F474C6AB760A80C1CF67</string>
+			<key>targetProxy</key>
+			<string>E7A4EABC8EC13BB399667392</string>
+		</dict>
+		<key>E873FE9D962D7C96C064A947</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MTDraggableCardLayout.h</string>
+			<key>path</key>
+			<string>MTCardLayout/MTDraggableCardLayout.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EB59D24D914244B952EEB2A6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-cardalot-JBChartView-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EC334A96D18EFBCE830088DB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B190D2CD9D435DEC120CB26D</string>
+				<string>7A75D1459451C123015DA1D9</string>
+				<string>8BF61327F6C185A21D8E4170</string>
+				<string>8CEA07FE3D44CC882443B75B</string>
+				<string>13DBED1957CE4FA9F7C692ED</string>
+				<string>CFB228106ACB297312B5F61F</string>
+				<string>1AEED3A38CC74829D9E40FA7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-cardalot</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-cardalot</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF98D3795468D1D5C3A7B5B1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>56A1227A4FBB51D6CF5726E9</string>
+				<string>06B05196B8B5C9D7C9D8E628</string>
+				<string>B3F34ED25F29FE66882F06FE</string>
+				<string>FA8DC0E5B91D140CBF704A18</string>
+				<string>5D0757B6A1B769B0137B94E6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F18B60928946481AEB9DDDA4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>41D57116577A6FC20B9D7417</string>
+				<string>4B7DBBFB4174AD5043730E3C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MMDrawerBarButtonItem</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F2D3263A64FC6FC3E3ACEECA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D0A2BEE1F76275A50768873A</string>
+			<string>749E74354BDEA145E27B5D1D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F33BEF7E6187C897F81E154B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Pods-cardalot-MTCardLayout</string>
+			<key>target</key>
+			<string>B11CC7AE8563785759AA351C</string>
+			<key>targetProxy</key>
+			<string>7D58B4F219EDFCF67A160171</string>
+		</dict>
+		<key>F570F457770B553514CA0E25</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D57AB6C842D1619F3B01D690</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2520,9 +3200,198 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
+		<key>F6707E7B687334A75AB84B00</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>IQKeyboardReturnKeyHandler.m</string>
+			<key>path</key>
+			<string>IQKeyBoardManager/IQKeyboardReturnKeyHandler.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F68003B0DB7676A42EE8AD80</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>8B53B04142CDE5B093FAA66A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>33007334994BD2E12615686F</string>
+				<string>6CCB72BC3DCEBEB8144E964B</string>
+				<string>A0FD7F64D6C9374F531CBB00</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-cardalot-JBChartView</string>
+			<key>productName</key>
+			<string>Pods-cardalot-JBChartView</string>
+			<key>productReference</key>
+			<string>D97FD0715431D796B4593A57</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>F81987C179F96D68733F3DF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>282E97786385358A32E73E03</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F8BAA98CABF655F32D8AA2D2</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>3A91C5C49B511AF9D90C6D21</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-cardalot-MTCardLayout/Pods-cardalot-MTCardLayout-prefix.pch</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>F8E8C43DC76F7CA5E3438570</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>554FAA711B21FCDFAA0E4B52</string>
+				<string>54141361A599E8A6B47FB25F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F9F723AC6CF22FCEE3D02E46</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MTCardLayout.m</string>
+			<key>path</key>
+			<string>MTCardLayout/MTCardLayout.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FA8DC0E5B91D140CBF704A18</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>649DC610FB917DBFE8508DB1</string>
+				<string>4CDC221AD80E3F042DC4A6D2</string>
+				<string>D97FD0715431D796B4593A57</string>
+				<string>AA64679BBB14C6B4249D0107</string>
+				<string>C0C3993348D029B3C3798BDA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FA9DE1A589F859E8BCE54EDB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-cardalot-MMDrawerController.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FD02CBA405B15B1E47525606</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>946161B0E018B880F8A14019</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>FE26691C3288847D3F4ABA64</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5E099B687564FF6E67AA6D8E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FEB5280D965A589D39E512C9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B37FBF5157A9EF186D374302</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FEE902A7B5388035843B1884</key>
+		<dict>
+			<key>fileRef</key>
+			<string>203D3AF5E4ABD95E42BA3A0A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 	</dict>
 	<key>rootObject</key>
-	<string>C4C074CB9FAC4F23BB22F7F5</string>
+	<string>99E1B75244C7782C9345B11B</string>
 </dict>
 </plist>
->>>>>>> feature/NewCardVC
