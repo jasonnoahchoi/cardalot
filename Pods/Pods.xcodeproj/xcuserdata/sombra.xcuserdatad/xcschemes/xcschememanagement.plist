@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-cardalot-MTCardLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-cardalot.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -28,6 +33,26 @@
 			<true/>
 		</dict>
 		<key>212D93DDDE15BAC563BF967C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>40D0BA4F9942FACA4F73EBCF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>40F64179450912F17D5EB945</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B286F2483F3D1925421D438F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E10333CEA3177562DEAE4155</key>
 		<dict>
 			<key>primary</key>
 			<true/>

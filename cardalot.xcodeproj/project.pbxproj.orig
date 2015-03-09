@@ -160,14 +160,16 @@
 				0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */,
 				7200CEB11AACE66000E84D55 /* HistoryViewController.h */,
 				7200CEB21AACE66000E84D55 /* HistoryViewController.m */,
+<<<<<<< HEAD
 				7200CEC01AAD1D9A00E84D55 /* CardCollectionViewController.h */,
 				7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */,
 				7200CEC31AAD1E9800E84D55 /* CardCollectionViewCell.h */,
 				7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */,
 				7200CEC61AAD1FD000E84D55 /* CardCollectionViewDataSource.h */,
 				7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */,
+=======
 				08D8F8CB1AACE7290015A4BD /* DeckCollectionView */,
-				08D8F8CB1AACE7290015A4BD /* DeckCollectionView */,
+>>>>>>> e5f6b092a2d8d8b60b0d283b638b4c443c202224
 				725180E51AAA6FAE00C446E5 /* Stack.h */,
 				725180E61AAA6FAE00C446E5 /* Stack.m */,
 				725180E81AAA751600C446E5 /* Model.xcdatamodeld */,
