@@ -19,6 +19,7 @@
 		08FE1E901AAA5F570068F0C9 /* cardalotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */; };
 		3B050E253021896E149A532F /* libPods-cardalot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8B54A570249508FE757348 /* libPods-cardalot.a */; };
 		7200CEB31AACE66000E84D55 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEB21AACE66000E84D55 /* HistoryViewController.m */; };
+		7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */; };
 		725180E71AAA6FAE00C446E5 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180E61AAA6FAE00C446E5 /* Stack.m */; };
 		725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725180E81AAA751600C446E5 /* Model.xcdatamodeld */; };
 		725180ED1AAA772900C446E5 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EC1AAA772900C446E5 /* Deck.m */; };
@@ -59,6 +60,8 @@
 		1E0294E2F64F78E379287CCE /* Pods-cardalot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardalot.release.xcconfig"; path = "Pods/Target Support Files/Pods-cardalot/Pods-cardalot.release.xcconfig"; sourceTree = "<group>"; };
 		7200CEB11AACE66000E84D55 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		7200CEB21AACE66000E84D55 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		7200CEC01AAD1D9A00E84D55 /* CardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewController.h; sourceTree = "<group>"; };
+		7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewController.m; sourceTree = "<group>"; };
 		725180E51AAA6FAE00C446E5 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		725180E61AAA6FAE00C446E5 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		725180E91AAA751600C446E5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */,
 				7200CEB11AACE66000E84D55 /* HistoryViewController.h */,
 				7200CEB21AACE66000E84D55 /* HistoryViewController.m */,
+				7200CEC01AAD1D9A00E84D55 /* CardCollectionViewController.h */,
+				7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */,
 				725180E51AAA6FAE00C446E5 /* Stack.h */,
 				725180E61AAA6FAE00C446E5 /* Stack.m */,
 				725180E81AAA751600C446E5 /* Model.xcdatamodeld */,
@@ -336,6 +341,7 @@
 				725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
 				0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */,
+				7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */,
 				7200CEB31AACE66000E84D55 /* HistoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
