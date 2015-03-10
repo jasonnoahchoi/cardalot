@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */; };
+		08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED41AAF9CC000BE440E /* StudyDraggableView.m */; };
+		08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED71AAF9CD400BE440E /* StudySubjectView.m */; };
+		08662EDB1AAF9CDF00BE440E /* StudyDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662EDA1AAF9CDF00BE440E /* StudyDescriptionView.m */; };
+		08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662EDD1AAF9CE800BE440E /* StudyOverlayView.m */; };
+		08662EE11AAF9F8D00BE440E /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662EE01AAF9F8D00BE440E /* StudyViewController.m */; };
 		0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */; };
 		0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */; };
 		08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08977A141AABCB6C00E525D0 /* AppearanceController.m */; };
@@ -50,6 +56,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08662ED01AAF9CA100BE440E /* StudyDraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDraggableViewBackground.h; sourceTree = "<group>"; };
+		08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDraggableViewBackground.m; sourceTree = "<group>"; };
+		08662ED31AAF9CC000BE440E /* StudyDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDraggableView.h; sourceTree = "<group>"; };
+		08662ED41AAF9CC000BE440E /* StudyDraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDraggableView.m; sourceTree = "<group>"; };
+		08662ED61AAF9CD400BE440E /* StudySubjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudySubjectView.h; sourceTree = "<group>"; };
+		08662ED71AAF9CD400BE440E /* StudySubjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudySubjectView.m; sourceTree = "<group>"; };
+		08662ED91AAF9CDF00BE440E /* StudyDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDescriptionView.h; sourceTree = "<group>"; };
+		08662EDA1AAF9CDF00BE440E /* StudyDescriptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDescriptionView.m; sourceTree = "<group>"; };
+		08662EDC1AAF9CE800BE440E /* StudyOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyOverlayView.h; sourceTree = "<group>"; };
+		08662EDD1AAF9CE800BE440E /* StudyOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyOverlayView.m; sourceTree = "<group>"; };
+		08662EDF1AAF9F8D00BE440E /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
+		08662EE01AAF9F8D00BE440E /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
 		0868F52D1AABDD58008CA47D /* DeckCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewCell.h; sourceTree = "<group>"; };
 		0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewCell.m; sourceTree = "<group>"; };
 		0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeckCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -126,6 +144,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08662EE21AAF9F9600BE440E /* StudyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				08662ED01AAF9CA100BE440E /* StudyDraggableViewBackground.h */,
+				08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */,
+				08662ED31AAF9CC000BE440E /* StudyDraggableView.h */,
+				08662ED41AAF9CC000BE440E /* StudyDraggableView.m */,
+				08662ED61AAF9CD400BE440E /* StudySubjectView.h */,
+				08662ED71AAF9CD400BE440E /* StudySubjectView.m */,
+				08662ED91AAF9CDF00BE440E /* StudyDescriptionView.h */,
+				08662EDA1AAF9CDF00BE440E /* StudyDescriptionView.m */,
+				08662EDC1AAF9CE800BE440E /* StudyOverlayView.h */,
+				08662EDD1AAF9CE800BE440E /* StudyOverlayView.m */,
+				08662EDF1AAF9F8D00BE440E /* StudyViewController.h */,
+				08662EE01AAF9F8D00BE440E /* StudyViewController.m */,
+			);
+			name = StudyViewController;
+			sourceTree = "<group>";
+		};
 		08D8F8CB1AACE7290015A4BD /* DeckCollectionView Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +202,7 @@
 				FF8F0AD81AAE592200BDD975 /* Deck Collection View */,
 				FF8F0AD91AAE594000BDD975 /* Card Collection View */,
 				FF8F0AC41AAE577F00BDD975 /* Card Entry View */,
+				08662EE21AAF9F9600BE440E /* StudyViewController */,
 				7200CEB11AACE66000E84D55 /* HistoryViewController.h */,
 				7200CEB21AACE66000E84D55 /* HistoryViewController.m */,
 				725180F11AAA7AFE00C446E5 /* DeckController.h */,
@@ -429,25 +467,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */,
 				725180E71AAA6FAE00C446E5 /* Stack.m in Sources */,
 				FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */,
 				08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
+				08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */,
 				FF8F0AD51AAE579A00BDD975 /* frontTextCell.m in Sources */,
 				725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */,
 				725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */,
 				08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */,
+				08662EDB1AAF9CDF00BE440E /* StudyDescriptionView.m in Sources */,
 				725180ED1AAA772900C446E5 /* Deck.m in Sources */,
+				08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */,
 				725180F01AAA772A00C446E5 /* Card.m in Sources */,
 				725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */,
 				FF8F0AD31AAE579A00BDD975 /* deckTagCell.m in Sources */,
 				08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
 				0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */,
+				08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */,
 				7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */,
 				FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */,
 				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
 				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,
+				08662EE11AAF9F8D00BE440E /* StudyViewController.m in Sources */,
 				7200CEB31AACE66000E84D55 /* HistoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
