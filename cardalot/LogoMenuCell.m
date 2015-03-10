@@ -14,6 +14,29 @@
     // Initialization code
 }
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
+    if (self) {
+        
+        //Position/Size
+        self.logoImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 60, 60)];
+        
+        // inserts image
+        self.logoImage.image = [UIImage imageNamed:@"logoMenu"];
+        
+        // set Delegate
+        
+        
+        // add subview
+        [self.contentView addSubview:self.logoImage];
+        
+    }
+    return self;
+}
+
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

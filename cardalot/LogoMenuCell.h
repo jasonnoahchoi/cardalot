@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LogoMenuCell : UITableViewCell
+@interface LogoMenuCell : UITableViewCell <UITableViewDelegate>
+
+@property (nonatomic, strong) UIImageView *logoImage;
 
 @end
