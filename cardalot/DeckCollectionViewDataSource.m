@@ -39,6 +39,11 @@ static NSString * const cellIdentifier = @"cell";
         cell.subjectLabel.text = deck.nameTag;
         NSLog(@"%@", deck.nameTag);
         cell.subjectLabel.textAlignment = NSTextAlignmentCenter;
+        
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+        longPress.minimumPressDuration = 1.5;
+        longPress.cancelsTouchesInView = NO;
+        [cell addGestureRecognizer:longPress];
 
         return cell;
     }
@@ -46,6 +51,12 @@ static NSString * const cellIdentifier = @"cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [DeckController sharedInstance].decks.count + 1;
+}
+
+- (void)longPress:(UILongPressGestureRecognizer *)gr {
+    if (gr.state == UIGestureRecognizerStateBegan) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:presentAlert object:nil];
+    }
 }
 
 @end

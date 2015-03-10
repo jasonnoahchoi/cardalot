@@ -22,7 +22,6 @@ static NSString * const cellIdentifier = @"cell";
 @property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
 @property (nonatomic, strong) DeckCollectionViewLayout *deckLayout;
 @property (nonatomic, strong) DeckCollectionViewCell *cell;
-@property (nonatomic, strong) UILongPressGestureRecognizer *longGesture;
 
 @end
 
@@ -38,7 +37,6 @@ static NSString * const cellIdentifier = @"cell";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
     
     self.deckLayout = [[DeckCollectionViewLayout alloc] init];
-//    self.cell = [[DeckCollectionViewCell alloc] init];
 
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:self.deckLayout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
@@ -50,14 +48,10 @@ static NSString * const cellIdentifier = @"cell";
     
     self.collectionView.delegate = self;
 
-    self.longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(createCloseButton:)];
-    self.longGesture.delegate = self;
-    self.longGesture.minimumPressDuration = 1.5;
-    self.longGesture.cancelsTouchesInView = NO;
-//    [self.collectionView addGestureRecognizer:self.longGesture];
-
     self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(createCloseButton) name:presentAlert object:nil];
 }
 
 - (void)open {
@@ -71,7 +65,6 @@ static NSString * const cellIdentifier = @"cell";
         [self createNewDeckAlertController];
     } else {
         NSLog(@"some other cell");
-        [self.cell addGestureRecognizer:self.longGesture];
     }
 }
 
@@ -97,8 +90,7 @@ static NSString * const cellIdentifier = @"cell";
 
 #pragma mark - Delete Cell Methods
 
-- (void)createCloseButton:(UILongPressGestureRecognizer *)gr {
-    if (gr.state == UIGestureRecognizerStateBegan) {
+- (void)createCloseButton {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Remove Deck" message:@"Are you sure you want to remove deck? All cards inside the deck will be erased." preferredStyle:UIAlertControllerStyleActionSheet];
         [alertController addAction:[UIAlertAction actionWithTitle:@"Remove" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
             NSIndexPath *indexPath = [self.collectionView indexPathForCell:self.cell];
@@ -116,7 +108,6 @@ static NSString * const cellIdentifier = @"cell";
         
         // [self.collectionView.visibleCells makeObjectsPerformSelector:@selector(startJiggling)];
         NSLog(@"Close Button");
-    }
 }
 
 //- (void)deleteItem:(int)i {
