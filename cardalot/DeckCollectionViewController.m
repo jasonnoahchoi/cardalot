@@ -11,6 +11,7 @@
 #import "DeckController.h"
 #import "DeckCollectionViewLayout.h"
 #import "DeckCollectionViewCell.h"
+#import "CardViewController.h"
 
 #import <MMDrawerController.h>
 
@@ -69,7 +70,8 @@ static NSString * const cellIdentifier = @"cell";
 }
 
 - (void)addItem:(id)sender {
-    NSLog(@"add new card");
+    CardViewController *cardVC = [[CardViewController alloc] init];
+    [self.navigationController pushViewController:cardVC animated:YES];
 }
 
 - (void)createNewDeckAlertController {
