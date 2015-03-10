@@ -55,6 +55,10 @@ static NSString * const cellIdentifier = @"cell";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(createCloseButton) name:presentAlert object:nil];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.collectionView reloadData];
+}
+
 - (void)open {
     [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
