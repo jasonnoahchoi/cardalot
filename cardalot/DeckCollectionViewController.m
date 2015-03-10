@@ -50,11 +50,11 @@ static NSString * const cellIdentifier = @"cell";
     
     self.collectionView.delegate = self;
 
-    self.longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(createCloseButton)];
+    self.longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(createCloseButton:)];
     self.longGesture.delegate = self;
     self.longGesture.minimumPressDuration = 1.5;
     self.longGesture.cancelsTouchesInView = NO;
-    [self.collectionView addGestureRecognizer:self.longGesture];
+//    [self.collectionView addGestureRecognizer:self.longGesture];
 
     self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
@@ -71,6 +71,7 @@ static NSString * const cellIdentifier = @"cell";
         [self createNewDeckAlertController];
     } else {
         NSLog(@"some other cell");
+        [self.cell addGestureRecognizer:self.longGesture];
     }
 }
 
@@ -96,24 +97,26 @@ static NSString * const cellIdentifier = @"cell";
 
 #pragma mark - Delete Cell Methods
 
-- (void)createCloseButton {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Remove Deck" message:@"Are you sure you want to remove deck? All cards inside the deck will be erased." preferredStyle:UIAlertControllerStyleActionSheet];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Remove" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-        NSIndexPath *indexPath = [self.collectionView indexPathForCell:self.cell];
-
-        Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
-        [[DeckController sharedInstance] removeDeck:deck];
-        [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
-
-        [self.collectionView reloadData];
-    }]];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        NSLog(@"cancel");
-    }]];
-    [self presentViewController:alertController animated:YES completion:nil];
-
-    // [self.collectionView.visibleCells makeObjectsPerformSelector:@selector(startJiggling)];
-    NSLog(@"Close Button");
+- (void)createCloseButton:(UILongPressGestureRecognizer *)gr {
+    if (gr.state == UIGestureRecognizerStateBegan) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Remove Deck" message:@"Are you sure you want to remove deck? All cards inside the deck will be erased." preferredStyle:UIAlertControllerStyleActionSheet];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Remove" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+            NSIndexPath *indexPath = [self.collectionView indexPathForCell:self.cell];
+            
+            Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+            [[DeckController sharedInstance] removeDeck:deck];
+            [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+            
+            [self.collectionView reloadData];
+        }]];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            NSLog(@"cancel");
+        }]];
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        // [self.collectionView.visibleCells makeObjectsPerformSelector:@selector(startJiggling)];
+        NSLog(@"Close Button");
+    }
 }
 
 //- (void)deleteItem:(int)i {
