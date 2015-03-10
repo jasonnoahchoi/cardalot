@@ -8,6 +8,8 @@
 
 @import UIKit;
 
+static NSString * const presentAlert = @"deleteDeck";
+
 @interface DeckCollectionViewDataSource : NSObject <UICollectionViewDataSource>
 
 - (void)registerCollectionView:(UICollectionView *)collectionView;
