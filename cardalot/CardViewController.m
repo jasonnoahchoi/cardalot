@@ -113,7 +113,7 @@
 
 #pragma mark IBAction
 - (IBAction)done:(id)sender {
-    [[DeckController sharedInstance] addCardToDeckWithNameTag:self.deckTagCell.deckTagField.text];
+    [[DeckController sharedInstance] addCardWithTitle:self.frontTextCell.frontTextField.text andAnswer:self.backTextCell.backTextView.text toDeckWithNameTag:self.deckTagCell.deckTagField.text];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
