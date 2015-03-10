@@ -11,6 +11,7 @@
 #import "DeckController.h"
 #import "DeckCollectionViewLayout.h"
 #import "DeckCollectionViewCell.h"
+#import "CardViewController.h"
 
 #import <MMDrawerController.h>
 
@@ -54,6 +55,10 @@ static NSString * const cellIdentifier = @"cell";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(createCloseButton) name:presentAlert object:nil];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.collectionView reloadData];
+}
+
 - (void)open {
     [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
@@ -69,7 +74,8 @@ static NSString * const cellIdentifier = @"cell";
 }
 
 - (void)addItem:(id)sender {
-    NSLog(@"add new card");
+    CardViewController *cardVC = [[CardViewController alloc] init];
+    [self.navigationController pushViewController:cardVC animated:YES];
 }
 
 - (void)createNewDeckAlertController {

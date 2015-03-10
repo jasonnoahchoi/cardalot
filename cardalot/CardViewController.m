@@ -7,11 +7,14 @@
 //
 
 #import "CardViewController.h"
-
+#import "DeckController.h"
 
 @interface CardViewController () <UITextViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) DeckTagCell *deckTagCell;
+@property (nonatomic, strong) FrontTextCell *frontTextCell;
+@property (nonatomic, strong) BackTextCell *backTextCell;
 
 @end
 
@@ -43,7 +46,7 @@
     
     // adds right bar button item
     UINavigationItem *navigationSaveItem = self.navigationItem;
-    navigationSaveItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissAnimated:)];     // will want to dismiss to detail card collection view
+    navigationSaveItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];     // will want to dismiss to detail card collection view
     
     // add to view
     [self.view addSubview:self.tableView];
@@ -67,22 +70,22 @@
         cell.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
         return cell;
     } else if (indexPath.row == 1) {
-        DeckTagCell *cell = [[DeckTagCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
-        return cell;
+        self.deckTagCell = [[DeckTagCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
+        return self.deckTagCell;
     } else if (indexPath.row == 2) {
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell3"];
         cell.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
         return cell;
     } else if (indexPath.row == 3) {
-        FrontTextCell *cell = [[FrontTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell4"];
-        return cell;
+        self.frontTextCell = [[FrontTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell4"];
+        return self.frontTextCell;
     } else if (indexPath.row == 4) {
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell5"];
         cell.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
         return cell;
     } else {
-        BackTextCell *cell = [[BackTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell6"];
-        return cell;
+        self.backTextCell = [[BackTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell6"];
+        return self.backTextCell;
     }
 }
 
@@ -108,11 +111,10 @@
     [self.view endEditing:YES];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark IBAction
+- (IBAction)done:(id)sender {
+    [[DeckController sharedInstance] addCardWithTitle:self.frontTextCell.frontTextField.text andAnswer:self.backTextCell.backTextView.text toDeckWithNameTag:self.deckTagCell.deckTagField.text];
+    [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 @end

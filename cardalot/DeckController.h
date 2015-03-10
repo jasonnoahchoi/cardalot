@@ -22,7 +22,7 @@
 - (void)addDeckWithName:(NSString *)nameTag;
 - (void)removeDeck:(Deck *)deck;
 
-- (void)addCardToDeckWithNameTag:(NSString *)nameTag;
+- (void)addCardWithTitle:(NSString *)title andAnswer:(NSString *)answer toDeckWithNameTag:(NSString *)nameTag;
 - (void)removeCard:(Card *)card;
 
 @end
