@@ -11,6 +11,12 @@
 #import "Card.h"
 #import "Stack.h"
 
+@interface DeckController ()
+
+@property (nonatomic, strong) NSArray *nameTags;
+
+@end
+
 static NSString * const deckEntity = @"Deck";
 static NSString * const cardEntity = @"Card";
 
@@ -28,6 +34,15 @@ static NSString * const cardEntity = @"Card";
 - (NSArray *)decks {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:deckEntity];
     return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:NULL];
+}
+
+- (NSArray *)nameTags {
+    NSMutableArray *mutableNameTags = [[NSMutableArray alloc] init];
+    for (Deck *deck in self.decks) {
+        NSString *nameTag = deck.nameTag;
+        [mutableNameTags addObject:nameTag];
+    }
+    return mutableNameTags;
 }
 
 - (void)save {
@@ -51,9 +66,13 @@ static NSString * const cardEntity = @"Card";
 - (void)addCardToDeckWithNameTag:(NSString *)nameTag {
     Card *card = [NSEntityDescription insertNewObjectForEntityForName:cardEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     
+    if (![self.nameTags containsObject:nameTag]) {
+        [self addDeckWithName:nameTag];
+    }
+    
     for (Deck *deck in self.decks) {
         if (deck.nameTag == nameTag) {
-            [deck addCardsObject:card];
+            [card setDecks:[NSSet setWithObject:deck]];
             [self save];
         }
     }
