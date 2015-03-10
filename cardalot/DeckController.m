@@ -63,8 +63,10 @@ static NSString * const cardEntity = @"Card";
 }
 
 #pragma Card stuff
-- (void)addCardToDeckWithNameTag:(NSString *)nameTag {
+- (void)addCardWithTitle:(NSString *)title andAnswer:(NSString *)answer toDeckWithNameTag:(NSString *)nameTag {
     Card *card = [NSEntityDescription insertNewObjectForEntityForName:cardEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    card.title = title;
+    card.answer = answer;
     
     if (![self.nameTags containsObject:nameTag]) {
         [self addDeckWithName:nameTag];
