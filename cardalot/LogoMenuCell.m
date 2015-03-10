@@ -21,10 +21,12 @@
     if (self) {
         
         //Position/Size
-        self.logoImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 60, 60)];
+        self.logoImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 30, 80, 80)];
         
         // inserts image
         self.logoImage.image = [UIImage imageNamed:@"logoMenu"];
+        
+        self.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
         
         // set Delegate
         
