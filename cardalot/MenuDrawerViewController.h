@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LogoMenuCell.h"
 
-@interface MenuDrawerViewController : UIViewController
+@interface MenuDrawerViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
