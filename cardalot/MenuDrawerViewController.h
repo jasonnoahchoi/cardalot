@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "LogoMenuCell.h"
+#import "SearchCell.h"
+
 
 @interface MenuDrawerViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
