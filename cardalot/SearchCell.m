@@ -22,7 +22,7 @@
 //        CGSize size = self.contentView.frame.size;
         
         // positioning
-        self.searchField = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 180, 44)];
+        self.searchField = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 20, 180, 44)];
         
         // modifications
 //        self.searchField.tintColor = [UIColor lightGrayColor];
