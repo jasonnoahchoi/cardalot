@@ -23,7 +23,6 @@ static NSString * const cellIdentifier = @"cell";
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
 @property (nonatomic, strong) DeckCollectionViewLayout *deckLayout;
-@property (nonatomic, strong) DeckCollectionViewCell *cell;
 
 @end
 
@@ -47,13 +46,12 @@ static NSString * const cellIdentifier = @"cell";
     self.dataSource = [DeckCollectionViewDataSource new];
     self.collectionView.dataSource = self.dataSource;
     [self.dataSource registerCollectionView:self.collectionView];
+    self.dataSource.deckCollectionVC = self;
     
     self.collectionView.delegate = self;
 
     self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(createCloseButton) name:presentAlert object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -65,7 +63,7 @@ static NSString * const cellIdentifier = @"cell";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    self.cell = (DeckCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+    
     if (indexPath.item == [DeckController sharedInstance].decks.count) {
         NSLog(@"last cell");
         [self createNewDeckAlertController];
@@ -98,43 +96,5 @@ static NSString * const cellIdentifier = @"cell";
     }]];
     [self presentViewController:alertController animated:YES completion:nil];
 }
-
-#pragma mark - Delete Cell Methods
-
-- (void)createCloseButton {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Remove Deck" message:@"Are you sure you want to remove deck? All cards inside the deck will be erased." preferredStyle:UIAlertControllerStyleActionSheet];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Remove" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-            NSIndexPath *indexPath = [self.collectionView indexPathForCell:self.cell];
-            
-            Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
-            [[DeckController sharedInstance] removeDeck:deck];
-            [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
-            
-            [self.collectionView reloadData];
-        }]];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            NSLog(@"cancel");
-        }]];
-        [self presentViewController:alertController animated:YES completion:nil];
-        
-        // [self.collectionView.visibleCells makeObjectsPerformSelector:@selector(startJiggling)];
-        NSLog(@"Close Button");
-}
-
-//- (void)deleteItem:(int)i {
-//    [self.collectionView performBatchUpdates:^{
-////        NSMutableArray *array = [[NSMutableArray alloc] initWithArray:[DeckController sharedInstance].decks];
-////        [array removeObjectAtIndex:i];
-//        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
-//        Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
-//        [[DeckController sharedInstance] removeDeck:deck];
-//        [self.collectionView deleteItemsAtIndexPaths:[NSArray arrayWithObject:indexPath]];
-//        NSLog(@"Delete item: %d", i);
-//    } completion:^(BOOL finished) {
-//        NSLog(@"Delete cell!");
-//    }];
-//
-//    [self.collectionView reloadData];
-//}
 
 @end

@@ -14,9 +14,18 @@
 
 static NSString * const cellIdentifier = @"cell";
 
+@interface DeckCollectionViewDataSource ()
+
+@property (strong, nonatomic) UICollectionView *collectionView;
+
+@end
+
 @implementation DeckCollectionViewDataSource
 
 - (void)registerCollectionView:(UICollectionView *)collectionView {
+    
+    self.collectionView = collectionView;
+    
     [collectionView registerNib:[UINib nibWithNibName:@"DeckCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:cellIdentifier];
 }
 
@@ -26,10 +35,8 @@ static NSString * const cellIdentifier = @"cell";
         NSInteger index = [DeckController sharedInstance].decks.count;
     
     if (indexPath.item == index) {
-        DeckCollectionViewController *deckVC = [[DeckCollectionViewController alloc] init];
         cell.subjectLabel.text = @"Insert Deck Name";
         cell.subjectLabel.textColor = [UIColor whiteColor];
-        NSLog(@"%@", deckVC.deckTitle);
         cell.subjectLabel.textAlignment = NSTextAlignmentCenter;
         [cell.contentView addSubview:cell.subjectLabel];
 
@@ -42,7 +49,6 @@ static NSString * const cellIdentifier = @"cell";
         
         UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
         longPress.minimumPressDuration = 1.5;
-        longPress.cancelsTouchesInView = NO;
         [cell addGestureRecognizer:longPress];
 
         return cell;
@@ -55,7 +61,27 @@ static NSString * const cellIdentifier = @"cell";
 
 - (void)longPress:(UILongPressGestureRecognizer *)gr {
     if (gr.state == UIGestureRecognizerStateBegan) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:presentAlert object:nil];
+        
+        DeckCollectionViewCell *cell = (DeckCollectionViewCell *)gr.view;
+        
+        NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Remove Deck" message:@"Are you sure you want to remove deck? All cards inside the deck will be erased." preferredStyle:UIAlertControllerStyleActionSheet];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Remove" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+            
+            Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+            [[DeckController sharedInstance] removeDeck:deck];
+            [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+            
+            [self.collectionView reloadData];
+        }]];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            NSLog(@"cancel");
+        }]];
+        [self.deckCollectionVC presentViewController:alertController animated:YES completion:nil];
+        
+        // [self.collectionView.visibleCells makeObjectsPerformSelector:@selector(startJiggling)];
+        NSLog(@"Close Button");
     }
 }
 
