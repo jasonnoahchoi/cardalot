@@ -12,6 +12,7 @@
 #import "DeckCollectionViewLayout.h"
 #import "DeckCollectionViewCell.h"
 #import "CardViewController.h"
+#import "CardCollectionViewController.h"
 
 #import <MMDrawerController.h>
 
@@ -70,6 +71,10 @@ static NSString * const cellIdentifier = @"cell";
         [self createNewDeckAlertController];
     } else {
         NSLog(@"some other cell");
+        CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
+        Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+        cardCollectionVC.deck = deck;
+        [self.navigationController pushViewController:cardCollectionVC animated:YES];
     }
 }
 

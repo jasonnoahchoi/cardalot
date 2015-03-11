@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Deck;
 
 @interface CardCollectionViewController : UIViewController
+
+@property (nonatomic, strong) Deck *deck;
 
 @end
