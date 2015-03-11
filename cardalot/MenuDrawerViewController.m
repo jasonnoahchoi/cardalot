@@ -32,9 +32,10 @@
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     
-    // Disable selection cell highlight
+    // Disable/Enable selection cell highlight
     self.tableView.allowsSelection = NO;
     
+    // Removes seperator lines
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     // Datasource
@@ -88,7 +89,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
-        return 110;
+        return 100;
     } else {
         return 44;
     }
