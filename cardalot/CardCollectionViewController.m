@@ -12,6 +12,7 @@
 #import <MTCardLayout/MTCardLayout.h>
 #import <MTCardLayout/UICollectionView+CardLayout.h>
 #import "DeckController.h"
+#import "Deck.h"
 #import "Card.h"
 
 @interface CardCollectionViewController () <UICollectionViewDelegate>
@@ -25,6 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = self.deck.nameTag;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(toggleEditingMode:)];
     
