@@ -38,7 +38,6 @@
         self.deckTagField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         self.deckTagField.returnKeyType = UIReturnKeyNext;
         self.deckTagField.borderStyle = UITextBorderStyleRoundedRect;
-
         [self.deckTagField setTranslatesAutoresizingMaskIntoConstraints:NO];
         
         // Add to View
@@ -47,7 +46,7 @@
         
         // AUTOLAYOUT
         NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(_hashTagLabel, _deckTagField);
-        NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_hashTagLabel]-[_deckTagField(==260)]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
+        NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_hashTagLabel]-[_deckTagField(>=260)]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
         [self.contentView addConstraints:constraints];
         
         NSLayoutConstraint *topConstraint = [NSLayoutConstraint constraintWithItem:self.hashTagLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:0];
@@ -68,7 +67,5 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.deckTagField endEditing:YES];// this will do the trick
 }
-
-
 
 @end
