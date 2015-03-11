@@ -30,6 +30,7 @@ static NSString * const cellIdentifier = @"cell";
     cell.backgroundColor = [UIColor whiteColor];
     
     Card *card = self.deck.cards[indexPath.item];
+    cell.card = card;
     cell.textField.text = card.title;
     cell.textView.text = card.answer;
     
