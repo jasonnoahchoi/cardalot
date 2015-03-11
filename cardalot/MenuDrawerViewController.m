@@ -18,6 +18,11 @@
 
 @implementation MenuDrawerViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.tableView.contentOffset = CGPointMake(0, self.searchCell.frame.size.height);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -45,6 +50,10 @@
     // Background Color of TableView
     self.tableView.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
     
+    
+
+    
+    
     // Add to view
     [self.view addSubview:self.tableView];
     
@@ -63,12 +72,12 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
-        self.logoMenuCell = [[LogoMenuCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell1"];
-        
-        return self.logoMenuCell;
-    } else if (indexPath.row == 1) {
-        self.searchCell = [[SearchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
+        self.searchCell = [[SearchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell1"];
+        self.searchCell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
         return self.searchCell;
+    } else if (indexPath.row == 1) {
+        self.logoMenuCell = [[LogoMenuCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
+        return self.logoMenuCell;
     } else {  // for string with format add the itentifier for account type
         NSArray *menuListArray = @[[NSString stringWithFormat:@"Account Type: "], @"Quiz History", @"Rate App", @"Go Premium", @"Refer Friends", @"Support Email", @"Attributions", @"Privacy Policy", @"Terms of Service"];
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
@@ -82,16 +91,15 @@
 }
 
 
-
-
-
 #pragma mark - custom menu cell height
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
+        return 64;
+    } else if (indexPath.row == 1) {
         return 100;
     } else {
-        return 44;
+        return 38;
     }
 }
 
