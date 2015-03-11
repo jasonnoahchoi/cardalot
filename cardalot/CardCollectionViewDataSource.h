@@ -7,10 +7,13 @@
 //
 
 @import UIKit;
+@class Deck;
 
 @class CardCollectionViewCell;
 
 @interface CardCollectionViewDataSource : NSObject <UICollectionViewDataSource>
+
+@property (nonatomic, strong) Deck *deck;
 
 - (void)registerCollectionView:(UICollectionView *)collectionView;
 

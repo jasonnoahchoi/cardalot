@@ -73,7 +73,7 @@ static NSString * const cardEntity = @"Card";
     }
     
     for (Deck *deck in self.decks) {
-        if (deck.nameTag == nameTag) {
+        if ([deck.nameTag isEqualToString:nameTag]) {
             [card setDecks:[NSSet setWithObject:deck]];
             [self save];
         }
