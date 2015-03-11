@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(toggleEditingMode:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(toggleEditingMode:)];
     
     MTCardLayout *cardLayout = [[MTCardLayout alloc] init];
     
@@ -33,6 +33,7 @@
     [self.view addSubview:self.collectionView];
     
     self.dataSource = [[CardCollectionViewDataSource alloc] init];
+    self.dataSource.deck = self.deck;
     self.collectionView.dataSource = self.dataSource;
     [self.dataSource registerCollectionView:self.collectionView];
     
