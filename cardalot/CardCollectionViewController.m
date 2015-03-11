@@ -11,6 +11,8 @@
 #import "CardCollectionViewCell.h"
 #import <MTCardLayout/MTCardLayout.h>
 #import <MTCardLayout/UICollectionView+CardLayout.h>
+#import "DeckController.h"
+#import "Card.h"
 
 @interface CardCollectionViewController () <UICollectionViewDelegate>
 
@@ -49,6 +51,10 @@
     if (self.isEditing) {
         [cell.textField setEnabled:NO];
         cell.textView.editable = NO;
+        
+        cell.card.title = cell.textField.text;
+        cell.card.answer = cell.textView.text;
+        [[DeckController sharedInstance] save];
         
         [barButtonItem setTitle:@"Edit"];
         [self setEditing:NO animated:YES];
