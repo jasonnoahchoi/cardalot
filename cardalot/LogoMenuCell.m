@@ -21,7 +21,7 @@
     if (self) {
         
         //Position/Size
-        self.logoImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 30, 80, 80)];
+        self.logoImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 22, 70, 70)];
         
         // inserts image
         self.logoImage.image = [UIImage imageNamed:@"logoMenu"];
