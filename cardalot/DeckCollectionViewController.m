@@ -50,7 +50,7 @@ static NSString * const cellIdentifier = @"cell";
     self.collectionView.delegate = self;
 
     // Disable/Enable Drawer Gestures
-//    self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+    self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(createCloseButton) name:presentAlert object:nil];
