@@ -30,6 +30,9 @@
         [self.searchField setBackgroundImage:[UIImage new]];
         [self.searchField setTranslucent:YES];
         
+//        [self.searchField setBackgroundImage:[UIImage imageNamed:@"search_bar"] forState:UIControlStateNormal];
+        
+        
         // set delegate
         self.searchField.delegate = self;
         
