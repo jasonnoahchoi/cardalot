@@ -59,6 +59,12 @@
     [rightArrowButton addTarget:self action:@selector(moveRight:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:rightArrowButton];
     
+    UIButton *pasteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [pasteButton setFrame:CGRectMake(335, 0, 80, 40)];
+    [pasteButton setTitle:@"📋" forState:UIControlStateNormal];
+    [pasteButton addTarget:self action:@selector(paste:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:pasteButton];
+    
     return self;
 }
 
@@ -110,6 +116,10 @@
         
         [(UITextView *)self.delegate setSelectedTextRange:newRange];
     }
+}
+
+- (IBAction)paste:(id)sender {
+    [self.delegate insertText:[[UIPasteboard generalPasteboard] string]];
 }
 
 @end
