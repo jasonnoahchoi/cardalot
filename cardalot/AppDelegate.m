@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DeckCollectionViewController.h"
+#import "StudyViewController.h"
 #import <MMDrawerController.h>
 #import "AppearanceController.h"
 #import "MenuDrawerViewController.h"

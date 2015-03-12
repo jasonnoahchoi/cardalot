@@ -11,6 +11,9 @@
 #import "CardCollectionViewCell.h"
 #import <MTCardLayout/MTCardLayout.h>
 #import <MTCardLayout/UICollectionView+CardLayout.h>
+#import "DeckController.h"
+#import "Deck.h"
+#import "Card.h"
 
 @interface CardCollectionViewController () <UICollectionViewDelegate>
 
@@ -24,7 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(toggleEditingMode:)];
+    self.title = self.deck.nameTag;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(toggleEditingMode:)];
     
     MTCardLayout *cardLayout = [[MTCardLayout alloc] init];
     
@@ -33,6 +38,7 @@
     [self.view addSubview:self.collectionView];
     
     self.dataSource = [[CardCollectionViewDataSource alloc] init];
+    self.dataSource.deck = self.deck;
     self.collectionView.dataSource = self.dataSource;
     [self.dataSource registerCollectionView:self.collectionView];
     
@@ -48,6 +54,10 @@
     if (self.isEditing) {
         [cell.textField setEnabled:NO];
         cell.textView.editable = NO;
+        
+        cell.card.title = cell.textField.text;
+        cell.card.answer = cell.textView.text;
+        [[DeckController sharedInstance] save];
         
         [barButtonItem setTitle:@"Edit"];
         [self setEditing:NO animated:YES];

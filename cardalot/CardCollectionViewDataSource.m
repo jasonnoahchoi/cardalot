@@ -8,6 +8,9 @@
 
 #import "CardCollectionViewDataSource.h"
 #import "CardCollectionViewCell.h"
+#import "DeckController.h"
+#import "Deck.h"
+#import "Card.h"
 
 static NSString * const cellIdentifier = @"cell";
 
@@ -19,12 +22,17 @@ static NSString * const cellIdentifier = @"cell";
 
 #pragma mark UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return self.deck.cards.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
+    
+    Card *card = self.deck.cards[indexPath.item];
+    cell.card = card;
+    cell.textField.text = card.title;
+    cell.textView.text = card.answer;
     
     return cell;
 }
