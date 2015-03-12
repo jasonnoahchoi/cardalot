@@ -7,6 +7,8 @@
 //
 
 #import "StudyDraggableViewBackground.h"
+#import "Card.h"
+#import "Deck.h"
 
 static const int MAX_BUFFER_SIZE = 2; //%%% max number of cards loaded at any given time, must be greater than 1
 static const float CARD_HEIGHT = 386; //%%% height of the draggable card
@@ -15,6 +17,7 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 @interface StudyDraggableViewBackground ()
 
 @property (nonatomic, strong) NSMutableArray *array;
+
 
 @property (nonatomic, assign) NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last
 @property (nonatomic, strong) NSMutableArray *loadedCards; //%%% the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
@@ -28,11 +31,12 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     if (self) {
         [super layoutSubviews];
         [self setupView];
-        self.exampleCardLabels = [[NSArray alloc]initWithObjects:@"first",@"second",@"third",@"fourth",@"last", nil]; //%%% placeholder for card-specific information
+//        self.exampleCardLabels = [[NSArray alloc]initWithObjects:@"first",@"second",@"third",@"fourth",@"last", nil]; //%%% placeholder for card-specific information
+        self.exampleCardLabels = [self.deck.cards.set allObjects];
         self.loadedCards = [[NSMutableArray alloc] init];
         self.allCards = [[NSMutableArray alloc] init];
         self.cardsLoadedIndex = 0;
-        [self loadCards];
+        //[self loadCards];
     }
     return self;
 }
@@ -57,13 +61,15 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     //    [self addSubview:checkButton];
 }
 
-#warning include own card customization here!
 //%%% creates a card and returns it.  This should be customized to fit your needs.
 // use "index" to indicate where the information should be pulled.  If this doesn't apply to you, feel free
 // to get rid of it (eg: if you are building cards from data from the internet)
 - (StudyDraggableView *)createDraggableViewWithDataAtIndex:(NSInteger)index {
     StudyDraggableView *draggableView = [[StudyDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
-    draggableView.subjectView.titleLabel.text = [self.exampleCardLabels objectAtIndex:index]; //%%% placeholder for card-specific information
+//    draggableView.subjectView.titleLabel.text = [self.exampleCardLabels objectAtIndex:index]; //%%% placeholder for card-specific information
+    Card *card = [self.exampleCardLabels objectAtIndex:index];
+    draggableView.subjectView.titleLabel.text = card.title;
+    draggableView.descriptionView.descriptionTextView.text = card.answer;
     draggableView.delegate = self;
     return draggableView;
 }
@@ -98,7 +104,6 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     }
 }
 
-#warning include own action here!
 //%%% action called when the card goes to the left.
 // This should be customized with your own action
 - (void)cardSwipedLeft:(UIView *)card {
@@ -114,7 +119,6 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     }
 }
 
-#warning include own action here!
 //%%% action called when the card goes to the right.
 // This should be customized with your own action
 - (void)cardSwipedRight:(UIView *)card {

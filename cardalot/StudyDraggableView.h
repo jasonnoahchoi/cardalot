@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "StudySubjectView.h"
+#import "StudyDescriptionView.h"
 @class StudyOverlayView;
 
 @protocol StudyDraggableViewDelegate <NSObject>
@@ -25,5 +26,6 @@
 @property (nonatomic) CGPoint originalPoint;
 @property (nonatomic, strong) StudyOverlayView *overlayView;
 @property (nonatomic, strong) StudySubjectView *subjectView;
+@property (nonatomic, strong) StudyDescriptionView *descriptionView;
 
 @end
