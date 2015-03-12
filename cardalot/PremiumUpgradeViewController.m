@@ -17,6 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    UIImage *background = [UIImage imageNamed: @"GoPremiumInProcess.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
+    
+    [self.view addSubview: imageView];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
