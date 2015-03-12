@@ -53,6 +53,12 @@
     [leftArrowButton addTarget:self action:@selector(moveLeft:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:leftArrowButton];
     
+    UIButton *rightArrowButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rightArrowButton setFrame:CGRectMake(335, 0, 80, 40)];
+    [rightArrowButton setTitle:@"⍈" forState:UIControlStateNormal];
+    [rightArrowButton addTarget:self action:@selector(moveRight:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:rightArrowButton];
+    
     return self;
 }
 
@@ -88,6 +94,18 @@
     
     if (![(UITextView *)self.delegate offsetFromPosition:selectedRange.start toPosition:startPosition] == 0) {
         UITextPosition *newPosition = [(UITextView *)self.delegate positionFromPosition:selectedRange.start offset:-1];
+        UITextRange *newRange = [(UITextView *)self.delegate textRangeFromPosition:newPosition toPosition:newPosition];
+        
+        [(UITextView *)self.delegate setSelectedTextRange:newRange];
+    }
+}
+
+- (IBAction)moveRight:(id)sender {
+    UITextRange *selectedRange = [self.delegate selectedTextRange];
+    UITextPosition *startPosition = [self.delegate positionFromPosition:[(UITextView *)self.delegate beginningOfDocument] offset:0];
+    
+    if (![(UITextView *)self.delegate offsetFromPosition:selectedRange.start toPosition:startPosition] == 0) {
+        UITextPosition *newPosition = [(UITextView *)self.delegate positionFromPosition:selectedRange.start offset:1];
         UITextRange *newRange = [(UITextView *)self.delegate textRangeFromPosition:newPosition toPosition:newPosition];
         
         [(UITextView *)self.delegate setSelectedTextRange:newRange];
