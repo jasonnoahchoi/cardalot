@@ -65,6 +65,12 @@
     [pasteButton addTarget:self action:@selector(paste:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:pasteButton];
     
+    UIButton *copyButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [copyButton setFrame:CGRectMake(0, 0, 80, 40)];
+    [copyButton setTitle:@"📝" forState:UIControlStateNormal];
+    [copyButton addTarget:self action:@selector(copy:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:copyButton];
+    
     return self;
 }
 
@@ -120,6 +126,12 @@
 
 - (IBAction)paste:(id)sender {
     [self.delegate insertText:[[UIPasteboard generalPasteboard] string]];
+}
+
+- (IBAction)copy:(id)sender {
+    UITextRange *selectedTextRange = [self.delegate selectedTextRange];
+    NSString *selectedText = [self.delegate textInRange:selectedTextRange];
+    [[UIPasteboard generalPasteboard] setString:selectedText];
 }
 
 @end
