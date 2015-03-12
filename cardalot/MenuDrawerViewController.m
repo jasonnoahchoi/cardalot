@@ -83,7 +83,8 @@
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
 //        cell.textLabel.text = menuListArray[indexPath.row - 2];
         cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
-        NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 2] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+        NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 2] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"Marion-Bold" size:16]}];
+  
         cell.textLabel.attributedText = attText;
         
         return cell;
