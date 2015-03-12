@@ -71,10 +71,16 @@
     [copyButton addTarget:self action:@selector(copy:) forControlEvents:UIControlEventTouchUpInside];
 //    [self addSubview:copyButton];
     
-    // AUTOLAYOUT
-    NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(indentButton, insertBulletButton, insertNumberButton, leftArrowButton, rightArrowButton);
+    UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [doneButton setTitle:@"⌨" forState:UIControlStateNormal];
+    [doneButton addTarget:self action:@selector(done:) forControlEvents:UIControlEventTouchUpInside];
+    [doneButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self addSubview:doneButton];
     
-    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(==40)-[indentButton]-(==80)-[insertBulletButton]-[insertNumberButton]-(==70)-[leftArrowButton][rightArrowButton]-(==20)-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
+    // AUTOLAYOUT
+    NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(indentButton, insertBulletButton, insertNumberButton, leftArrowButton, rightArrowButton, doneButton);
+    
+    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(==20)-[indentButton]-(==50)-[insertBulletButton]-[insertNumberButton]-(==40)-[leftArrowButton][rightArrowButton]-[doneButton]-(==20)-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
     [self addConstraints:constraints];
     
     constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[indentButton]-|" options:0 metrics:nil views:viewsDictionary];
@@ -141,6 +147,10 @@
     UITextRange *selectedTextRange = [self.delegate selectedTextRange];
     NSString *selectedText = [self.delegate textInRange:selectedTextRange];
     [[UIPasteboard generalPasteboard] setString:selectedText];
+}
+
+- (IBAction)done:(id)sender {
+    [(UITextView *)self.delegate resignFirstResponder];
 }
 
 @end
