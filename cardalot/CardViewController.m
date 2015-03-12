@@ -8,6 +8,7 @@
 
 #import "CardViewController.h"
 #import "DeckController.h"
+#import "CustomInputAccessoryView.h"
 
 @interface CardViewController () <UITextViewDelegate>
 
@@ -15,6 +16,7 @@
 @property (nonatomic, strong) DeckTagCell *deckTagCell;
 @property (nonatomic, strong) FrontTextCell *frontTextCell;
 @property (nonatomic, strong) BackTextCell *backTextCell;
+@property (nonatomic, strong) CustomInputAccessoryView *accessoryView;
 
 @end
 
@@ -85,6 +87,9 @@
         return cell;
     } else {
         self.backTextCell = [[BackTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell6"];
+        self.accessoryView = [[CustomInputAccessoryView alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+        self.backTextCell.backTextView.inputAccessoryView = self.accessoryView;
+        self.accessoryView.delegate = self.backTextCell.backTextView;
         return self.backTextCell;
     }
 }
