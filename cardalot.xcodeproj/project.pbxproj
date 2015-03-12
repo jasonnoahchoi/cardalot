@@ -45,6 +45,7 @@
 		FF32B3AA1AB231080098EFA5 /* PremiumUpgradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3A51AB231080098EFA5 /* PremiumUpgradeViewController.m */; };
 		FF32B3AB1AB231080098EFA5 /* RateAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3A71AB231080098EFA5 /* RateAppViewController.m */; };
 		FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3A91AB231080098EFA5 /* ReferralViewController.m */; };
+		FF32B3B01AB24E210098EFA5 /* SettingsMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3AF1AB24E210098EFA5 /* SettingsMenuViewController.m */; };
 		FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0AC61AAE579A00BDD975 /* BackTextCell.m */; };
 		FF8F0AD11AAE579A00BDD975 /* BackTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8F0AC71AAE579A00BDD975 /* BackTextCell.xib */; };
 		FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0AC91AAE579A00BDD975 /* CardViewController.m */; };
@@ -136,6 +137,8 @@
 		FF32B3A71AB231080098EFA5 /* RateAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateAppViewController.m; sourceTree = "<group>"; };
 		FF32B3A81AB231080098EFA5 /* ReferralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferralViewController.h; sourceTree = "<group>"; };
 		FF32B3A91AB231080098EFA5 /* ReferralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferralViewController.m; sourceTree = "<group>"; };
+		FF32B3AE1AB24E210098EFA5 /* SettingsMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsMenuViewController.h; sourceTree = "<group>"; };
+		FF32B3AF1AB24E210098EFA5 /* SettingsMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsMenuViewController.m; sourceTree = "<group>"; };
 		FF8F0AC51AAE579A00BDD975 /* BackTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackTextCell.h; sourceTree = "<group>"; };
 		FF8F0AC61AAE579A00BDD975 /* BackTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackTextCell.m; sourceTree = "<group>"; };
 		FF8F0AC71AAE579A00BDD975 /* BackTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackTextCell.xib; sourceTree = "<group>"; };
@@ -321,6 +324,8 @@
 				FF32B3A51AB231080098EFA5 /* PremiumUpgradeViewController.m */,
 				FF32B3A81AB231080098EFA5 /* ReferralViewController.h */,
 				FF32B3A91AB231080098EFA5 /* ReferralViewController.m */,
+				FF32B3AE1AB24E210098EFA5 /* SettingsMenuViewController.h */,
+				FF32B3AF1AB24E210098EFA5 /* SettingsMenuViewController.m */,
 			);
 			name = "Menu Option View Controllers";
 			sourceTree = "<group>";
@@ -564,6 +569,7 @@
 				08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */,
 				7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */,
 				FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */,
+				FF32B3B01AB24E210098EFA5 /* SettingsMenuViewController.m in Sources */,
 				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
 				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,
 				08662EE11AAF9F8D00BE440E /* StudyViewController.m in Sources */,
