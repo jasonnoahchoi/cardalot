@@ -7,6 +7,7 @@
 //
 
 #import "RateAppViewController.h"
+#import "DeckCollectionViewController.h"
 
 @interface RateAppViewController ()
 
@@ -18,7 +19,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 80, 50)];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    
+    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 80, 280, 50)];
     tempLabel.text = @"Rate App View Controller";
     
     [self.view addSubview:tempLabel];
