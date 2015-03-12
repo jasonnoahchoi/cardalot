@@ -23,6 +23,9 @@ static NSString * const cellIdentifier = @"cell";
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
 @property (nonatomic, strong) DeckCollectionViewLayout *deckLayout;
+@property (nonatomic, strong) DeckCollectionViewCell *deckCell;
+@property (nonatomic) BOOL isInEditMode;
+//@property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
@@ -52,6 +55,12 @@ static NSString * const cellIdentifier = @"cell";
 
     self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
+
+    //UIImage *image = [UIImage imageNamed:@"deletecircle"];
+    //self.imageView = [[UIImageView alloc] initWithImage:image];
+    //UIButton *deleteButton = [[UIButton alloc] init];
+   // [deleteButton setImage:image forState:UIControlStateNormal];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -63,22 +72,34 @@ static NSString * const cellIdentifier = @"cell";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.item == [DeckController sharedInstance].decks.count) {
-        NSLog(@"last cell");
-        [self createNewDeckAlertController];
-    } else {
-        NSLog(@"some other cell");
-        CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
-        Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
-        cardCollectionVC.deck = deck;
-        [self.navigationController pushViewController:cardCollectionVC animated:YES];
-    }
+
+        if (indexPath.item == [DeckController sharedInstance].decks.count) {
+            NSLog(@"last cell");
+            [self createNewDeckAlertController];
+        } else {
+            NSLog(@"some other cell");
+            CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
+            Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+            cardCollectionVC.deck = deck;
+            [self.navigationController pushViewController:cardCollectionVC animated:YES];
+        }
+
 }
+//
+//- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (self.isInEditMode) {
+//        return NO;
+//    } else {
+//        [self.deckCell.closeButton setHidden:YES];
+//        return YES;
+//    }
+//}
 
 - (void)addItem:(id)sender {
     CardViewController *cardVC = [[CardViewController alloc] init];
     [self.navigationController pushViewController:cardVC animated:YES];
+
 }
 
 - (void)createNewDeckAlertController {

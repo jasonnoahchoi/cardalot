@@ -11,5 +11,6 @@
 @interface DeckCollectionViewCell : UICollectionViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *subjectLabel;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
 
 @end

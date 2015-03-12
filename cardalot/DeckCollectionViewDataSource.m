@@ -48,7 +48,7 @@ static NSString * const cellIdentifier = @"cell";
         cell.subjectLabel.textAlignment = NSTextAlignmentCenter;
         
         UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
-        longPress.minimumPressDuration = 1.5;
+        longPress.minimumPressDuration = 1.1;
         [cell addGestureRecognizer:longPress];
 
         return cell;
@@ -63,10 +63,11 @@ static NSString * const cellIdentifier = @"cell";
     if (gr.state == UIGestureRecognizerStateBegan) {
         
         DeckCollectionViewCell *cell = (DeckCollectionViewCell *)gr.view;
+        cell.closeButton.hidden = NO;
         
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
         
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Remove Deck" message:@"Are you sure you want to remove deck? All cards inside the deck will be erased." preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Are you sure you want to remove #?" message:@"All cards inside the deck will be erased." preferredStyle:UIAlertControllerStyleActionSheet];
         [alertController addAction:[UIAlertAction actionWithTitle:@"Remove" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
             
             Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
