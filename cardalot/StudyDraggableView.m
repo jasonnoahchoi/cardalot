@@ -25,8 +25,6 @@ static CGFloat yFromCenter;
 
 @interface StudyDraggableView ()
 
-@property (nonatomic, strong) StudyDescriptionView *descriptionView;
-
 @end
 
 @implementation StudyDraggableView
@@ -37,9 +35,7 @@ static CGFloat yFromCenter;
         [self setupView];
 
         self.subjectView = [[StudySubjectView alloc] init];
-#warning placeholder stuff, replace with card-specific information {
         self.backgroundColor = [UIColor whiteColor];
-#warning placeholder stuff, replace with card-specific information }
 
         self.descriptionView = [[StudyDescriptionView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         [self addSubview:self.descriptionView];

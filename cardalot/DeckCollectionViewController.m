@@ -13,6 +13,10 @@
 #import "DeckCollectionViewCell.h"
 #import "CardViewController.h"
 #import "CardCollectionViewController.h"
+#import "Card.h"
+#import "Deck.h"
+#import "StudyViewController.h"
+#import "StudyDraggableViewBackground.h"
 
 #import <MMDrawerController.h>
 
@@ -78,10 +82,21 @@ static NSString * const cellIdentifier = @"cell";
             [self createNewDeckAlertController];
         } else {
             NSLog(@"some other cell");
-            CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
+            //CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
             Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
-            cardCollectionVC.deck = deck;
-            [self.navigationController pushViewController:cardCollectionVC animated:YES];
+            //cardCollectionVC.deck = deck;
+//            Card *card = [deck.cards objectAtIndex:indexPath.item];
+//            Card *card = [deck.cards objectAtIndex:indexPath.item];
+            StudyViewController *studyVC = [[StudyViewController alloc] init];
+            StudyDraggableViewBackground *dvb = [[StudyDraggableViewBackground alloc] init];
+            dvb.deck = deck;
+            dvb.exampleCardLabels = [deck.cards.set allObjects];
+            studyVC.deck = deck;
+            //studyVC.draggableViewBackground.exampleCardLabels = [deck.cards.set allObjects];
+//            studyVC.frontString = card.title;
+//            studyVC.backString = card.answer;
+
+            [self.navigationController pushViewController:studyVC animated:YES];
         }
 
 }

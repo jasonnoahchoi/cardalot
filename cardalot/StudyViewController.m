@@ -8,6 +8,7 @@
 
 #import "StudyViewController.h"
 #import "StudyDraggableViewBackground.h"
+#import "Deck.h"
 
 @interface StudyViewController ()
 
@@ -18,8 +19,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    StudyDraggableViewBackground *draggableBackground = [[StudyDraggableViewBackground alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:draggableBackground];
+//    StudyDraggableViewBackground *draggableBackground = [[StudyDraggableViewBackground alloc] initWithFrame:self.view.frame];
+//    draggableBackground.exampleCardLabels = [self.deck.cards.set allObjects];
+
+    self.draggableViewBackground = [[StudyDraggableViewBackground alloc] initWithFrame:self.view.frame];
+    self.draggableViewBackground.deck = self.deck;
+    [self.draggableViewBackground setExampleCardLabels:[self.deck.cards.set allObjects]];
+//    [self.view addSubview:draggableBackground];
+     [self.draggableViewBackground loadCards];
+    [self.view addSubview:self.draggableViewBackground];
 
 }
 
