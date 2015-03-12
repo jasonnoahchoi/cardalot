@@ -36,6 +36,15 @@
 		725180F01AAA772A00C446E5 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EF1AAA772A00C446E5 /* Card.m */; };
 		725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F21AAA7AFE00C446E5 /* DeckController.m */; };
 		725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */; };
+		FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */; };
+		FF32B39D1AB230A80098EFA5 /* LogoMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */; };
+		FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3961AB230A80098EFA5 /* MenuDrawerViewController.m */; };
+		FF32B39F1AB230A80098EFA5 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3981AB230A80098EFA5 /* SearchCell.m */; };
+		FF32B3A01AB230A80098EFA5 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32B3991AB230A80098EFA5 /* SearchCell.xib */; };
+		FF32B3A11AB230A80098EFA5 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B39B1AB230A80098EFA5 /* UIColor+CustomColors.m */; };
+		FF32B3AA1AB231080098EFA5 /* PremiumUpgradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3A51AB231080098EFA5 /* PremiumUpgradeViewController.m */; };
+		FF32B3AB1AB231080098EFA5 /* RateAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3A71AB231080098EFA5 /* RateAppViewController.m */; };
+		FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3A91AB231080098EFA5 /* ReferralViewController.m */; };
 		FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0AC61AAE579A00BDD975 /* BackTextCell.m */; };
 		FF8F0AD11AAE579A00BDD975 /* BackTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8F0AC71AAE579A00BDD975 /* BackTextCell.xib */; };
 		FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0AC91AAE579A00BDD975 /* CardViewController.m */; };
@@ -111,6 +120,22 @@
 		725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewDataSource.m; sourceTree = "<group>"; };
 		D497B0555BFD87161A2C78C4 /* Pods-cardalot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardalot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardalot/Pods-cardalot.debug.xcconfig"; sourceTree = "<group>"; };
 		EC8B54A570249508FE757348 /* libPods-cardalot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF32B3921AB230A80098EFA5 /* LogoMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoMenuCell.h; sourceTree = "<group>"; };
+		FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoMenuCell.m; sourceTree = "<group>"; };
+		FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoMenuCell.xib; sourceTree = "<group>"; };
+		FF32B3951AB230A80098EFA5 /* MenuDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDrawerViewController.h; sourceTree = "<group>"; };
+		FF32B3961AB230A80098EFA5 /* MenuDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuDrawerViewController.m; sourceTree = "<group>"; };
+		FF32B3971AB230A80098EFA5 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
+		FF32B3981AB230A80098EFA5 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
+		FF32B3991AB230A80098EFA5 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		FF32B39A1AB230A80098EFA5 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		FF32B39B1AB230A80098EFA5 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		FF32B3A41AB231080098EFA5 /* PremiumUpgradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PremiumUpgradeViewController.h; sourceTree = "<group>"; };
+		FF32B3A51AB231080098EFA5 /* PremiumUpgradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PremiumUpgradeViewController.m; sourceTree = "<group>"; };
+		FF32B3A61AB231080098EFA5 /* RateAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateAppViewController.h; sourceTree = "<group>"; };
+		FF32B3A71AB231080098EFA5 /* RateAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateAppViewController.m; sourceTree = "<group>"; };
+		FF32B3A81AB231080098EFA5 /* ReferralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferralViewController.h; sourceTree = "<group>"; };
+		FF32B3A91AB231080098EFA5 /* ReferralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferralViewController.m; sourceTree = "<group>"; };
 		FF8F0AC51AAE579A00BDD975 /* BackTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackTextCell.h; sourceTree = "<group>"; };
 		FF8F0AC61AAE579A00BDD975 /* BackTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackTextCell.m; sourceTree = "<group>"; };
 		FF8F0AC71AAE579A00BDD975 /* BackTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackTextCell.xib; sourceTree = "<group>"; };
@@ -199,6 +224,8 @@
 				08FE1E781AAA5F570068F0C9 /* AppDelegate.m */,
 				08977A131AABCB6C00E525D0 /* AppearanceController.h */,
 				08977A141AABCB6C00E525D0 /* AppearanceController.m */,
+				FF32B39A1AB230A80098EFA5 /* UIColor+CustomColors.h */,
+				FF32B39B1AB230A80098EFA5 /* UIColor+CustomColors.m */,
 				FF8F0AD81AAE592200BDD975 /* Deck Collection View */,
 				FF8F0AD91AAE594000BDD975 /* Card Collection View */,
 				FF8F0AC41AAE577F00BDD975 /* Card Entry View */,
@@ -207,6 +234,7 @@
 				7200CEB21AACE66000E84D55 /* HistoryViewController.m */,
 				725180F11AAA7AFE00C446E5 /* DeckController.h */,
 				725180F21AAA7AFE00C446E5 /* DeckController.m */,
+				FF32B3A31AB230D40098EFA5 /* Menu Drawer View Controller */,
 				FF8F0ADA1AAE597200BDD975 /* Model */,
 				08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */,
 				08FE1E801AAA5F570068F0C9 /* Images.xcassets */,
@@ -258,6 +286,43 @@
 				1E0294E2F64F78E379287CCE /* Pods-cardalot.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF32B3A21AB230B80098EFA5 /* UI Class Menu */ = {
+			isa = PBXGroup;
+			children = (
+				FF32B3921AB230A80098EFA5 /* LogoMenuCell.h */,
+				FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */,
+				FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */,
+				FF32B3971AB230A80098EFA5 /* SearchCell.h */,
+				FF32B3981AB230A80098EFA5 /* SearchCell.m */,
+				FF32B3991AB230A80098EFA5 /* SearchCell.xib */,
+			);
+			name = "UI Class Menu";
+			sourceTree = "<group>";
+		};
+		FF32B3A31AB230D40098EFA5 /* Menu Drawer View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF32B3951AB230A80098EFA5 /* MenuDrawerViewController.h */,
+				FF32B3961AB230A80098EFA5 /* MenuDrawerViewController.m */,
+				FF32B3AD1AB2310F0098EFA5 /* Menu Option View Controllers */,
+				FF32B3A21AB230B80098EFA5 /* UI Class Menu */,
+			);
+			name = "Menu Drawer View Controller";
+			sourceTree = "<group>";
+		};
+		FF32B3AD1AB2310F0098EFA5 /* Menu Option View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF32B3A61AB231080098EFA5 /* RateAppViewController.h */,
+				FF32B3A71AB231080098EFA5 /* RateAppViewController.m */,
+				FF32B3A41AB231080098EFA5 /* PremiumUpgradeViewController.h */,
+				FF32B3A51AB231080098EFA5 /* PremiumUpgradeViewController.m */,
+				FF32B3A81AB231080098EFA5 /* ReferralViewController.h */,
+				FF32B3A91AB231080098EFA5 /* ReferralViewController.m */,
+			);
+			name = "Menu Option View Controllers";
 			sourceTree = "<group>";
 		};
 		FF8F0AC41AAE577F00BDD975 /* Card Entry View */ = {
@@ -418,7 +483,9 @@
 				0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */,
 				08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */,
 				08FE1E811AAA5F570068F0C9 /* Images.xcassets in Resources */,
+				FF32B3A01AB230A80098EFA5 /* SearchCell.xib in Resources */,
 				FF8F0AD11AAE579A00BDD975 /* BackTextCell.xib in Resources */,
+				FF32B39D1AB230A80098EFA5 /* LogoMenuCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,22 +538,28 @@
 			files = (
 				08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */,
 				725180E71AAA6FAE00C446E5 /* Stack.m in Sources */,
+				FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */,
 				FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */,
 				08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
 				08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */,
+				FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */,
 				FF8F0AD51AAE579A00BDD975 /* frontTextCell.m in Sources */,
 				725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */,
 				725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */,
 				08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */,
+				FF32B3A11AB230A80098EFA5 /* UIColor+CustomColors.m in Sources */,
 				08662EDB1AAF9CDF00BE440E /* StudyDescriptionView.m in Sources */,
+				FF32B39F1AB230A80098EFA5 /* SearchCell.m in Sources */,
 				725180ED1AAA772900C446E5 /* Deck.m in Sources */,
 				08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */,
 				725180F01AAA772A00C446E5 /* Card.m in Sources */,
 				725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */,
 				FF8F0AD31AAE579A00BDD975 /* deckTagCell.m in Sources */,
 				08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */,
+				FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
+				FF32B3AA1AB231080098EFA5 /* PremiumUpgradeViewController.m in Sources */,
 				0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */,
 				08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */,
 				7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */,
@@ -494,6 +567,7 @@
 				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
 				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,
 				08662EE11AAF9F8D00BE440E /* StudyViewController.m in Sources */,
+				FF32B3AB1AB231080098EFA5 /* RateAppViewController.m in Sources */,
 				7200CEB31AACE66000E84D55 /* HistoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
