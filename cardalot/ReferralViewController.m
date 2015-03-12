@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 80, 50)];
+    tempLabel.text = @"Referral View Controller";
+    
+    [self.view addSubview:tempLabel];
+    
 }
 
 - (void)didReceiveMemoryWarning {
