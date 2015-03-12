@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "LogoMenuCell.h"
 #import "SearchCell.h"
+#import "PremiumUpgradeViewController.h"
+#import "RateAppViewController.h"
+#import "ReferralViewController.h"
 
 
 @interface MenuDrawerViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
