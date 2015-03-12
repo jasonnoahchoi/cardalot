@@ -7,6 +7,7 @@
 //
 
 #import "PremiumUpgradeViewController.h"
+#import "DeckCollectionViewController.h"
 
 @interface PremiumUpgradeViewController ()
 
@@ -18,6 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     UIImage *background = [UIImage imageNamed: @"GoPremiumInProcess.png"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
