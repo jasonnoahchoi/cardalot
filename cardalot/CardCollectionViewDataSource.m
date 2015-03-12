@@ -11,6 +11,7 @@
 #import "DeckController.h"
 #import "Deck.h"
 #import "Card.h"
+#import "CustomInputAccessoryView.h"
 
 static NSString * const cellIdentifier = @"cell";
 
@@ -28,6 +29,10 @@ static NSString * const cellIdentifier = @"cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
+    
+    CustomInputAccessoryView *accessoryView = [[CustomInputAccessoryView alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    cell.textView.inputAccessoryView = accessoryView;
+    accessoryView.delegate = cell.textView;
     
     Card *card = self.deck.cards[indexPath.item];
     cell.card = card;
