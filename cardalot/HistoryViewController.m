@@ -8,6 +8,7 @@
 
 #import "HistoryViewController.h"
 #import <JBChartView/JBBarChartView.h>
+#import "DeckCollectionViewController.h"
 
 @interface HistoryViewController () <JBBarChartViewDataSource, JBBarChartViewDelegate>
 
@@ -17,6 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    
     
     UIView *containerView = [[UIView alloc] init];
     [containerView setTranslatesAutoresizingMaskIntoConstraints:NO];
