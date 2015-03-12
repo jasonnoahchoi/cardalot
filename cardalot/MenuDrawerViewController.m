@@ -50,10 +50,7 @@
     // Background Color of TableView
     self.tableView.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
     
-    
 
-    
-    
     // Add to view
     [self.view addSubview:self.tableView];
     
@@ -81,7 +78,9 @@
     } else {  // for string with format add the itentifier for account type
         NSArray *menuListArray = @[[NSString stringWithFormat:@"Account Type: "], @"Quiz History", @"Rate App", @"Go Premium", @"Refer Friends", @"Support Email", @"Attributions", @"Privacy Policy", @"Terms of Service"];
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-//        cell.textLabel.text = menuListArray[indexPath.row - 2];
+        
+//        [self.navigationController presentViewController:[PremiumUpgradeViewController] animated:YES completion:nil];
+        
         cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
         NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 2] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"Marion-Bold" size:16]}];
   
