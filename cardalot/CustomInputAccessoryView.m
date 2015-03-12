@@ -8,10 +8,18 @@
 
 #import "CustomInputAccessoryView.h"
 
+@interface CustomInputAccessoryView ()
+
+@property (assign, nonatomic) NSInteger index;
+
+@end
+
 @implementation CustomInputAccessoryView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
+    
+    self.index = 1;
     
     self.backgroundColor = [UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0];
     
@@ -51,7 +59,8 @@
 }
 
 - (IBAction)insertNumber:(id)sender {
-    
+    [self.delegate insertText:[NSString stringWithFormat:@"%ld. ", (long)self.index]];
+    self.index++;
 }
 
 - (IBAction)makeBold:(id)sender {
