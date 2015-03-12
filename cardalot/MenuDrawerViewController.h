@@ -12,6 +12,9 @@
 #import "PremiumUpgradeViewController.h"
 #import "RateAppViewController.h"
 #import "ReferralViewController.h"
+#import "HistoryViewController.h"
+#import "SettingsMenuViewController.h"
+#import "DeckCollectionViewController.h"
 
 
 @interface MenuDrawerViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
