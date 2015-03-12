@@ -48,7 +48,7 @@ static NSString * const cellIdentifier = @"cell";
         cell.subjectLabel.textAlignment = NSTextAlignmentCenter;
         
         UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
-        longPress.minimumPressDuration = 1.5;
+        longPress.minimumPressDuration = 1.1;
         [cell addGestureRecognizer:longPress];
 
         return cell;
@@ -63,10 +63,13 @@ static NSString * const cellIdentifier = @"cell";
     if (gr.state == UIGestureRecognizerStateBegan) {
         
         DeckCollectionViewCell *cell = (DeckCollectionViewCell *)gr.view;
+        cell.closeButton.hidden = NO;
+
+        [cell startJiggling];
         
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
         
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Remove Deck" message:@"Are you sure you want to remove deck? All cards inside the deck will be erased." preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Are you sure you want to remove #?" message:@"All cards inside the deck will be erased." preferredStyle:UIAlertControllerStyleActionSheet];
         [alertController addAction:[UIAlertAction actionWithTitle:@"Remove" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
             
             Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
@@ -76,6 +79,8 @@ static NSString * const cellIdentifier = @"cell";
             [self.collectionView reloadData];
         }]];
         [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [cell stopJiggling];
+            cell.closeButton.hidden = YES;
             NSLog(@"cancel");
         }]];
         [self.deckCollectionVC presentViewController:alertController animated:YES completion:nil];
@@ -84,5 +89,26 @@ static NSString * const cellIdentifier = @"cell";
         NSLog(@"Close Button");
     }
 }
+
+//- (void)startJiggling {
+//    DeckCollectionViewCell *cell = [[DeckCollectionViewCell alloc] init];
+//    CABasicAnimation *quiverAnim = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+//    float startAngle = (-2) * M_PI/180.0;
+//    float stopAngle = -startAngle;
+//    quiverAnim.fromValue = [NSNumber numberWithFloat:startAngle];
+//    quiverAnim.toValue = [NSNumber numberWithFloat:3 * stopAngle];
+//    quiverAnim.autoreverses = YES;
+//    quiverAnim.duration = 0.1;
+//    quiverAnim.repeatCount = HUGE_VALF;
+//    float timeOffset = (float)(arc4random() % 100)/100 - 0.50;
+//    quiverAnim.timeOffset = timeOffset;
+//    CALayer *layer = cell.layer;
+//    [layer addAnimation:quiverAnim forKey:@"jiggling"];
+//}
+//
+//- (void)stopJiggling {
+//    CALayer *layer = nil;
+//    [layer removeAnimationForKey:@"jiggling"];
+//}
 
 @end

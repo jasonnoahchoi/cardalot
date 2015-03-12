@@ -19,10 +19,9 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
-        CGSize size = self.contentView.frame.size;
         
         // position/size
-        self.backTextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, size.width + 30.0, size.height + 235.0)];
+        self.backTextView = [[UITextView alloc] init];
         
         // modification
         self.backTextView.font = [UIFont boldSystemFontOfSize:16.0];
@@ -30,12 +29,26 @@
         self.backTextView.layer.borderWidth = 1.0f;
         self.backTextView.layer.cornerRadius = 8.0;
         self.backTextView.layer.borderColor = [[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1] CGColor];
+        [self.backTextView setTranslatesAutoresizingMaskIntoConstraints:NO];
         
         // setting delegate
         self.backTextView.delegate = self;
         
         // add to view
         [self.contentView addSubview:self.backTextView];
+        
+        // AUTOLAYOUT
+        NSLayoutConstraint *topConstraint = [NSLayoutConstraint constraintWithItem:self.backTextView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:0];
+        [self.contentView addConstraint:topConstraint];
+        
+        NSLayoutConstraint *leadingConstraint = [NSLayoutConstraint constraintWithItem:self.backTextView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:0];
+        [self.contentView addConstraint:leadingConstraint];
+        
+        NSLayoutConstraint *trailingConstraint = [NSLayoutConstraint constraintWithItem:self.backTextView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:0];
+        [self.contentView addConstraint:trailingConstraint];
+        
+        NSLayoutConstraint *bottomConstraint = [NSLayoutConstraint constraintWithItem:self.backTextView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeBottomMargin multiplier:1.0 constant:0];
+        [self.contentView addConstraint:bottomConstraint];
     }
     return self;
 }
