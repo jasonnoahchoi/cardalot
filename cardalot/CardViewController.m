@@ -129,7 +129,8 @@
 #pragma mark IBAction
 - (IBAction)done:(id)sender {
     [[DeckController sharedInstance] addCardWithTitle:self.frontTextCell.frontTextField.text andAnswer:self.backTextCell.backTextView.text toDeckWithNameTag:self.deckTagCell.deckTagField.text];
-    [self.navigationController popViewControllerAnimated:YES];
+    [[DeckController sharedInstance] save];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)backButtonAction {
