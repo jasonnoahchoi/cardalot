@@ -47,12 +47,18 @@
     [self.collectionView reloadData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.collectionView reloadData];
+}
+
 - (void)backButtonAction {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)addNewCards:(id)sender {
     CardViewController *newCard = [[CardViewController alloc] init];
+    newCard.deck = self.deck;
     [self.navigationController pushViewController:newCard animated:YES];
 }
 
