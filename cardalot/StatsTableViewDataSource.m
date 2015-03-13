@@ -7,13 +7,15 @@
 //
 
 #import "StatsTableViewDataSource.h"
+#import "StatsTableViewCell.h"
 
 static NSString * const cellIdentifier = @"cell";
 
 @implementation StatsTableViewDataSource
 
 - (void)registerTableView:(UITableView *)tableView {
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
+
+    [tableView registerNib:[UINib nibWithNibName:@"StatsTableViewCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
 }
 
 #pragma mark UITableViewDataSource
@@ -22,7 +24,7 @@ static NSString * const cellIdentifier = @"cell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    StatsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     return cell;
 }
