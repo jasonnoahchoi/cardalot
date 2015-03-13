@@ -45,7 +45,7 @@ static int count = 0;
     self.deckLayout = [[DeckCollectionViewLayout alloc] init];
 
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:self.deckLayout];
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = [UIColor backgroundGrayColor];
     [self.view addSubview:self.collectionView];
     
     self.dataSource = [DeckCollectionViewDataSource new];

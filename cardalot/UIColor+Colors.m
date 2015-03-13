@@ -26,4 +26,7 @@
     return [UIColor colorWithRed:110.0/255 green:110.0/255 blue:110.0/255 alpha:1];
 }
 
++ (UIColor *)backgroundGrayColor {
+    return [UIColor colorWithHue:0.0 saturation:0.0 brightness:.91 alpha:1];
+}
 @end
