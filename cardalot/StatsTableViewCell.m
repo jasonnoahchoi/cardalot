@@ -8,8 +8,7 @@
 
 #import "StatsTableViewCell.h"
 #import "Deck.h"
-#import "Quiz.h"
-#import "Study.h"
+#import "Session.h"
 #import "UIColor+Colors.h"
 
 @implementation StatsTableViewCell
