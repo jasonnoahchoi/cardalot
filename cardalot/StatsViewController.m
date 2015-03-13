@@ -22,6 +22,8 @@
     [super viewDidLoad];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    self.tableView.rowHeight = 150;
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.view addSubview:self.tableView];
     
     self.dataSource = [[StatsTableViewDataSource alloc] init];
