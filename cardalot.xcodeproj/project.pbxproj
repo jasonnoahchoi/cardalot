@@ -39,6 +39,7 @@
 		725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */; };
 		72C1E19F1AB278890041E2C8 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E19E1AB278890041E2C8 /* Quiz.m */; };
 		72C1E1A21AB2788A0041E2C8 /* Study.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A11AB2788A0041E2C8 /* Study.m */; };
+		72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A41AB278E10041E2C8 /* StatsViewController.m */; };
 		FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0AC61AAE579A00BDD975 /* BackTextCell.m */; };
 		FF8F0AD11AAE579A00BDD975 /* BackTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8F0AC71AAE579A00BDD975 /* BackTextCell.xib */; };
 		FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0AC91AAE579A00BDD975 /* CardViewController.m */; };
@@ -118,6 +119,8 @@
 		72C1E19E1AB278890041E2C8 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
 		72C1E1A01AB2788A0041E2C8 /* Study.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Study.h; sourceTree = "<group>"; };
 		72C1E1A11AB2788A0041E2C8 /* Study.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Study.m; sourceTree = "<group>"; };
+		72C1E1A31AB278E10041E2C8 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		72C1E1A41AB278E10041E2C8 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		D497B0555BFD87161A2C78C4 /* Pods-cardalot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardalot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardalot/Pods-cardalot.debug.xcconfig"; sourceTree = "<group>"; };
 		EC8B54A570249508FE757348 /* libPods-cardalot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8F0AC51AAE579A00BDD975 /* BackTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackTextCell.h; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 				08977A141AABCB6C00E525D0 /* AppearanceController.m */,
 				7200D0EE1AB1393E00E84D55 /* CustomInputAccessoryView.h */,
 				7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */,
+				72C1E1A31AB278E10041E2C8 /* StatsViewController.h */,
+				72C1E1A41AB278E10041E2C8 /* StatsViewController.m */,
 				FF8F0AD81AAE592200BDD975 /* Deck Collection View */,
 				FF8F0AD91AAE594000BDD975 /* Card Collection View */,
 				FF8F0AC41AAE577F00BDD975 /* Card Entry View */,
@@ -510,6 +515,7 @@
 				FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */,
 				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
 				72C1E1A21AB2788A0041E2C8 /* Study.m in Sources */,
+				72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */,
 				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,
 				08662EE11AAF9F8D00BE440E /* StudyViewController.m in Sources */,
 				7200CEB31AACE66000E84D55 /* HistoryViewController.m in Sources */,
