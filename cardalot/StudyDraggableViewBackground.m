@@ -144,7 +144,8 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     if (self.cardsLoadedIndex < [self.allCards count]) { //%%% if we haven't reached the end of all cards, put another into the loaded cards
         [self.loadedCards addObject:[self.allCards objectAtIndex:self.cardsLoadedIndex]];
         self.cardsLoadedIndex++;//%%% loaded a card, so have to increment count
-        [self insertSubview:[self.loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[self.loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
+        [self insertSubview:[self.loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)]
+               belowSubview:[self.loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
 }
 /*

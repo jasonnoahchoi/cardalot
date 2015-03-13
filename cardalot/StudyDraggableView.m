@@ -50,12 +50,7 @@ static CGFloat yFromCenter;
         [self addSubview:self.overlayView];
 
         [self.subjectView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        NSLayoutConstraint *informationCenterConstraint = [NSLayoutConstraint constraintWithItem:self.subjectView
-                                                                                       attribute:NSLayoutAttributeCenterX
-                                                                                       relatedBy:NSLayoutRelationGreaterThanOrEqual
-                                                                                          toItem:self
-                                                                                       attribute:NSLayoutAttributeCenterXWithinMargins
-                                                                                      multiplier:1.0 constant:0];
+        NSLayoutConstraint *informationCenterConstraint = [NSLayoutConstraint constraintWithItem:self.subjectView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self attribute:NSLayoutAttributeCenterXWithinMargins multiplier:1.0 constant:0];
         [self addConstraint:informationCenterConstraint];
 
         NSLayoutConstraint *bottomOfLabelToTopOfView = [NSLayoutConstraint constraintWithItem:self.subjectView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.descriptionView attribute:NSLayoutAttributeTop multiplier:1.0 constant:2];

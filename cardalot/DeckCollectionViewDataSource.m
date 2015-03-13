@@ -69,8 +69,11 @@ static NSString * const cellIdentifier = @"cell";
         
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
         
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Are you sure you want to remove #?" message:@"All cards inside the deck will be erased." preferredStyle:UIAlertControllerStyleActionSheet];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Remove" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Are you sure you want to remove #?"
+                                                                                 message:@"All cards inside the deck will be erased."
+                                                                          preferredStyle:UIAlertControllerStyleActionSheet];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Remove"
+                                                            style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
             
             Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
             [[DeckController sharedInstance] removeDeck:deck];
@@ -78,7 +81,9 @@ static NSString * const cellIdentifier = @"cell";
             
             [self.collectionView reloadData];
         }]];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction *action) {
             [cell stopJiggling];
             cell.closeButton.hidden = YES;
             NSLog(@"cancel");

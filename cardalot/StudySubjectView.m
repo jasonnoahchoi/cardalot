@@ -28,13 +28,7 @@
 
 
         [self.titleLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-        NSLayoutConstraint *leftMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel
-                                                                                attribute:NSLayoutAttributeLeading
-                                                                                relatedBy:NSLayoutRelationEqual
-                                                                                   toItem:self
-                                                                                attribute:NSLayoutAttributeLeadingMargin
-                                                                               multiplier:1.0 constant:15];
-        //        //leadingEdgeToMarginConstraint.priority = UILayoutPriorityDefaultHigh;
+        NSLayoutConstraint *leftMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:15];
         [self addConstraint:leftMarginConstraint];
 
         NSLayoutConstraint *bottomMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottomMargin multiplier:1.0 constant:5];

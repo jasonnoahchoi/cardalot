@@ -44,7 +44,8 @@ static int count = 0;
 
     self.deckLayout = [[DeckCollectionViewLayout alloc] init];
 
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:self.deckLayout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame
+                                             collectionViewLayout:self.deckLayout];
     self.collectionView.backgroundColor = [UIColor backgroundGrayColor];
     [self.view addSubview:self.collectionView];
     
@@ -73,14 +74,23 @@ static int count = 0;
 - (void)loadBarButtonItems {
     self.title = @"Decktags";
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"]
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(open)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor customBlueColor]];
 
     UIImage *studyIconGray = [UIImage imageNamed:@"Syellowicon"];
     UIImage *quizIconGray = [UIImage imageNamed:@"Qorangeicon"];
 
-    self.studyButton = [[UIBarButtonItem alloc] initWithImage:studyIconGray style:UIBarButtonItemStylePlain target:self action:@selector(studyMode)];
-    self.quizButton = [[UIBarButtonItem alloc] initWithImage:quizIconGray style:UIBarButtonItemStylePlain target:self action:@selector(quizMode)];
+    self.studyButton = [[UIBarButtonItem alloc] initWithImage:studyIconGray
+                                                        style:UIBarButtonItemStylePlain
+                                                       target:self
+                                                       action:@selector(studyMode)];
+    self.quizButton = [[UIBarButtonItem alloc] initWithImage:quizIconGray
+                                                       style:UIBarButtonItemStylePlain
+                                                      target:self
+                                                      action:@selector(quizMode)];
     [self.studyButton setTintColor:[UIColor customGrayColor]];
     [self.quizButton setTintColor:[UIColor customGrayColor]];
 
@@ -191,16 +201,20 @@ static int count = 0;
 }
 
 - (void)createNewDeckAlertController {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"New Deck" message:@"Enter tag of new deck" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"New Deck"
+                                                                             message:@"Enter tag of new deck"
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:nil];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Save"
+                                                        style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         self.deckTitle = ((UITextField *)[alertController.textFields objectAtIndex:0]).text;
         [[DeckController sharedInstance] addDeckWithName:self.deckTitle];
         [[DeckController sharedInstance] save];
 
         [self.collectionView reloadData];
     }]];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                                        style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
         NSLog(@"cancel");
     }]];
     [self presentViewController:alertController animated:YES completion:nil];
