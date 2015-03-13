@@ -48,9 +48,10 @@
         self.textField = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, self.frame.size.width - 30, 50)];
         self.textField.placeholder = @"text";
         self.textField.backgroundColor = [UIColor customBlueColor];
-        self.textField.font = [UIFont boldSystemFontOfSize:20];
+        self.textField.font = [UIFont boldSystemFontOfSize:18];
         [self.textField.layer setCornerRadius:5];
         self.textField.textColor = [UIColor whiteColor];
+        self.textField.textAlignment = NSTextAlignmentCenter;
         [self.textField.layer setBorderColor:[UIColor whiteColor].CGColor];
         [self.contentView addSubview:self.textField];
         [self.textField setEnabled:NO];
@@ -60,7 +61,7 @@
         //[self.textView layoutIfNeeded];
         self.textView = [[UITextView alloc] initWithFrame:CGRectMake(20, 70, self.contentView.frame.size.width - 40, 290)];
         self.textView.text = @"this is a text view";
-        self.textView.font = [UIFont systemFontOfSize:18];
+        self.textView.font = [UIFont systemFontOfSize:17];
         [self.textView.layer setCornerRadius:10];
         [self.textView.layer setBorderColor:[UIColor whiteColor].CGColor];
         [self.contentView addSubview:self.textView];
