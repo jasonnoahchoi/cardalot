@@ -17,10 +17,12 @@
 #import "Deck.h"
 #import "StudyViewController.h"
 #import "StudyDraggableViewBackground.h"
+#import "UIColor+Colors.h"
 
 #import <MMDrawerController.h>
 
 static NSString * const cellIdentifier = @"cell";
+static int count = 0;
 
 @interface DeckCollectionViewController () <UICollectionViewDelegate, UIGestureRecognizerDelegate>
 
@@ -28,8 +30,10 @@ static NSString * const cellIdentifier = @"cell";
 @property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
 @property (nonatomic, strong) DeckCollectionViewLayout *deckLayout;
 @property (nonatomic, strong) DeckCollectionViewCell *deckCell;
-@property (nonatomic) BOOL isInEditMode;
-//@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, getter=isQuizMode) BOOL quizMode;
+@property (nonatomic, getter=isStudyMode) BOOL studyMode;
+@property (nonatomic, strong) UIBarButtonItem *studyButton;
+@property (nonatomic, strong) UIBarButtonItem *quizButton;
 
 @end
 
@@ -41,26 +45,6 @@ static NSString * const cellIdentifier = @"cell";
     self.title = @"Decktags";
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
-
-    UIImage *studyIconGray = [UIImage imageNamed:@"Sgrayicon"];
-    UIImage *quizIconGray = [UIImage imageNamed:@"Qgrayicon"];
-
-    UIBarButtonItem *studyButton = [[UIBarButtonItem alloc] initWithImage:studyIconGray style:UIBarButtonItemStylePlain target:self action:@selector(study)];
-    UIBarButtonItem *quizButton = [[UIBarButtonItem alloc] initWithImage:quizIconGray style:UIBarButtonItemStylePlain target:self action:@selector(study)];
-    [studyButton setTintColor:[UIColor colorWithRed:110.0/255 green:110.0/255 blue:110.0/255 alpha:1]];
-    [quizButton setTintColor:[UIColor colorWithRed:110.0/255 green:110.0/255 blue:110.0/255 alpha:1]];
-//
-//    UIButton *addButton = [[UIButton alloc] init];
-//    [addButton setImage:plusButton forState:UIControlStateNormal];
-//    [quizButton targetForAction:@selector(addItem:) withSender:self];
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
-
-   // NSArray *arrayOfButtons = @[studyButton, quizButton, addButton];
-
-    //UIBarButtonItem *button = [self customAddButtonItemWithTarget:self action:@selector(addItem:)];
-
-    self.navigationItem.rightBarButtonItems = @[addButton, quizButton, studyButton];
 
     self.deckLayout = [[DeckCollectionViewLayout alloc] init];
 
@@ -78,34 +62,76 @@ static NSString * const cellIdentifier = @"cell";
     self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
 
+    [self loadBarButtonItems];
+
     //UIImage *image = [UIImage imageNamed:@"deletecircle"];
     //self.imageView = [[UIImageView alloc] initWithImage:image];
     //UIButton *deleteButton = [[UIButton alloc] init];
    // [deleteButton setImage:image forState:UIControlStateNormal];
-
-}
-
-- (UIBarButtonItem *)customAddButtonItemWithTarget:(id)target action:(SEL)action {
-    UIButton *customButtonView = [UIButton buttonWithType:UIButtonTypeCustom];
-
-    customButtonView.frame = CGRectMake(0.0f, 0.0f, 45.0f, 44.0f);
-    [customButtonView setImage:[UIImage imageNamed:@"Sgrayicon"] forState:UIControlStateNormal];
-    [customButtonView setImage:[UIImage imageNamed:@"Qgrayicon"] forState:UIControlStateNormal];
-    [customButtonView setImage:[UIImage imageNamed:@"plusButton"] forState:UIControlStateNormal];
-   // UIImage *studyIconGray = [UIImage imageNamed:@"Sgrayicon"];
-   // UIImage *quizIconGray = [UIImage imageNamed:@"Qgrayicon"];
-   // UIImage *plusButton = [UIImage imageNamed:@"plusbutton"];
-
-    [customButtonView addTarget:target action:action
-               forControlEvents:UIControlEventTouchUpInside];
-
-    UIBarButtonItem *customButtonItem = [[UIBarButtonItem alloc]
-                                         initWithCustomView:customButtonView];
-    return customButtonItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.collectionView reloadData];
+}
+
+- (void)loadBarButtonItems {
+    UIImage *studyIconGray = [UIImage imageNamed:@"Sgrayicon"];
+    UIImage *quizIconGray = [UIImage imageNamed:@"Qgrayicon"];
+
+    self.studyButton = [[UIBarButtonItem alloc] initWithImage:studyIconGray style:UIBarButtonItemStylePlain target:self action:@selector(studyMode:)];
+    self.quizButton = [[UIBarButtonItem alloc] initWithImage:quizIconGray style:UIBarButtonItemStylePlain target:self action:@selector(quizMode:)];
+    [self.studyButton setTintColor:[UIColor customGrayColor]];
+    [self.quizButton setTintColor:[UIColor customGrayColor]];
+
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
+
+    self.navigationItem.rightBarButtonItems = @[addButton, self.quizButton, self.studyButton];
+}
+
+- (BOOL)quizModeTrue {
+    self.quizMode = YES;
+    [self.quizButton setTintColor:[UIColor customOrangeColor]];
+    [self.studyButton setEnabled:NO];
+    return self.quizMode;
+}
+
+- (BOOL)quizModeFalse {
+    self.quizMode = NO;
+    [self.quizButton setTintColor:[UIColor customGrayColor]];
+    [self.studyButton setEnabled:YES];
+    return self.quizMode;
+}
+
+- (BOOL)studyModeTrue {
+    self.studyMode = YES;
+    [self.studyButton setTintColor:[UIColor customYellowColor]];
+    [self.quizButton setEnabled:NO];
+    return self.studyMode;
+}
+
+- (BOOL)studyModeFalse {
+    self.studyMode = NO;
+    [self.studyButton setTintColor:[UIColor customGrayColor]];
+    [self.quizButton setEnabled:YES];
+    return self.studyMode;
+}
+
+- (void)studyMode:(id)sender {
+    count++;
+    if (count % 2 != 0) {
+        [self studyModeTrue];
+    } else {
+        [self studyModeFalse];
+    }
+}
+
+- (IBAction)quizMode:(id)sender {
+    count++;
+    if (count % 2 != 0) {
+        [self quizModeTrue];
+    } else {
+        [self quizModeFalse];
+    }
 }
 
 - (void)open {

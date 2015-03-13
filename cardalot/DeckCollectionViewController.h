@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class MMDrawerController;
+@class DeckCollectionViewController;
 
 @interface DeckCollectionViewController : UIViewController
 
