@@ -11,12 +11,12 @@
         <relationship name="quizzes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Quiz" inverseName="deck" inverseEntity="Quiz" syncable="YES"/>
         <relationship name="studies" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Study" inverseName="deck" inverseEntity="Study" syncable="YES"/>
     </entity>
-    <entity name="Quiz" syncable="YES">
+    <entity name="Quiz" representedClassName="Quiz" syncable="YES">
         <attribute name="left" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="right" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="deck" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Deck" inverseName="quizzes" inverseEntity="Deck" syncable="YES"/>
     </entity>
-    <entity name="Study" syncable="YES">
+    <entity name="Study" representedClassName="Study" syncable="YES">
         <attribute name="left" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="right" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="deck" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Deck" inverseName="studies" inverseEntity="Deck" syncable="YES"/>
