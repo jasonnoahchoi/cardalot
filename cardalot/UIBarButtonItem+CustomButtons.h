@@ -10,7 +10,8 @@
 
 @interface UIBarButtonItem (CustomButtons)
 
-+ (UIBarButtonItem *)studyButton;
-+ (UIBarButtonItem *)quizButton:(UIImage *)image target:(id)target action:(SEL)action;
++ (UIBarButtonItem *)studyButtonWithImage:(UIImage *)image target:(id)target action:(SEL)action;
++ (UIBarButtonItem *)quizButtonWithImage:(UIImage *)image target:(id)target action:(SEL)action;
++ (UIBarButtonItem *)backButtonWithImage:(UIImage *)image target:(id)target action:(SEL)action;
 
 @end
