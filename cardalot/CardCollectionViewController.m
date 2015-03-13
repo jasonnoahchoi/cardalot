@@ -29,21 +29,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.title = self.deck.nameTag;
-    UIImage *backButton = [UIImage imageNamed:@"backbutton"];
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewCards:)];
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(toggleEditingMode:)];
-    [editButton setTintColor:[UIColor customBlueColor]];
-    self.navigationItem.rightBarButtonItems = @[addButton, editButton];
-    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor customBlueColor]];
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:backButton target:self action:@selector(backButtonAction)];
+    [self setupNavBar];
 
     MTCardLayout *cardLayout = [[MTCardLayout alloc] init];
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:cardLayout];
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = [UIColor backgroundGrayColor];
     [self.view addSubview:self.collectionView];
     
     self.dataSource = [[CardCollectionViewDataSource alloc] init];
@@ -52,6 +44,7 @@
     [self.dataSource registerCollectionView:self.collectionView];
     
     self.collectionView.delegate = self;
+    [self.collectionView reloadData];
 }
 
 - (void)backButtonAction {
@@ -86,6 +79,19 @@
         [barButtonItem setTitle:@"Done"];
         [self setEditing:YES animated:YES];
     }
+}
+
+- (void)setupNavBar {
+    self.title = self.deck.nameTag;
+    UIImage *backButton = [UIImage imageNamed:@"backbutton"];
+
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewCards:)];
+    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(toggleEditingMode:)];
+    [editButton setTintColor:[UIColor customBlueColor]];
+    self.navigationItem.rightBarButtonItems = @[addButton, editButton];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor customBlueColor]];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:backButton target:self action:@selector(backButtonAction)];
+
 }
 
 #pragma mark UICollectionViewDelegate
