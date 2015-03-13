@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,20 +14,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ct6-55-Pmr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <rect key="frame" x="8" y="8" width="304" height="134"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="134" id="lOI-Ei-tp1"/>
+                            <constraint firstAttribute="width" constant="304" id="o37-HE-1Vd"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ct6-55-Pmr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TaD-d8-Beb"/>
-                    <constraint firstAttribute="trailing" secondItem="ct6-55-Pmr" secondAttribute="trailing" id="bBx-2r-hcu"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="ct6-55-Pmr" secondAttribute="bottom" constant="-8.5" id="gjt-z8-UZN"/>
-                    <constraint firstItem="ct6-55-Pmr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uWB-C3-7K8"/>
+                    <constraint firstAttribute="centerY" secondItem="ct6-55-Pmr" secondAttribute="centerY" id="RoC-Oo-QRM"/>
+                    <constraint firstAttribute="centerX" secondItem="ct6-55-Pmr" secondAttribute="centerX" id="zDL-ZJ-ACx"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="containerView" destination="ct6-55-Pmr" id="jle-hY-6yI"/>
             </connections>
+            <point key="canvasLocation" x="305" y="335"/>
         </tableViewCell>
     </objects>
 </document>
