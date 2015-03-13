@@ -6,15 +6,15 @@
 //  Copyright (c) 2015 Jason Choi. All rights reserved.
 //
 
-#import "HistoryViewController.h"
+#import "CompletionViewController.h"
 #import <JBChartView/JBBarChartView.h>
 #import "DeckCollectionViewController.h"
 
-@interface HistoryViewController () <JBBarChartViewDataSource, JBBarChartViewDelegate>
+@interface CompletionViewController () <JBBarChartViewDataSource, JBBarChartViewDelegate>
 
 @end
 
-@implementation HistoryViewController
+@implementation CompletionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

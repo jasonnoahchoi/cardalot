@@ -104,7 +104,7 @@
         [navigationController popToRootViewControllerAnimated:NO];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 3) {
-        UINavigationController *historyNavController =[[UINavigationController alloc] initWithRootViewController:[HistoryViewController new]];
+        UINavigationController *historyNavController =[[UINavigationController alloc] initWithRootViewController:[CompletionViewController new]];
         [self.mm_drawerController setCenterViewController:historyNavController];
         [navigationController popToRootViewControllerAnimated:NO];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];

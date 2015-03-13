@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HistoryViewController : UIViewController
+@class Session;
+
+@interface CompletionViewController : UIViewController
+
+@property (strong, nonatomic) Session *session;
 
 @end
