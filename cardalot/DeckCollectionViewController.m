@@ -45,6 +45,7 @@ static int count = 0;
     self.title = @"Decktags";
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor customBlueColor]];
 
     self.deckLayout = [[DeckCollectionViewLayout alloc] init];
 
@@ -84,6 +85,7 @@ static int count = 0;
     [self.quizButton setTintColor:[UIColor customGrayColor]];
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
+    [addButton setTintColor:[UIColor customBlueColor]];
 
     self.navigationItem.rightBarButtonItems = @[addButton, self.quizButton, self.studyButton];
 }
@@ -141,11 +143,12 @@ static int count = 0;
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
         if (indexPath.item == [DeckController sharedInstance].decks.count) {
-            NSLog(@"last cell");
+            NSLog(@"Create a new deck");
             [self createNewDeckAlertController];
         } else {
-            NSLog(@"some other cell");
+            NSLog(@"A cell has been pressed");
             if (self.studyMode == YES) {
+                NSLog(@"Study Mode");
             //CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
                 Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
                 //cardCollectionVC.deck = deck;
