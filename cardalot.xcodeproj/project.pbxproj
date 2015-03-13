@@ -35,16 +35,16 @@
 		7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */; };
 		725180E71AAA6FAE00C446E5 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180E61AAA6FAE00C446E5 /* Stack.m */; };
 		725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725180E81AAA751600C446E5 /* Model.xcdatamodeld */; };
-		725180ED1AAA772900C446E5 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EC1AAA772900C446E5 /* Deck.m */; };
-		725180F01AAA772A00C446E5 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EF1AAA772A00C446E5 /* Card.m */; };
 		725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F21AAA7AFE00C446E5 /* DeckController.m */; };
 		725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */; };
-		72C1E19F1AB278890041E2C8 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E19E1AB278890041E2C8 /* Quiz.m */; };
-		72C1E1A21AB2788A0041E2C8 /* Study.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A11AB2788A0041E2C8 /* Study.m */; };
 		72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A41AB278E10041E2C8 /* StatsViewController.m */; };
 		72C1E1A81AB279E60041E2C8 /* StatsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */; };
 		72C1E1AF1AB27BAB0041E2C8 /* StatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */; };
 		72C1E1B01AB27BAB0041E2C8 /* StatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */; };
+		72C1E1B31AB394010041E2C8 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1B21AB394010041E2C8 /* Deck.m */; };
+		72C1E1B61AB395AD0041E2C8 /* Stat.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1B51AB395AD0041E2C8 /* Stat.m */; };
+		72C1E1B91AB395AE0041E2C8 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1B81AB395AE0041E2C8 /* Session.m */; };
+		72C1E1BC1AB3960B0041E2C8 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1BB1AB3960B0041E2C8 /* Card.m */; };
 		FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */; };
 		FF32B39D1AB230A80098EFA5 /* LogoMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */; };
 		FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3961AB230A80098EFA5 /* MenuDrawerViewController.m */; };
@@ -126,18 +126,10 @@
 		725180E51AAA6FAE00C446E5 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		725180E61AAA6FAE00C446E5 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		725180E91AAA751600C446E5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		725180EB1AAA772900C446E5 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
-		725180EC1AAA772900C446E5 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
-		725180EE1AAA772A00C446E5 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		725180EF1AAA772A00C446E5 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		725180F11AAA7AFE00C446E5 /* DeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckController.h; sourceTree = "<group>"; };
 		725180F21AAA7AFE00C446E5 /* DeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckController.m; sourceTree = "<group>"; };
 		725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewDataSource.h; sourceTree = "<group>"; };
 		725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewDataSource.m; sourceTree = "<group>"; };
-		72C1E19D1AB278890041E2C8 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
-		72C1E19E1AB278890041E2C8 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
-		72C1E1A01AB2788A0041E2C8 /* Study.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Study.h; sourceTree = "<group>"; };
-		72C1E1A11AB2788A0041E2C8 /* Study.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Study.m; sourceTree = "<group>"; };
 		72C1E1A31AB278E10041E2C8 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		72C1E1A41AB278E10041E2C8 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		72C1E1A61AB279E60041E2C8 /* StatsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTableViewDataSource.h; sourceTree = "<group>"; };
@@ -145,6 +137,14 @@
 		72C1E1AC1AB27BAB0041E2C8 /* StatsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTableViewCell.h; sourceTree = "<group>"; };
 		72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTableViewCell.m; sourceTree = "<group>"; };
 		72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatsTableViewCell.xib; sourceTree = "<group>"; };
+		72C1E1B11AB394010041E2C8 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		72C1E1B21AB394010041E2C8 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		72C1E1B41AB395AD0041E2C8 /* Stat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stat.h; sourceTree = "<group>"; };
+		72C1E1B51AB395AD0041E2C8 /* Stat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stat.m; sourceTree = "<group>"; };
+		72C1E1B71AB395AE0041E2C8 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		72C1E1B81AB395AE0041E2C8 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		72C1E1BA1AB3960B0041E2C8 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		72C1E1BB1AB3960B0041E2C8 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		D497B0555BFD87161A2C78C4 /* Pods-cardalot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardalot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardalot/Pods-cardalot.debug.xcconfig"; sourceTree = "<group>"; };
 		EC8B54A570249508FE757348 /* libPods-cardalot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF32B3921AB230A80098EFA5 /* LogoMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoMenuCell.h; sourceTree = "<group>"; };
@@ -421,14 +421,14 @@
 				725180E51AAA6FAE00C446E5 /* Stack.h */,
 				725180E61AAA6FAE00C446E5 /* Stack.m */,
 				725180E81AAA751600C446E5 /* Model.xcdatamodeld */,
-				72C1E1A01AB2788A0041E2C8 /* Study.h */,
-				72C1E1A11AB2788A0041E2C8 /* Study.m */,
-				72C1E19D1AB278890041E2C8 /* Quiz.h */,
-				72C1E19E1AB278890041E2C8 /* Quiz.m */,
-				725180EE1AAA772A00C446E5 /* Card.h */,
-				725180EF1AAA772A00C446E5 /* Card.m */,
-				725180EB1AAA772900C446E5 /* Deck.h */,
-				725180EC1AAA772900C446E5 /* Deck.m */,
+				72C1E1BA1AB3960B0041E2C8 /* Card.h */,
+				72C1E1BB1AB3960B0041E2C8 /* Card.m */,
+				72C1E1B71AB395AE0041E2C8 /* Session.h */,
+				72C1E1B81AB395AE0041E2C8 /* Session.m */,
+				72C1E1B41AB395AD0041E2C8 /* Stat.h */,
+				72C1E1B51AB395AD0041E2C8 /* Stat.m */,
+				72C1E1B11AB394010041E2C8 /* Deck.h */,
+				72C1E1B21AB394010041E2C8 /* Deck.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -577,16 +577,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C1E1B31AB394010041E2C8 /* Deck.m in Sources */,
 				08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */,
 				72C1E1AF1AB27BAB0041E2C8 /* StatsTableViewCell.m in Sources */,
 				725180E71AAA6FAE00C446E5 /* Stack.m in Sources */,
 				FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */,
+				72C1E1BC1AB3960B0041E2C8 /* Card.m in Sources */,
 				FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */,
 				08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
+				72C1E1B61AB395AD0041E2C8 /* Stat.m in Sources */,
 				08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */,
 				08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */,
-				72C1E19F1AB278890041E2C8 /* Quiz.m in Sources */,
 				FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */,
 				FF8F0AD51AAE579A00BDD975 /* frontTextCell.m in Sources */,
 				725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */,
@@ -595,9 +597,8 @@
 				FF32B3A11AB230A80098EFA5 /* UIColor+CustomColors.m in Sources */,
 				08662EDB1AAF9CDF00BE440E /* StudyDescriptionView.m in Sources */,
 				FF32B39F1AB230A80098EFA5 /* SearchCell.m in Sources */,
-				725180ED1AAA772900C446E5 /* Deck.m in Sources */,
 				08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */,
-				725180F01AAA772A00C446E5 /* Card.m in Sources */,
+				72C1E1B91AB395AE0041E2C8 /* Session.m in Sources */,
 				725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */,
 				FF8F0AD31AAE579A00BDD975 /* deckTagCell.m in Sources */,
 				08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */,
@@ -612,7 +613,6 @@
 				FF32B3B01AB24E210098EFA5 /* SettingsMenuViewController.m in Sources */,
 				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
 				083C0EDB1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m in Sources */,
-				72C1E1A21AB2788A0041E2C8 /* Study.m in Sources */,
 				72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */,
 				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,
 				08662EE11AAF9F8D00BE440E /* StudyViewController.m in Sources */,
