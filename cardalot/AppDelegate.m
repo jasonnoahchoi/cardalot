@@ -11,6 +11,7 @@
 #import "StudyViewController.h"
 #import <MMDrawerController.h>
 #import "AppearanceController.h"
+#import "MenuDrawerViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,7 +29,7 @@
 
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
     
-    UIViewController *settingsVC = [[UIViewController alloc] init];
+    MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
     
     MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
     

@@ -56,6 +56,7 @@ static int count = 0;
     
     self.collectionView.delegate = self;
 
+    // Disable/Enable Drawer Gestures
     self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
 

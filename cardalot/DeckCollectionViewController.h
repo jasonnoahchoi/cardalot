@@ -16,5 +16,7 @@
 @property (nonatomic, strong) MMDrawerController *drawerController;
 @property (nonatomic, strong) NSString *deckTitle;
 
+- (void)open;
+
 @end
 
