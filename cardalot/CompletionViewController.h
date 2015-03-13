@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class Session;
+@class Deck;
 
 @interface CompletionViewController : UIViewController
 
 @property (strong, nonatomic) Session *session;
+@property (strong, nonatomic) Deck *deck;
 
 @end

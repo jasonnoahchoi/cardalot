@@ -8,6 +8,7 @@
 
 #import "CompletionViewController.h"
 #import <JBChartView/JBBarChartView.h>
+#import "Deck.h"
 #import "Session.h"
 #import "UIColor+Colors.h"
 
@@ -64,9 +65,9 @@
 #pragma mark JBBarChartViewDelegate
 - (CGFloat)barChartView:(JBBarChartView *)barChartView heightForBarViewAtIndex:(NSUInteger)index {
     if (index == 0) {
-        return 31;
+        return ((float)self.deck.cards.count - [self.session.markedCorrect floatValue]);
     } else {
-        return 55;
+        return [self.session.markedCorrect floatValue];
     }
 }
 
