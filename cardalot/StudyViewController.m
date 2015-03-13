@@ -26,22 +26,38 @@
     // Do any additional setup after loading the view.
 //    StudyDraggableViewBackground *draggableBackground = [[StudyDraggableViewBackground alloc] initWithFrame:self.view.frame];
 //    draggableBackground.exampleCardLabels = [self.deck.cards.set allObjects];
-    UIImage *studyIconYellow = [UIImage imageNamed:@"Syellowicon"];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem studyButton] initWithImage:studyIconYellow style:UIBarButtonItemStylePlain target:nil action:@selector(test)];
-  //  [self.navigationItem.rightBarButtonItem setEnabled:NO];
-    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor customYellowColor]];
+    [self layoutNavigationBarItems];
+    [self layoutSubviews];
+}
+
+- (void)layoutSubviews {
     self.draggableViewBackground = [[StudyDraggableViewBackground alloc] initWithFrame:self.view.frame];
     self.draggableViewBackground.deck = self.deck;
     [self.draggableViewBackground setExampleCardLabels:[self.deck.cards.set allObjects]];
-//    [self.view addSubview:draggableBackground];
-     [self.draggableViewBackground loadCards];
+    [self.draggableViewBackground loadCards];
     [self.view addSubview:self.draggableViewBackground];
-    //UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:self];
+}
 
+- (void)layoutNavigationBarItems {
+    NSString *string = [NSString stringWithFormat:@"Studying %@", self.deck.nameTag];
+    self.navigationItem.title = string;
+
+    UIImage *backIcon = [UIImage imageNamed:@"backbutton"];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:backIcon style:UIBarButtonItemStylePlain target:self action:@selector(backButtonAction)];
+    self.navigationItem.leftBarButtonItem = backButton;
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor customBlueColor]];
+
+    UIImage *studyIconYellow = [UIImage imageNamed:@"Syellowicon"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem studyButton] initWithImage:studyIconYellow style:UIBarButtonItemStylePlain target:nil action:@selector(test)];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor customYellowColor]];
 }
 
 - (void)test {
     NSLog(@"Button");
+}
+
+- (void)backButtonAction {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
