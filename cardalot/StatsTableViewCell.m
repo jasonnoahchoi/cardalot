@@ -10,6 +10,7 @@
 #import "Deck.h"
 #import "Quiz.h"
 #import "Study.h"
+#import "UIColor+Colors.h"
 
 @implementation StatsTableViewCell
 
@@ -18,14 +19,19 @@
     JBLineChartView *lineChartView = [[JBLineChartView alloc] init];
     lineChartView.dataSource = self;
     lineChartView.delegate = self;
-    lineChartView.backgroundColor = [UIColor darkGrayColor];
+    lineChartView.backgroundColor = [UIColor customGrayColor];
+    
+    lineChartView.layer.borderWidth = 3.0;
+    lineChartView.layer.cornerRadius = 5;
+    lineChartView.layer.borderColor = [[UIColor customBlueColor] CGColor];
+    
     [self.containerView addSubview:lineChartView];
     
     lineChartView.frame = self.containerView.frame;
     [lineChartView reloadData];
     
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
-    headerView.backgroundColor = [UIColor grayColor];
+    headerView.backgroundColor = [UIColor customYellowColor];
     UILabel *chartTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.containerView.frame.size.width, 30)];
     chartTitle.text = @"Deck";
 //    chartTitle.text = self.deck.nameTag;
@@ -70,9 +76,9 @@
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForLineAtLineIndex:(NSUInteger)lineIndex {
     if (lineIndex == 0) {
-        return [UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0];
+        return [UIColor customBlueColor];
     } else {
-        return [UIColor orangeColor];
+        return [UIColor customOrangeColor];
     }
 }
 @end
