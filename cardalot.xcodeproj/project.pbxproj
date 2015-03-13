@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083C0EDB1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */; };
 		08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */; };
 		08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED41AAF9CC000BE440E /* StudyDraggableView.m */; };
 		08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED71AAF9CD400BE440E /* StudySubjectView.m */; };
@@ -64,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083C0ED91AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CustomButtons.h"; sourceTree = "<group>"; };
+		083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CustomButtons.m"; sourceTree = "<group>"; };
 		08662ED01AAF9CA100BE440E /* StudyDraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDraggableViewBackground.h; sourceTree = "<group>"; };
 		08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDraggableViewBackground.m; sourceTree = "<group>"; };
 		08662ED31AAF9CC000BE440E /* StudyDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDraggableView.h; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 				08977A141AABCB6C00E525D0 /* AppearanceController.m */,
 				08CA76631AB2660B00292997 /* UIColor+Colors.h */,
 				08CA76641AB2660B00292997 /* UIColor+Colors.m */,
+				083C0ED91AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.h */,
+				083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */,
 				7200D0EE1AB1393E00E84D55 /* CustomInputAccessoryView.h */,
 				7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */,
 				72C1E1A31AB278E10041E2C8 /* StatsViewController.h */,
@@ -535,6 +540,7 @@
 				7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */,
 				FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */,
 				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
+				083C0EDB1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m in Sources */,
 				72C1E1A21AB2788A0041E2C8 /* Study.m in Sources */,
 				72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */,
 				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,

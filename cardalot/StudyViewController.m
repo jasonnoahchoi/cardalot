@@ -9,8 +9,13 @@
 #import "StudyViewController.h"
 #import "StudyDraggableViewBackground.h"
 #import "Deck.h"
+#import "DeckCollectionViewController.h"
+#import "UIBarButtonItem+CustomButtons.h"
+#import "UIColor+Colors.h"
 
 @interface StudyViewController ()
+
+@property (nonatomic, strong) DeckCollectionViewController *deckCollectionVC;
 
 @end
 
@@ -21,14 +26,22 @@
     // Do any additional setup after loading the view.
 //    StudyDraggableViewBackground *draggableBackground = [[StudyDraggableViewBackground alloc] initWithFrame:self.view.frame];
 //    draggableBackground.exampleCardLabels = [self.deck.cards.set allObjects];
-
+    UIImage *studyIconYellow = [UIImage imageNamed:@"Syellowicon"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem studyButton] initWithImage:studyIconYellow style:UIBarButtonItemStylePlain target:nil action:@selector(test)];
+  //  [self.navigationItem.rightBarButtonItem setEnabled:NO];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor customYellowColor]];
     self.draggableViewBackground = [[StudyDraggableViewBackground alloc] initWithFrame:self.view.frame];
     self.draggableViewBackground.deck = self.deck;
     [self.draggableViewBackground setExampleCardLabels:[self.deck.cards.set allObjects]];
 //    [self.view addSubview:draggableBackground];
      [self.draggableViewBackground loadCards];
     [self.view addSubview:self.draggableViewBackground];
+    //UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:self];
 
+}
+
+- (void)test {
+    NSLog(@"Button");
 }
 
 - (void)didReceiveMemoryWarning {
