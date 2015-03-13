@@ -76,9 +76,9 @@
 
 - (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForLineAtLineIndex:(NSUInteger)lineIndex {
     if (lineIndex == 0) {
-        return [UIColor customBlueColor];
-    } else {
         return [UIColor customOrangeColor];
+    } else {
+        return [UIColor customBlueColor];
     }
 }
 @end

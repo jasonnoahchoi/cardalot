@@ -45,7 +45,7 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        self.textField = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, self.frame.size.width - 30, 50)];
+        self.textField = [[UITextField alloc] initWithFrame:CGRectMake(20, 10, self.frame.size.width - 40, 50)];
         self.textField.placeholder = @"text";
         self.textField.backgroundColor = [UIColor customBlueColor];
         self.textField.font = [UIFont boldSystemFontOfSize:18];
@@ -62,8 +62,10 @@
         self.textView = [[UITextView alloc] initWithFrame:CGRectMake(20, 70, self.contentView.frame.size.width - 40, 290)];
         self.textView.text = @"this is a text view";
         self.textView.font = [UIFont systemFontOfSize:17];
+        [self.textView.layer setBorderWidth:3.0f];
+        [self.textView.layer setBorderColor:[UIColor customBlueColor].CGColor];
         [self.textView.layer setCornerRadius:10];
-        [self.textView.layer setBorderColor:[UIColor whiteColor].CGColor];
+        //[self.textView.layer setBorderColor:[UIColor whiteColor].CGColor];
         [self.contentView addSubview:self.textView];
         self.textView.editable = NO;
     }
