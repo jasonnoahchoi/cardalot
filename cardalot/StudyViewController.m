@@ -8,8 +8,14 @@
 
 #import "StudyViewController.h"
 #import "StudyDraggableViewBackground.h"
+#import "Deck.h"
+#import "DeckCollectionViewController.h"
+#import "UIBarButtonItem+CustomButtons.h"
+#import "UIColor+Colors.h"
 
 @interface StudyViewController ()
+
+@property (nonatomic, strong) DeckCollectionViewController *deckCollectionVC;
 
 @end
 
@@ -17,10 +23,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    StudyDraggableViewBackground *draggableBackground = [[StudyDraggableViewBackground alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:draggableBackground];
 
+    [self layoutNavigationBarItems];
+    [self layoutSubviews];
+}
+
+- (void)layoutSubviews {
+    self.draggableViewBackground = [[StudyDraggableViewBackground alloc] initWithFrame:self.view.frame];
+    self.draggableViewBackground.deck = self.deck;
+    [self.draggableViewBackground setExampleCardLabels:[self.deck.cards.set allObjects]];
+    [self.draggableViewBackground loadCards];
+    [self.view addSubview:self.draggableViewBackground];
+}
+
+- (void)layoutNavigationBarItems {
+    NSString *string = [NSString stringWithFormat:@"Studying %@", self.deck.nameTag];
+    self.navigationItem.title = string;
+
+    UIImage *backIcon = [UIImage imageNamed:@"backbutton"];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:backIcon target:self action:@selector(backButtonAction)];
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor customBlueColor]];
+
+    UIImage *studyIconYellow = [UIImage imageNamed:@"Syellowicon"];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem studyButtonWithImage:studyIconYellow target:nil action:@selector(test)];
+}
+
+- (void)test {
+    NSLog(@"Button");
+}
+
+- (void)backButtonAction {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

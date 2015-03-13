@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083C0EDB1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */; };
 		08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */; };
 		08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED41AAF9CC000BE440E /* StudyDraggableView.m */; };
 		08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED71AAF9CD400BE440E /* StudySubjectView.m */; };
@@ -17,6 +18,7 @@
 		0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */; };
 		08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08977A141AABCB6C00E525D0 /* AppearanceController.m */; };
 		08C8830E1AAD289200DFE40E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C8830D1AAD289200DFE40E /* QuartzCore.framework */; };
+		08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CA76641AB2660B00292997 /* UIColor+Colors.m */; };
 		08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */; };
 		08FE1E761AAA5F570068F0C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E751AAA5F570068F0C9 /* main.m */; };
 		08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E781AAA5F570068F0C9 /* AppDelegate.m */; };
@@ -30,12 +32,19 @@
 		7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */; };
 		7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */; };
 		7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */; };
+		7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */; };
 		725180E71AAA6FAE00C446E5 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180E61AAA6FAE00C446E5 /* Stack.m */; };
 		725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725180E81AAA751600C446E5 /* Model.xcdatamodeld */; };
 		725180ED1AAA772900C446E5 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EC1AAA772900C446E5 /* Deck.m */; };
 		725180F01AAA772A00C446E5 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EF1AAA772A00C446E5 /* Card.m */; };
 		725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F21AAA7AFE00C446E5 /* DeckController.m */; };
 		725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */; };
+		72C1E19F1AB278890041E2C8 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E19E1AB278890041E2C8 /* Quiz.m */; };
+		72C1E1A21AB2788A0041E2C8 /* Study.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A11AB2788A0041E2C8 /* Study.m */; };
+		72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A41AB278E10041E2C8 /* StatsViewController.m */; };
+		72C1E1A81AB279E60041E2C8 /* StatsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */; };
+		72C1E1AF1AB27BAB0041E2C8 /* StatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */; };
+		72C1E1B01AB27BAB0041E2C8 /* StatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */; };
 		FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */; };
 		FF32B39D1AB230A80098EFA5 /* LogoMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */; };
 		FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3961AB230A80098EFA5 /* MenuDrawerViewController.m */; };
@@ -66,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083C0ED91AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CustomButtons.h"; sourceTree = "<group>"; };
+		083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CustomButtons.m"; sourceTree = "<group>"; };
 		08662ED01AAF9CA100BE440E /* StudyDraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDraggableViewBackground.h; sourceTree = "<group>"; };
 		08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDraggableViewBackground.m; sourceTree = "<group>"; };
 		08662ED31AAF9CC000BE440E /* StudyDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDraggableView.h; sourceTree = "<group>"; };
@@ -84,6 +95,8 @@
 		08977A131AABCB6C00E525D0 /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceController.h; sourceTree = "<group>"; };
 		08977A141AABCB6C00E525D0 /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceController.m; sourceTree = "<group>"; };
 		08C8830D1AAD289200DFE40E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		08CA76631AB2660B00292997 /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Colors.h"; sourceTree = "<group>"; };
+		08CA76641AB2660B00292997 /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colors.m"; sourceTree = "<group>"; };
 		08D8F8CC1AACE7670015A4BD /* DeckCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewLayout.h; sourceTree = "<group>"; };
 		08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewLayout.m; sourceTree = "<group>"; };
 		08FE1E701AAA5F570068F0C9 /* cardalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +121,8 @@
 		7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewCell.m; sourceTree = "<group>"; };
 		7200CEC61AAD1FD000E84D55 /* CardCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewDataSource.h; sourceTree = "<group>"; };
 		7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewDataSource.m; sourceTree = "<group>"; };
+		7200D0EE1AB1393E00E84D55 /* CustomInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInputAccessoryView.h; sourceTree = "<group>"; };
+		7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInputAccessoryView.m; sourceTree = "<group>"; };
 		725180E51AAA6FAE00C446E5 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		725180E61AAA6FAE00C446E5 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		725180E91AAA751600C446E5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -119,6 +134,17 @@
 		725180F21AAA7AFE00C446E5 /* DeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckController.m; sourceTree = "<group>"; };
 		725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewDataSource.h; sourceTree = "<group>"; };
 		725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewDataSource.m; sourceTree = "<group>"; };
+		72C1E19D1AB278890041E2C8 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
+		72C1E19E1AB278890041E2C8 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
+		72C1E1A01AB2788A0041E2C8 /* Study.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Study.h; sourceTree = "<group>"; };
+		72C1E1A11AB2788A0041E2C8 /* Study.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Study.m; sourceTree = "<group>"; };
+		72C1E1A31AB278E10041E2C8 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		72C1E1A41AB278E10041E2C8 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		72C1E1A61AB279E60041E2C8 /* StatsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTableViewDataSource.h; sourceTree = "<group>"; };
+		72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTableViewDataSource.m; sourceTree = "<group>"; };
+		72C1E1AC1AB27BAB0041E2C8 /* StatsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTableViewCell.h; sourceTree = "<group>"; };
+		72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTableViewCell.m; sourceTree = "<group>"; };
+		72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatsTableViewCell.xib; sourceTree = "<group>"; };
 		D497B0555BFD87161A2C78C4 /* Pods-cardalot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardalot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardalot/Pods-cardalot.debug.xcconfig"; sourceTree = "<group>"; };
 		EC8B54A570249508FE757348 /* libPods-cardalot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF32B3921AB230A80098EFA5 /* LogoMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoMenuCell.h; sourceTree = "<group>"; };
@@ -191,15 +217,6 @@
 			name = StudyViewController;
 			sourceTree = "<group>";
 		};
-		08D8F8CB1AACE7290015A4BD /* DeckCollectionView Layout */ = {
-			isa = PBXGroup;
-			children = (
-				08D8F8CC1AACE7670015A4BD /* DeckCollectionViewLayout.h */,
-				08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */,
-			);
-			name = "DeckCollectionView Layout";
-			sourceTree = "<group>";
-		};
 		08FE1E671AAA5F570068F0C9 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +244,19 @@
 				08FE1E781AAA5F570068F0C9 /* AppDelegate.m */,
 				08977A131AABCB6C00E525D0 /* AppearanceController.h */,
 				08977A141AABCB6C00E525D0 /* AppearanceController.m */,
+				08CA76631AB2660B00292997 /* UIColor+Colors.h */,
+				08CA76641AB2660B00292997 /* UIColor+Colors.m */,
+				083C0ED91AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.h */,
+				083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */,
+				7200D0EE1AB1393E00E84D55 /* CustomInputAccessoryView.h */,
+				7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */,
+				72C1E1A31AB278E10041E2C8 /* StatsViewController.h */,
+				72C1E1A41AB278E10041E2C8 /* StatsViewController.m */,
+				72C1E1AC1AB27BAB0041E2C8 /* StatsTableViewCell.h */,
+				72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */,
+				72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */,
+				72C1E1A61AB279E60041E2C8 /* StatsTableViewDataSource.h */,
+				72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */,
 				FF32B39A1AB230A80098EFA5 /* UIColor+CustomColors.h */,
 				FF32B39B1AB230A80098EFA5 /* UIColor+CustomColors.m */,
 				FF8F0AD81AAE592200BDD975 /* Deck Collection View */,
@@ -366,7 +396,8 @@
 				0868F52D1AABDD58008CA47D /* DeckCollectionViewCell.h */,
 				0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */,
 				0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */,
-				08D8F8CB1AACE7290015A4BD /* DeckCollectionView Layout */,
+				08D8F8CC1AACE7670015A4BD /* DeckCollectionViewLayout.h */,
+				08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */,
 			);
 			name = "Deck Collection View";
 			sourceTree = "<group>";
@@ -390,6 +421,10 @@
 				725180E51AAA6FAE00C446E5 /* Stack.h */,
 				725180E61AAA6FAE00C446E5 /* Stack.m */,
 				725180E81AAA751600C446E5 /* Model.xcdatamodeld */,
+				72C1E1A01AB2788A0041E2C8 /* Study.h */,
+				72C1E1A11AB2788A0041E2C8 /* Study.m */,
+				72C1E19D1AB278890041E2C8 /* Quiz.h */,
+				72C1E19E1AB278890041E2C8 /* Quiz.m */,
 				725180EE1AAA772A00C446E5 /* Card.h */,
 				725180EF1AAA772A00C446E5 /* Card.m */,
 				725180EB1AAA772900C446E5 /* Deck.h */,
@@ -483,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF8F0AD61AAE579A00BDD975 /* frontTextCell.xib in Resources */,
+				72C1E1B01AB27BAB0041E2C8 /* StatsTableViewCell.xib in Resources */,
 				08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */,
 				FF8F0AD41AAE579A00BDD975 /* deckTagCell.xib in Resources */,
 				0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */,
@@ -542,12 +578,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */,
+				72C1E1AF1AB27BAB0041E2C8 /* StatsTableViewCell.m in Sources */,
 				725180E71AAA6FAE00C446E5 /* Stack.m in Sources */,
 				FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */,
 				FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */,
 				08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
+				08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */,
 				08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */,
+				72C1E19F1AB278890041E2C8 /* Quiz.m in Sources */,
 				FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */,
 				FF8F0AD51AAE579A00BDD975 /* frontTextCell.m in Sources */,
 				725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */,
@@ -564,6 +603,7 @@
 				08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */,
 				FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
+				7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */,
 				FF32B3AA1AB231080098EFA5 /* PremiumUpgradeViewController.m in Sources */,
 				0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */,
 				08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */,
@@ -571,8 +611,12 @@
 				FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */,
 				FF32B3B01AB24E210098EFA5 /* SettingsMenuViewController.m in Sources */,
 				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
+				083C0EDB1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m in Sources */,
+				72C1E1A21AB2788A0041E2C8 /* Study.m in Sources */,
+				72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */,
 				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,
 				08662EE11AAF9F8D00BE440E /* StudyViewController.m in Sources */,
+				72C1E1A81AB279E60041E2C8 /* StatsTableViewDataSource.m in Sources */,
 				FF32B3AB1AB231080098EFA5 /* RateAppViewController.m in Sources */,
 				7200CEB31AACE66000E84D55 /* HistoryViewController.m in Sources */,
 			);
@@ -697,6 +741,7 @@
 			baseConfigurationReference = D497B0555BFD87161A2C78C4 /* Pods-cardalot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = cardalot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -708,6 +753,7 @@
 			baseConfigurationReference = 1E0294E2F64F78E379287CCE /* Pods-cardalot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = cardalot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

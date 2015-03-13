@@ -28,25 +28,19 @@
 
 
         [self.titleLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-        NSLayoutConstraint *leftMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel
-                                                                                attribute:NSLayoutAttributeLeading
-                                                                                relatedBy:NSLayoutRelationEqual
-                                                                                   toItem:self
-                                                                                attribute:NSLayoutAttributeLeadingMargin
-                                                                               multiplier:1.0 constant:3];
-        //        //leadingEdgeToMarginConstraint.priority = UILayoutPriorityDefaultHigh;
+        NSLayoutConstraint *leftMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:15];
         [self addConstraint:leftMarginConstraint];
 
         NSLayoutConstraint *bottomMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottomMargin multiplier:1.0 constant:5];
         [self addConstraint:bottomMarginConstraint];
 
-        NSLayoutConstraint *rightMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:-3];
+        NSLayoutConstraint *rightMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:-15];
         [self addConstraint:rightMarginConstraint];
 
         NSLayoutConstraint *topMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:-5];
         [self addConstraint:topMarginConstraint];
-
     }
+
     return self;
 }
 

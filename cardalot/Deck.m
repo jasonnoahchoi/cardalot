@@ -13,5 +13,7 @@
 
 @dynamic nameTag;
 @dynamic cards;
+@dynamic quizzes;
+@dynamic studies;
 
 @end
