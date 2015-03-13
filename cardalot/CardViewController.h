@@ -12,7 +12,7 @@
 #import "BackTextCell.h"
 @class Deck;
 
-@interface CardViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
+@interface CardViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) Deck *deck;
 
