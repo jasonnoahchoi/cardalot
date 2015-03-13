@@ -9,6 +9,8 @@
 #import "CardViewController.h"
 #import "DeckController.h"
 #import "CustomInputAccessoryView.h"
+#import "UIBarButtonItem+CustomButtons.h"
+#import "UIColor+Colors.h"
 
 @interface CardViewController () <UITextViewDelegate>
 
@@ -24,10 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Set Title of card
-    self.title = @"Study Card";
-    
+
+    [self layoutNavBarItems];
+
     // Create Tableview
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     
@@ -46,12 +47,21 @@
     // sets background color
     self.tableView.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
     
-    // adds right bar button item
-    UINavigationItem *navigationSaveItem = self.navigationItem;
-    navigationSaveItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];     // will want to dismiss to detail card collection view
-    
     // add to view
     [self.view addSubview:self.tableView];
+}
+
+- (void)layoutNavBarItems {
+    // Set Title of card
+    self.title = @"Study Card";
+
+    UIImage *image = [UIImage imageNamed:@"backbutton"];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:image target:self action:@selector(backButtonAction)];
+
+    // adds right bar button item
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];     // will want to dismiss to detail card collection view
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor customBlueColor]];
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -119,6 +129,10 @@
 #pragma mark IBAction
 - (IBAction)done:(id)sender {
     [[DeckController sharedInstance] addCardWithTitle:self.frontTextCell.frontTextField.text andAnswer:self.backTextCell.backTextView.text toDeckWithNameTag:self.deckTagCell.deckTagField.text];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)backButtonAction {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
