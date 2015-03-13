@@ -10,11 +10,6 @@
 #import "Deck.h"
 #import "Stat.h"
 
-typedef enum {
-    kQuizMode = 0,
-    kStudyMode = 1
-} Mode;
-
 @implementation Session
 
 @dynamic startTime;

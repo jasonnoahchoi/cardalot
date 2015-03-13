@@ -9,14 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+typedef enum {
+    kQuizMode = 0,
+    kStudyMode = 1
+} Mode;
+
 @class Deck, Stat;
 
 @interface Session : NSManagedObject
 
-@property (nonatomic, retain) NSDate * startTime;
-@property (nonatomic, retain) NSDate * endTime;
-@property (nonatomic, retain) NSNumber * markedCorrect;
-@property (nonatomic, retain) NSNumber * mode;
+@property (nonatomic, retain) NSDate *startTime;
+@property (nonatomic, retain) NSDate *endTime;
+@property (nonatomic, retain) NSNumber *markedCorrect;
+@property (nonatomic, retain) NSNumber *mode;
 @property (nonatomic, retain) Deck *deck;
 @property (nonatomic, retain) NSSet *stats;
 @end
