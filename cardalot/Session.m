@@ -1,21 +1,23 @@
 //
-//  Card.m
+//  Session.m
 //  cardalot
 //
 //  Created by sombra on 2015-03-13.
 //  Copyright (c) 2015 Jason Choi. All rights reserved.
 //
 
-#import "Card.h"
+#import "Session.h"
 #import "Deck.h"
 #import "Stat.h"
 
 
-@implementation Card
+@implementation Session
 
-@dynamic answer;
-@dynamic title;
-@dynamic decks;
+@dynamic startTime;
+@dynamic endTime;
+@dynamic markedCorrect;
+@dynamic mode;
+@dynamic deck;
 @dynamic stats;
 
 @end
