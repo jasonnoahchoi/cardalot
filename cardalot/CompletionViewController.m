@@ -8,7 +8,8 @@
 
 #import "CompletionViewController.h"
 #import <JBChartView/JBBarChartView.h>
-#import "DeckCollectionViewController.h"
+#import "Session.h"
+#import "UIColor+Colors.h"
 
 @interface CompletionViewController () <JBBarChartViewDataSource, JBBarChartViewDelegate>
 
@@ -70,7 +71,7 @@
 }
 
 - (UIColor *)barChartView:(JBBarChartView *)barChartView colorForBarViewAtIndex:(NSUInteger)index {
-    return [UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0];
+    return [UIColor customBlueColor];
 }
 
 @end
