@@ -78,8 +78,8 @@ static int count = 0;
     UIImage *studyIconGray = [UIImage imageNamed:@"Sgrayicon"];
     UIImage *quizIconGray = [UIImage imageNamed:@"Qgrayicon"];
 
-    self.studyButton = [[UIBarButtonItem alloc] initWithImage:studyIconGray style:UIBarButtonItemStylePlain target:self action:@selector(studyMode:)];
-    self.quizButton = [[UIBarButtonItem alloc] initWithImage:quizIconGray style:UIBarButtonItemStylePlain target:self action:@selector(quizMode:)];
+    self.studyButton = [[UIBarButtonItem alloc] initWithImage:studyIconGray style:UIBarButtonItemStylePlain target:self action:@selector(studyMode)];
+    self.quizButton = [[UIBarButtonItem alloc] initWithImage:quizIconGray style:UIBarButtonItemStylePlain target:self action:@selector(quizMode)];
     [self.studyButton setTintColor:[UIColor customGrayColor]];
     [self.quizButton setTintColor:[UIColor customGrayColor]];
 
@@ -116,7 +116,7 @@ static int count = 0;
     return self.studyMode;
 }
 
-- (void)studyMode:(id)sender {
+- (void)studyMode {
     count++;
     if (count % 2 != 0) {
         [self studyModeTrue];
@@ -125,7 +125,7 @@ static int count = 0;
     }
 }
 
-- (IBAction)quizMode:(id)sender {
+- (IBAction)quizMode {
     count++;
     if (count % 2 != 0) {
         [self quizModeTrue];
@@ -145,21 +145,28 @@ static int count = 0;
             [self createNewDeckAlertController];
         } else {
             NSLog(@"some other cell");
+            if (self.studyMode == YES) {
             //CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
-            Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
-            //cardCollectionVC.deck = deck;
-//            Card *card = [deck.cards objectAtIndex:indexPath.item];
-//            Card *card = [deck.cards objectAtIndex:indexPath.item];
-            StudyViewController *studyVC = [[StudyViewController alloc] init];
-          //  StudyDraggableViewBackground *dvb = [[StudyDraggableViewBackground alloc] init];
-          //  dvb.deck = deck;
-           // dvb.exampleCardLabels = [deck.cards.set allObjects];
-            studyVC.deck = deck;
-            //studyVC.draggableViewBackground.exampleCardLabels = [deck.cards.set allObjects];
-//            studyVC.frontString = card.title;
-//            studyVC.backString = card.answer;
-
-            [self.navigationController pushViewController:studyVC animated:YES];
+                Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+                //cardCollectionVC.deck = deck;
+                //            Card *card = [deck.cards objectAtIndex:indexPath.item];
+                //            Card *card = [deck.cards objectAtIndex:indexPath.item];
+                StudyViewController *studyVC = [[StudyViewController alloc] init];
+                //  StudyDraggableViewBackground *dvb = [[StudyDraggableViewBackground alloc] init];
+                //  dvb.deck = deck;
+                // dvb.exampleCardLabels = [deck.cards.set allObjects];
+                studyVC.deck = deck;
+                //studyVC.draggableViewBackground.exampleCardLabels = [deck.cards.set allObjects];
+                //            studyVC.frontString = card.title;
+                //            studyVC.backString = card.answer;
+                
+                [self.navigationController pushViewController:studyVC animated:YES];
+            } else if (self.studyMode == NO && self.quizMode == NO) {
+                CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
+                Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+                cardCollectionVC.deck = deck;
+                [self.navigationController pushViewController:cardCollectionVC animated:YES];
+            }
         }
 
 }
