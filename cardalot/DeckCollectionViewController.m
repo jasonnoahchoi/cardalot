@@ -42,8 +42,26 @@ static NSString * const cellIdentifier = @"cell";
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
-    
+    UIImage *studyIconGray = [UIImage imageNamed:@"Sgrayicon"];
+    UIImage *quizIconGray = [UIImage imageNamed:@"Qgrayicon"];
+
+    UIBarButtonItem *studyButton = [[UIBarButtonItem alloc] initWithImage:studyIconGray style:UIBarButtonItemStylePlain target:self action:@selector(study)];
+    UIBarButtonItem *quizButton = [[UIBarButtonItem alloc] initWithImage:quizIconGray style:UIBarButtonItemStylePlain target:self action:@selector(study)];
+    [studyButton setTintColor:[UIColor colorWithRed:110.0/255 green:110.0/255 blue:110.0/255 alpha:1]];
+    [quizButton setTintColor:[UIColor colorWithRed:110.0/255 green:110.0/255 blue:110.0/255 alpha:1]];
+//
+//    UIButton *addButton = [[UIButton alloc] init];
+//    [addButton setImage:plusButton forState:UIControlStateNormal];
+//    [quizButton targetForAction:@selector(addItem:) withSender:self];
+
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
+
+   // NSArray *arrayOfButtons = @[studyButton, quizButton, addButton];
+
+    //UIBarButtonItem *button = [self customAddButtonItemWithTarget:self action:@selector(addItem:)];
+
+    self.navigationItem.rightBarButtonItems = @[addButton, quizButton, studyButton];
+
     self.deckLayout = [[DeckCollectionViewLayout alloc] init];
 
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:self.deckLayout];
@@ -65,6 +83,25 @@ static NSString * const cellIdentifier = @"cell";
     //UIButton *deleteButton = [[UIButton alloc] init];
    // [deleteButton setImage:image forState:UIControlStateNormal];
 
+}
+
+- (UIBarButtonItem *)customAddButtonItemWithTarget:(id)target action:(SEL)action {
+    UIButton *customButtonView = [UIButton buttonWithType:UIButtonTypeCustom];
+
+    customButtonView.frame = CGRectMake(0.0f, 0.0f, 45.0f, 44.0f);
+    [customButtonView setImage:[UIImage imageNamed:@"Sgrayicon"] forState:UIControlStateNormal];
+    [customButtonView setImage:[UIImage imageNamed:@"Qgrayicon"] forState:UIControlStateNormal];
+    [customButtonView setImage:[UIImage imageNamed:@"plusButton"] forState:UIControlStateNormal];
+   // UIImage *studyIconGray = [UIImage imageNamed:@"Sgrayicon"];
+   // UIImage *quizIconGray = [UIImage imageNamed:@"Qgrayicon"];
+   // UIImage *plusButton = [UIImage imageNamed:@"plusbutton"];
+
+    [customButtonView addTarget:target action:action
+               forControlEvents:UIControlEventTouchUpInside];
+
+    UIBarButtonItem *customButtonItem = [[UIBarButtonItem alloc]
+                                         initWithCustomView:customButtonView];
+    return customButtonItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
