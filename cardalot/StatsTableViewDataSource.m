@@ -28,8 +28,8 @@ static NSString * const cellIdentifier = @"cell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     StatsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    Deck *deck = [DeckController sharedInstance].decks[indexPath.row];
-    cell.deck = deck;
+//    Deck *deck = [DeckController sharedInstance].decks[indexPath.row];
+//    cell.deck = deck;
     
     return cell;
 }

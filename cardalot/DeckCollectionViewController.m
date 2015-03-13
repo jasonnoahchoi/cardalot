@@ -17,7 +17,6 @@
 #import "Deck.h"
 #import "StudyViewController.h"
 #import "StudyDraggableViewBackground.h"
-#import "StatsViewController.h"
 
 #import <MMDrawerController.h>
 
@@ -96,9 +95,8 @@ static NSString * const cellIdentifier = @"cell";
             //studyVC.draggableViewBackground.exampleCardLabels = [deck.cards.set allObjects];
 //            studyVC.frontString = card.title;
 //            studyVC.backString = card.answer;
-            StatsViewController *statsVC = [[StatsViewController alloc] init];
 
-            [self.navigationController pushViewController:statsVC animated:YES];
+            [self.navigationController pushViewController:studyVC animated:YES];
         }
 
 }
