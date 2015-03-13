@@ -10,10 +10,10 @@
 #import "DeckTagCell.h"
 #import "FrontTextCell.h"
 #import "BackTextCell.h"
-
+@class Deck;
 
 @interface CardViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
 
-@property (nonatomic, strong) UITableView *cardTableView;
+@property (strong, nonatomic) Deck *deck;
 
 @end
