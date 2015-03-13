@@ -43,13 +43,11 @@
     self.navigationItem.title = string;
 
     UIImage *backIcon = [UIImage imageNamed:@"backbutton"];
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:backIcon style:UIBarButtonItemStylePlain target:self action:@selector(backButtonAction)];
-    self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:backIcon target:self action:@selector(backButtonAction)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor customBlueColor]];
 
     UIImage *studyIconYellow = [UIImage imageNamed:@"Syellowicon"];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem studyButton] initWithImage:studyIconYellow style:UIBarButtonItemStylePlain target:nil action:@selector(test)];
-    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor customYellowColor]];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem studyButtonWithImage:studyIconYellow target:nil action:@selector(test)];
 }
 
 - (void)test {
