@@ -42,11 +42,6 @@ static int count = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"Decktags";
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
-    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor customBlueColor]];
-
     self.deckLayout = [[DeckCollectionViewLayout alloc] init];
 
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:self.deckLayout];
@@ -76,8 +71,13 @@ static int count = 0;
 }
 
 - (void)loadBarButtonItems {
-    UIImage *studyIconGray = [UIImage imageNamed:@"Sgrayicon"];
-    UIImage *quizIconGray = [UIImage imageNamed:@"Qgrayicon"];
+    self.title = @"Decktags";
+
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor customBlueColor]];
+
+    UIImage *studyIconGray = [UIImage imageNamed:@"Syellowicon"];
+    UIImage *quizIconGray = [UIImage imageNamed:@"Qorangeicon"];
 
     self.studyButton = [[UIBarButtonItem alloc] initWithImage:studyIconGray style:UIBarButtonItemStylePlain target:self action:@selector(studyMode)];
     self.quizButton = [[UIBarButtonItem alloc] initWithImage:quizIconGray style:UIBarButtonItemStylePlain target:self action:@selector(quizMode)];
