@@ -23,9 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    StudyDraggableViewBackground *draggableBackground = [[StudyDraggableViewBackground alloc] initWithFrame:self.view.frame];
-//    draggableBackground.exampleCardLabels = [self.deck.cards.set allObjects];
+
     [self layoutNavigationBarItems];
     [self layoutSubviews];
 }
