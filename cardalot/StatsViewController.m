@@ -7,10 +7,12 @@
 //
 
 #import "StatsViewController.h"
+#import "StatsTableViewDataSource.h"
 
 @interface StatsViewController ()
 
 @property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) StatsTableViewDataSource *dataSource;
 
 @end
 
@@ -22,6 +24,9 @@
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.tableView];
     
+    self.dataSource = [[StatsTableViewDataSource alloc] init];
+    self.tableView.dataSource = self.dataSource;
+    [self.dataSource registerTableView:self.tableView];
 }
 
 @end
