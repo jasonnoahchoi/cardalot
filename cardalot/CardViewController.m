@@ -11,6 +11,7 @@
 #import "CustomInputAccessoryView.h"
 #import "UIBarButtonItem+CustomButtons.h"
 #import "UIColor+Colors.h"
+#import "Deck.h"
 
 @interface CardViewController () <UITextViewDelegate>
 
@@ -83,6 +84,7 @@
         return cell;
     } else if (indexPath.row == 1) {
         self.deckTagCell = [[DeckTagCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
+        self.deckTagCell.deckTagField.text = self.deck.nameTag;
         return self.deckTagCell;
     } else if (indexPath.row == 2) {
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell3"];
@@ -130,7 +132,8 @@
 - (IBAction)done:(id)sender {
     [[DeckController sharedInstance] addCardWithTitle:self.frontTextCell.frontTextField.text andAnswer:self.backTextCell.backTextView.text toDeckWithNameTag:self.deckTagCell.deckTagField.text];
     [[DeckController sharedInstance] save];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)backButtonAction {
