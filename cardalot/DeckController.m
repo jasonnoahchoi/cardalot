@@ -9,6 +9,8 @@
 #import "DeckController.h"
 #import "Deck.h"
 #import "Card.h"
+#import "Quiz.h"
+#import "Study.h"
 #import "Stack.h"
 
 @interface DeckController ()
@@ -19,6 +21,8 @@
 
 static NSString * const deckEntity = @"Deck";
 static NSString * const cardEntity = @"Card";
+static NSString * const quizEntity = @"Quiz";
+static NSString * const studyEntity = @"Study";
 
 @implementation DeckController
 
@@ -49,7 +53,7 @@ static NSString * const cardEntity = @"Card";
     [[Stack sharedInstance].managedObjectContext save:NULL];
 }
 
-#pragma Deck stuff
+#pragma mark Deck stuff
 - (void)addDeckWithName:(NSString *)nameTag {
     Deck *deck = [NSEntityDescription insertNewObjectForEntityForName:deckEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     deck.nameTag = nameTag;
@@ -62,7 +66,7 @@ static NSString * const cardEntity = @"Card";
     [self save];
 }
 
-#pragma Card stuff
+#pragma mark Card stuff
 - (void)addCardWithTitle:(NSString *)title andAnswer:(NSString *)answer toDeckWithNameTag:(NSString *)nameTag {
     Card *card = [NSEntityDescription insertNewObjectForEntityForName:cardEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     card.title = title;
@@ -85,7 +89,18 @@ static NSString * const cardEntity = @"Card";
     [self save];
 }
 
+#pragma mark Quiz stuff
+- (void)addQuizToDeck:(Deck *)deck {
+    Quiz *quiz = [NSEntityDescription insertNewObjectForEntityForName:quizEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    [quiz setDeck:deck];
+    [self save];
+}
 
-
+#pragma mark Study stuff
+- (void)addStudyToDeck:(Deck *)deck {
+    Study *study = [NSEntityDescription insertNewObjectForEntityForName:studyEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    [study setDeck:deck];
+    [self save];
+}
 
 @end
