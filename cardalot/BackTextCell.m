@@ -19,7 +19,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
-        
         // position/size
         self.backTextView = [[UITextView alloc] init];
         
@@ -50,6 +49,7 @@
         NSLayoutConstraint *bottomConstraint = [NSLayoutConstraint constraintWithItem:self.backTextView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeBottomMargin multiplier:1.0 constant:0];
         [self.contentView addConstraint:bottomConstraint];
     }
+    
     return self;
 }
 

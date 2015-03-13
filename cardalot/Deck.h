@@ -13,7 +13,7 @@
 
 @interface Deck : NSManagedObject
 
-@property (nonatomic, retain) NSString * nameTag;
+@property (nonatomic, retain) NSString *nameTag;
 @property (nonatomic, retain) NSOrderedSet *cards;
 @property (nonatomic, retain) NSOrderedSet *sessions;
 @end

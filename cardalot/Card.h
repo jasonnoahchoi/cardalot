@@ -13,8 +13,8 @@
 
 @interface Card : NSManagedObject
 
-@property (nonatomic, retain) NSString * answer;
-@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString *answer;
+@property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSSet *decks;
 @property (nonatomic, retain) NSOrderedSet *stats;
 @end

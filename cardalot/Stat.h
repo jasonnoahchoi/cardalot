@@ -13,8 +13,8 @@
 
 @interface Stat : NSManagedObject
 
-@property (nonatomic, retain) NSDate * time;
-@property (nonatomic, retain) NSNumber * markedCorrect;
+@property (nonatomic, retain) NSDate *time;
+@property (nonatomic, retain) NSNumber *markedCorrect;
 @property (nonatomic, retain) Card *card;
 @property (nonatomic, retain) NSManagedObject *session;
 
