@@ -14,6 +14,8 @@
 
 @property (nonatomic, retain) NSString * nameTag;
 @property (nonatomic, retain) NSOrderedSet *cards;
+@property (nonatomic, retain) NSOrderedSet *quizzes;
+@property (nonatomic, retain) NSOrderedSet *studies;
 @end
 
 @interface Deck (CoreDataGeneratedAccessors)

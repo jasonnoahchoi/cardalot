@@ -38,6 +38,12 @@
 		725180F01AAA772A00C446E5 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EF1AAA772A00C446E5 /* Card.m */; };
 		725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F21AAA7AFE00C446E5 /* DeckController.m */; };
 		725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */; };
+		72C1E19F1AB278890041E2C8 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E19E1AB278890041E2C8 /* Quiz.m */; };
+		72C1E1A21AB2788A0041E2C8 /* Study.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A11AB2788A0041E2C8 /* Study.m */; };
+		72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A41AB278E10041E2C8 /* StatsViewController.m */; };
+		72C1E1A81AB279E60041E2C8 /* StatsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */; };
+		72C1E1AF1AB27BAB0041E2C8 /* StatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */; };
+		72C1E1B01AB27BAB0041E2C8 /* StatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */; };
 		FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0AC61AAE579A00BDD975 /* BackTextCell.m */; };
 		FF8F0AD11AAE579A00BDD975 /* BackTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8F0AC71AAE579A00BDD975 /* BackTextCell.xib */; };
 		FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0AC91AAE579A00BDD975 /* CardViewController.m */; };
@@ -115,6 +121,17 @@
 		725180F21AAA7AFE00C446E5 /* DeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckController.m; sourceTree = "<group>"; };
 		725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewDataSource.h; sourceTree = "<group>"; };
 		725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewDataSource.m; sourceTree = "<group>"; };
+		72C1E19D1AB278890041E2C8 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
+		72C1E19E1AB278890041E2C8 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
+		72C1E1A01AB2788A0041E2C8 /* Study.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Study.h; sourceTree = "<group>"; };
+		72C1E1A11AB2788A0041E2C8 /* Study.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Study.m; sourceTree = "<group>"; };
+		72C1E1A31AB278E10041E2C8 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		72C1E1A41AB278E10041E2C8 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		72C1E1A61AB279E60041E2C8 /* StatsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTableViewDataSource.h; sourceTree = "<group>"; };
+		72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTableViewDataSource.m; sourceTree = "<group>"; };
+		72C1E1AC1AB27BAB0041E2C8 /* StatsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTableViewCell.h; sourceTree = "<group>"; };
+		72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTableViewCell.m; sourceTree = "<group>"; };
+		72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatsTableViewCell.xib; sourceTree = "<group>"; };
 		D497B0555BFD87161A2C78C4 /* Pods-cardalot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardalot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardalot/Pods-cardalot.debug.xcconfig"; sourceTree = "<group>"; };
 		EC8B54A570249508FE757348 /* libPods-cardalot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8F0AC51AAE579A00BDD975 /* BackTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackTextCell.h; sourceTree = "<group>"; };
@@ -209,6 +226,13 @@
 				08CA76641AB2660B00292997 /* UIColor+Colors.m */,
 				7200D0EE1AB1393E00E84D55 /* CustomInputAccessoryView.h */,
 				7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */,
+				72C1E1A31AB278E10041E2C8 /* StatsViewController.h */,
+				72C1E1A41AB278E10041E2C8 /* StatsViewController.m */,
+				72C1E1AC1AB27BAB0041E2C8 /* StatsTableViewCell.h */,
+				72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */,
+				72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */,
+				72C1E1A61AB279E60041E2C8 /* StatsTableViewDataSource.h */,
+				72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */,
 				FF8F0AD81AAE592200BDD975 /* Deck Collection View */,
 				FF8F0AD91AAE594000BDD975 /* Card Collection View */,
 				FF8F0AC41AAE577F00BDD975 /* Card Entry View */,
@@ -330,6 +354,10 @@
 				725180E51AAA6FAE00C446E5 /* Stack.h */,
 				725180E61AAA6FAE00C446E5 /* Stack.m */,
 				725180E81AAA751600C446E5 /* Model.xcdatamodeld */,
+				72C1E1A01AB2788A0041E2C8 /* Study.h */,
+				72C1E1A11AB2788A0041E2C8 /* Study.m */,
+				72C1E19D1AB278890041E2C8 /* Quiz.h */,
+				72C1E19E1AB278890041E2C8 /* Quiz.m */,
 				725180EE1AAA772A00C446E5 /* Card.h */,
 				725180EF1AAA772A00C446E5 /* Card.m */,
 				725180EB1AAA772900C446E5 /* Deck.h */,
@@ -423,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF8F0AD61AAE579A00BDD975 /* frontTextCell.xib in Resources */,
+				72C1E1B01AB27BAB0041E2C8 /* StatsTableViewCell.xib in Resources */,
 				08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */,
 				FF8F0AD41AAE579A00BDD975 /* deckTagCell.xib in Resources */,
 				0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */,
@@ -480,12 +509,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */,
+				72C1E1AF1AB27BAB0041E2C8 /* StatsTableViewCell.m in Sources */,
 				725180E71AAA6FAE00C446E5 /* Stack.m in Sources */,
 				FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */,
 				08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
 				08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */,
 				08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */,
+				72C1E19F1AB278890041E2C8 /* Quiz.m in Sources */,
 				FF8F0AD51AAE579A00BDD975 /* frontTextCell.m in Sources */,
 				725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */,
 				725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */,
@@ -504,8 +535,11 @@
 				7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */,
 				FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */,
 				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
+				72C1E1A21AB2788A0041E2C8 /* Study.m in Sources */,
+				72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */,
 				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,
 				08662EE11AAF9F8D00BE440E /* StudyViewController.m in Sources */,
+				72C1E1A81AB279E60041E2C8 /* StatsTableViewDataSource.m in Sources */,
 				7200CEB31AACE66000E84D55 /* HistoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
