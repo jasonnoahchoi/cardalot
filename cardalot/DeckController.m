@@ -9,7 +9,6 @@
 #import "DeckController.h"
 #import "Deck.h"
 #import "Card.h"
-#import "Session.h"
 #import "Stack.h"
 
 @interface DeckController ()
@@ -88,9 +87,10 @@ static NSString * const sessionEntity = @"Session";
 }
 
 #pragma mark Session stuff
-- (void)addSessionToDeck:(Deck *)deck {
+- (void)addSessionToDeck:(Deck *)deck withMode:(Mode)mode {
     Session *session = [NSEntityDescription insertNewObjectForEntityForName:sessionEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     [session setDeck:deck];
+    session.mode = [NSNumber numberWithInt:mode];
     [self save];
 }
 
