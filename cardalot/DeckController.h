@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Session.h"
 
 @class Deck;
 @class Card;
-@class Session;
+
 
 @interface DeckController : NSObject
 
@@ -26,6 +27,6 @@
 - (void)addCardWithTitle:(NSString *)title andAnswer:(NSString *)answer toDeckWithNameTag:(NSString *)nameTag;
 - (void)removeCard:(Card *)card;
 
-- (void)addSessionToDeck:(Deck *)deck;
+- (void)addSessionToDeck:(Deck *)deck withMode:(Mode)mode;
 
 @end

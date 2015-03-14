@@ -33,8 +33,6 @@ static int studyMode;
 @property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
 @property (nonatomic, strong) DeckCollectionViewLayout *deckLayout;
 @property (nonatomic, strong) DeckCollectionViewCell *deckCell;
-//@property (nonatomic, assign) int quizMode;
-//@property (nonatomic, assign) int studyMode;
 @property (nonatomic, strong) UIBarButtonItem *studyButton;
 @property (nonatomic, strong) UIBarButtonItem *quizButton;
 
@@ -64,16 +62,13 @@ static int studyMode;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
 
     [self loadBarButtonItems];
-
-    //UIImage *image = [UIImage imageNamed:@"deletecircle"];
-    //self.imageView = [[UIImageView alloc] initWithImage:image];
-    //UIButton *deleteButton = [[UIButton alloc] init];
-   // [deleteButton setImage:image forState:UIControlStateNormal];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.collectionView reloadData];
 }
+
+#pragma mark - Navigation Items
 
 - (void)loadBarButtonItems {
     self.title = @"Decktags";
@@ -104,7 +99,7 @@ static int studyMode;
     self.navigationItem.rightBarButtonItems = @[addButton, self.quizButton, self.studyButton];
 }
 
-#pragma mark - Model State Methods
+#pragma mark - Mode State Methods
 
 - (int)quizModeTrue {
     quizMode = kQuizMode;
@@ -170,6 +165,10 @@ static int studyMode;
                 NSLog(@"Study Mode");
 
                 Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+                [[DeckController sharedInstance] addSessionToDeck:deck withMode:kStudyMode];
+            //    Session *session = [deck.sessions lastObject];
+             //   session.mode = [NSNumber numberWithInt:kStudyMode];
+
                 StudyViewController *studyVC = [[StudyViewController alloc] init];
 
                 studyVC.deck = deck;
@@ -209,7 +208,7 @@ static int studyMode;
         [self.collectionView reloadData];
     }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
-                                                        style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+                                                        style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         NSLog(@"cancel");
     }]];
     [self presentViewController:alertController animated:YES completion:nil];
