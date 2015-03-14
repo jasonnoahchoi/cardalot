@@ -2,7 +2,7 @@
 //  Session.h
 //  cardalot
 //
-//  Created by sombra on 2015-03-13.
+//  Created by Jason Noah Choi on 3/14/15.
 //  Copyright (c) 2015 Jason Choi. All rights reserved.
 //
 
@@ -10,18 +10,18 @@
 #import <CoreData/CoreData.h>
 
 typedef enum {
-    kQuizMode = 0,
-    kStudyMode = 1
+    kQuizMode,
+    kStudyMode
 } Mode;
 
 @class Deck, Stat;
 
 @interface Session : NSManagedObject
 
-@property (nonatomic, retain) NSDate *startTime;
-@property (nonatomic, retain) NSDate *endTime;
-@property (nonatomic, retain) NSNumber *markedCorrect;
-@property (nonatomic, retain) NSNumber *mode;
+@property (nonatomic, retain) NSDate * endTime;
+@property (nonatomic, retain) NSNumber * markedCorrect;
+@property (nonatomic, retain) NSNumber * mode;
+@property (nonatomic, retain) NSDate * startTime;
 @property (nonatomic, retain) Deck *deck;
 @property (nonatomic, retain) NSSet *stats;
 @end

@@ -12,6 +12,7 @@
 #import "DeckCollectionViewController.h"
 #import "UIBarButtonItem+CustomButtons.h"
 #import "UIColor+Colors.h"
+#import "DeckController.h"
 
 @interface StudyViewController ()
 
@@ -53,6 +54,9 @@
 }
 
 - (void)backButtonAction {
+    Session *session = [self.deck.sessions lastObject];
+    [[DeckController sharedInstance] removeSession:session];
+    [[DeckController sharedInstance] save];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

@@ -2,12 +2,13 @@
 //  Deck.m
 //  cardalot
 //
-//  Created by sombra on 2015-03-13.
+//  Created by Jason Noah Choi on 3/14/15.
 //  Copyright (c) 2015 Jason Choi. All rights reserved.
 //
 
 #import "Deck.h"
 #import "Card.h"
+#import "Session.h"
 
 
 @implementation Deck

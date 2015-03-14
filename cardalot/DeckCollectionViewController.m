@@ -181,7 +181,6 @@ static int studyMode;
                 [self.navigationController pushViewController:cardCollectionVC animated:YES];
             }
         }
-
 }
 
 #pragma mark - Add button

@@ -2,7 +2,7 @@
 //  Session.m
 //  cardalot
 //
-//  Created by sombra on 2015-03-13.
+//  Created by Jason Noah Choi on 3/14/15.
 //  Copyright (c) 2015 Jason Choi. All rights reserved.
 //
 
@@ -10,21 +10,14 @@
 #import "Deck.h"
 #import "Stat.h"
 
+
 @implementation Session
 
-@dynamic startTime;
 @dynamic endTime;
 @dynamic markedCorrect;
 @dynamic mode;
+@dynamic startTime;
 @dynamic deck;
 @dynamic stats;
-
-- (void)setModeRaw:(Mode)mode {
-    [self setMode:[NSNumber numberWithInt:mode]];
-}
-
-- (Mode)modeRaw {
-    return (Mode)[[self mode] intValue];
-}
 
 @end
