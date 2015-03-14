@@ -28,5 +28,6 @@
 - (void)removeCard:(Card *)card;
 
 - (void)addSessionToDeck:(Deck *)deck withMode:(Mode)mode;
+- (void)removeSession:(Session *)session;
 
 @end

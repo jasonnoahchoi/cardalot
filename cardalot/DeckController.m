@@ -94,4 +94,9 @@ static NSString * const sessionEntity = @"Session";
     [self save];
 }
 
+- (void)removeSession:(Session *)session {
+    [session.managedObjectContext deleteObject:session];
+    [self save];
+}
+
 @end

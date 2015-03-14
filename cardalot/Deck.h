@@ -2,18 +2,18 @@
 //  Deck.h
 //  cardalot
 //
-//  Created by sombra on 2015-03-13.
+//  Created by Jason Noah Choi on 3/14/15.
 //  Copyright (c) 2015 Jason Choi. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Card;
+@class Card, Session;
 
 @interface Deck : NSManagedObject
 
-@property (nonatomic, retain) NSString *nameTag;
+@property (nonatomic, retain) NSString * nameTag;
 @property (nonatomic, retain) NSOrderedSet *cards;
 @property (nonatomic, retain) NSOrderedSet *sessions;
 @end
@@ -30,14 +30,14 @@
 - (void)removeCardsObject:(Card *)value;
 - (void)addCards:(NSOrderedSet *)values;
 - (void)removeCards:(NSOrderedSet *)values;
-- (void)insertObject:(NSManagedObject *)value inSessionsAtIndex:(NSUInteger)idx;
+- (void)insertObject:(Session *)value inSessionsAtIndex:(NSUInteger)idx;
 - (void)removeObjectFromSessionsAtIndex:(NSUInteger)idx;
 - (void)insertSessions:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
 - (void)removeSessionsAtIndexes:(NSIndexSet *)indexes;
-- (void)replaceObjectInSessionsAtIndex:(NSUInteger)idx withObject:(NSManagedObject *)value;
+- (void)replaceObjectInSessionsAtIndex:(NSUInteger)idx withObject:(Session *)value;
 - (void)replaceSessionsAtIndexes:(NSIndexSet *)indexes withSessions:(NSArray *)values;
-- (void)addSessionsObject:(NSManagedObject *)value;
-- (void)removeSessionsObject:(NSManagedObject *)value;
+- (void)addSessionsObject:(Session *)value;
+- (void)removeSessionsObject:(Session *)value;
 - (void)addSessions:(NSOrderedSet *)values;
 - (void)removeSessions:(NSOrderedSet *)values;
 @end
