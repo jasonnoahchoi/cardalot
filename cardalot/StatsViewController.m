@@ -8,6 +8,7 @@
 
 #import "StatsViewController.h"
 #import "StatsTableViewDataSource.h"
+#import "DeckCollectionViewController.h"
 
 @interface StatsViewController ()
 
@@ -20,6 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"History/Stats";
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
     self.tableView.rowHeight = 150;
