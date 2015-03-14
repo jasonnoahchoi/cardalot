@@ -8,6 +8,7 @@
 
 #import "PremiumUpgradeViewController.h"
 #import "DeckCollectionViewController.h"
+#import <MMDrawerController.h>
 
 @interface PremiumUpgradeViewController ()
 
@@ -19,16 +20,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.title = @"Cardalot Premium";
+    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIImage *background = [UIImage imageNamed: @"GoPremiumInProcess.png"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
+    
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
+    imageView.image = background;
+    
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
     
     [self.view addSubview: imageView];
     
     
+}
+
+- (void)open {
+    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
