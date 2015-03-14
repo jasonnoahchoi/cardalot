@@ -8,6 +8,7 @@
 
 #import "SettingsMenuViewController.h"
 #import "DeckCollectionViewController.h"
+#import <MMDrawerController.h>
 
 @interface SettingsMenuViewController ()
 
@@ -19,12 +20,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.title = @"Settings";
+    
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
     
     
     
+}
+
+- (void)open {
+    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
