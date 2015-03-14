@@ -43,22 +43,32 @@
 #pragma mark - sets static settings cells
     self.advancedSettingsCell = [UITableViewCell new];
     self.advancedSettingsCell.textLabel.text = @"Advanced Settings";
+    self.advancedSettingsCell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     self.reminderCell = [UITableViewCell new];
     self.reminderCell.textLabel.text = @"Reminders";
+    self.reminderCell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     self.howToUseCell = [UITableViewCell new];
     self.howToUseCell.textLabel.text = @"FAQ";
+    self.howToUseCell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     self.supportCell = [UITableViewCell new];
     self.supportCell.textLabel.text = @"Support";
+    self.supportCell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     self.legalCell = [UITableViewCell new];
     self.legalCell.textLabel.text = @"Legal";
+    self.legalCell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     self.versionCell = [UITableViewCell new];
+    self.versionLabel = [[UILabel alloc] initWithFrame:CGRectInset(self.versionCell.contentView.bounds, 15, 0)];
+    self.versionLabel.text = @"Version ";
+    self.versionCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    [self.versionCell addSubview:self.versionLabel];
     
-    
+    // Disable/Enable selection
+    self.tableView.allowsSelection = YES;
     
     // Add to view
     [self.view addSubview:self.tableView];
@@ -74,9 +84,9 @@
     
     switch(section)
     {
-        case 0:  return 1;  // section 0 has 1 rows
-        case 1:  return 1;  // section 1 has 1 row
-        case 2: return 1;  // section 2 has 1 row
+        case 0:  return 2;  // section 0 has 2 rows
+        case 1:  return 2;  // section 1 has 2 row
+        case 2: return 2;  // section 2 has 2 row
         default: return 0;
     };
     
@@ -87,6 +97,7 @@
     
 //    NSArray *menuListArray = @[@"Advanced Settings", @"Support", @"Legal"];
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+
 //    cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
 //    NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"Marion-Bold" size:16]}];
 //    cell.textLabel.attributedText = attText;
@@ -99,20 +110,23 @@
         case 0:
             switch(indexPath.row)
         {
-            case 0: return self.advancedSettingsCell;  // section 0, row 0 is advanced settings
+            case 0: return self.reminderCell;
+            case 1: return self.advancedSettingsCell;
         }
         case 1:
             switch(indexPath.row)
         {
-            case 0: return self.supportCell;      // section 1, row 0 is support
+            case 0: return self.howToUseCell;
+            case 1: return self.supportCell;
         }
         case 2:
             switch (indexPath.row)
         {
             case 0: return self.legalCell;
+            case 1: return self.versionCell;
         }
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
     
     
