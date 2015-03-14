@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LegalInformationViewController : UINavigationController
+@class MMDrawerController;
+
+@interface LegalInformationViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) MMDrawerController *drawerController;
+
+@property (nonatomic, strong) UITableViewCell *attributionCell;
+@property (nonatomic, strong) UITableViewCell *privacyPolicyCell;
+@property (nonatomic, strong) UITableViewCell *termsOfServiceCell;
 
 @end
