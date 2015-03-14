@@ -80,7 +80,7 @@
         self.logoMenuCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return self.logoMenuCell;
     } else {  // for string with format add the itentifier for account type
-        NSArray *menuListArray = @[[NSString stringWithFormat:@"Account Type: "], @"History", @"Rate App", @"Go Premium", @"Refer Friends", @"Settings"];
+        NSArray *menuListArray = @[[NSString stringWithFormat:@"Account Type: "], @"History/Stats", @"Rate App", @"Go Premium", @"Refer Friends", @"Settings"];
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
         cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
         NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 2] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"Marion-Bold" size:16]}];
@@ -99,13 +99,22 @@
     UINavigationController *navigationController = (UINavigationController *)self.mm_drawerController.centerViewController;
     
     if (indexPath.row == 1) {
-        UINavigationController *deckHomeNavController = [[UINavigationController alloc] initWithRootViewController:[DeckCollectionViewController new]];
+        DeckCollectionViewController *deckCollectionVC = [DeckCollectionViewController new];
+        deckCollectionVC.drawerController = self.mm_drawerController;
+        
+        UINavigationController *deckHomeNavController = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
         [self.mm_drawerController setCenterViewController:deckHomeNavController];
         [navigationController popToRootViewControllerAnimated:NO];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        
+        
+        
     } else if (indexPath.row == 3) {
-        UINavigationController *historyNavController =[[UINavigationController alloc] initWithRootViewController:[HistoryViewController new]];
-        [self.mm_drawerController setCenterViewController:historyNavController];
+//        StatsViewController *statsVC = [StatsViewController new];
+        
+        
+        UINavigationController *statsNavController =[[UINavigationController alloc] initWithRootViewController:[StatsViewController new]];
+        [self.mm_drawerController setCenterViewController:statsNavController];
         [navigationController popToRootViewControllerAnimated:NO];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 4) {

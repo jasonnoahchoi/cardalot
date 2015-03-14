@@ -59,8 +59,8 @@ static int count = 0;
     // Disable/Enable Drawer Gestures
     self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
-
     [self loadBarButtonItems];
+
 
     //UIImage *image = [UIImage imageNamed:@"deletecircle"];
     //self.imageView = [[UIImageView alloc] initWithImage:image];
