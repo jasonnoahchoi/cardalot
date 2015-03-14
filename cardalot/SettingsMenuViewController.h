@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsMenuViewController : UIViewController
+@class MMDrawerController;
+
+@interface SettingsMenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) MMDrawerController *drawerController;
 
 @end
