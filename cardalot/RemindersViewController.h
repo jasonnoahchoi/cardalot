@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class MMDrawerController;
+
 @interface RemindersViewController : UIViewController
+
+@property (nonatomic, strong) MMDrawerController *drawerController;
 
 @end

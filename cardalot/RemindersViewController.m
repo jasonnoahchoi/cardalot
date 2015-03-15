@@ -8,6 +8,7 @@
 
 #import "RemindersViewController.h"
 #import "RemindersTableViewDataSource.h"
+#import <MMDrawerController.h>
 
 @interface RemindersViewController ()
 
@@ -30,6 +31,10 @@
     [self.dataSource registerTableView:self.tableView];
     
     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil]];
+}
+
+- (void)open {
+    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 @end
