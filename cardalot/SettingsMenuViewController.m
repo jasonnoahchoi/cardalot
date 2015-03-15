@@ -13,6 +13,7 @@
 #import "RemindersViewController.h"
 #import "SupportViewController.h"
 #import "AdvancedSettingsViewController.h"
+#import "FAQViewController.h"
 
 @interface SettingsMenuViewController () <UITableViewDelegate>
 
@@ -173,9 +174,23 @@
             [navigationController popToRootViewControllerAnimated:YES];
             [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
         }
-    }
-    
-    if (indexPath.section == 2) {
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            FAQViewController *faqVC = [FAQViewController new];
+            faqVC.drawerController = self.mm_drawerController;
+            UINavigationController *faqNavController = [[UINavigationController alloc] initWithRootViewController:faqVC];
+            [self.mm_drawerController setCenterViewController:faqNavController];
+            [navigationController popToRootViewControllerAnimated:YES];
+            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        } else if (indexPath.row == 1) {
+            SupportViewController *supportVC = [SupportViewController new];
+            supportVC.drawerController = self.mm_drawerController;
+            UINavigationController *supportNavController = [[UINavigationController alloc] initWithRootViewController:supportVC];
+            [self.mm_drawerController setCenterViewController:supportNavController];
+            [navigationController popToRootViewControllerAnimated:YES];
+            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        }
+    } else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
             LegalInformationViewController *legalVC = [LegalInformationViewController new];
             legalVC.drawerController = self.mm_drawerController;
@@ -185,10 +200,9 @@
             [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
         }
     }
-    
 }
 
-
+// Reminders / Advanced Settings / FAQ / Support / Legal / Version
 
 // Sets the section headings for each section
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
