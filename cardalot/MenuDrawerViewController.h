@@ -15,8 +15,11 @@
 #import "CompletionViewController.h"
 #import "SettingsMenuViewController.h"
 #import "DeckCollectionViewController.h"
+#import "StatsViewController.h"
 
 
 @interface MenuDrawerViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+//@property (nonatomic, strong) MMDrawerController *drawerController;
 
 @end

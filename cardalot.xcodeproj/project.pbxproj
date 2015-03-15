@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0832BEFA1AB5243100213071 /* LegalInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0832BEF91AB5243100213071 /* LegalInformationViewController.m */; };
 		083C0EDB1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */; };
 		08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */; };
 		08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED41AAF9CC000BE440E /* StudyDraggableView.m */; };
@@ -78,6 +79,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0832BEF81AB5243100213071 /* LegalInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegalInformationViewController.h; sourceTree = "<group>"; };
+		0832BEF91AB5243100213071 /* LegalInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegalInformationViewController.m; sourceTree = "<group>"; };
 		083C0ED91AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CustomButtons.h"; sourceTree = "<group>"; };
 		083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CustomButtons.m"; sourceTree = "<group>"; };
 		08662ED01AAF9CA100BE440E /* StudyDraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDraggableViewBackground.h; sourceTree = "<group>"; };
@@ -371,6 +374,8 @@
 				FF32B3A91AB231080098EFA5 /* ReferralViewController.m */,
 				FF32B3AE1AB24E210098EFA5 /* SettingsMenuViewController.h */,
 				FF32B3AF1AB24E210098EFA5 /* SettingsMenuViewController.m */,
+				0832BEF81AB5243100213071 /* LegalInformationViewController.h */,
+				0832BEF91AB5243100213071 /* LegalInformationViewController.m */,
 			);
 			name = "Menu Option View Controllers";
 			sourceTree = "<group>";
@@ -630,6 +635,7 @@
 				FF32B3B01AB24E210098EFA5 /* SettingsMenuViewController.m in Sources */,
 				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
 				72C1E1F71AB505D30041E2C8 /* RemindersViewController.m in Sources */,
+				0832BEFA1AB5243100213071 /* LegalInformationViewController.m in Sources */,
 				083C0EDB1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m in Sources */,
 				72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */,
 				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,
