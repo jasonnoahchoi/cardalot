@@ -99,7 +99,8 @@
             [self.view addSubview:attributionsView];
             UILabel *attributionLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 75, self.view.frame.size.width - 20, self.view.frame.size.height - 90)];
             attributionLabel.text = @"";
-            attributionLabel.backgroundColor = [UIColor blackColor];
+            attributionLabel.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
+            attributionLabel.alpha = 0.9;
             attributionLabel.numberOfLines = 0;
             [attributionsView addSubview:attributionLabel];
         }
@@ -109,7 +110,7 @@
             [self.view addSubview:privacyView];
             UILabel *privacyLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 75, self.view.frame.size.width - 20, self.view.frame.size.height - 90)];
             privacyLabel.text = @"";
-            privacyLabel.backgroundColor = [UIColor blackColor];
+            privacyLabel.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
             privacyLabel.numberOfLines = 0;
             [privacyView addSubview:privacyLabel];
         }
@@ -119,7 +120,7 @@
             [self.view addSubview:termsView];
             UILabel *termsLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 75, self.view.frame.size.width - 20, self.view.frame.size.height - 90)];
             termsLabel.text = @"";
-            termsLabel.backgroundColor = [UIColor blackColor];
+            termsLabel.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
             termsLabel.numberOfLines = 0;
             [termsView addSubview:termsLabel];
         }
