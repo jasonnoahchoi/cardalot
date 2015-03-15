@@ -6,15 +6,17 @@
 //  Copyright (c) 2015 Jason Choi. All rights reserved.
 //
 
-#import "HistoryViewController.h"
+#import "CompletionViewController.h"
 #import <JBChartView/JBBarChartView.h>
-#import "DeckCollectionViewController.h"
+#import "Deck.h"
+#import "Session.h"
+#import "UIColor+Colors.h"
 
-@interface HistoryViewController () <JBBarChartViewDataSource, JBBarChartViewDelegate>
+@interface CompletionViewController () <JBBarChartViewDataSource, JBBarChartViewDelegate>
 
 @end
 
-@implementation HistoryViewController
+@implementation CompletionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -63,14 +65,14 @@
 #pragma mark JBBarChartViewDelegate
 - (CGFloat)barChartView:(JBBarChartView *)barChartView heightForBarViewAtIndex:(NSUInteger)index {
     if (index == 0) {
-        return 31;
+        return ((float)self.deck.cards.count - [self.session.markedCorrect floatValue]);
     } else {
-        return 55;
+        return [self.session.markedCorrect floatValue];
     }
 }
 
 - (UIColor *)barChartView:(JBBarChartView *)barChartView colorForBarViewAtIndex:(NSUInteger)index {
-    return [UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0];
+    return [UIColor customBlueColor];
 }
 
 @end

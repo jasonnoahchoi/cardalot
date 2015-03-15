@@ -12,6 +12,7 @@
 #import <MMDrawerController.h>
 #import "AppearanceController.h"
 #import "MenuDrawerViewController.h"
+#import "RemindersViewController.h"
 
 @interface AppDelegate ()
 
@@ -38,6 +39,8 @@
     self.window.rootViewController = drawerController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     
     return YES;
 }

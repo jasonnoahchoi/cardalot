@@ -9,8 +9,6 @@
 #import "DeckController.h"
 #import "Deck.h"
 #import "Card.h"
-#import "Quiz.h"
-#import "Study.h"
 #import "Stack.h"
 
 @interface DeckController ()
@@ -21,8 +19,7 @@
 
 static NSString * const deckEntity = @"Deck";
 static NSString * const cardEntity = @"Card";
-static NSString * const quizEntity = @"Quiz";
-static NSString * const studyEntity = @"Study";
+static NSString * const sessionEntity = @"Session";
 
 @implementation DeckController
 
@@ -89,17 +86,16 @@ static NSString * const studyEntity = @"Study";
     [self save];
 }
 
-#pragma mark Quiz stuff
-- (void)addQuizToDeck:(Deck *)deck {
-    Quiz *quiz = [NSEntityDescription insertNewObjectForEntityForName:quizEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-    [quiz setDeck:deck];
+#pragma mark Session stuff
+- (void)addSessionToDeck:(Deck *)deck withMode:(Mode)mode {
+    Session *session = [NSEntityDescription insertNewObjectForEntityForName:sessionEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    [session setDeck:deck];
+    session.mode = [NSNumber numberWithInt:mode];
     [self save];
 }
 
-#pragma mark Study stuff
-- (void)addStudyToDeck:(Deck *)deck {
-    Study *study = [NSEntityDescription insertNewObjectForEntityForName:studyEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-    [study setDeck:deck];
+- (void)removeSession:(Session *)session {
+    [session.managedObjectContext deleteObject:session];
     [self save];
 }
 

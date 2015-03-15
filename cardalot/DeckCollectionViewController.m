@@ -18,11 +18,14 @@
 #import "StudyViewController.h"
 #import "StudyDraggableViewBackground.h"
 #import "UIColor+Colors.h"
+#import "Session.h"
 
 #import <MMDrawerController.h>
 
 static NSString * const cellIdentifier = @"cell";
 static int count = 0;
+static int quizMode;
+static int studyMode;
 
 @interface DeckCollectionViewController () <UICollectionViewDelegate, UIGestureRecognizerDelegate>
 
@@ -30,8 +33,6 @@ static int count = 0;
 @property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
 @property (nonatomic, strong) DeckCollectionViewLayout *deckLayout;
 @property (nonatomic, strong) DeckCollectionViewCell *deckCell;
-@property (nonatomic, getter=isQuizMode) BOOL quizMode;
-@property (nonatomic, getter=isStudyMode) BOOL studyMode;
 @property (nonatomic, strong) UIBarButtonItem *studyButton;
 @property (nonatomic, strong) UIBarButtonItem *quizButton;
 
@@ -61,16 +62,13 @@ static int count = 0;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
     [self loadBarButtonItems];
 
-
-    //UIImage *image = [UIImage imageNamed:@"deletecircle"];
-    //self.imageView = [[UIImageView alloc] initWithImage:image];
-    //UIButton *deleteButton = [[UIButton alloc] init];
-   // [deleteButton setImage:image forState:UIControlStateNormal];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.collectionView reloadData];
 }
+
+#pragma mark - Navigation Items
 
 - (void)loadBarButtonItems {
     self.title = @"Decktags";
@@ -101,32 +99,34 @@ static int count = 0;
     self.navigationItem.rightBarButtonItems = @[addButton, self.quizButton, self.studyButton];
 }
 
-- (BOOL)quizModeTrue {
-    self.quizMode = YES;
+#pragma mark - Mode State Methods
+
+- (int)quizModeTrue {
+    quizMode = kQuizMode;
     [self.quizButton setTintColor:[UIColor customOrangeColor]];
     [self.studyButton setEnabled:NO];
-    return self.quizMode;
+    return quizMode;
 }
 
-- (BOOL)quizModeFalse {
-    self.quizMode = NO;
+- (int)quizModeFalse {
+    quizMode = !kQuizMode;
     [self.quizButton setTintColor:[UIColor customGrayColor]];
     [self.studyButton setEnabled:YES];
-    return self.quizMode;
+    return quizMode;
 }
 
-- (BOOL)studyModeTrue {
-    self.studyMode = YES;
+- (int)studyModeTrue {
+    studyMode = kStudyMode;
     [self.studyButton setTintColor:[UIColor customYellowColor]];
     [self.quizButton setEnabled:NO];
-    return self.studyMode;
+    return studyMode;
 }
 
-- (BOOL)studyModeFalse {
-    self.studyMode = NO;
+- (int)studyModeFalse {
+    studyMode = !kStudyMode;
     [self.studyButton setTintColor:[UIColor customGrayColor]];
     [self.quizButton setEnabled:YES];
-    return self.studyMode;
+    return studyMode;
 }
 
 - (void)studyMode {
@@ -147,59 +147,51 @@ static int count = 0;
     }
 }
 
+#pragma mark - Drawer Method
+
 - (void)open {
     [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+#pragma mark - Collection View Delegate Methods
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
         if (indexPath.item == [DeckController sharedInstance].decks.count) {
             NSLog(@"Create a new deck");
             [self createNewDeckAlertController];
         } else {
             NSLog(@"A cell has been pressed");
-            if (self.studyMode == YES) {
+            if (studyMode) {
                 NSLog(@"Study Mode");
-            //CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
+
                 Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
-                //cardCollectionVC.deck = deck;
-                //            Card *card = [deck.cards objectAtIndex:indexPath.item];
-                //            Card *card = [deck.cards objectAtIndex:indexPath.item];
+                [[DeckController sharedInstance] addSessionToDeck:deck withMode:kStudyMode];
+            //    Session *session = [deck.sessions lastObject];
+             //   session.mode = [NSNumber numberWithInt:kStudyMode];
+
                 StudyViewController *studyVC = [[StudyViewController alloc] init];
-                //  StudyDraggableViewBackground *dvb = [[StudyDraggableViewBackground alloc] init];
-                //  dvb.deck = deck;
-                // dvb.exampleCardLabels = [deck.cards.set allObjects];
+
                 studyVC.deck = deck;
-                //studyVC.draggableViewBackground.exampleCardLabels = [deck.cards.set allObjects];
-                //            studyVC.frontString = card.title;
-                //            studyVC.backString = card.answer;
-                
+
                 [self.navigationController pushViewController:studyVC animated:YES];
-            } else if (self.studyMode == NO && self.quizMode == NO) {
+            } else if (!studyMode && !quizMode) {
                 CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
                 Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
                 cardCollectionVC.deck = deck;
                 [self.navigationController pushViewController:cardCollectionVC animated:YES];
             }
         }
-
 }
-//
-//- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (self.isInEditMode) {
-//        return NO;
-//    } else {
-//        [self.deckCell.closeButton setHidden:YES];
-//        return YES;
-//    }
-//}
+
+#pragma mark - Add button
 
 - (void)addItem:(id)sender {
     CardViewController *cardVC = [[CardViewController alloc] init];
     [self.navigationController pushViewController:cardVC animated:YES];
 
 }
+
+#pragma mark - Helper Method
 
 - (void)createNewDeckAlertController {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"New Deck"
@@ -215,7 +207,7 @@ static int count = 0;
         [self.collectionView reloadData];
     }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
-                                                        style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+                                                        style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         NSLog(@"cancel");
     }]];
     [self presentViewController:alertController animated:YES completion:nil];

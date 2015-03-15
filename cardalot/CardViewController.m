@@ -103,6 +103,7 @@
     if (indexPath.row == 0) {
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell1"];
         cell.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
+
         return cell;
     } else if (indexPath.row == 1) {
         self.deckTagCell = [[DeckTagCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
@@ -110,18 +111,22 @@
         if (self.deck) {
             self.deckTagCell.deckTagField.text = self.deck.nameTag;
         }
+
         return self.deckTagCell;
     } else if (indexPath.row == 2) {
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell3"];
         cell.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
+
         return cell;
     } else if (indexPath.row == 3) {
         self.frontTextCell = [[FrontTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell4"];
         self.frontTextCell.frontTextField.delegate = self;
+
         return self.frontTextCell;
     } else if (indexPath.row == 4) {
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell5"];
         cell.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
+
         return cell;
     } else {
         self.backTextCell = [[BackTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell6"];
@@ -129,6 +134,7 @@
         self.backTextCell.backTextView.inputAccessoryView = self.accessoryView;
         self.accessoryView.delegate = self.backTextCell.backTextView;
         self.backTextCell.backTextView.delegate = self;
+
         return self.backTextCell;
     }
 }
@@ -155,7 +161,7 @@
     [self.view endEditing:YES];
 }
 
-#pragma mark IBAction
+#pragma mark - Navigation Methods
 - (IBAction)done:(id)sender {
     [[DeckController sharedInstance] addCardWithTitle:self.frontTextCell.frontTextField.text andAnswer:self.backTextCell.backTextView.text toDeckWithNameTag:self.deckTagCell.deckTagField.text];
     [[DeckController sharedInstance] save];

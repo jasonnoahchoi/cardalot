@@ -19,7 +19,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
-        
         // label/field position/size
         self.hashTagLabel = [[UILabel alloc] init];
         
@@ -55,13 +54,8 @@
         NSLayoutConstraint *leadingConstraint = [NSLayoutConstraint constraintWithItem:self.hashTagLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:0];
         [self.contentView addConstraint:leadingConstraint];
     }
+
     return self;
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

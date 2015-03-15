@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Session.h"
 
 @class Deck;
 @class Card;
-@class Quiz;
-@class Study;
+
 
 @interface DeckController : NSObject
 
@@ -27,8 +27,7 @@
 - (void)addCardWithTitle:(NSString *)title andAnswer:(NSString *)answer toDeckWithNameTag:(NSString *)nameTag;
 - (void)removeCard:(Card *)card;
 
-- (void)addQuizToDeck:(Deck *)deck;
-
-- (void)addStudyToDeck:(Deck *)deck;
+- (void)addSessionToDeck:(Deck *)deck withMode:(Mode)mode;
+- (void)removeSession:(Session *)session;
 
 @end

@@ -12,6 +12,7 @@
 #import "DeckCollectionViewController.h"
 #import "UIBarButtonItem+CustomButtons.h"
 #import "UIColor+Colors.h"
+#import "DeckController.h"
 
 @interface StudyViewController ()
 
@@ -31,7 +32,7 @@
 - (void)layoutSubviews {
     self.draggableViewBackground = [[StudyDraggableViewBackground alloc] initWithFrame:self.view.frame];
     self.draggableViewBackground.deck = self.deck;
-    [self.draggableViewBackground setExampleCardLabels:[self.deck.cards.set allObjects]];
+    [self.draggableViewBackground setTopCardInDeck:[self.deck.cards.set allObjects]];
     [self.draggableViewBackground loadCards];
     [self.view addSubview:self.draggableViewBackground];
 }
@@ -53,6 +54,9 @@
 }
 
 - (void)backButtonAction {
+    Session *session = [self.deck.sessions lastObject];
+    [[DeckController sharedInstance] removeSession:session];
+    [[DeckController sharedInstance] save];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

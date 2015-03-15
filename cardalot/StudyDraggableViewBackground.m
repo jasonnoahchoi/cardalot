@@ -32,14 +32,14 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     if (self) {
         [super layoutSubviews];
         [self setupView];
-//        self.exampleCardLabels = [[NSArray alloc]initWithObjects:@"first",@"second",@"third",@"fourth",@"last", nil]; //%%% placeholder for card-specific information
-        self.exampleCardLabels = [self.deck.cards.set allObjects];
+        self.topCardInDeck = [self.deck.cards.set allObjects];
         self.loadedCards = [[NSMutableArray alloc] init];
         self.allCards = [[NSMutableArray alloc] init];
         self.cardsLoadedIndex = 0;
         self.studyVC = [[StudyViewController alloc] init];
         //[self loadCards];
     }
+
     return self;
 }
 
@@ -81,21 +81,22 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 
     //StudyDraggableView *draggableView = [[StudyDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
 //    draggableView.subjectView.titleLabel.text = [self.exampleCardLabels objectAtIndex:index]; //%%% placeholder for card-specific information
-    Card *card = [self.exampleCardLabels objectAtIndex:index];
+    Card *card = [self.topCardInDeck objectAtIndex:index];
     self.draggableView.subjectView.titleLabel.text = card.title;
     self.draggableView.descriptionView.descriptionTextView.text = card.answer;
     self.draggableView.delegate = self;
+
     return self.draggableView;
 }
 
 //%%% loads all the cards and puts the first x in the "loaded cards" array
 - (void)loadCards {
-    if([self.exampleCardLabels count] > 0) {
-        NSInteger numLoadedCardsCap =(([self.exampleCardLabels count] > MAX_BUFFER_SIZE)?MAX_BUFFER_SIZE:[self.exampleCardLabels count]);
+    if([self.topCardInDeck count] > 0) {
+        NSInteger numLoadedCardsCap =(([self.topCardInDeck count] > MAX_BUFFER_SIZE)?MAX_BUFFER_SIZE:[self.topCardInDeck count]);
         //%%% if the buffer size is greater than the data size, there will be an array error, so this makes sure that doesn't happen
 
         //%%% loops through the exampleCardsLabels array to create a card for each label.  This should be customized by removing "exampleCardLabels" with your own array of data
-        for (int i = 0; i < [self.exampleCardLabels count]; i++) {
+        for (int i = 0; i < [self.topCardInDeck count]; i++) {
             StudyDraggableView *newCard = [self createDraggableViewWithDataAtIndex:i];
             [self.allCards addObject:newCard];
 

@@ -12,7 +12,7 @@
 #import "PremiumUpgradeViewController.h"
 #import "RateAppViewController.h"
 #import "ReferralViewController.h"
-#import "HistoryViewController.h"
+#import "CompletionViewController.h"
 #import "SettingsMenuViewController.h"
 #import "DeckCollectionViewController.h"
 #import "StatsViewController.h"

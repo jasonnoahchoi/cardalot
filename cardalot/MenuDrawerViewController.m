@@ -104,10 +104,15 @@
         [navigationController popToRootViewControllerAnimated:NO];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 3) {
+
         StatsViewController *statsVC = [StatsViewController new];
         statsVC.drawerController = self.mm_drawerController;
         UINavigationController *statsNavController =[[UINavigationController alloc] initWithRootViewController:statsVC];
         [self.mm_drawerController setCenterViewController:statsNavController];
+
+        UINavigationController *historyNavController =[[UINavigationController alloc] initWithRootViewController:[CompletionViewController new]];
+        [self.mm_drawerController setCenterViewController:historyNavController];
+
         [navigationController popToRootViewControllerAnimated:NO];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 4) {

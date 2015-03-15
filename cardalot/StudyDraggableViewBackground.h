@@ -12,7 +12,7 @@
 
 @interface StudyDraggableViewBackground : UIView <StudyDraggableViewDelegate>
 
-@property (strong, nonatomic) NSArray *exampleCardLabels; //%%% the labels the cards
+@property (strong, nonatomic) NSArray *topCardInDeck; //%%% the labels the cards
 @property (retain, nonatomic) NSMutableArray *allCards; //%%% the labels the cards
 @property (strong, nonatomic) Deck *deck;
 
