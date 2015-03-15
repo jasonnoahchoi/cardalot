@@ -8,7 +8,8 @@
 
 #import "SettingsMenuViewController.h"
 #import "DeckCollectionViewController.h"
-#import <MMDrawerController.h>
+#import <MMDrawerController/UIViewController+MMDrawerController.h>
+#import "LegalInformationViewController.h"
 
 @interface SettingsMenuViewController () <UITableViewDelegate>
 
@@ -28,6 +29,8 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
     
+    // using icon8 image:  <a href="http://icons8.com/web-app/5771/Appointment-Reminders">Free icons by Icons8</a>
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reminder"] style:UIBarButtonItemStylePlain target:self action:nil]; ////// set action to dropdown alerts from reminders
     
     // Create tableView
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -82,65 +85,94 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    switch(section)
-    {
+    switch(section) {
         case 0:  return 2;  // section 0 has 2 rows
         case 1:  return 2;  // section 1 has 2 row
         case 2: return 2;  // section 2 has 2 row
         default: return 0;
     };
-    
-//    return 1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-//    NSArray *menuListArray = @[@"Advanced Settings", @"Support", @"Legal"];
+
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
 
 //    cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
 //    NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"Marion-Bold" size:16]}];
 //    cell.textLabel.attributedText = attText;
-//    // removes highlighting of cells when selecting
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    return cell;
-    
-    switch(indexPath.section)
-    {
+
+    switch(indexPath.section) {
         case 0:
-            switch(indexPath.row)
-        {
+            switch(indexPath.row) {
             case 0: return self.reminderCell;
             case 1: return self.advancedSettingsCell;
         }
         case 1:
-            switch(indexPath.row)
-        {
+            switch(indexPath.row) {
             case 0: return self.howToUseCell;
             case 1: return self.supportCell;
         }
         case 2:
-            switch (indexPath.row)
-        {
+            switch (indexPath.row) {
             case 0: return self.legalCell;
             case 1: return self.versionCell;
         }
     }
-    
     return cell;
-    
-    
 }
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    if (indexPath.section == 0) {
+//        switch (indexPath.row) {
+//            case 0:
+//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
+//                break;
+//            case 1:
+//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
+//        }
+//    } else if (indexPath.section == 1) {
+//        switch (indexPath.row) {
+//            case 0:
+//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
+//                break;
+//            case 1:
+//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
+//        }
+//    } else if (indexPath.section == 2) {
+//        switch (indexPath.row) {
+//            case 0:
+//                [self presentViewController:[[UINavigationController alloc] initWithRootViewController:[LegalInformationViewController new]] animated:YES completion:nil];
+//                break;
+//            case 1:
+//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
+//        }
+//    }
+//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    UINavigationController *navigationController = (UINavigationController *)self.mm_drawerController.centerViewController;
+    
+    if (indexPath.section == 2) {
+        if (indexPath.row == 0) {
+            LegalInformationViewController *legalVC = [LegalInformationViewController new];
+            legalVC.drawerController = self.mm_drawerController;
+            UINavigationController *legalNavController = [[UINavigationController alloc] initWithRootViewController:legalVC];
+            [self.mm_drawerController setCenterViewController:legalNavController];
+            [navigationController popToRootViewControllerAnimated:YES];
+            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        }
+    }
+    
 }
+
+
 
 // Sets the section headings for each section
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    switch(section)
-    {
+    switch(section) {
         case 0: return @"Settings";
         case 1: return @"Help";
         case 2: return @"About";
