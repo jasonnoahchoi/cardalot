@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0832BEE61AB5170600213071 /* QuizFrontView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0832BEE31AB5170600213071 /* QuizFrontView.m */; };
+		0832BEE71AB5170600213071 /* QuizBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0832BEE51AB5170600213071 /* QuizBackView.m */; };
+		0832BEEB1AB5180500213071 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0832BEEA1AB5180500213071 /* QuizViewController.m */; };
+		0832BEF61AB5195700213071 /* QuizDraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 0832BEF31AB5195700213071 /* QuizDraggableViewBackground.m */; };
+		0832BEF71AB5195700213071 /* QuizDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0832BEF51AB5195700213071 /* QuizDraggableView.m */; };
 		083C0EDB1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */; };
 		08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */; };
 		08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED41AAF9CC000BE440E /* StudyDraggableView.m */; };
@@ -78,6 +83,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0832BEE21AB5170600213071 /* QuizFrontView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizFrontView.h; sourceTree = "<group>"; };
+		0832BEE31AB5170600213071 /* QuizFrontView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizFrontView.m; sourceTree = "<group>"; };
+		0832BEE41AB5170600213071 /* QuizBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizBackView.h; sourceTree = "<group>"; };
+		0832BEE51AB5170600213071 /* QuizBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizBackView.m; sourceTree = "<group>"; };
+		0832BEE91AB5180500213071 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
+		0832BEEA1AB5180500213071 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
+		0832BEF21AB5195700213071 /* QuizDraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizDraggableViewBackground.h; sourceTree = "<group>"; };
+		0832BEF31AB5195700213071 /* QuizDraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizDraggableViewBackground.m; sourceTree = "<group>"; };
+		0832BEF41AB5195700213071 /* QuizDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizDraggableView.h; sourceTree = "<group>"; };
+		0832BEF51AB5195700213071 /* QuizDraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizDraggableView.m; sourceTree = "<group>"; };
 		083C0ED91AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CustomButtons.h"; sourceTree = "<group>"; };
 		083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CustomButtons.m"; sourceTree = "<group>"; };
 		08662ED01AAF9CA100BE440E /* StudyDraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDraggableViewBackground.h; sourceTree = "<group>"; };
@@ -207,6 +222,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0832BEE81AB517E000213071 /* QuizViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0832BEF21AB5195700213071 /* QuizDraggableViewBackground.h */,
+				0832BEF31AB5195700213071 /* QuizDraggableViewBackground.m */,
+				0832BEF41AB5195700213071 /* QuizDraggableView.h */,
+				0832BEF51AB5195700213071 /* QuizDraggableView.m */,
+				0832BEE21AB5170600213071 /* QuizFrontView.h */,
+				0832BEE31AB5170600213071 /* QuizFrontView.m */,
+				0832BEE41AB5170600213071 /* QuizBackView.h */,
+				0832BEE51AB5170600213071 /* QuizBackView.m */,
+				0832BEE91AB5180500213071 /* QuizViewController.h */,
+				0832BEEA1AB5180500213071 /* QuizViewController.m */,
+			);
+			name = QuizViewController;
+			sourceTree = "<group>";
+		};
 		08662EE21AAF9F9600BE440E /* StudyViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,8 +310,9 @@
 				FF8F0AD91AAE594000BDD975 /* Card Collection View */,
 				FF8F0AC41AAE577F00BDD975 /* Card Entry View */,
 				08662EE21AAF9F9600BE440E /* StudyViewController */,
-				7200CEB11AACE66000E84D55 /* CompletionViewController.h */,
+				0832BEE81AB517E000213071 /* QuizViewController */,
 				7200CEB21AACE66000E84D55 /* CompletionViewController.m */,
+				7200CEB11AACE66000E84D55 /* CompletionViewController.h */,
 				725180F11AAA7AFE00C446E5 /* DeckController.h */,
 				725180F21AAA7AFE00C446E5 /* DeckController.m */,
 				FF32B3A31AB230D40098EFA5 /* Menu Drawer View Controller */,
@@ -592,6 +625,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0832BEE71AB5170600213071 /* QuizBackView.m in Sources */,
 				08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */,
 				72C1E1AF1AB27BAB0041E2C8 /* StatsTableViewCell.m in Sources */,
 				725180E71AAA6FAE00C446E5 /* Stack.m in Sources */,
@@ -607,12 +641,16 @@
 				FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */,
 				FF8F0AD51AAE579A00BDD975 /* frontTextCell.m in Sources */,
 				725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */,
+				0832BEE61AB5170600213071 /* QuizFrontView.m in Sources */,
 				725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */,
 				08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */,
 				72C1E1FA1AB506AB0041E2C8 /* RemindersTableViewDataSource.m in Sources */,
+				0832BEF61AB5195700213071 /* QuizDraggableViewBackground.m in Sources */,
 				FF32B3A11AB230A80098EFA5 /* UIColor+CustomColors.m in Sources */,
 				08662EDB1AAF9CDF00BE440E /* StudyDescriptionView.m in Sources */,
 				FF32B39F1AB230A80098EFA5 /* SearchCell.m in Sources */,
+				0832BEEB1AB5180500213071 /* QuizViewController.m in Sources */,
+				0832BEF71AB5195700213071 /* QuizDraggableView.m in Sources */,
 				08F5EA2E1AB4F31700D00A3F /* Session.m in Sources */,
 				08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */,
 				725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */,
