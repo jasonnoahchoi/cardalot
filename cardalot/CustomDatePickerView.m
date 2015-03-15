@@ -313,6 +313,12 @@ typedef enum : NSInteger {
     [UIView animateWithDuration:1.0 animations:^{
         self.center = CGPointMake(self.center.x, self.center.y + 700);
     }];
+    
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.alertBody = @"Time to study!";
+    localNotification.fireDate = selectedDate;
+    localNotification.applicationIconBadgeNumber = 1;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
 @end
