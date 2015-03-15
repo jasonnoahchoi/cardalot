@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-@interface RemindersTableViewDataSource : NSObject <UITableViewDataSource>
+@interface RemindersTableViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 - (void)registerTableView:(UITableView *)tableView;
 
