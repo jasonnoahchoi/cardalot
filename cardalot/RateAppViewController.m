@@ -11,6 +11,8 @@
 #import <MMDrawerController.h>
 #import "UIColor+Colors.h"
 
+@import MessageUI;
+
 @interface RateAppViewController ()
 
 @end
@@ -19,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.title = @"Rate Cardalot";
     
@@ -36,6 +37,7 @@
     UIButton *composeEmailButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [composeEmailButton setTitle:@"Send feedback" forState:UIControlStateNormal];
     [composeEmailButton setTitleColor:[UIColor customBlueColor] forState:UIControlStateNormal];
+    [composeEmailButton addTarget:self action:@selector(sendFeedbackEmail:) forControlEvents:UIControlEventTouchUpInside];
     [composeEmailButton setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:composeEmailButton];
     
@@ -59,8 +61,19 @@
     [self.view addConstraint:composeEmailButtonTrailingConstraint];
 }
 
+#pragma mark - Actions
 - (void)open {
     [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+}
+
+- (IBAction)sendFeedbackEmail:(id)sender {
+    MFMailComposeViewController *mailComposeViewController = [[MFMailComposeViewController alloc] init];
+
+    [mailComposeViewController setToRecipients:@[@"weekendconcept@gmail.com"]];
+    
+    if ([MFMailComposeViewController canSendMail]) {
+        [self presentViewController:mailComposeViewController animated:YES completion:nil];
+    }
 }
 
 @end
