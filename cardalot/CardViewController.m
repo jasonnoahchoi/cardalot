@@ -20,6 +20,7 @@
 @property (nonatomic, strong) FrontTextCell *frontTextCell;
 @property (nonatomic, strong) BackTextCell *backTextCell;
 @property (nonatomic, strong) CustomInputAccessoryView *accessoryView;
+@property (nonatomic, strong) NSMutableArray *cells;
 
 @end
 
@@ -27,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self createCells];
 
     [self layoutNavBarItems];
 
@@ -54,6 +57,40 @@
     [self.view addSubview:self.tableView];
 }
 
+- (void)createCells {
+    self.cells = [[NSMutableArray alloc] init];
+    
+    UITableViewCell *cellOne = [[UITableViewCell alloc] init];
+    cellOne.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
+    [self.cells addObject:cellOne];
+    
+    self.deckTagCell = [[DeckTagCell alloc] init];
+    self.deckTagCell.deckTagField.delegate = self;
+    if (self.deck) {
+        self.deckTagCell.deckTagField.text = self.deck.nameTag;
+    }
+    [self.cells addObject:self.deckTagCell];
+    
+    UITableViewCell *cellTwo = [[UITableViewCell alloc] init];
+    cellTwo.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
+    [self.cells addObject:cellTwo];
+    
+    self.frontTextCell = [[FrontTextCell alloc] init];
+    self.frontTextCell.frontTextField.delegate = self;
+    [self.cells addObject:self.frontTextCell];
+    
+    UITableViewCell *cellThree = [[UITableViewCell alloc] init];
+    cellThree.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
+    [self.cells addObject:cellThree];
+    
+    self.backTextCell = [[BackTextCell alloc] init];
+    self.accessoryView = [[CustomInputAccessoryView alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    self.backTextCell.backTextView.inputAccessoryView = self.accessoryView;
+    self.accessoryView.delegate = self.backTextCell.backTextView;
+    self.backTextCell.backTextView.delegate = self;
+    [self.cells addObject:self.backTextCell];
+}
+
 - (void)layoutNavBarItems {
     // Set Title of card
     self.title = @"Study Card";
@@ -74,7 +111,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 6;
+    return self.cells.count;
 }
 
 - (void)checkTextFields {
@@ -98,45 +135,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    static NSString *CellIdentifier = @"Cell";
-    
-    if (indexPath.row == 0) {
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell1"];
-        cell.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
-
-        return cell;
-    } else if (indexPath.row == 1) {
-        self.deckTagCell = [[DeckTagCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
-        self.deckTagCell.deckTagField.delegate = self;
-        if (self.deck) {
-            self.deckTagCell.deckTagField.text = self.deck.nameTag;
-        }
-
-        return self.deckTagCell;
-    } else if (indexPath.row == 2) {
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell3"];
-        cell.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
-
-        return cell;
-    } else if (indexPath.row == 3) {
-        self.frontTextCell = [[FrontTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell4"];
-        self.frontTextCell.frontTextField.delegate = self;
-
-        return self.frontTextCell;
-    } else if (indexPath.row == 4) {
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell5"];
-        cell.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
-
-        return cell;
-    } else {
-        self.backTextCell = [[BackTextCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell6"];
-        self.accessoryView = [[CustomInputAccessoryView alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
-        self.backTextCell.backTextView.inputAccessoryView = self.accessoryView;
-        self.accessoryView.delegate = self.backTextCell.backTextView;
-        self.backTextCell.backTextView.delegate = self;
-
-        return self.backTextCell;
-    }
+    return self.cells[indexPath.row];
 }
 
 #pragma mark - custom cell heights
