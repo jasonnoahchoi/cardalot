@@ -36,11 +36,11 @@
     
     deckCollectionVC.drawerController = drawerController;
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[RemindersViewController new]];
-    
-//    self.window.rootViewController = drawerController;
+    self.window.rootViewController = drawerController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     
     return YES;
 }
