@@ -19,6 +19,7 @@
 #import "StudyDraggableViewBackground.h"
 #import "UIColor+Colors.h"
 #import "Session.h"
+#import "RateAppViewController.h"
 
 #import <MMDrawerController.h>
 
@@ -237,6 +238,9 @@ static NSString * const launchCountKey = @"launchCount";
         UIAlertController *rateAppAlertController = [UIAlertController alertControllerWithTitle:@"Rate the app" message:@"We hope you love the app as much as we do. Please consider rating the app on the App Store." preferredStyle:UIAlertControllerStyleAlert];
         [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"Cancel");
+            RateAppViewController *rateAppVC = [[RateAppViewController alloc] init];
+            UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rateAppVC];
+            [self presentViewController:navController animated:YES completion:nil];
         }]];
         [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Rate app" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"rate app");
