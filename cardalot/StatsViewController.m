@@ -9,6 +9,7 @@
 #import "StatsViewController.h"
 #import "StatsTableViewDataSource.h"
 #import "DeckCollectionViewController.h"
+#import <MMDrawerController.h>
 
 @interface StatsViewController ()
 
@@ -34,6 +35,10 @@
     self.dataSource = [[StatsTableViewDataSource alloc] init];
     self.tableView.dataSource = self.dataSource;
     [self.dataSource registerTableView:self.tableView];
+}
+
+- (void)open {
+    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 @end
