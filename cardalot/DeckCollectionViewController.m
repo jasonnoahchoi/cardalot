@@ -43,8 +43,6 @@ static NSString * const launchCountKey = @"launchCount";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self trackLaunches];
 
     self.deckLayout = [[DeckCollectionViewLayout alloc] init];
 
@@ -69,6 +67,10 @@ static NSString * const launchCountKey = @"launchCount";
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.collectionView reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self trackLaunches];
 }
 
 #pragma mark - Navigation Items
