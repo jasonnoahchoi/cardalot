@@ -45,6 +45,7 @@
 		72C1E1AF1AB27BAB0041E2C8 /* StatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */; };
 		72C1E1B01AB27BAB0041E2C8 /* StatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */; };
 		72C1E1BC1AB3960B0041E2C8 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1BB1AB3960B0041E2C8 /* Card.m */; };
+		72C1E1F41AB5036E0041E2C8 /* CustomDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1F31AB5036E0041E2C8 /* CustomDatePickerView.m */; };
 		FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */; };
 		FF32B39D1AB230A80098EFA5 /* LogoMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */; };
 		FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3961AB230A80098EFA5 /* MenuDrawerViewController.m */; };
@@ -145,6 +146,8 @@
 		72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatsTableViewCell.xib; sourceTree = "<group>"; };
 		72C1E1BA1AB3960B0041E2C8 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		72C1E1BB1AB3960B0041E2C8 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		72C1E1F21AB5036E0041E2C8 /* CustomDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDatePickerView.h; sourceTree = "<group>"; };
+		72C1E1F31AB5036E0041E2C8 /* CustomDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDatePickerView.m; sourceTree = "<group>"; };
 		D497B0555BFD87161A2C78C4 /* Pods-cardalot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardalot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardalot/Pods-cardalot.debug.xcconfig"; sourceTree = "<group>"; };
 		EC8B54A570249508FE757348 /* libPods-cardalot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF32B3921AB230A80098EFA5 /* LogoMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoMenuCell.h; sourceTree = "<group>"; };
@@ -259,6 +262,8 @@
 				72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */,
 				FF32B39A1AB230A80098EFA5 /* UIColor+CustomColors.h */,
 				FF32B39B1AB230A80098EFA5 /* UIColor+CustomColors.m */,
+				72C1E1F21AB5036E0041E2C8 /* CustomDatePickerView.h */,
+				72C1E1F31AB5036E0041E2C8 /* CustomDatePickerView.m */,
 				FF8F0AD81AAE592200BDD975 /* Deck Collection View */,
 				FF8F0AD91AAE594000BDD975 /* Card Collection View */,
 				FF8F0AC41AAE577F00BDD975 /* Card Entry View */,
@@ -586,6 +591,7 @@
 				08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
 				08F5EA311AB4F45600D00A3F /* Stat.m in Sources */,
+				72C1E1F41AB5036E0041E2C8 /* CustomDatePickerView.m in Sources */,
 				08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */,
 				08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */,
 				FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */,
