@@ -10,6 +10,9 @@
 #import "DeckCollectionViewController.h"
 #import <MMDrawerController/UIViewController+MMDrawerController.h>
 #import "LegalInformationViewController.h"
+#import "RemindersViewController.h"
+#import "SupportViewController.h"
+#import "AdvancedSettingsViewController.h"
 
 @interface SettingsMenuViewController () <UITableViewDelegate>
 
@@ -153,6 +156,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UINavigationController *navigationController = (UINavigationController *)self.mm_drawerController.centerViewController;
+    
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            RemindersViewController *reminderVC = [RemindersViewController new];
+            reminderVC.drawerController = self.mm_drawerController;
+            UINavigationController *reminderNavController = [[UINavigationController alloc] initWithRootViewController:reminderVC];
+            [self.mm_drawerController setCenterViewController:reminderNavController];
+            [navigationController popToRootViewControllerAnimated:YES];
+            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        } else if (indexPath.row == 1) {
+            AdvancedSettingsViewController *advancedSettingVC = [AdvancedSettingsViewController new];
+            advancedSettingVC.drawerController = self.mm_drawerController;
+            UINavigationController *advancedSettingNavController = [[UINavigationController alloc] initWithRootViewController:advancedSettingVC];
+            [self.mm_drawerController setCenterViewController:advancedSettingNavController];
+            [navigationController popToRootViewControllerAnimated:YES];
+            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        }
+    }
     
     if (indexPath.section == 2) {
         if (indexPath.row == 0) {
