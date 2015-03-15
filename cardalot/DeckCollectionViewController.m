@@ -60,8 +60,8 @@ static int studyMode;
     // Disable/Enable Drawer Gestures
     self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
-
     [self loadBarButtonItems];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {

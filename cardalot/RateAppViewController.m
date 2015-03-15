@@ -8,6 +8,7 @@
 
 #import "RateAppViewController.h"
 #import "DeckCollectionViewController.h"
+#import <MMDrawerController.h>
 
 @interface RateAppViewController ()
 
@@ -19,6 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.title = @"Rate Cardalot";
+    
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
@@ -28,6 +31,10 @@
     
     [self.view addSubview:tempLabel];
     
+}
+
+- (void)open {
+    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

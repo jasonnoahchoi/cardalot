@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class MMDrawerController;
+
 @interface PremiumUpgradeViewController : UIViewController
+
+@property (nonatomic, strong) MMDrawerController *drawerController;
 
 @end
