@@ -93,6 +93,37 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            UIView *attributionsView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+            [self.view addSubview:attributionsView];
+            UILabel *attributionLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 75, self.view.frame.size.width - 20, self.view.frame.size.height - 90)];
+            attributionLabel.text = @"";
+            attributionLabel.backgroundColor = [UIColor blackColor];
+            attributionLabel.numberOfLines = 0;
+            [attributionsView addSubview:attributionLabel];
+        }
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            UIView *privacyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+            [self.view addSubview:privacyView];
+            UILabel *privacyLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 75, self.view.frame.size.width - 20, self.view.frame.size.height - 90)];
+            privacyLabel.text = @"";
+            privacyLabel.backgroundColor = [UIColor blackColor];
+            privacyLabel.numberOfLines = 0;
+            [privacyView addSubview:privacyLabel];
+        }
+    } else if (indexPath.section == 2) {
+        if (indexPath.row == 0) {
+            UIView *termsView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+            [self.view addSubview:termsView];
+            UILabel *termsLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 75, self.view.frame.size.width - 20, self.view.frame.size.height - 90)];
+            termsLabel.text = @"";
+            termsLabel.backgroundColor = [UIColor blackColor];
+            termsLabel.numberOfLines = 0;
+            [termsView addSubview:termsLabel];
+        }
+    }
 }
 
 // Sets the section headings for each section
