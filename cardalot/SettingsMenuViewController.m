@@ -25,7 +25,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.title = @"Settings";
     
@@ -125,35 +124,6 @@
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    if (indexPath.section == 0) {
-//        switch (indexPath.row) {
-//            case 0:
-//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
-//                break;
-//            case 1:
-//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
-//        }
-//    } else if (indexPath.section == 1) {
-//        switch (indexPath.row) {
-//            case 0:
-//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
-//                break;
-//            case 1:
-//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
-//        }
-//    } else if (indexPath.section == 2) {
-//        switch (indexPath.row) {
-//            case 0:
-//                [self presentViewController:[[UINavigationController alloc] initWithRootViewController:[LegalInformationViewController new]] animated:YES completion:nil];
-//                break;
-//            case 1:
-//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
-//        }
-//    }
-//}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UINavigationController *navigationController = (UINavigationController *)self.mm_drawerController.centerViewController;
@@ -202,8 +172,6 @@
     }
 }
 
-// Reminders / Advanced Settings / FAQ / Support / Legal / Version
-
 // Sets the section headings for each section
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
@@ -221,17 +189,8 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
