@@ -43,7 +43,7 @@
     self.privacyPolicyCell.textLabel.text = @"Privacy Policy";
     
     self.termsOfServiceCell = [UITableViewCell new];
-    self.termsOfServiceCell.textLabel.text = @"Terms of Service";
+    self.termsOfServiceCell.textLabel.text = @"Terms of Use";
     
     // Disable/Enable selection
     self.tableView.allowsSelection = YES;
