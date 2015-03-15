@@ -12,6 +12,7 @@
 #import <MMDrawerController.h>
 #import "AppearanceController.h"
 #import "MenuDrawerViewController.h"
+#import "RemindersViewController.h"
 
 @interface AppDelegate ()
 
@@ -35,7 +36,9 @@
     
     deckCollectionVC.drawerController = drawerController;
     
-    self.window.rootViewController = drawerController;
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[RemindersViewController new]];
+    
+//    self.window.rootViewController = drawerController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
