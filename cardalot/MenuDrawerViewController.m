@@ -93,47 +93,48 @@
 
 #pragma mark - sets the tableview links to ViewControllers
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-    
+
     UINavigationController *navigationController = (UINavigationController *)self.mm_drawerController.centerViewController;
     
     if (indexPath.row == 1) {
         DeckCollectionViewController *deckCollectionVC = [DeckCollectionViewController new];
         deckCollectionVC.drawerController = self.mm_drawerController;
-        
         UINavigationController *deckHomeNavController = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
         [self.mm_drawerController setCenterViewController:deckHomeNavController];
         [navigationController popToRootViewControllerAnimated:NO];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
-        
-        
-        
     } else if (indexPath.row == 3) {
-//        StatsViewController *statsVC = [StatsViewController new];
-        
-        
-        UINavigationController *statsNavController =[[UINavigationController alloc] initWithRootViewController:[StatsViewController new]];
+        StatsViewController *statsVC = [StatsViewController new];
+        statsVC.drawerController = self.mm_drawerController;
+        UINavigationController *statsNavController =[[UINavigationController alloc] initWithRootViewController:statsVC];
         [self.mm_drawerController setCenterViewController:statsNavController];
         [navigationController popToRootViewControllerAnimated:NO];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 4) {
-        UINavigationController *rateNavController = [[UINavigationController alloc] initWithRootViewController:[RateAppViewController new]];
+        RateAppViewController *rateVC = [RateAppViewController new];
+        rateVC.drawerController = self.mm_drawerController;
+        UINavigationController *rateNavController = [[UINavigationController alloc] initWithRootViewController:rateVC];
         [self.mm_drawerController setCenterViewController:rateNavController];
         [navigationController popToRootViewControllerAnimated:NO];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 5) {
-        UINavigationController *premiumUpgradeNavController = [[UINavigationController alloc] initWithRootViewController:[PremiumUpgradeViewController new]];
+        PremiumUpgradeViewController *premiumVC = [PremiumUpgradeViewController new];
+        premiumVC.drawerController = self.mm_drawerController;
+        UINavigationController *premiumUpgradeNavController = [[UINavigationController alloc] initWithRootViewController:premiumVC];
         [self.mm_drawerController setCenterViewController:premiumUpgradeNavController];
         [navigationController popToRootViewControllerAnimated:NO];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 6) {
-        UINavigationController *referralNavController = [[UINavigationController alloc] initWithRootViewController:[ReferralViewController new]];
+        ReferralViewController *referralVC = [ReferralViewController new];
+        referralVC.drawerController = self.mm_drawerController;
+        UINavigationController *referralNavController = [[UINavigationController alloc] initWithRootViewController:referralVC];
         [self.mm_drawerController setCenterViewController:referralNavController];
         [navigationController popToRootViewControllerAnimated:NO];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 7) {
-        UINavigationController *settingsNavController = [[UINavigationController alloc] initWithRootViewController:[SettingsMenuViewController new]];
+        SettingsMenuViewController *settingsVC = [SettingsMenuViewController new];
+        settingsVC.drawerController = self.mm_drawerController;
+        UINavigationController *settingsNavController = [[UINavigationController alloc] initWithRootViewController:settingsVC];
         [self.mm_drawerController setCenterViewController:settingsNavController];
         [navigationController popToRootViewControllerAnimated:NO];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
