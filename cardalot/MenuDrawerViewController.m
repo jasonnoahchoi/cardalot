@@ -101,47 +101,42 @@
         deckCollectionVC.drawerController = self.mm_drawerController;
         UINavigationController *deckHomeNavController = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
         [self.mm_drawerController setCenterViewController:deckHomeNavController];
-        [navigationController popToRootViewControllerAnimated:NO];
+        [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 3) {
-
         StatsViewController *statsVC = [StatsViewController new];
         statsVC.drawerController = self.mm_drawerController;
         UINavigationController *statsNavController =[[UINavigationController alloc] initWithRootViewController:statsVC];
         [self.mm_drawerController setCenterViewController:statsNavController];
-
-        UINavigationController *historyNavController =[[UINavigationController alloc] initWithRootViewController:[CompletionViewController new]];
-        [self.mm_drawerController setCenterViewController:historyNavController];
-
-        [navigationController popToRootViewControllerAnimated:NO];
+        [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 4) {
         RateAppViewController *rateVC = [RateAppViewController new];
         rateVC.drawerController = self.mm_drawerController;
         UINavigationController *rateNavController = [[UINavigationController alloc] initWithRootViewController:rateVC];
         [self.mm_drawerController setCenterViewController:rateNavController];
-        [navigationController popToRootViewControllerAnimated:NO];
+        [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 5) {
         PremiumUpgradeViewController *premiumVC = [PremiumUpgradeViewController new];
         premiumVC.drawerController = self.mm_drawerController;
         UINavigationController *premiumUpgradeNavController = [[UINavigationController alloc] initWithRootViewController:premiumVC];
         [self.mm_drawerController setCenterViewController:premiumUpgradeNavController];
-        [navigationController popToRootViewControllerAnimated:NO];
+        [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 6) {
         ReferralViewController *referralVC = [ReferralViewController new];
         referralVC.drawerController = self.mm_drawerController;
         UINavigationController *referralNavController = [[UINavigationController alloc] initWithRootViewController:referralVC];
         [self.mm_drawerController setCenterViewController:referralNavController];
-        [navigationController popToRootViewControllerAnimated:NO];
+        [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 7) {
         SettingsMenuViewController *settingsVC = [SettingsMenuViewController new];
         settingsVC.drawerController = self.mm_drawerController;
         UINavigationController *settingsNavController = [[UINavigationController alloc] initWithRootViewController:settingsVC];
         [self.mm_drawerController setCenterViewController:settingsNavController];
-        [navigationController popToRootViewControllerAnimated:NO];
+        [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     }
 }
