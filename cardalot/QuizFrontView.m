@@ -15,17 +15,23 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor customBlueColor];
+        self.frontLabel.backgroundColor = [UIColor customBlueColor];
         self.frontLabel = [[UILabel alloc] init];
-        self.frontLabel.textColor = [UIColor blueColor];
+        self.frontLabel.textColor = [UIColor whiteColor];
+        self.frontLabel.font = [UIFont boldSystemFontOfSize:32];
         self.frontLabel.text = @"Sample text";
-        self.frontLabel.backgroundColor = [UIColor clearColor];
+        self.frontLabel.numberOfLines = 0;
+    
+        //self.frontLabel.backgroundColor = [UIColor clearColor];
         self.frontLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:self.frontLabel];
 
         self.layer.borderColor = [UIColor whiteColor].CGColor;
         self.layer.borderWidth = 3.0f;
         self.layer.cornerRadius = 3;
-        
+
+        [self.frontLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+
         NSLayoutConstraint *centerXLabelInViewConstraint = [NSLayoutConstraint
                                                            constraintWithItem:self.frontLabel
                                                            attribute:NSLayoutAttributeCenterX
