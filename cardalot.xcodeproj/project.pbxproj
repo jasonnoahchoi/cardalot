@@ -7,13 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083C0EDB1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */; };
+		08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */; };
+		08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED41AAF9CC000BE440E /* StudyDraggableView.m */; };
+		08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED71AAF9CD400BE440E /* StudySubjectView.m */; };
+		08662EDB1AAF9CDF00BE440E /* StudyDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662EDA1AAF9CDF00BE440E /* StudyDescriptionView.m */; };
+		08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662EDD1AAF9CE800BE440E /* StudyOverlayView.m */; };
+		08662EE11AAF9F8D00BE440E /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662EE01AAF9F8D00BE440E /* StudyViewController.m */; };
+		0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */; };
+		0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */; };
+		08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08977A141AABCB6C00E525D0 /* AppearanceController.m */; };
+		08C8830E1AAD289200DFE40E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C8830D1AAD289200DFE40E /* QuartzCore.framework */; };
+		08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CA76641AB2660B00292997 /* UIColor+Colors.m */; };
+		08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */; };
 		08FE1E761AAA5F570068F0C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E751AAA5F570068F0C9 /* main.m */; };
 		08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E781AAA5F570068F0C9 /* AppDelegate.m */; };
-		08FE1E7C1AAA5F570068F0C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E7B1AAA5F570068F0C9 /* ViewController.m */; };
+		08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */; };
 		08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */; };
 		08FE1E811AAA5F570068F0C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FE1E801AAA5F570068F0C9 /* Images.xcassets */; };
 		08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08FE1E821AAA5F570068F0C9 /* LaunchScreen.xib */; };
 		08FE1E901AAA5F570068F0C9 /* cardalotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */; };
+		3B050E253021896E149A532F /* libPods-cardalot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8B54A570249508FE757348 /* libPods-cardalot.a */; };
+		7200CEB31AACE66000E84D55 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEB21AACE66000E84D55 /* HistoryViewController.m */; };
+		7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */; };
+		7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */; };
+		7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */; };
+		7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */; };
+		725180E71AAA6FAE00C446E5 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180E61AAA6FAE00C446E5 /* Stack.m */; };
+		725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725180E81AAA751600C446E5 /* Model.xcdatamodeld */; };
+		725180ED1AAA772900C446E5 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EC1AAA772900C446E5 /* Deck.m */; };
+		725180F01AAA772A00C446E5 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180EF1AAA772A00C446E5 /* Card.m */; };
+		725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F21AAA7AFE00C446E5 /* DeckController.m */; };
+		725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */; };
+		72C1E19F1AB278890041E2C8 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E19E1AB278890041E2C8 /* Quiz.m */; };
+		72C1E1A21AB2788A0041E2C8 /* Study.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A11AB2788A0041E2C8 /* Study.m */; };
+		72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A41AB278E10041E2C8 /* StatsViewController.m */; };
+		72C1E1A81AB279E60041E2C8 /* StatsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */; };
+		72C1E1AF1AB27BAB0041E2C8 /* StatsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */; };
+		72C1E1B01AB27BAB0041E2C8 /* StatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */; };
+		FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */; };
+		FF32B39D1AB230A80098EFA5 /* LogoMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */; };
+		FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3961AB230A80098EFA5 /* MenuDrawerViewController.m */; };
+		FF32B39F1AB230A80098EFA5 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3981AB230A80098EFA5 /* SearchCell.m */; };
+		FF32B3A01AB230A80098EFA5 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32B3991AB230A80098EFA5 /* SearchCell.xib */; };
+		FF32B3A11AB230A80098EFA5 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B39B1AB230A80098EFA5 /* UIColor+CustomColors.m */; };
+		FF32B3AA1AB231080098EFA5 /* PremiumUpgradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3A51AB231080098EFA5 /* PremiumUpgradeViewController.m */; };
+		FF32B3AB1AB231080098EFA5 /* RateAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3A71AB231080098EFA5 /* RateAppViewController.m */; };
+		FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3A91AB231080098EFA5 /* ReferralViewController.m */; };
+		FF32B3B01AB24E210098EFA5 /* SettingsMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3AF1AB24E210098EFA5 /* SettingsMenuViewController.m */; };
+		FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0AC61AAE579A00BDD975 /* BackTextCell.m */; };
+		FF8F0AD11AAE579A00BDD975 /* BackTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8F0AC71AAE579A00BDD975 /* BackTextCell.xib */; };
+		FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0AC91AAE579A00BDD975 /* CardViewController.m */; };
+		FF8F0AD31AAE579A00BDD975 /* deckTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0ACB1AAE579A00BDD975 /* deckTagCell.m */; };
+		FF8F0AD41AAE579A00BDD975 /* deckTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8F0ACC1AAE579A00BDD975 /* deckTagCell.xib */; };
+		FF8F0AD51AAE579A00BDD975 /* frontTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F0ACE1AAE579A00BDD975 /* frontTextCell.m */; };
+		FF8F0AD61AAE579A00BDD975 /* frontTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF8F0ACF1AAE579A00BDD975 /* frontTextCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +75,107 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083C0ED91AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CustomButtons.h"; sourceTree = "<group>"; };
+		083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CustomButtons.m"; sourceTree = "<group>"; };
+		08662ED01AAF9CA100BE440E /* StudyDraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDraggableViewBackground.h; sourceTree = "<group>"; };
+		08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDraggableViewBackground.m; sourceTree = "<group>"; };
+		08662ED31AAF9CC000BE440E /* StudyDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDraggableView.h; sourceTree = "<group>"; };
+		08662ED41AAF9CC000BE440E /* StudyDraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDraggableView.m; sourceTree = "<group>"; };
+		08662ED61AAF9CD400BE440E /* StudySubjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudySubjectView.h; sourceTree = "<group>"; };
+		08662ED71AAF9CD400BE440E /* StudySubjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudySubjectView.m; sourceTree = "<group>"; };
+		08662ED91AAF9CDF00BE440E /* StudyDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDescriptionView.h; sourceTree = "<group>"; };
+		08662EDA1AAF9CDF00BE440E /* StudyDescriptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDescriptionView.m; sourceTree = "<group>"; };
+		08662EDC1AAF9CE800BE440E /* StudyOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyOverlayView.h; sourceTree = "<group>"; };
+		08662EDD1AAF9CE800BE440E /* StudyOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyOverlayView.m; sourceTree = "<group>"; };
+		08662EDF1AAF9F8D00BE440E /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
+		08662EE01AAF9F8D00BE440E /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
+		0868F52D1AABDD58008CA47D /* DeckCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewCell.h; sourceTree = "<group>"; };
+		0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewCell.m; sourceTree = "<group>"; };
+		0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeckCollectionViewCell.xib; sourceTree = "<group>"; };
+		08977A131AABCB6C00E525D0 /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceController.h; sourceTree = "<group>"; };
+		08977A141AABCB6C00E525D0 /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceController.m; sourceTree = "<group>"; };
+		08C8830D1AAD289200DFE40E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		08CA76631AB2660B00292997 /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Colors.h"; sourceTree = "<group>"; };
+		08CA76641AB2660B00292997 /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colors.m"; sourceTree = "<group>"; };
+		08D8F8CC1AACE7670015A4BD /* DeckCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewLayout.h; sourceTree = "<group>"; };
+		08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewLayout.m; sourceTree = "<group>"; };
 		08FE1E701AAA5F570068F0C9 /* cardalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FE1E741AAA5F570068F0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FE1E751AAA5F570068F0C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08FE1E771AAA5F570068F0C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		08FE1E781AAA5F570068F0C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		08FE1E7A1AAA5F570068F0C9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		08FE1E7B1AAA5F570068F0C9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		08FE1E7A1AAA5F570068F0C9 /* DeckCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewController.h; sourceTree = "<group>"; };
+		08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewController.m; sourceTree = "<group>"; };
 		08FE1E7E1AAA5F570068F0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08FE1E801AAA5F570068F0C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		08FE1E831AAA5F570068F0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		08FE1E891AAA5F570068F0C9 /* cardalotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cardalotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FE1E8E1AAA5F570068F0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cardalotTests.m; sourceTree = "<group>"; };
+		1E0294E2F64F78E379287CCE /* Pods-cardalot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardalot.release.xcconfig"; path = "Pods/Target Support Files/Pods-cardalot/Pods-cardalot.release.xcconfig"; sourceTree = "<group>"; };
+		7200CEB11AACE66000E84D55 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		7200CEB21AACE66000E84D55 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		7200CEC01AAD1D9A00E84D55 /* CardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewController.h; sourceTree = "<group>"; };
+		7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewController.m; sourceTree = "<group>"; };
+		7200CEC31AAD1E9800E84D55 /* CardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewCell.h; sourceTree = "<group>"; };
+		7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewCell.m; sourceTree = "<group>"; };
+		7200CEC61AAD1FD000E84D55 /* CardCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewDataSource.h; sourceTree = "<group>"; };
+		7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewDataSource.m; sourceTree = "<group>"; };
+		7200D0EE1AB1393E00E84D55 /* CustomInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInputAccessoryView.h; sourceTree = "<group>"; };
+		7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInputAccessoryView.m; sourceTree = "<group>"; };
+		725180E51AAA6FAE00C446E5 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		725180E61AAA6FAE00C446E5 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		725180E91AAA751600C446E5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		725180EB1AAA772900C446E5 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		725180EC1AAA772900C446E5 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		725180EE1AAA772A00C446E5 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		725180EF1AAA772A00C446E5 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		725180F11AAA7AFE00C446E5 /* DeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckController.h; sourceTree = "<group>"; };
+		725180F21AAA7AFE00C446E5 /* DeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckController.m; sourceTree = "<group>"; };
+		725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewDataSource.h; sourceTree = "<group>"; };
+		725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewDataSource.m; sourceTree = "<group>"; };
+		72C1E19D1AB278890041E2C8 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
+		72C1E19E1AB278890041E2C8 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
+		72C1E1A01AB2788A0041E2C8 /* Study.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Study.h; sourceTree = "<group>"; };
+		72C1E1A11AB2788A0041E2C8 /* Study.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Study.m; sourceTree = "<group>"; };
+		72C1E1A31AB278E10041E2C8 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		72C1E1A41AB278E10041E2C8 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		72C1E1A61AB279E60041E2C8 /* StatsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTableViewDataSource.h; sourceTree = "<group>"; };
+		72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTableViewDataSource.m; sourceTree = "<group>"; };
+		72C1E1AC1AB27BAB0041E2C8 /* StatsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTableViewCell.h; sourceTree = "<group>"; };
+		72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTableViewCell.m; sourceTree = "<group>"; };
+		72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatsTableViewCell.xib; sourceTree = "<group>"; };
+		D497B0555BFD87161A2C78C4 /* Pods-cardalot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardalot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardalot/Pods-cardalot.debug.xcconfig"; sourceTree = "<group>"; };
+		EC8B54A570249508FE757348 /* libPods-cardalot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF32B3921AB230A80098EFA5 /* LogoMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoMenuCell.h; sourceTree = "<group>"; };
+		FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoMenuCell.m; sourceTree = "<group>"; };
+		FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoMenuCell.xib; sourceTree = "<group>"; };
+		FF32B3951AB230A80098EFA5 /* MenuDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDrawerViewController.h; sourceTree = "<group>"; };
+		FF32B3961AB230A80098EFA5 /* MenuDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuDrawerViewController.m; sourceTree = "<group>"; };
+		FF32B3971AB230A80098EFA5 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
+		FF32B3981AB230A80098EFA5 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
+		FF32B3991AB230A80098EFA5 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		FF32B39A1AB230A80098EFA5 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		FF32B39B1AB230A80098EFA5 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		FF32B3A41AB231080098EFA5 /* PremiumUpgradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PremiumUpgradeViewController.h; sourceTree = "<group>"; };
+		FF32B3A51AB231080098EFA5 /* PremiumUpgradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PremiumUpgradeViewController.m; sourceTree = "<group>"; };
+		FF32B3A61AB231080098EFA5 /* RateAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateAppViewController.h; sourceTree = "<group>"; };
+		FF32B3A71AB231080098EFA5 /* RateAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateAppViewController.m; sourceTree = "<group>"; };
+		FF32B3A81AB231080098EFA5 /* ReferralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferralViewController.h; sourceTree = "<group>"; };
+		FF32B3A91AB231080098EFA5 /* ReferralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferralViewController.m; sourceTree = "<group>"; };
+		FF32B3AE1AB24E210098EFA5 /* SettingsMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsMenuViewController.h; sourceTree = "<group>"; };
+		FF32B3AF1AB24E210098EFA5 /* SettingsMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsMenuViewController.m; sourceTree = "<group>"; };
+		FF8F0AC51AAE579A00BDD975 /* BackTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackTextCell.h; sourceTree = "<group>"; };
+		FF8F0AC61AAE579A00BDD975 /* BackTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackTextCell.m; sourceTree = "<group>"; };
+		FF8F0AC71AAE579A00BDD975 /* BackTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackTextCell.xib; sourceTree = "<group>"; };
+		FF8F0AC81AAE579A00BDD975 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		FF8F0AC91AAE579A00BDD975 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		FF8F0ACA1AAE579A00BDD975 /* deckTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deckTagCell.h; sourceTree = "<group>"; };
+		FF8F0ACB1AAE579A00BDD975 /* deckTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = deckTagCell.m; sourceTree = "<group>"; };
+		FF8F0ACC1AAE579A00BDD975 /* deckTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = deckTagCell.xib; sourceTree = "<group>"; };
+		FF8F0ACD1AAE579A00BDD975 /* frontTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frontTextCell.h; sourceTree = "<group>"; };
+		FF8F0ACE1AAE579A00BDD975 /* frontTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = frontTextCell.m; sourceTree = "<group>"; };
+		FF8F0ACF1AAE579A00BDD975 /* frontTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = frontTextCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +183,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C8830E1AAD289200DFE40E /* QuartzCore.framework in Frameworks */,
+				3B050E253021896E149A532F /* libPods-cardalot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +198,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08662EE21AAF9F9600BE440E /* StudyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				08662ED01AAF9CA100BE440E /* StudyDraggableViewBackground.h */,
+				08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */,
+				08662ED31AAF9CC000BE440E /* StudyDraggableView.h */,
+				08662ED41AAF9CC000BE440E /* StudyDraggableView.m */,
+				08662ED61AAF9CD400BE440E /* StudySubjectView.h */,
+				08662ED71AAF9CD400BE440E /* StudySubjectView.m */,
+				08662ED91AAF9CDF00BE440E /* StudyDescriptionView.h */,
+				08662EDA1AAF9CDF00BE440E /* StudyDescriptionView.m */,
+				08662EDC1AAF9CE800BE440E /* StudyOverlayView.h */,
+				08662EDD1AAF9CE800BE440E /* StudyOverlayView.m */,
+				08662EDF1AAF9F8D00BE440E /* StudyViewController.h */,
+				08662EE01AAF9F8D00BE440E /* StudyViewController.m */,
+			);
+			name = StudyViewController;
+			sourceTree = "<group>";
+		};
 		08FE1E671AAA5F570068F0C9 = {
 			isa = PBXGroup;
 			children = (
 				08FE1E721AAA5F570068F0C9 /* cardalot */,
 				08FE1E8C1AAA5F570068F0C9 /* cardalotTests */,
 				08FE1E711AAA5F570068F0C9 /* Products */,
+				6E06EBD7635169F25D1075C8 /* Pods */,
+				66ADD19846CF93B05FF3AC8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,8 +242,33 @@
 			children = (
 				08FE1E771AAA5F570068F0C9 /* AppDelegate.h */,
 				08FE1E781AAA5F570068F0C9 /* AppDelegate.m */,
-				08FE1E7A1AAA5F570068F0C9 /* ViewController.h */,
-				08FE1E7B1AAA5F570068F0C9 /* ViewController.m */,
+				08977A131AABCB6C00E525D0 /* AppearanceController.h */,
+				08977A141AABCB6C00E525D0 /* AppearanceController.m */,
+				08CA76631AB2660B00292997 /* UIColor+Colors.h */,
+				08CA76641AB2660B00292997 /* UIColor+Colors.m */,
+				083C0ED91AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.h */,
+				083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */,
+				7200D0EE1AB1393E00E84D55 /* CustomInputAccessoryView.h */,
+				7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */,
+				72C1E1A31AB278E10041E2C8 /* StatsViewController.h */,
+				72C1E1A41AB278E10041E2C8 /* StatsViewController.m */,
+				72C1E1AC1AB27BAB0041E2C8 /* StatsTableViewCell.h */,
+				72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */,
+				72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */,
+				72C1E1A61AB279E60041E2C8 /* StatsTableViewDataSource.h */,
+				72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */,
+				FF32B39A1AB230A80098EFA5 /* UIColor+CustomColors.h */,
+				FF32B39B1AB230A80098EFA5 /* UIColor+CustomColors.m */,
+				FF8F0AD81AAE592200BDD975 /* Deck Collection View */,
+				FF8F0AD91AAE594000BDD975 /* Card Collection View */,
+				FF8F0AC41AAE577F00BDD975 /* Card Entry View */,
+				08662EE21AAF9F9600BE440E /* StudyViewController */,
+				7200CEB11AACE66000E84D55 /* HistoryViewController.h */,
+				7200CEB21AACE66000E84D55 /* HistoryViewController.m */,
+				725180F11AAA7AFE00C446E5 /* DeckController.h */,
+				725180F21AAA7AFE00C446E5 /* DeckController.m */,
+				FF32B3A31AB230D40098EFA5 /* Menu Drawer View Controller */,
+				FF8F0ADA1AAE597200BDD975 /* Model */,
 				08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */,
 				08FE1E801AAA5F570068F0C9 /* Images.xcassets */,
 				08FE1E821AAA5F570068F0C9 /* LaunchScreen.xib */,
@@ -119,6 +303,136 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		66ADD19846CF93B05FF3AC8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08C8830D1AAD289200DFE40E /* QuartzCore.framework */,
+				EC8B54A570249508FE757348 /* libPods-cardalot.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E06EBD7635169F25D1075C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D497B0555BFD87161A2C78C4 /* Pods-cardalot.debug.xcconfig */,
+				1E0294E2F64F78E379287CCE /* Pods-cardalot.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF32B3A21AB230B80098EFA5 /* UI Class Menu */ = {
+			isa = PBXGroup;
+			children = (
+				FF32B3921AB230A80098EFA5 /* LogoMenuCell.h */,
+				FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */,
+				FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */,
+				FF32B3971AB230A80098EFA5 /* SearchCell.h */,
+				FF32B3981AB230A80098EFA5 /* SearchCell.m */,
+				FF32B3991AB230A80098EFA5 /* SearchCell.xib */,
+			);
+			name = "UI Class Menu";
+			sourceTree = "<group>";
+		};
+		FF32B3A31AB230D40098EFA5 /* Menu Drawer View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF32B3951AB230A80098EFA5 /* MenuDrawerViewController.h */,
+				FF32B3961AB230A80098EFA5 /* MenuDrawerViewController.m */,
+				FF32B3AD1AB2310F0098EFA5 /* Menu Option View Controllers */,
+				FF32B3A21AB230B80098EFA5 /* UI Class Menu */,
+			);
+			name = "Menu Drawer View Controller";
+			sourceTree = "<group>";
+		};
+		FF32B3AD1AB2310F0098EFA5 /* Menu Option View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF32B3A61AB231080098EFA5 /* RateAppViewController.h */,
+				FF32B3A71AB231080098EFA5 /* RateAppViewController.m */,
+				FF32B3A41AB231080098EFA5 /* PremiumUpgradeViewController.h */,
+				FF32B3A51AB231080098EFA5 /* PremiumUpgradeViewController.m */,
+				FF32B3A81AB231080098EFA5 /* ReferralViewController.h */,
+				FF32B3A91AB231080098EFA5 /* ReferralViewController.m */,
+				FF32B3AE1AB24E210098EFA5 /* SettingsMenuViewController.h */,
+				FF32B3AF1AB24E210098EFA5 /* SettingsMenuViewController.m */,
+			);
+			name = "Menu Option View Controllers";
+			sourceTree = "<group>";
+		};
+		FF8F0AC41AAE577F00BDD975 /* Card Entry View */ = {
+			isa = PBXGroup;
+			children = (
+				FF8F0AC81AAE579A00BDD975 /* CardViewController.h */,
+				FF8F0AC91AAE579A00BDD975 /* CardViewController.m */,
+				FF8F0AD71AAE57AA00BDD975 /* UI Class Cells */,
+			);
+			name = "Card Entry View";
+			sourceTree = "<group>";
+		};
+		FF8F0AD71AAE57AA00BDD975 /* UI Class Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FF8F0AC51AAE579A00BDD975 /* BackTextCell.h */,
+				FF8F0AC61AAE579A00BDD975 /* BackTextCell.m */,
+				FF8F0AC71AAE579A00BDD975 /* BackTextCell.xib */,
+				FF8F0ACA1AAE579A00BDD975 /* deckTagCell.h */,
+				FF8F0ACB1AAE579A00BDD975 /* deckTagCell.m */,
+				FF8F0ACC1AAE579A00BDD975 /* deckTagCell.xib */,
+				FF8F0ACD1AAE579A00BDD975 /* frontTextCell.h */,
+				FF8F0ACE1AAE579A00BDD975 /* frontTextCell.m */,
+				FF8F0ACF1AAE579A00BDD975 /* frontTextCell.xib */,
+			);
+			name = "UI Class Cells";
+			sourceTree = "<group>";
+		};
+		FF8F0AD81AAE592200BDD975 /* Deck Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				08FE1E7A1AAA5F570068F0C9 /* DeckCollectionViewController.h */,
+				08FE1E7B1AAA5F570068F0C9 /* DeckCollectionViewController.m */,
+				725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */,
+				725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */,
+				0868F52D1AABDD58008CA47D /* DeckCollectionViewCell.h */,
+				0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */,
+				0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */,
+				08D8F8CC1AACE7670015A4BD /* DeckCollectionViewLayout.h */,
+				08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */,
+			);
+			name = "Deck Collection View";
+			sourceTree = "<group>";
+		};
+		FF8F0AD91AAE594000BDD975 /* Card Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				7200CEC01AAD1D9A00E84D55 /* CardCollectionViewController.h */,
+				7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */,
+				7200CEC31AAD1E9800E84D55 /* CardCollectionViewCell.h */,
+				7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */,
+				7200CEC61AAD1FD000E84D55 /* CardCollectionViewDataSource.h */,
+				7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */,
+			);
+			name = "Card Collection View";
+			sourceTree = "<group>";
+		};
+		FF8F0ADA1AAE597200BDD975 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				725180E51AAA6FAE00C446E5 /* Stack.h */,
+				725180E61AAA6FAE00C446E5 /* Stack.m */,
+				725180E81AAA751600C446E5 /* Model.xcdatamodeld */,
+				72C1E1A01AB2788A0041E2C8 /* Study.h */,
+				72C1E1A11AB2788A0041E2C8 /* Study.m */,
+				72C1E19D1AB278890041E2C8 /* Quiz.h */,
+				72C1E19E1AB278890041E2C8 /* Quiz.m */,
+				725180EE1AAA772A00C446E5 /* Card.h */,
+				725180EF1AAA772A00C446E5 /* Card.m */,
+				725180EB1AAA772900C446E5 /* Deck.h */,
+				725180EC1AAA772900C446E5 /* Deck.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +440,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08FE1E931AAA5F570068F0C9 /* Build configuration list for PBXNativeTarget "cardalot" */;
 			buildPhases = (
+				6AE9804A54213E9D2730F29C /* Check Pods Manifest.lock */,
 				08FE1E6C1AAA5F570068F0C9 /* Sources */,
 				08FE1E6D1AAA5F570068F0C9 /* Frameworks */,
 				08FE1E6E1AAA5F570068F0C9 /* Resources */,
+				1A96D18054B89DDB1AA2C52A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,9 +484,11 @@
 				TargetAttributes = {
 					08FE1E6F1AAA5F570068F0C9 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = GQHC8CPYGZ;
 					};
 					08FE1E881AAA5F570068F0C9 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = GQHC8CPYGZ;
 						TestTargetID = 08FE1E6F1AAA5F570068F0C9;
 					};
 				};
@@ -199,9 +517,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8F0AD61AAE579A00BDD975 /* frontTextCell.xib in Resources */,
+				72C1E1B01AB27BAB0041E2C8 /* StatsTableViewCell.xib in Resources */,
 				08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */,
+				FF8F0AD41AAE579A00BDD975 /* deckTagCell.xib in Resources */,
+				0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */,
 				08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */,
 				08FE1E811AAA5F570068F0C9 /* Images.xcassets in Resources */,
+				FF32B3A01AB230A80098EFA5 /* SearchCell.xib in Resources */,
+				FF8F0AD11AAE579A00BDD975 /* BackTextCell.xib in Resources */,
+				FF32B39D1AB230A80098EFA5 /* LogoMenuCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +539,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A96D18054B89DDB1AA2C52A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cardalot/Pods-cardalot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AE9804A54213E9D2730F29C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		08FE1E6C1AAA5F570068F0C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08FE1E7C1AAA5F570068F0C9 /* ViewController.m in Sources */,
+				08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */,
+				72C1E1AF1AB27BAB0041E2C8 /* StatsTableViewCell.m in Sources */,
+				725180E71AAA6FAE00C446E5 /* Stack.m in Sources */,
+				FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */,
+				FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */,
+				08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */,
+				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
+				08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */,
+				08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */,
+				72C1E19F1AB278890041E2C8 /* Quiz.m in Sources */,
+				FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */,
+				FF8F0AD51AAE579A00BDD975 /* frontTextCell.m in Sources */,
+				725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */,
+				725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */,
 				08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */,
+				FF32B3A11AB230A80098EFA5 /* UIColor+CustomColors.m in Sources */,
+				08662EDB1AAF9CDF00BE440E /* StudyDescriptionView.m in Sources */,
+				FF32B39F1AB230A80098EFA5 /* SearchCell.m in Sources */,
+				725180ED1AAA772900C446E5 /* Deck.m in Sources */,
+				08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */,
+				725180F01AAA772A00C446E5 /* Card.m in Sources */,
+				725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */,
+				FF8F0AD31AAE579A00BDD975 /* deckTagCell.m in Sources */,
+				08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */,
+				FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
+				7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */,
+				FF32B3AA1AB231080098EFA5 /* PremiumUpgradeViewController.m in Sources */,
+				0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */,
+				08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */,
+				7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */,
+				FF8F0AD21AAE579A00BDD975 /* CardViewController.m in Sources */,
+				FF32B3B01AB24E210098EFA5 /* SettingsMenuViewController.m in Sources */,
+				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
+				083C0EDB1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m in Sources */,
+				72C1E1A21AB2788A0041E2C8 /* Study.m in Sources */,
+				72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */,
+				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,
+				08662EE11AAF9F8D00BE440E /* StudyViewController.m in Sources */,
+				72C1E1A81AB279E60041E2C8 /* StatsTableViewDataSource.m in Sources */,
+				FF32B3AB1AB231080098EFA5 /* RateAppViewController.m in Sources */,
+				7200CEB31AACE66000E84D55 /* HistoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,8 +738,10 @@
 		};
 		08FE1E941AAA5F570068F0C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D497B0555BFD87161A2C78C4 /* Pods-cardalot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = cardalot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,8 +750,10 @@
 		};
 		08FE1E951AAA5F570068F0C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E0294E2F64F78E379287CCE /* Pods-cardalot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = cardalot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +813,7 @@
 				08FE1E951AAA5F570068F0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08FE1E961AAA5F570068F0C9 /* Build configuration list for PBXNativeTarget "cardalotTests" */ = {
 			isa = XCConfigurationList;
@@ -420,8 +822,22 @@
 				08FE1E981AAA5F570068F0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		725180E81AAA751600C446E5 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				725180E91AAA751600C446E5 /* Model.xcdatamodel */,
+			);
+			currentVersion = 725180E91AAA751600C446E5 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 08FE1E681AAA5F570068F0C9 /* Project object */;
 }

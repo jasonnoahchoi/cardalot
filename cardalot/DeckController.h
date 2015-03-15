@@ -1,0 +1,34 @@
+//
+//  DeckController.h
+//  cardalot
+//
+//  Created by sombra on 2015-03-06.
+//  Copyright (c) 2015 Jason Choi. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@class Deck;
+@class Card;
+@class Quiz;
+@class Study;
+
+@interface DeckController : NSObject
+
+@property (nonatomic, strong, readonly) NSArray *decks;
+
++ (DeckController *)sharedInstance;
+
+- (void)save;
+
+- (void)addDeckWithName:(NSString *)nameTag;
+- (void)removeDeck:(Deck *)deck;
+
+- (void)addCardWithTitle:(NSString *)title andAnswer:(NSString *)answer toDeckWithNameTag:(NSString *)nameTag;
+- (void)removeCard:(Card *)card;
+
+- (void)addQuizToDeck:(Deck *)deck;
+
+- (void)addStudyToDeck:(Deck *)deck;
+
+@end

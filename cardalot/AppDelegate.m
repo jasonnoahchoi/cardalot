@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "DeckCollectionViewController.h"
+#import "StudyViewController.h"
+#import <MMDrawerController.h>
+#import "AppearanceController.h"
+#import "MenuDrawerViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +21,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    [AppearanceController setupDefaultAppearance];
+
+    DeckCollectionViewController *deckCollectionVC = [[DeckCollectionViewController alloc] init];
+
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
+    
+    MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
+    
+    MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
+    
+    deckCollectionVC.drawerController = drawerController;
+    
+    self.window.rootViewController = drawerController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
