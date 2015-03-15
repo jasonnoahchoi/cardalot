@@ -42,10 +42,6 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    // Background Color of TableView
-//    self.tableView.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
-    
-    
 #pragma mark - sets static settings cells
     self.advancedSettingsCell = [UITableViewCell new];
     self.advancedSettingsCell.textLabel.text = @"Advanced Settings";
