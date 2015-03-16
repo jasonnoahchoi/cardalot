@@ -78,7 +78,7 @@
 //}
 - (void)layoutSubviews {
     self.view.backgroundColor = [UIColor backgroundGrayColor];
-    self.draggableViewBackground = [[QuizDraggableViewBackground alloc] initWithFrame:self.view.frame];
+    self.draggableViewBackground = [[QuizDraggableViewBackground alloc] initWithFrame:self.view.bounds];
     self.draggableViewBackground.deck = self.deck;
     [self.draggableViewBackground setCards:[self.deck.cards.set allObjects]];
     [self.draggableViewBackground setTopCardInDeck:[self.draggableViewBackground shuffleCards:self.draggableViewBackground.cards]];
