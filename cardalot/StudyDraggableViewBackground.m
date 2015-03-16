@@ -32,7 +32,6 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     if (self) {
         [super layoutSubviews];
         [self setupView];
-        self.topCardInDeck = [self.deck.cards.set allObjects];
         self.loadedCards = [[NSMutableArray alloc] init];
         self.allCards = [[NSMutableArray alloc] init];
         self.cardsLoadedIndex = 0;
@@ -103,6 +102,7 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
             if (i<numLoadedCardsCap) {
                 //%%% adds a small number of cards to be loaded
                 [self.loadedCards addObject:newCard];
+                
             }
         }
 
@@ -156,5 +156,17 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     // Drawing code
 }
 */
+
+- (NSArray *)shuffleCards:(NSArray *)cards {
+    
+    NSMutableArray *mutableCards = [NSMutableArray arrayWithArray:cards];
+    NSUInteger count = [mutableCards count];
+    if (count > 1) {
+        for (NSUInteger i = count - 1; i > 0; --i) {
+            [mutableCards exchangeObjectAtIndex:i withObjectAtIndex:arc4random_uniform((u_int32_t)(i + 1))];
+        }
+    }
+    return mutableCards;
+}
 
 @end
