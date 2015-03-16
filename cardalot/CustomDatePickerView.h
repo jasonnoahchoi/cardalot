@@ -10,4 +10,6 @@
 
 @interface CustomDatePickerView : UIView
 
+@property (nonatomic, strong) UITableView *tableView;
+
 @end

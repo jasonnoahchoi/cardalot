@@ -12,6 +12,7 @@
 #import <MMDrawerController.h>
 #import "AppearanceController.h"
 #import "MenuDrawerViewController.h"
+#import "RemindersViewController.h"
 
 @interface AppDelegate ()
 
@@ -37,7 +38,8 @@ static NSString * const launchCountKey = @"launchCount";
     
     deckCollectionVC.drawerController = drawerController;
     
-    self.window.rootViewController = drawerController;
+//    self.window.rootViewController = drawerController;
+    self.window.rootViewController = [RemindersViewController new];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

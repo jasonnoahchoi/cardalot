@@ -7,6 +7,8 @@
 //
 
 #import "CustomDatePickerView.h"
+#import "RemindersController.h"
+#import "Reminder.h"
 
 typedef enum : NSInteger {
     HourPicker = 0,
@@ -242,11 +244,15 @@ typedef enum : NSInteger {
 
 - (IBAction)setDateButtonPressed:(id)sender {
     NSDate *selectedDate = [self selectedTime];
-    NSDictionary *userInfo = @{@"selectedDate": selectedDate, @"frequency": self.frequency};
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"DateSelected" object:nil userInfo:userInfo];
+    Reminder *reminder = [[Reminder alloc] init];
+    reminder.date = selectedDate;
+    reminder.frequency = self.frequency;
+    [[RemindersController sharedInstance] addReminder:reminder];
     [UIView animateWithDuration:1.0 animations:^{
         self.center = CGPointMake(self.center.x, self.center.y + 700);
     }];
+    
+    [self.tableView reloadData];
     
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
     localNotification.alertBody = @"Time to study!";
