@@ -10,6 +10,10 @@
 #import "DeckCollectionViewController.h"
 #import <MMDrawerController/UIViewController+MMDrawerController.h>
 #import "LegalInformationViewController.h"
+#import "RemindersViewController.h"
+#import "SupportViewController.h"
+#import "AdvancedSettingsViewController.h"
+#import "FAQViewController.h"
 
 @interface SettingsMenuViewController () <UITableViewDelegate>
 
@@ -21,7 +25,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.title = @"Settings";
     
@@ -38,10 +41,6 @@
     // Datasource
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    
-    // Background Color of TableView
-//    self.tableView.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
-    
     
 #pragma mark - sets static settings cells
     self.advancedSettingsCell = [UITableViewCell new];
@@ -121,40 +120,43 @@
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    if (indexPath.section == 0) {
-//        switch (indexPath.row) {
-//            case 0:
-//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
-//                break;
-//            case 1:
-//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
-//        }
-//    } else if (indexPath.section == 1) {
-//        switch (indexPath.row) {
-//            case 0:
-//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
-//                break;
-//            case 1:
-//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
-//        }
-//    } else if (indexPath.section == 2) {
-//        switch (indexPath.row) {
-//            case 0:
-//                [self presentViewController:[[UINavigationController alloc] initWithRootViewController:[LegalInformationViewController new]] animated:YES completion:nil];
-//                break;
-//            case 1:
-//                [self presentViewController:[UINavigationController new] animated:YES completion:nil];
-//        }
-//    }
-//}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UINavigationController *navigationController = (UINavigationController *)self.mm_drawerController.centerViewController;
     
-    if (indexPath.section == 2) {
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            RemindersViewController *reminderVC = [RemindersViewController new];
+            reminderVC.drawerController = self.mm_drawerController;
+            UINavigationController *reminderNavController = [[UINavigationController alloc] initWithRootViewController:reminderVC];
+            [self.mm_drawerController setCenterViewController:reminderNavController];
+            [navigationController popToRootViewControllerAnimated:YES];
+            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        } else if (indexPath.row == 1) {
+            AdvancedSettingsViewController *advancedSettingVC = [AdvancedSettingsViewController new];
+            advancedSettingVC.drawerController = self.mm_drawerController;
+            UINavigationController *advancedSettingNavController = [[UINavigationController alloc] initWithRootViewController:advancedSettingVC];
+            [self.mm_drawerController setCenterViewController:advancedSettingNavController];
+            [navigationController popToRootViewControllerAnimated:YES];
+            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        }
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            FAQViewController *faqVC = [FAQViewController new];
+            faqVC.drawerController = self.mm_drawerController;
+            UINavigationController *faqNavController = [[UINavigationController alloc] initWithRootViewController:faqVC];
+            [self.mm_drawerController setCenterViewController:faqNavController];
+            [navigationController popToRootViewControllerAnimated:YES];
+            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        } else if (indexPath.row == 1) {
+            SupportViewController *supportVC = [SupportViewController new];
+            supportVC.drawerController = self.mm_drawerController;
+            UINavigationController *supportNavController = [[UINavigationController alloc] initWithRootViewController:supportVC];
+            [self.mm_drawerController setCenterViewController:supportNavController];
+            [navigationController popToRootViewControllerAnimated:YES];
+            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        }
+    } else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
             LegalInformationViewController *legalVC = [LegalInformationViewController new];
             legalVC.drawerController = self.mm_drawerController;
@@ -164,10 +166,7 @@
             [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
         }
     }
-    
 }
-
-
 
 // Sets the section headings for each section
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -186,17 +185,8 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
