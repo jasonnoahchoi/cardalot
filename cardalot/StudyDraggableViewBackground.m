@@ -135,6 +135,14 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         self.cardsLoadedIndex++;//%%% loaded a card, so have to increment count
         [self insertSubview:[self.loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[self.loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
+    
+    if (self.loadedCards.count == 0) {
+        CompletionViewController *completionVC = [[CompletionViewController alloc] init];
+        completionVC.deck = self.deck;
+        completionVC.session = self.session;
+        //        [self.studyVC presentViewController:completionVC animated:YES completion:nil];
+        [self.studyVC.navigationController pushViewController:completionVC animated:YES];
+    }
 }
 
 //%%% action called when the card goes to the right.
