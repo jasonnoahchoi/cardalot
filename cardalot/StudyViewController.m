@@ -32,6 +32,8 @@
 - (void)layoutSubviews {
     self.draggableViewBackground = [[StudyDraggableViewBackground alloc] initWithFrame:self.view.bounds];
     self.draggableViewBackground.deck = self.deck;
+    self.draggableViewBackground.session = self.session;
+    self.draggableViewBackground.studyVC = self;
 //    [self.draggableViewBackground setTopCardInDeck:[self.deck.cards.set allObjects]];
     [self.draggableViewBackground setCards:[self.deck.cards.set allObjects]];
     [self.draggableViewBackground setTopCardInDeck:[self.draggableViewBackground shuffleCards:self.draggableViewBackground.cards]];

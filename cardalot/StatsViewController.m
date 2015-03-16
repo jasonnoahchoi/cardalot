@@ -35,6 +35,8 @@
     self.dataSource = [[StatsTableViewDataSource alloc] init];
     self.tableView.dataSource = self.dataSource;
     [self.dataSource registerTableView:self.tableView];
+    
+    [self.tableView setAllowsSelection:NO];
 }
 
 - (void)open {

@@ -17,6 +17,7 @@
 #import "StudyDraggableView.h"
 #import "StudyOverlayView.h"
 #import "StudyDescriptionView.h"
+#import "Deck.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -168,7 +169,7 @@ static CGFloat yFromCenter;
                      }];
 
     [self.delegate cardSwipedRight:self];
-
+    
     NSLog(@"YES");
 }
 
