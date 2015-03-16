@@ -31,7 +31,7 @@
     tempLabel.text = @"Please feel free to reachout to your cardalot team";
     
     
-    
+    // Sets email compose
     UIButton *composeEmailButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 350, 180, 80)];
     composeEmailButton.tintColor = [UIColor lightGrayColor];
     composeEmailButton.layer.borderWidth = 1.0;
