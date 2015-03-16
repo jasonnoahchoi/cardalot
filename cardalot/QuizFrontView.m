@@ -14,9 +14,11 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.flipped = NO;
         self.backgroundColor = [UIColor customBlueColor];
         self.frontLabel.backgroundColor = [UIColor customBlueColor];
-        self.frontLabel = [[UILabel alloc] init];
+        self.frontLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+       // [self.frontLabel sizeToFit];
         self.frontLabel.textColor = [UIColor whiteColor];
         self.frontLabel.font = [UIFont boldSystemFontOfSize:32];
         self.frontLabel.text = @"Sample text";
@@ -25,7 +27,7 @@
         //self.frontLabel.backgroundColor = [UIColor clearColor];
         self.frontLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:self.frontLabel];
-
+        
         self.layer.borderColor = [UIColor whiteColor].CGColor;
         self.layer.borderWidth = 3.0f;
         self.layer.cornerRadius = 3;
@@ -54,6 +56,24 @@
     }
     return self;
 }
+
+- (void)handleTap:(UITapGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        //        self.flipped = YES;
+               if (!self.flipped) {
+                  [UIView transitionFromView:self toView:self.backView duration:1 options:UIViewAnimationOptionTransitionFlipFromRight
+                       completion:nil];
+                    self.flipped = NO;
+                } else {
+                    [UIView transitionFromView:self.backView toView:self duration:1 options:UIViewAnimationOptionCurveEaseOut completion:nil];
+                    self.flipped = YES;
+                }
+
+
+        
+    }
+}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

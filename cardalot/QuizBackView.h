@@ -10,6 +10,6 @@
 
 @interface QuizBackView : UIView
 
-@property (nonatomic, strong) UITextView *backTextView;
+@property (nonatomic, strong) UILabel *backTextView;
 
 @end

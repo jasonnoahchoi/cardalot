@@ -13,53 +13,80 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-
     if (self) {
-        self.backTextView = [[UITextView alloc] init];
-        self.backTextView.textColor = [UIColor customBlueColor];
+        //self.backTextView = [[UITextView alloc] init];
+        self.backTextView = [[UILabel alloc] initWithFrame:CGRectMake(15, 15, self.frame.size.width-30, self.frame.size.height-30)];
+        self.backgroundColor = [UIColor orangeColor];
+        //[self.backTextView sizeToFit];
+        self.backTextView.textColor = [UIColor blueColor];
         self.backTextView.text = @"Sample back text";
+        self.backTextView.numberOfLines = 0;
+        //self.backTextView.editable = NO;
+        self.backTextView.font = [UIFont systemFontOfSize:24];
         [self addSubview:self.backTextView];
 
-        self.backgroundColor = [UIColor whiteColor];
+        //self.backgroundColor = [UIColor whiteColor];
         self.layer.borderWidth = 3.0f;
         self.layer.borderColor = [UIColor customBlueColor].CGColor;
         self.layer.cornerRadius = 3;
+        //[self.backTextView setTranslatesAutoresizingMaskIntoConstraints:NO];
 
-        NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.backTextView
-                                                                   attribute:NSLayoutAttributeLeading
-                                                                   relatedBy:NSLayoutRelationEqual
-                                                                      toItem:self
-                                                                   attribute:NSLayoutAttributeLeftMargin
-                                                                  multiplier:1.0
-                                                                    constant:15];
-        [self addConstraint:leading];
+        NSLayoutConstraint *centerXInViewConstraint = [NSLayoutConstraint
+                                                            constraintWithItem:self.backTextView
+                                                            attribute:NSLayoutAttributeCenterX
+                                                            relatedBy:NSLayoutRelationEqual
+                                                            toItem:self
+                                                            attribute:NSLayoutAttributeCenterX
+                                                            multiplier:1.0
+                                                            constant:0];
+        [self addConstraint:centerXInViewConstraint];
 
-        NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.backTextView
-                                                               attribute:NSLayoutAttributeTop
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:self
-                                                               attribute:NSLayoutAttributeTopMargin
-                                                              multiplier:1.0
-                                                                constant:15];
-        [self addConstraint:top];
+        NSLayoutConstraint *centerYInViewConstraint = [NSLayoutConstraint
+                                                            constraintWithItem:self.backTextView
+                                                            attribute:NSLayoutAttributeCenterY
+                                                            relatedBy:NSLayoutRelationEqual
+                                                            toItem:self
+                                                            attribute:NSLayoutAttributeCenterY
+                                                            multiplier:1.0
+                                                            constant:0];
+        [self addConstraint:centerYInViewConstraint];
 
-        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:self.backTextView
-                                                               attribute:NSLayoutAttributeTrailing
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:self
-                                                               attribute:NSLayoutAttributeTrailingMargin
-                                                              multiplier:1.0
-                                                                constant:15];
-        [self addConstraint:right];
 
-        NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.backTextView
-                                                               attribute:NSLayoutAttributeBottom
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:self
-                                                                  attribute:NSLayoutAttributeBottomMargin
-                                                              multiplier:1.0
-                                                                constant:15];
-        [self addConstraint:bottom];
+//        NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.backTextView
+//                                                                   attribute:NSLayoutAttributeLeading
+//                                                                   relatedBy:NSLayoutRelationEqual
+//                                                                      toItem:self
+//                                                                   attribute:NSLayoutAttributeLeftMargin
+//                                                                  multiplier:1.0
+//                                                                    constant:15];
+//        [self addConstraint:leading];
+//
+//        NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.backTextView
+//                                                               attribute:NSLayoutAttributeTop
+//                                                               relatedBy:NSLayoutRelationEqual
+//                                                                  toItem:self
+//                                                               attribute:NSLayoutAttributeTopMargin
+//                                                              multiplier:1.0
+//                                                                constant:15];
+//        [self addConstraint:top];
+//
+//        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:self.backTextView
+//                                                               attribute:NSLayoutAttributeTrailing
+//                                                               relatedBy:NSLayoutRelationEqual
+//                                                                  toItem:self
+//                                                               attribute:NSLayoutAttributeTrailingMargin
+//                                                              multiplier:1.0
+//                                                                constant:15];
+//        [self addConstraint:right];
+//
+//        NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.backTextView
+//                                                               attribute:NSLayoutAttributeBottom
+//                                                               relatedBy:NSLayoutRelationEqual
+//                                                                  toItem:self
+//                                                                  attribute:NSLayoutAttributeBottomMargin
+//                                                              multiplier:1.0
+//                                                                constant:15];
+//        [self addConstraint:bottom];
     }
     return self;
 }
