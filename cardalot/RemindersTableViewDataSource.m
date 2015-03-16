@@ -83,7 +83,8 @@ static NSString * const cellIdentifier = @"cell";
     NSDictionary *userInfo = notification.userInfo;
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     NSDate *date = userInfo[@"selectedDate"];
-    cell.textLabel.text = [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle];
+    NSString *frequency = userInfo[@"frequency"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ at %@", frequency, [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle]];
 }
 
 @end

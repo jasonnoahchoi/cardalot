@@ -12,7 +12,6 @@
 #import <MMDrawerController.h>
 #import "AppearanceController.h"
 #import "MenuDrawerViewController.h"
-#import "RemindersViewController.h"
 
 @interface AppDelegate ()
 

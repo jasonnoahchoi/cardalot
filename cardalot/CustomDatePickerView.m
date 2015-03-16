@@ -242,7 +242,7 @@ typedef enum : NSInteger {
 
 - (IBAction)setDateButtonPressed:(id)sender {
     NSDate *selectedDate = [self selectedTime];
-    NSDictionary *userInfo = @{@"selectedDate": selectedDate};
+    NSDictionary *userInfo = @{@"selectedDate": selectedDate, @"frequency": self.frequency};
     [[NSNotificationCenter defaultCenter] postNotificationName:@"DateSelected" object:nil userInfo:userInfo];
     [UIView animateWithDuration:1.0 animations:^{
         self.center = CGPointMake(self.center.x, self.center.y + 700);
