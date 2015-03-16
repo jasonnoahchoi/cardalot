@@ -60,6 +60,14 @@ static NSString * const cellIdentifier = @"cell";
     }
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == [RemindersController sharedInstance].reminders.count) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
 #pragma mark UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
