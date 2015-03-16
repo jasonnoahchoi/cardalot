@@ -7,9 +7,12 @@
 //
 
 #import "QuizDraggableViewBackground.h"
+#import "CompletionViewController.h"
 #import "QuizViewController.h"
+#import "DeckController.h"
 #import "Card.h"
 #import "Deck.h"
+#import "Session.h"
 #import "UIColor+Colors.h"
 
 static const int MAX_BUFFER_SIZE = 2; //%%% max number of cards loaded at any given time, must be greater than 1
@@ -18,9 +21,9 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 
 @interface QuizDraggableViewBackground ()
 
-@property (nonatomic, strong) QuizViewController *quizVC;
 @property (nonatomic, assign) NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last
 @property (nonatomic, strong) NSMutableArray *loadedCards; //%%% the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
+@property (nonatomic, assign) NSInteger markedCorrect;
 
 @end
 
@@ -40,7 +43,6 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         self.loadedCards = [[NSMutableArray alloc] init];
         self.allCards = [[NSMutableArray alloc] init];
         self.cardsLoadedIndex = 0;
-        self.quizVC = [[QuizViewController alloc] init];
                 //[self loadCards];
         //self.flipped = NO;
 
@@ -177,9 +179,9 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
                 } else {
                     [self addSubview:[self.loadedCards objectAtIndex:i]];
                 }
-
-        }
             self.cardsLoadedIndex++; //%%% we loaded a card into loaded cards, so we have to increment
+        }
+        
 
     }
 }
@@ -197,6 +199,13 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         self.cardsLoadedIndex++;//%%% loaded a card, so have to increment count
         [self insertSubview:[self.loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[self.loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
+    
+    if (self.loadedCards.count == 0) {
+        CompletionViewController *completionVC = [[CompletionViewController alloc] init];
+        completionVC.deck = self.deck;
+        completionVC.session = self.session;
+        [self.quizVC.navigationController pushViewController:completionVC animated:YES];
+    }
 }
 
 //%%% action called when the card goes to the right.
@@ -212,6 +221,17 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         self.cardsLoadedIndex++;//%%% loaded a card, so have to increment count
         [self insertSubview:[self.loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)]
                belowSubview:[self.loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
+    }
+    self.markedCorrect++;
+    self.session.markedCorrect = [NSNumber numberWithInteger:self.markedCorrect];
+    [[DeckController sharedInstance] save];
+    NSLog(@"%@", self.session.markedCorrect);
+    
+    if (self.loadedCards.count == 0) {
+        CompletionViewController *completionVC = [[CompletionViewController alloc] init];
+        completionVC.deck = self.deck;
+        completionVC.session = self.session;
+        [self.quizVC.navigationController pushViewController:completionVC animated:YES];
     }
 }
 /*

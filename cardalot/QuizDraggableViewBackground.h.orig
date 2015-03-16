@@ -19,8 +19,11 @@
 @property (strong, nonatomic) Deck *deck;
 @property (strong, nonatomic) Session *session;
 @property (nonatomic, strong) QuizDraggableView *draggableView;
+<<<<<<< HEAD
 @property (nonatomic, strong) QuizViewController *quizVC;
+=======
 @property (nonatomic, strong) NSArray *cards;
+>>>>>>> 1219fa0aefd011aaf6cdf290b38c9b337da800a6
 
 //methods called in DraggableView
 - (void)cardSwipedLeft:(UIView *)card;
