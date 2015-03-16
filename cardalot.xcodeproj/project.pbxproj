@@ -42,6 +42,8 @@
 		7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */; };
 		7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */; };
 		7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */; };
+		723D96C01AB784E100121C55 /* RemindersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 723D96BF1AB784E100121C55 /* RemindersController.m */; };
+		723D96C31AB785AE00121C55 /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 723D96C21AB785AE00121C55 /* Reminder.m */; };
 		725180E71AAA6FAE00C446E5 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180E61AAA6FAE00C446E5 /* Stack.m */; };
 		725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725180E81AAA751600C446E5 /* Model.xcdatamodeld */; };
 		725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F21AAA7AFE00C446E5 /* DeckController.m */; };
@@ -152,6 +154,10 @@
 		7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewDataSource.m; sourceTree = "<group>"; };
 		7200D0EE1AB1393E00E84D55 /* CustomInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInputAccessoryView.h; sourceTree = "<group>"; };
 		7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInputAccessoryView.m; sourceTree = "<group>"; };
+		723D96BE1AB784E100121C55 /* RemindersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersController.h; sourceTree = "<group>"; };
+		723D96BF1AB784E100121C55 /* RemindersController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersController.m; sourceTree = "<group>"; };
+		723D96C11AB785AE00121C55 /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
+		723D96C21AB785AE00121C55 /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
 		725180E51AAA6FAE00C446E5 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		725180E61AAA6FAE00C446E5 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		725180E91AAA751600C446E5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -322,6 +328,10 @@
 				7200CEB11AACE66000E84D55 /* CompletionViewController.h */,
 				725180F11AAA7AFE00C446E5 /* DeckController.h */,
 				725180F21AAA7AFE00C446E5 /* DeckController.m */,
+				723D96BE1AB784E100121C55 /* RemindersController.h */,
+				723D96BF1AB784E100121C55 /* RemindersController.m */,
+				723D96C11AB785AE00121C55 /* Reminder.h */,
+				723D96C21AB785AE00121C55 /* Reminder.m */,
 				FF32B3A31AB230D40098EFA5 /* Menu Drawer View Controller */,
 				FF8F0ADA1AAE597200BDD975 /* Model */,
 				08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */,
@@ -659,6 +669,7 @@
 				08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
 				08F5EA311AB4F45600D00A3F /* Stat.m in Sources */,
+				723D96C01AB784E100121C55 /* RemindersController.m in Sources */,
 				72C1E1F41AB5036E0041E2C8 /* CustomDatePickerView.m in Sources */,
 				08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */,
 				08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */,
@@ -680,6 +691,7 @@
 				08F5EA341AB4F45700D00A3F /* Deck.m in Sources */,
 				FF8F0AD31AAE579A00BDD975 /* deckTagCell.m in Sources */,
 				08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */,
+				723D96C31AB785AE00121C55 /* Reminder.m in Sources */,
 				FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
 				7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */,
