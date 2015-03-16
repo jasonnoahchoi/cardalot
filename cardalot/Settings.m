@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-#import "SCSettings.h"
+#import "Settings.h"
 
-@implementation SCSettings
+@implementation Settings
 
 #pragma mark - Class Methods
 
 + (instancetype)defaultSettings
 {
-    static SCSettings *settings = nil;
+    static Settings *settings = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         settings = [[self alloc] init];
@@ -32,7 +32,7 @@
 
 #pragma mark - Properties
 
-static NSString *const kShouldSkipLoginKey = @"shouldSkipLogin";
+static NSString * const kShouldSkipLoginKey = @"shouldSkipLogin";
 
 - (BOOL)shouldSkipLogin
 {

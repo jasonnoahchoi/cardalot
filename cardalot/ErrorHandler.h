@@ -16,4 +16,4 @@
 
 #import <Foundation/Foundation.h>
 
-extern void SCHandleError(NSError *error);
+extern void HandleError(NSError *error);

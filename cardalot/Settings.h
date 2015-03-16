@@ -16,7 +16,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SCSettings : NSObject
+@interface Settings : NSObject
 
 + (instancetype)defaultSettings;
 

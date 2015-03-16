@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-#import "SCErrorHandler.h"
+#import "ErrorHandler.h"
 
 #import <UIKit/UIKit.h>
 
-#import <FacebookSDK/FacebookSDK.h>
+#import <Facebook-iOS-SDK/FacebookSDK/FacebookSDK.h>
 
-void SCHandleError(NSError *error)
+void HandleError(NSError *error)
 {
     if (error != nil) {
         NSString *alertMessage;
