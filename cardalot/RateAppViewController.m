@@ -10,10 +10,11 @@
 #import "DeckCollectionViewController.h"
 #import <MMDrawerController.h>
 #import "UIColor+Colors.h"
+#import <MessageUI/MessageUI.h>
 
 @import MessageUI;
 
-@interface RateAppViewController ()
+@interface RateAppViewController () <MFMailComposeViewControllerDelegate>
 
 @end
 
@@ -66,14 +67,23 @@
     [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
-- (IBAction)sendFeedbackEmail:(id)sender {
+- (void)sendFeedbackEmail:(id)sender {
+    
     MFMailComposeViewController *mailComposeViewController = [[MFMailComposeViewController alloc] init];
-
+    mailComposeViewController.mailComposeDelegate = self;
+    
     [mailComposeViewController setToRecipients:@[@"weekendconcept@gmail.com"]];
+    [mailComposeViewController setSubject:@""];
     
     if ([MFMailComposeViewController canSendMail]) {
         [self presentViewController:mailComposeViewController animated:YES completion:nil];
     }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 @end

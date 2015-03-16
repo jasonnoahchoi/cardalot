@@ -9,9 +9,10 @@
 #import "SupportViewController.h"
 #import <MMDrawerController.h>
 #import "UIColor+Colors.h"
+#import <MessageUI/MessageUI.h>
 @import MessageUI;
 
-@interface SupportViewController ()
+@interface SupportViewController () <MFMailComposeViewControllerDelegate>
 
 @end
 
@@ -51,14 +52,23 @@
 
 }
 
-- (IBAction)sendFeedbackEmail:(id)sender {
+- (void)sendFeedbackEmail:(id)sender {
+    
     MFMailComposeViewController *mailComposeViewController = [[MFMailComposeViewController alloc] init];
+    mailComposeViewController.mailComposeDelegate = self;
     
     [mailComposeViewController setToRecipients:@[@"weekendconcept@gmail.com"]];
+    [mailComposeViewController setSubject:@""];
     
     if ([MFMailComposeViewController canSendMail]) {
         [self presentViewController:mailComposeViewController animated:YES completion:nil];
     }
+}
+
+// allows user to hit 'cancel' and exit
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)open {
