@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "QuizDraggableView.h"
+@class QuizViewController;
 @class Deck;
 @class Session;
 
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) Deck *deck;
 @property (strong, nonatomic) Session *session;
 @property (nonatomic, strong) QuizDraggableView *draggableView;
+@property (nonatomic, strong) QuizViewController *quizVC;
 
 //methods called in DraggableView
 - (void)cardSwipedLeft:(UIView *)card;
