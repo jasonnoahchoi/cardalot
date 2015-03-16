@@ -13,6 +13,7 @@
 
 @interface StatsTableViewCell ()
 
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) NSArray *quizSessions;
 @property (strong, nonatomic) NSArray *studySessions;
 
@@ -22,19 +23,20 @@
 
 - (void)awakeFromNib {
     
-    JBLineChartView *lineChartView = [[JBLineChartView alloc] init];
-    lineChartView.dataSource = self;
-    lineChartView.delegate = self;
-    lineChartView.backgroundColor = [UIColor customGrayColor];
+    self.lineChartView = [[JBLineChartView alloc] init];
+    self.lineChartView.dataSource = self;
+    self.lineChartView.delegate = self;
+    [self.lineChartView setMaximumValue:1];
+    [self.lineChartView setMinimumValue:0];
+    self.lineChartView.backgroundColor = [UIColor customGrayColor];
     
-    lineChartView.layer.borderWidth = 3.0;
-    lineChartView.layer.cornerRadius = 5;
-    lineChartView.layer.borderColor = [[UIColor customBlueColor] CGColor];
+    self.lineChartView.layer.borderWidth = 3.0;
+    self.lineChartView.layer.cornerRadius = 5;
+    self.lineChartView.layer.borderColor = [[UIColor customBlueColor] CGColor];
     
-    [self.containerView addSubview:lineChartView];
+    [self.containerView addSubview:self.lineChartView];
     
-    lineChartView.frame = self.containerView.frame;
-    [lineChartView reloadData];
+    self.lineChartView.frame = self.containerView.frame;
     
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     headerView.backgroundColor = [UIColor customYellowColor];
@@ -43,7 +45,7 @@
     chartTitle.textColor = [UIColor whiteColor];
     chartTitle.textAlignment = NSTextAlignmentCenter;
     [headerView addSubview:chartTitle];
-    lineChartView.headerView = headerView;
+    self.lineChartView.headerView = headerView;
 }
 
 - (NSArray *)quizSessions {

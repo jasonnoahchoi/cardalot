@@ -21,15 +21,16 @@ static NSString * const cellIdentifier = @"cell";
 
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
-//    return [DeckController sharedInstance].decks.count;
+    return [DeckController sharedInstance].decks.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     StatsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-//    Deck *deck = [DeckController sharedInstance].decks[indexPath.row];
-//    cell.deck = deck;
+    Deck *deck = [DeckController sharedInstance].decks[indexPath.row];
+    cell.deck = deck;
+    
+    [cell.lineChartView reloadData];
     
     return cell;
 }
