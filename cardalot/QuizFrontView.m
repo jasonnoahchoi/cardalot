@@ -56,22 +56,6 @@
     return self;
 }
 
-- (void)handleTap:(UITapGestureRecognizer *)sender {
-    if (sender.state == UIGestureRecognizerStateEnded) {
-        //        self.flipped = YES;
-               if (!self.flipped) {
-                  [UIView transitionFromView:self toView:self.backView duration:1 options:UIViewAnimationOptionTransitionFlipFromRight
-                       completion:nil];
-                    self.flipped = NO;
-                } else {
-                    [UIView transitionFromView:self.backView toView:self duration:1 options:UIViewAnimationOptionCurveEaseOut completion:nil];
-                    self.flipped = YES;
-                }
-
-
-        
-    }
-}
 
 
 /*
