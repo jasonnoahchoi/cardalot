@@ -8,6 +8,7 @@
 
 #import "StudyDraggableViewBackground.h"
 #import "StudyViewController.h"
+#import "CompletionViewController.h"
 #import "DeckController.h"
 #import "Card.h"
 #import "Deck.h"
@@ -21,7 +22,6 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 @interface StudyDraggableViewBackground ()
 
 @property (nonatomic, strong) StudyDraggableView *draggableView;
-@property (nonatomic, strong) StudyViewController *studyVC;
 @property (nonatomic, assign) NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last
 @property (nonatomic, strong) NSMutableArray *loadedCards; //%%% the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
 @property (nonatomic, assign) NSInteger markedCorrect;
@@ -38,7 +38,6 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         self.loadedCards = [[NSMutableArray alloc] init];
         self.allCards = [[NSMutableArray alloc] init];
         self.cardsLoadedIndex = 0;
-        self.studyVC = [[StudyViewController alloc] init];
         //[self loadCards];
     }
 
@@ -157,6 +156,14 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     self.session.markedCorrect = [NSNumber numberWithInteger:self.markedCorrect];
     [[DeckController sharedInstance] save];
     NSLog(@"%@", self.session.markedCorrect);
+    
+    if (self.loadedCards.count == 0) {
+        CompletionViewController *completionVC = [[CompletionViewController alloc] init];
+        completionVC.deck = self.deck;
+        completionVC.session = self.session;
+//        [self.studyVC presentViewController:completionVC animated:YES completion:nil];
+        [self.studyVC.navigationController pushViewController:completionVC animated:YES];
+    }
 }
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "StudyDraggableView.h"
+@class StudyViewController;
 @class Deck;
 @class Session;
 
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) Deck *deck;
 @property (strong, nonatomic) Session *session;
 @property (nonatomic, strong) NSArray *cards;
+@property (nonatomic, strong) StudyViewController *studyVC;
 
 //methods called in DraggableView
 - (void)cardSwipedLeft:(UIView *)card;
