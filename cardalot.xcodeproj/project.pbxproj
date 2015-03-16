@@ -24,7 +24,12 @@
 		0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */; };
 		08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08977A141AABCB6C00E525D0 /* AppearanceController.m */; };
 		08C8830E1AAD289200DFE40E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C8830D1AAD289200DFE40E /* QuartzCore.framework */; };
+		08CA60131AB72C7F00FAC558 /* FBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CA60121AB72C7F00FAC558 /* FBLoginViewController.m */; };
 		08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CA76641AB2660B00292997 /* UIColor+Colors.m */; };
+		08D250651AB67F1C00A716D2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D250631AB67F1C00A716D2 /* LoginViewController.m */; };
+		08D250661AB67F1C00A716D2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08D250641AB67F1C00A716D2 /* LoginViewController.xib */; };
+		08D250691AB6BCB700A716D2 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D250681AB6BCB700A716D2 /* Settings.m */; };
+		08D2506C1AB6BD0400A716D2 /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D2506B1AB6BD0400A716D2 /* ErrorHandler.m */; };
 		08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */; };
 		08F5EA2E1AB4F31700D00A3F /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F5EA2D1AB4F31700D00A3F /* Session.m */; };
 		08F5EA311AB4F45600D00A3F /* Stat.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F5EA301AB4F45600D00A3F /* Stat.m */; };
@@ -42,6 +47,8 @@
 		7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC41AAD1E9800E84D55 /* CardCollectionViewCell.m */; };
 		7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */; };
 		7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */; };
+		723D96C01AB784E100121C55 /* RemindersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 723D96BF1AB784E100121C55 /* RemindersController.m */; };
+		723D96C31AB785AE00121C55 /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 723D96C21AB785AE00121C55 /* Reminder.m */; };
 		725180E71AAA6FAE00C446E5 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180E61AAA6FAE00C446E5 /* Stack.m */; };
 		725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725180E81AAA751600C446E5 /* Model.xcdatamodeld */; };
 		725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F21AAA7AFE00C446E5 /* DeckController.m */; };
@@ -118,8 +125,17 @@
 		08977A131AABCB6C00E525D0 /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceController.h; sourceTree = "<group>"; };
 		08977A141AABCB6C00E525D0 /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceController.m; sourceTree = "<group>"; };
 		08C8830D1AAD289200DFE40E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		08CA60111AB72C7F00FAC558 /* FBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginViewController.h; sourceTree = "<group>"; };
+		08CA60121AB72C7F00FAC558 /* FBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginViewController.m; sourceTree = "<group>"; };
 		08CA76631AB2660B00292997 /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Colors.h"; sourceTree = "<group>"; };
 		08CA76641AB2660B00292997 /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colors.m"; sourceTree = "<group>"; };
+		08D250621AB67F1C00A716D2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		08D250631AB67F1C00A716D2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		08D250641AB67F1C00A716D2 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		08D250671AB6BCB700A716D2 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		08D250681AB6BCB700A716D2 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		08D2506A1AB6BD0400A716D2 /* ErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorHandler.h; sourceTree = "<group>"; };
+		08D2506B1AB6BD0400A716D2 /* ErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorHandler.m; sourceTree = "<group>"; };
 		08D8F8CC1AACE7670015A4BD /* DeckCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewLayout.h; sourceTree = "<group>"; };
 		08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewLayout.m; sourceTree = "<group>"; };
 		08F5EA2C1AB4F31700D00A3F /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
@@ -152,6 +168,10 @@
 		7200CEC71AAD1FD000E84D55 /* CardCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewDataSource.m; sourceTree = "<group>"; };
 		7200D0EE1AB1393E00E84D55 /* CustomInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInputAccessoryView.h; sourceTree = "<group>"; };
 		7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInputAccessoryView.m; sourceTree = "<group>"; };
+		723D96BE1AB784E100121C55 /* RemindersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersController.h; sourceTree = "<group>"; };
+		723D96BF1AB784E100121C55 /* RemindersController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersController.m; sourceTree = "<group>"; };
+		723D96C11AB785AE00121C55 /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
+		723D96C21AB785AE00121C55 /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
 		725180E51AAA6FAE00C446E5 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		725180E61AAA6FAE00C446E5 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		725180E91AAA751600C446E5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -290,6 +310,15 @@
 		08FE1E721AAA5F570068F0C9 /* cardalot */ = {
 			isa = PBXGroup;
 			children = (
+				08D250621AB67F1C00A716D2 /* LoginViewController.h */,
+				08D250631AB67F1C00A716D2 /* LoginViewController.m */,
+				08D250641AB67F1C00A716D2 /* LoginViewController.xib */,
+				08CA60111AB72C7F00FAC558 /* FBLoginViewController.h */,
+				08CA60121AB72C7F00FAC558 /* FBLoginViewController.m */,
+				08D250671AB6BCB700A716D2 /* Settings.h */,
+				08D250681AB6BCB700A716D2 /* Settings.m */,
+				08D2506A1AB6BD0400A716D2 /* ErrorHandler.h */,
+				08D2506B1AB6BD0400A716D2 /* ErrorHandler.m */,
 				08FE1E771AAA5F570068F0C9 /* AppDelegate.h */,
 				08FE1E781AAA5F570068F0C9 /* AppDelegate.m */,
 				08977A131AABCB6C00E525D0 /* AppearanceController.h */,
@@ -322,6 +351,10 @@
 				7200CEB11AACE66000E84D55 /* CompletionViewController.h */,
 				725180F11AAA7AFE00C446E5 /* DeckController.h */,
 				725180F21AAA7AFE00C446E5 /* DeckController.m */,
+				723D96BE1AB784E100121C55 /* RemindersController.h */,
+				723D96BF1AB784E100121C55 /* RemindersController.m */,
+				723D96C11AB785AE00121C55 /* Reminder.h */,
+				723D96C21AB785AE00121C55 /* Reminder.m */,
 				FF32B3A31AB230D40098EFA5 /* Menu Drawer View Controller */,
 				FF8F0ADA1AAE597200BDD975 /* Model */,
 				08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */,
@@ -590,6 +623,7 @@
 			files = (
 				FF8F0AD61AAE579A00BDD975 /* frontTextCell.xib in Resources */,
 				72C1E1B01AB27BAB0041E2C8 /* StatsTableViewCell.xib in Resources */,
+				08D250661AB67F1C00A716D2 /* LoginViewController.xib in Resources */,
 				08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */,
 				FF8F0AD41AAE579A00BDD975 /* deckTagCell.xib in Resources */,
 				0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */,
@@ -659,8 +693,10 @@
 				08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
 				08F5EA311AB4F45600D00A3F /* Stat.m in Sources */,
+				723D96C01AB784E100121C55 /* RemindersController.m in Sources */,
 				72C1E1F41AB5036E0041E2C8 /* CustomDatePickerView.m in Sources */,
 				08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */,
+				08D2506C1AB6BD0400A716D2 /* ErrorHandler.m in Sources */,
 				08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */,
 				FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */,
 				FF8F0AD51AAE579A00BDD975 /* frontTextCell.m in Sources */,
@@ -680,6 +716,7 @@
 				08F5EA341AB4F45700D00A3F /* Deck.m in Sources */,
 				FF8F0AD31AAE579A00BDD975 /* deckTagCell.m in Sources */,
 				08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */,
+				723D96C31AB785AE00121C55 /* Reminder.m in Sources */,
 				FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
 				7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */,
@@ -691,10 +728,13 @@
 				FF0C44E01AB604B4007C7544 /* FAQViewController.m in Sources */,
 				FF32B3B01AB24E210098EFA5 /* SettingsMenuViewController.m in Sources */,
 				7200CEC81AAD1FD000E84D55 /* CardCollectionViewDataSource.m in Sources */,
+				08CA60131AB72C7F00FAC558 /* FBLoginViewController.m in Sources */,
+				08D250651AB67F1C00A716D2 /* LoginViewController.m in Sources */,
 				72C1E1F71AB505D30041E2C8 /* RemindersViewController.m in Sources */,
 				0832BEFA1AB5243100213071 /* LegalInformationViewController.m in Sources */,
 				083C0EDB1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m in Sources */,
 				72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */,
+				08D250691AB6BCB700A716D2 /* Settings.m in Sources */,
 				7200CEC51AAD1E9800E84D55 /* CardCollectionViewCell.m in Sources */,
 				08662EE11AAF9F8D00BE440E /* StudyViewController.m in Sources */,
 				72C1E1A81AB279E60041E2C8 /* StatsTableViewDataSource.m in Sources */,

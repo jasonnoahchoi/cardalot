@@ -25,6 +25,7 @@
     self.title = @"Reminders";
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -39,6 +40,11 @@
 
 - (void)open {
     [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+}
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:YES];
 }
 
 @end

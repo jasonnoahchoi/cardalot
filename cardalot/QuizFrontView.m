@@ -16,12 +16,15 @@
     if (self) {
         self.backgroundColor = [UIColor customBlueColor];
         self.frontLabel.backgroundColor = [UIColor customBlueColor];
-        self.frontLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-       // [self.frontLabel sizeToFit];
+//        self.frontLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
+//        [self.frontLabel sizeToFit];
+        self.frontLabel = [UILabel new];
         self.frontLabel.textColor = [UIColor whiteColor];
+        //self.frontLabel.layer.masksToBounds = YES;
         self.frontLabel.font = [UIFont boldSystemFontOfSize:32];
         self.frontLabel.text = @"Sample text";
         self.frontLabel.numberOfLines = 0;
+        self.frontLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
         //self.frontLabel.backgroundColor = [UIColor clearColor];
         self.frontLabel.textAlignment = NSTextAlignmentCenter;
@@ -52,6 +55,15 @@
                                                             multiplier:1.0
                                                             constant:0];
         [self addConstraint:centerYLabelInViewConstraint];
+
+
+
+        NSArray *constraint = [NSLayoutConstraint
+                                         constraintsWithVisualFormat:@"H:|-[_frontLabel]-|"
+                                         options:NSLayoutFormatAlignAllCenterY
+                                         metrics:nil
+                                         views:NSDictionaryOfVariableBindings(_frontLabel)];
+        [self addConstraints:constraint];
     }
     return self;
 }

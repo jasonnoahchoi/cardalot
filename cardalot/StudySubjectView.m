@@ -22,26 +22,36 @@
         self.layer.shouldRasterize = YES;
 
         self.titleLabel = [[UILabel alloc] init];
-        self.titleLabel.numberOfLines = 0;
+        self.titleLabel.numberOfLines = 2;
+        //[self.titleLabel sizeToFit];
         self.titleLabel.text = @"no info given";
         self.titleLabel.backgroundColor = [UIColor clearColor];
         [self.titleLabel setTextAlignment:NSTextAlignmentCenter];
+        self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.titleLabel.textColor = [UIColor whiteColor];
         [self addSubview:self.titleLabel];
 
 
         [self.titleLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-        NSLayoutConstraint *leftMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:15];
-        [self addConstraint:leftMarginConstraint];
+      //  NSLayoutConstraint *leftMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:15];
+       // [self addConstraint:leftMarginConstraint];
 
         NSLayoutConstraint *bottomMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottomMargin multiplier:1.0 constant:5];
         [self addConstraint:bottomMarginConstraint];
 
-        NSLayoutConstraint *rightMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:-15];
-        [self addConstraint:rightMarginConstraint];
+    //    NSLayoutConstraint *rightMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:-15];
+   //     [self addConstraint:rightMarginConstraint];
 
         NSLayoutConstraint *topMarginConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:-5];
         [self addConstraint:topMarginConstraint];
+
+        NSArray *constraint = [NSLayoutConstraint
+                               constraintsWithVisualFormat:@"H:|-[_titleLabel]-|"
+                               options:NSLayoutFormatAlignAllCenterY
+                               metrics:nil
+                               views:NSDictionaryOfVariableBindings(_titleLabel)];
+        [self addConstraints:constraint];
+
     }
 
     return self;
