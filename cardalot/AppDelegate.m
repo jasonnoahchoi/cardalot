@@ -39,7 +39,7 @@ static NSString * const launchCountKey = @"launchCount";
     deckCollectionVC.drawerController = drawerController;
     
 //    self.window.rootViewController = drawerController;
-    self.window.rootViewController = [RemindersViewController new];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[RemindersViewController new]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
@@ -47,6 +47,7 @@ static NSString * const launchCountKey = @"launchCount";
     
     [self trackLaunches];
     
+    NSLog(@"%@", [UIApplication sharedApplication].scheduledLocalNotifications);
     return YES;
 }
 

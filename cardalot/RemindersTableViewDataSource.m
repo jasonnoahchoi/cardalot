@@ -47,6 +47,19 @@ static NSString * const cellIdentifier = @"cell";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Reminder *reminder = [RemindersController sharedInstance].reminders[indexPath.row];
+        [[RemindersController sharedInstance] removeReminder:reminder];
+        
+        UILocalNotification *notification = [UIApplication sharedApplication].scheduledLocalNotifications[indexPath.row];
+        [[UIApplication sharedApplication] cancelLocalNotification:notification];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
 #pragma mark UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
