@@ -50,8 +50,18 @@ static CGFloat yFromCenter;
         [self addSubview:self.overlayView];
 
         [self.subjectView setTranslatesAutoresizingMaskIntoConstraints:NO];
+            //    NSArray *constraint = [NSLayoutConstraint
+//                               constraintsWithVisualFormat:@"H:|-[_subjectView]-|"
+//                               options:NSLayoutFormatAlignAllCenterY
+//                               metrics:nil
+//                               views:NSDictionaryOfVariableBindings(_subjectView)];
+     //   [self addConstraints:constraint];
+
         //[self.descriptionView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        NSLayoutConstraint *informationCenterConstraint = [NSLayoutConstraint constraintWithItem:self.subjectView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self attribute:NSLayoutAttributeCenterXWithinMargins multiplier:1.0 constant:0];
+        NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:self.subjectView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationLessThanOrEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0];
+        [self addConstraint:width];
+
+        NSLayoutConstraint *informationCenterConstraint = [NSLayoutConstraint constraintWithItem:self.subjectView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
         [self addConstraint:informationCenterConstraint];
 
         NSLayoutConstraint *bottomOfLabelToTopOfView = [NSLayoutConstraint constraintWithItem:self.descriptionView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.subjectView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-3];
