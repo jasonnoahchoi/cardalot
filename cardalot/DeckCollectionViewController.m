@@ -173,12 +173,13 @@ static NSString * const launchCountKey = @"launchCount";
 
                 Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
                 [[DeckController sharedInstance] addSessionToDeck:deck withMode:kStudyMode];
-            //    Session *session = [deck.sessions lastObject];
+                Session *session = [deck.sessions lastObject];
              //   session.mode = [NSNumber numberWithInt:kStudyMode];
 
                 StudyViewController *studyVC = [[StudyViewController alloc] init];
 
                 studyVC.deck = deck;
+                studyVC.session = session;
 
                 [self.navigationController pushViewController:studyVC animated:YES];
             } else if (quizMode) {

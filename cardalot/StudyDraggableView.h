@@ -10,6 +10,7 @@
 #import "StudySubjectView.h"
 #import "StudyDescriptionView.h"
 @class StudyOverlayView;
+@class Deck;
 
 @protocol StudyDraggableViewDelegate <NSObject>
 
@@ -27,5 +28,6 @@
 @property (nonatomic, strong) StudyOverlayView *overlayView;
 @property (nonatomic, strong) StudySubjectView *subjectView;
 @property (nonatomic, strong) StudyDescriptionView *descriptionView;
+@property (nonatomic, strong) Deck *deck;
 
 @end
