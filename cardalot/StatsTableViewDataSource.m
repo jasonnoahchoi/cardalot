@@ -9,6 +9,7 @@
 #import "StatsTableViewDataSource.h"
 #import "StatsTableViewCell.h"
 #import "DeckController.h"
+#import "Deck.h"
 
 static NSString * const cellIdentifier = @"cell";
 
@@ -31,6 +32,7 @@ static NSString * const cellIdentifier = @"cell";
     cell.deck = deck;
     
     [cell.lineChartView reloadData];
+    cell.chartTitle.text = cell.deck.nameTag;
     
     return cell;
 }

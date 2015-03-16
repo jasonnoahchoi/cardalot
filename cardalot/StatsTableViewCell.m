@@ -40,11 +40,10 @@
     
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     headerView.backgroundColor = [UIColor customYellowColor];
-    UILabel *chartTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.containerView.frame.size.width, 30)];
-    chartTitle.text = self.deck.nameTag;
-    chartTitle.textColor = [UIColor whiteColor];
-    chartTitle.textAlignment = NSTextAlignmentCenter;
-    [headerView addSubview:chartTitle];
+    self.chartTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.containerView.frame.size.width, 30)];
+    self.chartTitle.textColor = [UIColor whiteColor];
+    self.chartTitle.textAlignment = NSTextAlignmentCenter;
+    [headerView addSubview:self.chartTitle];
     self.lineChartView.headerView = headerView;
 }
 
