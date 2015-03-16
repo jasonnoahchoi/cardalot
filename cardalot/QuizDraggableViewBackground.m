@@ -96,13 +96,15 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     } else if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 568) {
         self.frame = CGRectMake((self.frame.size.width - 250)/2, (self.frame.size.height - CARD_HEIGHT)/2 + 30, 250, 350);
     } else if ([[UIScreen mainScreen] bounds].size.width == 375) {
-        self.frame = CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT);
+        self.frame = CGRectMake((self.bounds.size.width - CARD_WIDTH)/2, (self.bounds.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT);
     } else if ([[UIScreen mainScreen] bounds].size.width > 375) {
-        self.frame = CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - 460)/2, CARD_WIDTH, 460);
+        self.frame = CGRectMake((self.bounds.size.width - CARD_WIDTH)/2, (self.frame.size.height - 460)/2, CARD_WIDTH, 460);
     }
 }
 
-
+- (void)layoutSubviews {
+    [super layoutSubviews];
+}
 
 
 //%%% sets up the extra buttons on the screen
@@ -117,13 +119,13 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 
     // couldn't figure out autolayout so did it this way
     if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 480) {
-        self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - 250)/2, (self.frame.size.height - 280)/2, 250, 330)];
+        self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.bounds.size.width - 250)/2, (self.frame.size.height - 280)/2, 250, 330)];
     } else if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 568) {
-        self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - 250)/2, (self.frame.size.height - CARD_HEIGHT)/2 + 30, 250, 350)];
+        self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.bounds.size.width - 250)/2, (self.frame.size.height - CARD_HEIGHT)/2 + 30, 250, 350)];
     } else if ([[UIScreen mainScreen] bounds].size.width == 375) {
-        self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
+        self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.bounds.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
     } else if ([[UIScreen mainScreen] bounds].size.width > 375) {
-        self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - 460)/2, CARD_WIDTH , 460)];
+        self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.bounds.size.width - CARD_WIDTH)/2, (self.frame.size.height - 460)/2, CARD_WIDTH , 460)];
     }
 
 //    NSLayoutConstraint *bottomOfCardToBottomMarginConstraint = [NSLayoutConstraint constraintWithItem:draggableView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottomMargin multiplier:1.0 constant:5];
