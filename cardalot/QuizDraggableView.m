@@ -94,7 +94,7 @@ static CGFloat yFromCenter;
 
         [UIView transitionWithView:self.frontView
                           duration:1
-                           options:UIViewAnimationOptionOverrideInheritedCurve
+                           options:UIViewAnimationOptionTransitionFlipFromLeft
                         animations:^{
                             if (!self.flipped) {
                                 self.flipped = YES;

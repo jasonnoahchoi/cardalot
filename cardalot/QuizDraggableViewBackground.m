@@ -18,7 +18,6 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 
 @interface QuizDraggableViewBackground ()
 
-@property (nonatomic, strong) QuizDraggableView *draggableView;
 @property (nonatomic, strong) QuizViewController *quizVC;
 @property (nonatomic, assign) NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last
 @property (nonatomic, strong) NSMutableArray *loadedCards; //%%% the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
@@ -30,18 +29,81 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [super layoutSubviews];
+       [super layoutSubviews];
         [self setupView];
+        [self setFrameOfViewBackground];
+       // self.flipped = NO;
+        self.layer.borderColor = [UIColor whiteColor].CGColor;
+        self.layer.cornerRadius = 3;
+
         self.topCardInDeck = [self.deck.cards.set allObjects];
         self.loadedCards = [[NSMutableArray alloc] init];
         self.allCards = [[NSMutableArray alloc] init];
         self.cardsLoadedIndex = 0;
         self.quizVC = [[QuizViewController alloc] init];
-        //[self loadCards];
+                //[self loadCards];
+        //self.flipped = NO;
+
+//        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+//        tapGesture.numberOfTapsRequired = 2;
+//
+//        [self addGestureRecognizer:tapGesture];
     }
 
     return self;
 }
+
+//- (void)handleTap:(UITapGestureRecognizer *)sender {
+//    if (sender.state == UIGestureRecognizerStateEnded) {
+//        //  [UIView transitionFromView:self.draggableViewBackground.draggableView.frontView toView:self.draggableViewBackground.draggableView.backView duration:1 options:UIViewAnimationOptionTransitionFlipFromRight
+//        //       completion:nil];
+//        [UIView transitionWithView:self
+//                          duration:1
+//                           options:UIViewAnimationOptionTransitionFlipFromTop|UIViewAnimationCurveEaseIn
+//                        animations:^{
+//                            if (!self.flipped) {
+//                                [self.draggableView.frontView setHidden:NO];
+//                                //  [self.draggableViewBackground addSubview:self.draggableViewBackground.draggableView.frontView];
+//                              //  [self.draggableView.backView setHidden:NO];
+////                                [self addSubview:self.draggableView.backView];
+//                               //  [self.draggableView bringSubviewToFront:self.draggableView.backView];
+//                                //  [self.draggableViewBackground.draggableView.frontView removeFromSuperview];
+//                               // [self addSubview:self.draggableView.backView];
+//                              //  [self.draggableView.backView setAlpha:1];
+//                                //  [self.draggableViewBackground.draggableView.backView setHidden:NO];
+//                              //  NSLog(@"%d", self.draggableView.frontView.hidden);
+//                                self.flipped = YES;
+//                            } else {
+//                                //                                [self.draggableViewBackground.draggableView.backView setHidden:NO];
+//                             //   [self.draggableView.frontView setHidden:YES];
+//                              //  [self.draggableView.frontView removeFromSuperview];
+//
+//                               // [self.draggableViewBackground bringSubviewToFront:self.draggableViewBackground.draggableView.backView];
+//                                //[self.draggableView.frontView setAlpha:1];
+//                                [self.draggableView.frontView setHidden:YES];
+////                                [self.draggableView.backView removeFromSuperview];
+//                                self.flipped = NO;
+//                            }
+//                        }
+//                        completion:nil];
+//    }
+//}
+
+
+- (void)setFrameOfViewBackground {
+    if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 480) {
+        self.frame = CGRectMake((self.frame.size.width - 250)/2, (self.frame.size.height - 280)/2, 250, 330);
+    } else if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 568) {
+        self.frame = CGRectMake((self.frame.size.width - 250)/2, (self.frame.size.height - CARD_HEIGHT)/2 + 30, 250, 350);
+    } else if ([[UIScreen mainScreen] bounds].size.width == 375) {
+        self.frame = CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT);
+    } else if ([[UIScreen mainScreen] bounds].size.width > 375) {
+        self.frame = CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - 460)/2, CARD_WIDTH, 460);
+    }
+}
+
+
+
 
 //%%% sets up the extra buttons on the screen
 -(void)setupView {
@@ -108,14 +170,17 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 
         //%%% displays the small number of loaded cards dictated by MAX_BUFFER_SIZE so that not all the cards
         // are showing at once and clogging a ton of data
+
         for (int i = 0; i<[self.loadedCards count]; i++) {
-            if (i > 0) {
-                [self insertSubview:[self.loadedCards objectAtIndex:i] belowSubview:[self.loadedCards objectAtIndex:i - 1]];
-            } else {
-                [self addSubview:[self.loadedCards objectAtIndex:i]];
-            }
-            self.cardsLoadedIndex++; //%%% we loaded a card into loaded cards, so we have to increment
+                if (i > 0) {
+                    [self insertSubview:[self.loadedCards objectAtIndex:i] belowSubview:[self.loadedCards objectAtIndex:i - 1]];
+                } else {
+                    [self addSubview:[self.loadedCards objectAtIndex:i]];
+                }
+
         }
+            self.cardsLoadedIndex++; //%%% we loaded a card into loaded cards, so we have to increment
+
     }
 }
 
