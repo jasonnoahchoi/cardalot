@@ -10,8 +10,10 @@
 
 @class MMDrawerController;
 
-@interface AdvancedSettingsViewController : UIViewController
+@interface AdvancedSettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) MMDrawerController *drawerController;
+
+@property (nonatomic, strong) UITableViewCell *logoutCell;
 
 @end
