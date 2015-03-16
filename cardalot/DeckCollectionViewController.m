@@ -17,6 +17,7 @@
 #import "Deck.h"
 #import "StudyViewController.h"
 #import "StudyDraggableViewBackground.h"
+#import "QuizViewController.h"
 #import "UIColor+Colors.h"
 #import "Session.h"
 #import "RateAppViewController.h"
@@ -107,15 +108,15 @@ static NSString * const launchCountKey = @"launchCount";
 
 #pragma mark - Mode State Methods
 
-- (int)quizModeTrue {
-    quizMode = kQuizMode;
+- (int)quizModeFalse {
+    quizMode = !kQuizMode;
     [self.quizButton setTintColor:[UIColor customOrangeColor]];
     [self.studyButton setEnabled:NO];
     return quizMode;
 }
 
-- (int)quizModeFalse {
-    quizMode = !kQuizMode;
+- (int)quizModeTrue {
+    quizMode = kQuizMode;
     [self.quizButton setTintColor:[UIColor customGrayColor]];
     [self.studyButton setEnabled:YES];
     return quizMode;
@@ -147,9 +148,9 @@ static NSString * const launchCountKey = @"launchCount";
 - (IBAction)quizMode {
     count++;
     if (count % 2 != 0) {
-        [self quizModeTrue];
-    } else {
         [self quizModeFalse];
+    } else {
+        [self quizModeTrue];
     }
 }
 
@@ -180,6 +181,16 @@ static NSString * const launchCountKey = @"launchCount";
                 studyVC.deck = deck;
 
                 [self.navigationController pushViewController:studyVC animated:YES];
+            } else if (quizMode) {
+                NSLog(@"QuizMode");
+                Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+                [[DeckController sharedInstance] addSessionToDeck:deck withMode:kQuizMode];
+
+                QuizViewController *quizVC = [[QuizViewController alloc] init];
+
+                quizVC.deck = deck;
+                [self.navigationController pushViewController:quizVC animated:YES];
+
             } else if (!studyMode && !quizMode) {
                 CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
                 Deck *deck = [DeckController sharedInstance].decks[indexPath.item];

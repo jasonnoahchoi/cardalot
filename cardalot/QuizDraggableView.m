@@ -14,50 +14,132 @@
 #define ROTATION_ANGLE M_PI/8 //%%% Higher = stronger rotation angle
 
 
-#import "StudyDraggableView.h"
+#import "QuizDraggableView.h"
 #import "StudyOverlayView.h"
 #import "StudyDescriptionView.h"
+#import "UIColor+Colors.h"
+#import "QuizDraggableViewBackground.h"
 
 #import <QuartzCore/QuartzCore.h>
 
 static CGFloat xFromCenter;
 static CGFloat yFromCenter;
 
-@interface StudyDraggableView ()
+@interface QuizDraggableView ()
+
+@property (nonatomic, strong) QuizDraggableViewBackground *background;
 
 @end
 
-@implementation StudyDraggableView
+@implementation QuizDraggableView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self setupView];
 
-        self.subjectView = [[StudySubjectView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.frame.size.height)];
-        self.backgroundColor = [UIColor whiteColor];
+        self.flipped = NO;
 
-        self.descriptionView = [[StudyDescriptionView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-        [self addSubview:self.descriptionView];
+        self.frontView = [[QuizFrontView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.frame.size.height)];
+        //self.frontView.backgroundColor = [UIColor redColor];
+        //self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor customBlueColor];
+        self.layer.borderColor = [UIColor whiteColor].CGColor;
+        self.layer.borderWidth = 4.0f;
 
-        self.panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(beingDragged:)];
+        self.backView = [[QuizBackView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        //self.backView.hidden = NO;
+       // self.frontView.hidden = NO;
+        //self.backView.backgroundColor = [UIColor orangeColor];
+
+        self.panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(beingDragged:)];
 
         [self addGestureRecognizer:self.panGestureRecognizer];
-        [self addSubview:self.subjectView];
+        [self addSubview:self.backView];
+        [self addSubview:self.frontView];
+        //[self bringSubviewToFront:self.backView];
 
         self.overlayView = [[StudyOverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width / 2 - 50, 100, 100, 100)];
         self.overlayView.alpha = 0;
         [self addSubview:self.overlayView];
 
-        [self.subjectView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        //[self.descriptionView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        NSLayoutConstraint *informationCenterConstraint = [NSLayoutConstraint constraintWithItem:self.subjectView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self attribute:NSLayoutAttributeCenterXWithinMargins multiplier:1.0 constant:0];
-        [self addConstraint:informationCenterConstraint];
+      //  [self.frontView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        //[self.backView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        NSLayoutConstraint *CenterXFrontView = [NSLayoutConstraint constraintWithItem:self.frontView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
+        [self addConstraint:CenterXFrontView];
 
-        NSLayoutConstraint *bottomOfLabelToTopOfView = [NSLayoutConstraint constraintWithItem:self.descriptionView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.subjectView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-3];
-        [self addConstraint:bottomOfLabelToTopOfView];
+        NSLayoutConstraint *centerYFrontView = [NSLayoutConstraint constraintWithItem:self.frontView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
+        [self addConstraint:centerYFrontView];
+
+        NSLayoutConstraint *CenterXBackView = [NSLayoutConstraint constraintWithItem:self.backView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
+        [self addConstraint:CenterXBackView];
+
+        NSLayoutConstraint *centerYBackView = [NSLayoutConstraint constraintWithItem:self.backView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
+        [self addConstraint:centerYBackView];
+
+      //  self.flipped = NO;
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+        tapGesture.numberOfTapsRequired = 2;
+
+        [self addGestureRecognizer:tapGesture];
+        
+
+        
     }
     return self;
+}
+
+- (void)handleTap:(UITapGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateEnded) {
+
+        [UIView transitionWithView:self.frontView
+                          duration:1
+                           options:UIViewAnimationOptionTransitionFlipFromLeft
+                        animations:^{
+                            if (!self.flipped) {
+                                self.flipped = YES;
+                                 [self.frontView setHidden:NO];
+                                //[self.frontView setHidden:YES];
+                                //  [self.draggableViewBackground addSubview:self.draggableViewBackground.draggableView.frontView];
+                                //  [self.draggableView.backView setHidden:NO];
+                                //[self.frontView removeFromSuperview];
+
+                                [self addSubview:self.backView];
+                                [self bringSubviewToFront:self.backView];
+                                [self sendSubviewToBack:self.frontView];
+                                // [self.backView didMoveToSuperview];
+
+                                //  [self.backView setHidden:YES];
+                                //  [self.draggableView bringSubviewToFront:self.draggableView.backView];
+                                //  [self.draggableViewBackground.draggableView.frontView removeFromSuperview];
+                                // [self addSubview:self.draggableView.backView];
+                                //  [self.draggableView.backView setAlpha:1];
+                                //  [self.draggableViewBackground.draggableView.backView setHidden:NO];
+                                //  NSLog(@"%d", self.draggableView.frontView.hidden);
+
+                            } else {
+                                self.flipped = NO;
+                                //
+                                //[self.draggableViewBackground.draggableView.backView setHidden:NO];
+                                //   [self.draggableView.frontView setHidden:YES];
+                                //  [self.draggableView.frontView removeFromSuperview];
+
+                                // [self.draggableViewBackground bringSubviewToFront:self.draggableViewBackground.draggableView.backView];
+                                //[self.draggableView.frontView setAlpha:1];
+                                //[self.backView removeFromSuperview];
+                                [self addSubview:self.frontView];
+                                [self bringSubviewToFront:self.frontView];
+                                [self sendSubviewToBack:self.backView];
+
+                                // [self.frontView setHidden:YES];
+                                // [self.backView setHidden:NO];
+
+                            }
+                        }
+                        completion:^(BOOL finished) {
+
+                        }];
+    }
 }
 
 -(void)setupView {

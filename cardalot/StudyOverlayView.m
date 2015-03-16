@@ -13,7 +13,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
         self.imageView = [[UIImageView alloc] init];
         [self addSubview:self.imageView];
     }
@@ -27,7 +27,7 @@
 
     _mode = mode;
 
-    if(mode == GGOverlayViewModeLeft) {
+    if (mode == GGOverlayViewModeLeft) {
         self.imageView.image = [UIImage imageNamed:@"noButton"];
     } else {
         self.imageView.image = [UIImage imageNamed:@"yesButton"];

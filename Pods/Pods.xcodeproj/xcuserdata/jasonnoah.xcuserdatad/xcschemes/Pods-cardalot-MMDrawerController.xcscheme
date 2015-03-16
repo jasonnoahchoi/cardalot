@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0630"
+   LastUpgradeVersion = "0620"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2AA6F4BDA3CB59C18EDAD334"
+               BlueprintIdentifier = "7A203AC7536CC479DE30B367"
                BuildableName = "libPods-cardalot-MMDrawerController.a"
                BlueprintName = "Pods-cardalot-MMDrawerController"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2AA6F4BDA3CB59C18EDAD334"
+            BlueprintIdentifier = "7A203AC7536CC479DE30B367"
             BuildableName = "libPods-cardalot-MMDrawerController.a"
             BlueprintName = "Pods-cardalot-MMDrawerController"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,7 +60,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2AA6F4BDA3CB59C18EDAD334"
+            BlueprintIdentifier = "7A203AC7536CC479DE30B367"
             BuildableName = "libPods-cardalot-MMDrawerController.a"
             BlueprintName = "Pods-cardalot-MMDrawerController"
             ReferencedContainer = "container:Pods.xcodeproj">
