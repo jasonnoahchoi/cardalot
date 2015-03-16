@@ -32,20 +32,21 @@ BOOL viewIsVisible;
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView
 {
     if (viewIsVisible) {
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-//        DeckCollectionViewController *deckVC = [storyboard instantiateViewControllerWithIdentifier:@"deckVC"];
-        [self performSegueWithIdentifier:@"loginsegue" sender:loginView];
-//        MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
-//
-//       // UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckVC];
-//        MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:deckVC leftDrawerViewController:settingsVC];
-//        
-//        deckVC.drawerController = drawerController;
-//
-//        [self.navigationController pushViewController:drawerController animated:YES];
-//        // Disable/Enable Drawer Gestures
-//        drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
-//        drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        DeckCollectionViewController *deckVC = [storyboard instantiateViewControllerWithIdentifier:@"deckVC"];
+        //[self performSegueWithIdentifier:@"loginsegue" sender:loginView];
+        MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
+
+        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckVC];
+        MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
+        
+        deckVC.drawerController = drawerController;
+
+        [self presentViewController:drawerController animated:YES completion:nil];
+
+        // Disable/Enable Drawer Gestures
+        drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+        drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
 
     }
 }
@@ -80,7 +81,18 @@ BOOL viewIsVisible;
         [FBSession openActiveSessionWithAllowLoginUI:NO];
         FBSession *session = [FBSession activeSession];
         if (settings.shouldSkipLogin || session.isOpen) {
-            [self performSegueWithIdentifier:@"loginsegue" sender:self.loginView];
+           // [self performSegueWithIdentifier:@"loginsegue" sender:self.loginView];
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+            DeckCollectionViewController *deckVC = [storyboard instantiateViewControllerWithIdentifier:@"deckVC"];
+            //[self performSegueWithIdentifier:@"loginsegue" sender:loginView];
+            MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
+
+             UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckVC];
+            MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
+
+            deckVC.drawerController = drawerController;
+
+            [self presentViewController:drawerController animated:YES completion:nil];
         } else {
             viewIsVisible = YES;
         }
