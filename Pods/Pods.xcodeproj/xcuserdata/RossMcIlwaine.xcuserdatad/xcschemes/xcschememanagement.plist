@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-cardalot-IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-cardalot-JBChartView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-cardalot-MMDrawerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-cardalot-MTCardLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-cardalot.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>317AF8F25FF3CD98FAC6698B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7A203AC7536CC479DE30B367</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B11CC7AE8563785759AA351C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CBB9F474C6AB760A80C1CF67</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F68003B0DB7676A42EE8AD80</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
