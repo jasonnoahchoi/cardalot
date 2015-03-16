@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class Deck;
+@class Session;
 @class StudyDraggableViewBackground;
 
 @interface StudyViewController : UIViewController
@@ -15,6 +16,7 @@
 @property (nonatomic, strong) NSString *frontString;
 @property (nonatomic, strong) NSString *backString;
 @property (nonatomic, strong) Deck *deck;
+@property (nonatomic, strong) Session *session;
 @property (nonatomic, strong) StudyDraggableViewBackground *draggableViewBackground;
 
 @end
