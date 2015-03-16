@@ -58,7 +58,6 @@
 		FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3961AB230A80098EFA5 /* MenuDrawerViewController.m */; };
 		FF32B39F1AB230A80098EFA5 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3981AB230A80098EFA5 /* SearchCell.m */; };
 		FF32B3A01AB230A80098EFA5 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32B3991AB230A80098EFA5 /* SearchCell.xib */; };
-		FF32B3A11AB230A80098EFA5 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B39B1AB230A80098EFA5 /* UIColor+CustomColors.m */; };
 		FF32B3AA1AB231080098EFA5 /* PremiumUpgradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3A51AB231080098EFA5 /* PremiumUpgradeViewController.m */; };
 		FF32B3AB1AB231080098EFA5 /* RateAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3A71AB231080098EFA5 /* RateAppViewController.m */; };
 		FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3A91AB231080098EFA5 /* ReferralViewController.m */; };
@@ -179,8 +178,6 @@
 		FF32B3971AB230A80098EFA5 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
 		FF32B3981AB230A80098EFA5 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
 		FF32B3991AB230A80098EFA5 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
-		FF32B39A1AB230A80098EFA5 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
-		FF32B39B1AB230A80098EFA5 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		FF32B3A41AB231080098EFA5 /* PremiumUpgradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PremiumUpgradeViewController.h; sourceTree = "<group>"; };
 		FF32B3A51AB231080098EFA5 /* PremiumUpgradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PremiumUpgradeViewController.m; sourceTree = "<group>"; };
 		FF32B3A61AB231080098EFA5 /* RateAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateAppViewController.h; sourceTree = "<group>"; };
@@ -298,8 +295,6 @@
 				72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */,
 				72C1E1A61AB279E60041E2C8 /* StatsTableViewDataSource.h */,
 				72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */,
-				FF32B39A1AB230A80098EFA5 /* UIColor+CustomColors.h */,
-				FF32B39B1AB230A80098EFA5 /* UIColor+CustomColors.m */,
 				72C1E1F21AB5036E0041E2C8 /* CustomDatePickerView.h */,
 				72C1E1F31AB5036E0041E2C8 /* CustomDatePickerView.m */,
 				72C1E1F51AB505D30041E2C8 /* RemindersViewController.h */,
@@ -646,7 +641,6 @@
 				08FE1E791AAA5F570068F0C9 /* AppDelegate.m in Sources */,
 				72C1E1FA1AB506AB0041E2C8 /* RemindersTableViewDataSource.m in Sources */,
 				0832BEF61AB5195700213071 /* QuizDraggableViewBackground.m in Sources */,
-				FF32B3A11AB230A80098EFA5 /* UIColor+CustomColors.m in Sources */,
 				08662EDB1AAF9CDF00BE440E /* StudyDescriptionView.m in Sources */,
 				FF32B39F1AB230A80098EFA5 /* SearchCell.m in Sources */,
 				0832BEEB1AB5180500213071 /* QuizViewController.m in Sources */,
