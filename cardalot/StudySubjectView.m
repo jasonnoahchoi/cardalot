@@ -17,9 +17,12 @@
         self.backgroundColor = [UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0];
         [self.layer setCornerRadius:3];
         self.layer.rasterizationScale = [UIScreen mainScreen].scale;
+       // self.layer.borderColor = [UIColor whiteColor].CGColor;
+       // self.layer.borderWidth = 3.0f;
         self.layer.shouldRasterize = YES;
 
         self.titleLabel = [[UILabel alloc] init];
+        self.titleLabel.numberOfLines = 0;
         self.titleLabel.text = @"no info given";
         self.titleLabel.backgroundColor = [UIColor clearColor];
         [self.titleLabel setTextAlignment:NSTextAlignmentCenter];

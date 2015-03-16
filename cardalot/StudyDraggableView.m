@@ -34,7 +34,7 @@ static CGFloat yFromCenter;
     if (self) {
         [self setupView];
 
-        self.subjectView = [[StudySubjectView alloc] init];
+        self.subjectView = [[StudySubjectView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.frame.size.height)];
         self.backgroundColor = [UIColor whiteColor];
 
         self.descriptionView = [[StudyDescriptionView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
@@ -50,10 +50,11 @@ static CGFloat yFromCenter;
         [self addSubview:self.overlayView];
 
         [self.subjectView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        //[self.descriptionView setTranslatesAutoresizingMaskIntoConstraints:NO];
         NSLayoutConstraint *informationCenterConstraint = [NSLayoutConstraint constraintWithItem:self.subjectView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self attribute:NSLayoutAttributeCenterXWithinMargins multiplier:1.0 constant:0];
         [self addConstraint:informationCenterConstraint];
 
-        NSLayoutConstraint *bottomOfLabelToTopOfView = [NSLayoutConstraint constraintWithItem:self.subjectView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.descriptionView attribute:NSLayoutAttributeTop multiplier:1.0 constant:2];
+        NSLayoutConstraint *bottomOfLabelToTopOfView = [NSLayoutConstraint constraintWithItem:self.descriptionView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.subjectView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-3];
         [self addConstraint:bottomOfLabelToTopOfView];
     }
     return self;
