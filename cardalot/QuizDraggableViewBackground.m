@@ -242,4 +242,16 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 }
 */
 
+- (NSArray *)shuffleCards:(NSArray *)cards {
+    
+    NSMutableArray *mutableCards = [NSMutableArray arrayWithArray:cards];
+    NSUInteger count = [mutableCards count];
+    if (count > 1) {
+        for (NSUInteger i  = count - 1; i > 0; --i) {
+            [mutableCards exchangeObjectAtIndex:i withObjectAtIndex:arc4random_uniform((u_int32_t)(i + 1))];
+        }
+    }
+    return mutableCards;
+}
+
 @end
