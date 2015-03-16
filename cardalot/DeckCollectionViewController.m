@@ -28,7 +28,6 @@ static NSString * const cellIdentifier = @"cell";
 static int count = 0;
 static int quizMode;
 static int studyMode;
-static NSString * const launchCountKey = @"launchCount";
 
 @interface DeckCollectionViewController () <UICollectionViewDelegate, UIGestureRecognizerDelegate>
 
@@ -69,10 +68,6 @@ static NSString * const launchCountKey = @"launchCount";
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.collectionView reloadData];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [self trackLaunches];
 }
 
 #pragma mark - Navigation Items
@@ -231,36 +226,6 @@ static NSString * const launchCountKey = @"launchCount";
         NSLog(@"cancel");
     }]];
     [self presentViewController:alertController animated:YES completion:nil];
-}
-
-#pragma mark - Launch Tracker
-- (void)trackLaunches {
-    NSInteger launchCount = [[NSUserDefaults standardUserDefaults] integerForKey:launchCountKey];
-    
-    if (launchCount) {
-        launchCount++;
-    } else {
-        launchCount = 1;
-    }
-    
-    NSLog(@"%ld", (long) launchCount);
-    
-    [[NSUserDefaults standardUserDefaults] setInteger:launchCount forKey:launchCountKey];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    if (launchCount == 3) {
-        UIAlertController *rateAppAlertController = [UIAlertController alertControllerWithTitle:@"Rate the app" message:@"We hope you love the app as much as we do. Please consider rating the app on the App Store." preferredStyle:UIAlertControllerStyleAlert];
-        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            NSLog(@"Cancel");
-            RateAppViewController *rateAppVC = [[RateAppViewController alloc] init];
-            UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rateAppVC];
-            [self presentViewController:navController animated:YES completion:nil];
-        }]];
-        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Rate app" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            NSLog(@"rate app");
-        }]];
-        [self presentViewController:rateAppAlertController animated:YES completion:nil];
-    }
 }
 
 @end

@@ -1,8 +1,8 @@
 //
-//  RemindersViewController.h
+//  AdvancedSettingsViewController.h
 //  cardalot
 //
-//  Created by sombra on 2015-03-14.
+//  Created by Ross McIlwaine on 3/15/15.
 //  Copyright (c) 2015 Jason Choi. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @class MMDrawerController;
 
-@interface RemindersViewController : UIViewController
+@interface AdvancedSettingsViewController : UIViewController
 
 @property (nonatomic, strong) MMDrawerController *drawerController;
 
