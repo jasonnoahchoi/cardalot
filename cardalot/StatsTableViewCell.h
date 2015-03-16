@@ -13,7 +13,8 @@
 
 @interface StatsTableViewCell : UITableViewCell <JBLineChartViewDataSource, JBLineChartViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) Deck *deck;
+@property (strong, nonatomic) JBLineChartView *lineChartView;
+@property (strong, nonatomic) UILabel *chartTitle;
 
 @end

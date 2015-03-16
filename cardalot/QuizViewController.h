@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 @class QuizDraggableViewBackground;
 @class Deck;
+@class Session;
 
 @interface QuizViewController : UIViewController
 
 @property (nonatomic, strong) Deck *deck;
+@property (nonatomic, strong) Session *session;
 @property (nonatomic, strong) QuizDraggableViewBackground *draggableViewBackground;
 
 @end
