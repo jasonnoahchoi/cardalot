@@ -9,9 +9,10 @@
 #import "SupportViewController.h"
 #import <MMDrawerController.h>
 #import "UIColor+Colors.h"
+#import <MessageUI/MessageUI.h>
 @import MessageUI;
 
-@interface SupportViewController ()
+@interface SupportViewController () <MFMailComposeViewControllerDelegate>
 
 @end
 
@@ -20,39 +21,54 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-
-    
-    self.title = @"Supportatlot";
+    self.title = @"Supportalot";
     
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
     
-    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 80, 280, 50)];
+    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 300, 80)];
+    tempLabel.numberOfLines = 0;
     tempLabel.text = @"Please feel free to reachout to your cardalot team";
     
-    [self.view addSubview:tempLabel];
     
-    UIButton *composeEmailButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    // Sets email compose
+    UIButton *composeEmailButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 350, 180, 80)];
+    composeEmailButton.tintColor = [UIColor lightGrayColor];
+    composeEmailButton.layer.borderWidth = 1.0;
     [composeEmailButton setTitle:@"Send feedback" forState:UIControlStateNormal];
     [composeEmailButton setTitleColor:[UIColor customBlueColor] forState:UIControlStateNormal];
     [composeEmailButton addTarget:self action:@selector(sendFeedbackEmail:) forControlEvents:UIControlEventTouchUpInside];
     [composeEmailButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    
+    [self.view addSubview:tempLabel];
     [self.view addSubview:composeEmailButton];
+    
 }
 
-- (IBAction)sendFeedbackEmail:(id)sender {
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+
+}
+
+- (void)sendFeedbackEmail:(id)sender {
+    
     MFMailComposeViewController *mailComposeViewController = [[MFMailComposeViewController alloc] init];
+    mailComposeViewController.mailComposeDelegate = self;
     
     [mailComposeViewController setToRecipients:@[@"weekendconcept@gmail.com"]];
+    [mailComposeViewController setSubject:@""];
     
     if ([MFMailComposeViewController canSendMail]) {
         [self presentViewController:mailComposeViewController animated:YES completion:nil];
     }
+}
+
+// allows user to hit 'cancel' and exit
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)open {
