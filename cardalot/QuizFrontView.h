@@ -12,7 +12,6 @@
 @interface QuizFrontView : UIView
 
 @property (nonatomic, strong) UILabel *frontLabel;
-@property (nonatomic, assign) BOOL flipped;
 @property (nonatomic, strong) QuizBackView *backView;
 
 

@@ -21,11 +21,11 @@
 @interface QuizDraggableView : UIView
 
 @property (weak) id <QuizDraggableViewDelegate> delegate;
-
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic) CGPoint originalPoint;
 @property (nonatomic, strong) StudyOverlayView *overlayView;
 @property (nonatomic, strong) QuizFrontView *frontView;
 @property (nonatomic, strong) QuizBackView *backView;
+@property (nonatomic, assign) BOOL flipped;
 
 @end

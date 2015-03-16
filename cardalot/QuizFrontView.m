@@ -14,7 +14,6 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.flipped = NO;
         self.backgroundColor = [UIColor customBlueColor];
         self.frontLabel.backgroundColor = [UIColor customBlueColor];
         self.frontLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
