@@ -78,6 +78,10 @@ static NSString * const launchCountKey = @"launchCount";
     [self.window makeKeyAndVisible];
     
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+
+    [self trackLaunches];
+
+    NSLog(@"%@", [UIApplication sharedApplication].scheduledLocalNotifications);
   //   Whenever a person opens the app, check for a cached session
     if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
         NSLog(@"Found a cached session");
