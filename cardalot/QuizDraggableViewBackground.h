@@ -7,20 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "StudyDraggableView.h"
+#import "QuizDraggableView.h"
 @class Deck;
 
-@interface StudyDraggableViewBackground : UIView <StudyDraggableViewDelegate>
+@interface QuizDraggableViewBackground : UIView <QuizDraggableViewDelegate>
 
 @property (strong, nonatomic) NSArray *topCardInDeck; //%%% the labels the cards
 @property (retain, nonatomic) NSMutableArray *allCards; //%%% the labels the cards
 @property (strong, nonatomic) Deck *deck;
-@property (nonatomic, strong) NSArray *cards;
+@property (nonatomic, strong) QuizDraggableView *draggableView;
 
 //methods called in DraggableView
 - (void)cardSwipedLeft:(UIView *)card;
 - (void)cardSwipedRight:(UIView *)card;
 - (void)loadCards;
-- (NSArray *)shuffleCards:(NSArray *)cards;
 
 @end

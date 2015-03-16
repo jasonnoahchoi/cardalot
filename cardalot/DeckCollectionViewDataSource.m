@@ -44,6 +44,8 @@ static NSString * const cellIdentifier = @"cell";
     } else {
         Deck *deck = [[DeckController sharedInstance].decks objectAtIndex:indexPath.item];
         cell.subjectLabel.text = deck.nameTag;
+        cell.subjectLabel.numberOfLines = 0;
+        cell.subjectLabel.lineBreakMode = NSLineBreakByWordWrapping;
         NSLog(@"%@", deck.nameTag);
         cell.subjectLabel.textAlignment = NSTextAlignmentCenter;
         

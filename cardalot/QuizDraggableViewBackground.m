@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Jason Choi. All rights reserved.
 //
 
-#import "StudyDraggableViewBackground.h"
-#import "StudyViewController.h"
+#import "QuizDraggableViewBackground.h"
+#import "QuizViewController.h"
 #import "Card.h"
 #import "Deck.h"
 #import "UIColor+Colors.h"
@@ -16,31 +16,94 @@ static const int MAX_BUFFER_SIZE = 2; //%%% max number of cards loaded at any gi
 static const float CARD_HEIGHT = 386; //%%% height of the draggable card
 static const float CARD_WIDTH = 290; //%%% width of the draggable card
 
-@interface StudyDraggableViewBackground ()
+@interface QuizDraggableViewBackground ()
 
-@property (nonatomic, strong) StudyDraggableView *draggableView;
-@property (nonatomic, strong) StudyViewController *studyVC;
+@property (nonatomic, strong) QuizViewController *quizVC;
 @property (nonatomic, assign) NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last
 @property (nonatomic, strong) NSMutableArray *loadedCards; //%%% the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
 
 @end
 
-@implementation StudyDraggableViewBackground
+@implementation QuizDraggableViewBackground
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [super layoutSubviews];
+       [super layoutSubviews];
         [self setupView];
+        [self setFrameOfViewBackground];
+       // self.flipped = NO;
+        self.layer.borderColor = [UIColor whiteColor].CGColor;
+        self.layer.cornerRadius = 3;
+
+        self.topCardInDeck = [self.deck.cards.set allObjects];
         self.loadedCards = [[NSMutableArray alloc] init];
         self.allCards = [[NSMutableArray alloc] init];
         self.cardsLoadedIndex = 0;
-        self.studyVC = [[StudyViewController alloc] init];
-        //[self loadCards];
+        self.quizVC = [[QuizViewController alloc] init];
+                //[self loadCards];
+        //self.flipped = NO;
+
+//        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+//        tapGesture.numberOfTapsRequired = 2;
+//
+//        [self addGestureRecognizer:tapGesture];
     }
 
     return self;
 }
+
+//- (void)handleTap:(UITapGestureRecognizer *)sender {
+//    if (sender.state == UIGestureRecognizerStateEnded) {
+//        //  [UIView transitionFromView:self.draggableViewBackground.draggableView.frontView toView:self.draggableViewBackground.draggableView.backView duration:1 options:UIViewAnimationOptionTransitionFlipFromRight
+//        //       completion:nil];
+//        [UIView transitionWithView:self
+//                          duration:1
+//                           options:UIViewAnimationOptionTransitionFlipFromTop|UIViewAnimationCurveEaseIn
+//                        animations:^{
+//                            if (!self.flipped) {
+//                                [self.draggableView.frontView setHidden:NO];
+//                                //  [self.draggableViewBackground addSubview:self.draggableViewBackground.draggableView.frontView];
+//                              //  [self.draggableView.backView setHidden:NO];
+////                                [self addSubview:self.draggableView.backView];
+//                               //  [self.draggableView bringSubviewToFront:self.draggableView.backView];
+//                                //  [self.draggableViewBackground.draggableView.frontView removeFromSuperview];
+//                               // [self addSubview:self.draggableView.backView];
+//                              //  [self.draggableView.backView setAlpha:1];
+//                                //  [self.draggableViewBackground.draggableView.backView setHidden:NO];
+//                              //  NSLog(@"%d", self.draggableView.frontView.hidden);
+//                                self.flipped = YES;
+//                            } else {
+//                                //                                [self.draggableViewBackground.draggableView.backView setHidden:NO];
+//                             //   [self.draggableView.frontView setHidden:YES];
+//                              //  [self.draggableView.frontView removeFromSuperview];
+//
+//                               // [self.draggableViewBackground bringSubviewToFront:self.draggableViewBackground.draggableView.backView];
+//                                //[self.draggableView.frontView setAlpha:1];
+//                                [self.draggableView.frontView setHidden:YES];
+////                                [self.draggableView.backView removeFromSuperview];
+//                                self.flipped = NO;
+//                            }
+//                        }
+//                        completion:nil];
+//    }
+//}
+
+
+- (void)setFrameOfViewBackground {
+    if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 480) {
+        self.frame = CGRectMake((self.frame.size.width - 250)/2, (self.frame.size.height - 280)/2, 250, 330);
+    } else if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 568) {
+        self.frame = CGRectMake((self.frame.size.width - 250)/2, (self.frame.size.height - CARD_HEIGHT)/2 + 30, 250, 350);
+    } else if ([[UIScreen mainScreen] bounds].size.width == 375) {
+        self.frame = CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT);
+    } else if ([[UIScreen mainScreen] bounds].size.width > 375) {
+        self.frame = CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - 460)/2, CARD_WIDTH, 460);
+    }
+}
+
+
+
 
 //%%% sets up the extra buttons on the screen
 -(void)setupView {
@@ -50,17 +113,17 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 //%%% creates a card and returns it.  This should be customized to fit your needs.
 // use "index" to indicate where the information should be pulled.  If this doesn't apply to you, feel free
 // to get rid of it (eg: if you are building cards from data from the internet)
-- (StudyDraggableView *)createDraggableViewWithDataAtIndex:(NSInteger)index {
+- (QuizDraggableView *)createDraggableViewWithDataAtIndex:(NSInteger)index {
 
     // couldn't figure out autolayout so did it this way
     if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 480) {
-        self.draggableView = [[StudyDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - 250)/2, (self.frame.size.height - 280)/2, 250, 330)];
+        self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - 250)/2, (self.frame.size.height - 280)/2, 250, 330)];
     } else if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 568) {
-        self.draggableView = [[StudyDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - 250)/2, (self.frame.size.height - CARD_HEIGHT)/2 + 30, 250, 350)];
+        self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - 250)/2, (self.frame.size.height - CARD_HEIGHT)/2 + 30, 250, 350)];
     } else if ([[UIScreen mainScreen] bounds].size.width == 375) {
-        self.draggableView = [[StudyDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
+        self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
     } else if ([[UIScreen mainScreen] bounds].size.width > 375) {
-        self.draggableView = [[StudyDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - 460)/2, CARD_WIDTH , 460)];
+        self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - 460)/2, CARD_WIDTH , 460)];
     }
 
 //    NSLayoutConstraint *bottomOfCardToBottomMarginConstraint = [NSLayoutConstraint constraintWithItem:draggableView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottomMargin multiplier:1.0 constant:5];
@@ -81,8 +144,8 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     //StudyDraggableView *draggableView = [[StudyDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
 //    draggableView.subjectView.titleLabel.text = [self.exampleCardLabels objectAtIndex:index]; //%%% placeholder for card-specific information
     Card *card = [self.topCardInDeck objectAtIndex:index];
-    self.draggableView.subjectView.titleLabel.text = card.title;
-    self.draggableView.descriptionView.descriptionTextView.text = card.answer;
+    self.draggableView.frontView.frontLabel.text = card.title;
+    self.draggableView.backView.backTextView.text = card.answer;
     self.draggableView.delegate = self;
 
     return self.draggableView;
@@ -96,26 +159,28 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 
         //%%% loops through the exampleCardsLabels array to create a card for each label.  This should be customized by removing "exampleCardLabels" with your own array of data
         for (int i = 0; i < [self.topCardInDeck count]; i++) {
-            StudyDraggableView *newCard = [self createDraggableViewWithDataAtIndex:i];
+            QuizDraggableView *newCard = [self createDraggableViewWithDataAtIndex:i];
             [self.allCards addObject:newCard];
 
             if (i<numLoadedCardsCap) {
                 //%%% adds a small number of cards to be loaded
                 [self.loadedCards addObject:newCard];
-                
             }
         }
 
         //%%% displays the small number of loaded cards dictated by MAX_BUFFER_SIZE so that not all the cards
         // are showing at once and clogging a ton of data
+
         for (int i = 0; i<[self.loadedCards count]; i++) {
-            if (i > 0) {
-                [self insertSubview:[self.loadedCards objectAtIndex:i] belowSubview:[self.loadedCards objectAtIndex:i - 1]];
-            } else {
-                [self addSubview:[self.loadedCards objectAtIndex:i]];
-            }
-            self.cardsLoadedIndex++; //%%% we loaded a card into loaded cards, so we have to increment
+                if (i > 0) {
+                    [self insertSubview:[self.loadedCards objectAtIndex:i] belowSubview:[self.loadedCards objectAtIndex:i - 1]];
+                } else {
+                    [self addSubview:[self.loadedCards objectAtIndex:i]];
+                }
+
         }
+            self.cardsLoadedIndex++; //%%% we loaded a card into loaded cards, so we have to increment
+
     }
 }
 
@@ -156,17 +221,5 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     // Drawing code
 }
 */
-
-- (NSArray *)shuffleCards:(NSArray *)cards {
-    
-    NSMutableArray *mutableCards = [NSMutableArray arrayWithArray:cards];
-    NSUInteger count = [mutableCards count];
-    if (count > 1) {
-        for (NSUInteger i = count - 1; i > 0; --i) {
-            [mutableCards exchangeObjectAtIndex:i withObjectAtIndex:arc4random_uniform((u_int32_t)(i + 1))];
-        }
-    }
-    return mutableCards;
-}
 
 @end
