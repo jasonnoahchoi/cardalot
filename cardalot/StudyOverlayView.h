@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM (NSUInteger, GGOverlayViewMode) {
+typedef enum {
     GGOverlayViewModeLeft,
     GGOverlayViewModeRight
-};
+} GGOverlayViewMode;
 
 @interface StudyOverlayView : UIView
 
