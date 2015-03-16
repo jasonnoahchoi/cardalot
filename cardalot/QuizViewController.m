@@ -80,6 +80,7 @@
     self.view.backgroundColor = [UIColor backgroundGrayColor];
     self.draggableViewBackground = [[QuizDraggableViewBackground alloc] initWithFrame:self.view.frame];
     self.draggableViewBackground.deck = self.deck;
+    self.draggableViewBackground.session = self.session;
     [self.draggableViewBackground setTopCardInDeck:[self.deck.cards.set allObjects]];
     [self.draggableViewBackground loadCards];
     [self.view addSubview:self.draggableViewBackground];

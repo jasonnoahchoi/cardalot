@@ -8,8 +8,10 @@
 
 #import "QuizDraggableViewBackground.h"
 #import "QuizViewController.h"
+#import "DeckController.h"
 #import "Card.h"
 #import "Deck.h"
+#import "Session.h"
 #import "UIColor+Colors.h"
 
 static const int MAX_BUFFER_SIZE = 2; //%%% max number of cards loaded at any given time, must be greater than 1
@@ -21,6 +23,7 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 @property (nonatomic, strong) QuizViewController *quizVC;
 @property (nonatomic, assign) NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last
 @property (nonatomic, strong) NSMutableArray *loadedCards; //%%% the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
+@property (nonatomic, assign) NSInteger markedCorrect;
 
 @end
 
@@ -213,6 +216,10 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         [self insertSubview:[self.loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)]
                belowSubview:[self.loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
+    self.markedCorrect++;
+    self.session.markedCorrect = [NSNumber numberWithInteger:self.markedCorrect];
+    [[DeckController sharedInstance] save];
+    NSLog(@"%@", self.session.markedCorrect);
 }
 /*
 // Only override drawRect: if you perform custom drawing.
