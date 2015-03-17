@@ -136,9 +136,10 @@
             AdvancedSettingsViewController *advancedSettingVC = [AdvancedSettingsViewController new];
             advancedSettingVC.drawerController = self.mm_drawerController;
             UINavigationController *advancedSettingNavController = [[UINavigationController alloc] initWithRootViewController:advancedSettingVC];
-            [self.mm_drawerController setCenterViewController:advancedSettingNavController];
-            [navigationController popToRootViewControllerAnimated:YES];
-            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+//            [self.mm_drawerController setCenterViewController:advancedSettingNavController];
+//            [navigationController popToRootViewControllerAnimated:YES];
+//            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+            [self presentViewController:advancedSettingNavController animated:YES completion:nil];
         }
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
