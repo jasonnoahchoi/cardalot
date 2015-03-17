@@ -38,13 +38,13 @@
     [barChartView setMinimumValue:0];
     
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 30)];
-    UILabel *leftLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
+    UILabel *leftLabel = [[UILabel alloc] init];
+    [leftLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     leftLabel.text = @"Left";
-    leftLabel.textAlignment = NSTextAlignmentCenter;
     [footerView addSubview:leftLabel];
-    UILabel *rightLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 80, 30)];
+    UILabel *rightLabel = [[UILabel alloc] init];
+    [rightLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     rightLabel.text = @"Right";
-    rightLabel.textAlignment = NSTextAlignmentCenter;
     [footerView addSubview:rightLabel];
     
     barChartView.footerView = footerView;
@@ -55,6 +55,21 @@
     NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(containerView);
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[containerView]|" options:NSLayoutFormatAlignAllCenterY metrics:0 views:viewDictionary]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[containerView]|" options:NSLayoutFormatAlignAllCenterX metrics:0 views:viewDictionary]];
+    
+    NSLayoutConstraint *leadingConstraint = [NSLayoutConstraint constraintWithItem:leftLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:footerView attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:0];
+    [footerView addConstraint:leadingConstraint];
+    
+    NSLayoutConstraint *leftLabelCenterConstraint = [NSLayoutConstraint constraintWithItem:leftLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:footerView attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
+    [footerView addConstraint:leftLabelCenterConstraint];
+    
+    NSLayoutConstraint *trailingToRightLabelConstraint = [NSLayoutConstraint constraintWithItem:leftLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:rightLabel attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0];
+    [footerView addConstraint:trailingToRightLabelConstraint];
+    
+    NSLayoutConstraint *rightLabelCenterConstraint = [NSLayoutConstraint constraintWithItem:rightLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:footerView attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
+    [footerView addConstraint:rightLabelCenterConstraint];
+    
+    NSLayoutConstraint *trailingConstraint = [NSLayoutConstraint constraintWithItem:rightLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:footerView attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:0];
+    [footerView addConstraint:trailingConstraint];
 }
 
 #pragma mark JBBarChartViewDataSource
