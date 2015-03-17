@@ -152,6 +152,10 @@ static NSString * const launchCountKey = @"launchCount";
     [[NSUserDefaults standardUserDefaults] setInteger:launchCount forKey:launchCountKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+    if (launchCount == 0) {
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    }
+    
     if (launchCount == 3) {
         UIAlertController *rateAppAlertController = [UIAlertController alertControllerWithTitle:@"Rate the app" message:@"We hope you love the app as much as we do. Please consider rating the app on the App Store." preferredStyle:UIAlertControllerStyleAlert];
         [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
