@@ -12,7 +12,6 @@
 #import <MMDrawerController.h>
 #import "AppearanceController.h"
 #import "MenuDrawerViewController.h"
-#import "RemindersViewController.h"
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
 #import <Facebook-iOS-SDK/FacebookSDK/FacebookSDK.h>
@@ -158,14 +157,17 @@ static NSString * const launchCountKey = @"launchCount";
     
     if (launchCount == 3) {
         UIAlertController *rateAppAlertController = [UIAlertController alertControllerWithTitle:@"Rate the app" message:@"We hope you love the app as much as we do. Please consider rating the app on the App Store." preferredStyle:UIAlertControllerStyleAlert];
-        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Rate app" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+            NSLog(@"rate app");
+        }]];
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"NO I am not a fan of this app." style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"Cancel");
             RateAppViewController *rateAppVC = [[RateAppViewController alloc] init];
             UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rateAppVC];
             [self.window.rootViewController presentViewController:navController animated:YES completion:nil];
         }]];
-        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Rate app" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            NSLog(@"rate app");
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            
         }]];
         [self.window.rootViewController presentViewController:rateAppAlertController animated:YES completion:nil];
     }
