@@ -85,7 +85,7 @@
         NSArray *menuListArray = @[[NSString stringWithFormat:@"Account Type: FREE"], @"History/Stats", @"Rate App", @"Go Premium", @"Refer Friends", @"Settings"];
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
         cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
-        NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 1] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"Marion-Bold" size:16]}];
+        NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 1] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:16.0]}];
         cell.textLabel.attributedText = attText;
         // removes highlighting of cells when selecting
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -151,7 +151,7 @@
 //        return 64;
 //    }
     if (indexPath.row == 0) {
-        return 100;
+        return 125;
     } else {
         return 38;
     }

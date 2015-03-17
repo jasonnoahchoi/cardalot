@@ -11,5 +11,6 @@
 @interface LogoMenuCell : UITableViewCell <UITableViewDelegate>
 
 @property (nonatomic, strong) UIImageView *logoImage;
+@property (nonatomic, strong) UILabel *decktagLabel;
 
 @end
