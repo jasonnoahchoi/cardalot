@@ -23,7 +23,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
     
     
     UIView *containerView = [[UIView alloc] init];
@@ -70,6 +70,10 @@
     
     NSLayoutConstraint *trailingConstraint = [NSLayoutConstraint constraintWithItem:rightLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:footerView attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:0];
     [footerView addConstraint:trailingConstraint];
+}
+
+- (void)done {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark JBBarChartViewDataSource
