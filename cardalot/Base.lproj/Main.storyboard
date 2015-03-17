@@ -1,13 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8lc-zb-IGy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
+        <scene sceneID="uQe-vK-VXo">
+            <objects>
+                <viewController id="8lc-zb-IGy" customClass="FBLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ujb-YL-hcL"/>
+                        <viewControllerLayoutGuide type="bottom" id="dUM-tz-U77"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IJ4-Gf-Zyk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="han-QW-HAS">
+                                <rect key="frame" x="222" y="101" width="157" height="149"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37T-5I-wK9" customClass="FBLoginView">
+                                <rect key="frame" x="200" y="421" width="200" height="77"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="han-QW-HAS" secondAttribute="centerX" constant="-0.5" id="8b3-Pz-POS"/>
+                            <constraint firstItem="dUM-tz-U77" firstAttribute="top" secondItem="37T-5I-wK9" secondAttribute="bottom" constant="102" id="DNu-ZQ-1EK"/>
+                            <constraint firstItem="han-QW-HAS" firstAttribute="top" secondItem="Ujb-YL-hcL" secondAttribute="bottom" constant="81" id="feM-bD-59M"/>
+                            <constraint firstAttribute="centerX" secondItem="37T-5I-wK9" secondAttribute="centerX" id="uVE-0q-iey"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="han-QW-HAS" id="nBR-HP-a0w"/>
+                        <outlet property="loginView" destination="37T-5I-wK9" id="B6d-1B-Lso"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="loginsegue" id="sXv-rW-sTq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUr-HT-I0X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-429" y="228"/>
+        </scene>
+        <!--Deck Collection View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="deckVC" id="vXZ-lx-hvc" customClass="DeckCollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -22,4 +60,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="LogoBlue" width="316" height="299"/>
+    </resources>
 </document>
