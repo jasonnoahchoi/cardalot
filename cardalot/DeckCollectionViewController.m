@@ -28,7 +28,6 @@ static NSString * const cellIdentifier = @"cell";
 static int count = 0;
 static int quizMode;
 static int studyMode;
-static NSString * const launchCountKey = @"launchCount";
 
 @interface DeckCollectionViewController () <UICollectionViewDelegate, UIGestureRecognizerDelegate>
 
