@@ -40,7 +40,11 @@
 }
 
 - (void)open {
-    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+    if (self.drawerController.openSide) {
+        [self.drawerController closeDrawerAnimated:YES completion:nil];
+    } else {
+        [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+    }
 }
 
 @end

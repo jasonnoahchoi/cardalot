@@ -123,19 +123,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UINavigationController *navigationController = (UINavigationController *)self.mm_drawerController.centerViewController;
+//    UINavigationController *navigationController = (UINavigationController *)self.mm_drawerController.centerViewController;
     
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             RemindersViewController *reminderVC = [RemindersViewController new];
-            reminderVC.drawerController = self.mm_drawerController;
+//            reminderVC.drawerController = self.mm_drawerController;
             UINavigationController *reminderNavController = [[UINavigationController alloc] initWithRootViewController:reminderVC];
-            [self.mm_drawerController setCenterViewController:reminderNavController];
-            [navigationController popToRootViewControllerAnimated:YES];
-            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+//            [self.mm_drawerController setCenterViewController:reminderNavController];
+//            [navigationController popToRootViewControllerAnimated:YES];
+//            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+            [self presentViewController:reminderNavController animated:YES completion:nil];
         } else if (indexPath.row == 1) {
             AdvancedSettingsViewController *advancedSettingVC = [AdvancedSettingsViewController new];
-            advancedSettingVC.drawerController = self.mm_drawerController;
+//            advancedSettingVC.drawerController = self.mm_drawerController;
             UINavigationController *advancedSettingNavController = [[UINavigationController alloc] initWithRootViewController:advancedSettingVC];
 //            [self.mm_drawerController setCenterViewController:advancedSettingNavController];
 //            [navigationController popToRootViewControllerAnimated:YES];
@@ -145,27 +146,30 @@
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
             FAQViewController *faqVC = [FAQViewController new];
-            faqVC.drawerController = self.mm_drawerController;
+//            faqVC.drawerController = self.mm_drawerController;
             UINavigationController *faqNavController = [[UINavigationController alloc] initWithRootViewController:faqVC];
-            [self.mm_drawerController setCenterViewController:faqNavController];
-            [navigationController popToRootViewControllerAnimated:YES];
-            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+//            [self.mm_drawerController setCenterViewController:faqNavController];
+//            [navigationController popToRootViewControllerAnimated:YES];
+//            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+            [self presentViewController:faqNavController animated:YES completion:nil];
         } else if (indexPath.row == 1) {
             SupportViewController *supportVC = [SupportViewController new];
-            supportVC.drawerController = self.mm_drawerController;
+//            supportVC.drawerController = self.mm_drawerController;
             UINavigationController *supportNavController = [[UINavigationController alloc] initWithRootViewController:supportVC];
-            [self.mm_drawerController setCenterViewController:supportNavController];
-            [navigationController popToRootViewControllerAnimated:YES];
-            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+//            [self.mm_drawerController setCenterViewController:supportNavController];
+//            [navigationController popToRootViewControllerAnimated:YES];
+//            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+            [self presentViewController:supportNavController animated:YES completion:nil];
         }
     } else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
             LegalInformationViewController *legalVC = [LegalInformationViewController new];
-            legalVC.drawerController = self.mm_drawerController;
+//            legalVC.drawerController = self.mm_drawerController;
             UINavigationController *legalNavController = [[UINavigationController alloc] initWithRootViewController:legalVC];
-            [self.mm_drawerController setCenterViewController:legalNavController];
-            [navigationController popToRootViewControllerAnimated:YES];
-            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+//            [self.mm_drawerController setCenterViewController:legalNavController];
+//            [navigationController popToRootViewControllerAnimated:YES];
+//            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+            [self presentViewController:legalNavController animated:YES completion:nil];
         }
     }
 }

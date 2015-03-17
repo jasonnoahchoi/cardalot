@@ -27,7 +27,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
     
     UILabel *rateAppMessageLabel = [[UILabel alloc] init];
     rateAppMessageLabel.text = @"We are sorry that you decide not to rate our app. We are constantly looking for ways to improve in order to provide you with the best experience possible. Please consider sending us a support email to let us know where and how we can improve.";
@@ -63,8 +63,9 @@
 }
 
 #pragma mark - Actions
-- (void)open {
-    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+- (void)done {
+//    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)sendFeedbackEmail:(id)sender {
