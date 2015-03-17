@@ -56,7 +56,7 @@ typedef enum : NSInteger {
         self.layer.borderWidth = 1.0;
         
         self.reminderLabel = [[UILabel alloc] initWithFrame:CGRectMake(46, 9, 188, 21)];
-        self.reminderLabel.text =[NSString stringWithFormat:@"%@ at 12:00 AM", self.frequency];
+        self.reminderLabel.text =[NSString stringWithFormat:@"%@ at 1:00 AM", self.frequency];
         self.reminderLabel.textAlignment = NSTextAlignmentCenter;
         self.reminderLabel.textColor = [UIColor whiteColor];
         [self addSubview:self.reminderLabel];
@@ -196,7 +196,7 @@ typedef enum : NSInteger {
             [paragraphStyle setAlignment:NSTextAlignmentCenter];
             break;
         case HourPicker:
-            title = [NSString stringWithFormat:@"%02ld", row % [self actualNumberOfRowsInComponent:component]];
+            title = [NSString stringWithFormat:@"%02ld", row % [self actualNumberOfRowsInComponent:component] + 1];
             [paragraphStyle setAlignment:NSTextAlignmentRight];
             break;
         case MinutePicker:
@@ -220,8 +220,14 @@ typedef enum : NSInteger {
     NSInteger hour;
     if ([self.meridiem isEqualToString:@"AM"]) {
         hour = [[self pickerView:self.pickerView attributedTitleForRow:[self.pickerView selectedRowInComponent:HourPicker] forComponent:HourPicker].string integerValue];
+        if (hour == 12) {
+            hour = 0;
+        }
     } else {
         hour = [[self pickerView:self.pickerView attributedTitleForRow:[self.pickerView selectedRowInComponent:HourPicker] forComponent:HourPicker].string integerValue] + 12;
+        if (hour == 24) {
+            hour = 12;
+        }
     }
     NSInteger minute = [[self pickerView:self.pickerView attributedTitleForRow:[self.pickerView selectedRowInComponent:MinutePicker] forComponent:MinutePicker].string integerValue];
     

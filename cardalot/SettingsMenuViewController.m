@@ -14,6 +14,7 @@
 #import "SupportViewController.h"
 #import "AdvancedSettingsViewController.h"
 #import "FAQViewController.h"
+#import "DeckCollectionViewController.h"
 
 @interface SettingsMenuViewController () <UITableViewDelegate>
 
@@ -30,7 +31,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(goBack)];
     
     // using icon8 image:  <a href="http://icons8.com/web-app/5771/Appointment-Reminders">Free icons by Icons8</a>
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reminder"] style:UIBarButtonItemStylePlain target:self action:nil]; ////// set action to dropdown alerts from reminders
@@ -136,9 +137,10 @@
             AdvancedSettingsViewController *advancedSettingVC = [AdvancedSettingsViewController new];
             advancedSettingVC.drawerController = self.mm_drawerController;
             UINavigationController *advancedSettingNavController = [[UINavigationController alloc] initWithRootViewController:advancedSettingVC];
-            [self.mm_drawerController setCenterViewController:advancedSettingNavController];
-            [navigationController popToRootViewControllerAnimated:YES];
-            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+//            [self.mm_drawerController setCenterViewController:advancedSettingNavController];
+//            [navigationController popToRootViewControllerAnimated:YES];
+//            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+            [self presentViewController:advancedSettingNavController animated:YES completion:nil];
         }
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
@@ -179,8 +181,11 @@
     return nil;
 }
 
-- (void)open {
-    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+- (void)goBack {
+//    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+    DeckCollectionViewController *deckCollectionVC = [[DeckCollectionViewController alloc] init];
+    deckCollectionVC.drawerController = self.drawerController;
+    [self.navigationController pushViewController:deckCollectionVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
