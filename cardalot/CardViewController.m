@@ -42,7 +42,7 @@
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
 
     // Disable selection of cells highlighting
-    self.tableView.allowsSelection = NO;
+    self.tableView.allowsSelection = YES;
     
     // DataSource
     self.tableView.dataSource = self;
@@ -103,13 +103,6 @@
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor customBlueColor]];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.cells.count;
-}
 
 #pragma mark - Helper Method
 // check if empty
@@ -133,8 +126,21 @@
     [self checkTextFields];
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return self.cells[indexPath.row];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.cells.count;
 }
 
 #pragma mark - Delegate Method
@@ -155,8 +161,24 @@
     }
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self.view endEditing:YES];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+
+    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+//    float verticalContentOffset  = tableView.contentOffset.y;
+//
+//    [tableView setContentOffset:CGPointMake(0, verticalContentOffset + 300)];
+    
+//        CGPoint tableViewCenter = [tableView contentOffset];
+//        tableViewCenter.y += tableView.frame.size.height/2;
+
+//        [tableView setContentOffset:CGPointMake(0, cell.center.y + 300) animated:YES];
+//        [tableView reloadData];
+}
+
+
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
 }
 
 #pragma mark - Navigation Methods
