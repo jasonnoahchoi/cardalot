@@ -49,7 +49,7 @@
     self.tableView.delegate = self;
 
     // sets background color
-    self.tableView.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
+    self.tableView.backgroundColor = [UIColor customBlueColor];
 
     [self checkTextFields];
 
@@ -61,7 +61,7 @@
     self.cells = [[NSMutableArray alloc] init];
     
     UITableViewCell *cellOne = [[UITableViewCell alloc] init];
-    cellOne.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
+    cellOne.backgroundColor = [UIColor customBlueColor];
     [self.cells addObject:cellOne];
     
     self.deckTagCell = [[DeckTagCell alloc] init];
@@ -72,7 +72,7 @@
     [self.cells addObject:self.deckTagCell];
     
     UITableViewCell *cellTwo = [[UITableViewCell alloc] init];
-    cellTwo.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
+    cellTwo.backgroundColor = [UIColor customBlueColor];
     [self.cells addObject:cellTwo];
     
     self.frontTextCell = [[FrontTextCell alloc] init];
@@ -80,7 +80,7 @@
     [self.cells addObject:self.frontTextCell];
     
     UITableViewCell *cellThree = [[UITableViewCell alloc] init];
-    cellThree.backgroundColor = [UIColor colorWithRed:0.79 green:0.88 blue:0.91 alpha:1];
+    cellThree.backgroundColor = [UIColor customBlueColor];
     [self.cells addObject:cellThree];
     
     self.backTextCell = [[BackTextCell alloc] init];
@@ -93,7 +93,7 @@
 
 - (void)layoutNavBarItems {
     // Set Title of card
-    self.title = @"Study Card";
+    self.title = @"Add a New Card";
 
     UIImage *image = [UIImage imageNamed:@"backbutton"];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:image target:self action:@selector(backButtonAction)];
@@ -101,19 +101,18 @@
     // adds right bar button item
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];     // will want to dismiss to detail card collection view
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor customBlueColor]];
-
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return self.cells.count;
 }
 
+#pragma mark - Helper Method
+// check if empty
 - (void)checkTextFields {
     if ([self.backTextCell.backTextView.text isEqualToString:@""] || self.backTextCell.backTextView.text == nil || [self.deckTagCell.deckTagField.text isEqualToString:@""] || self.deckTagCell.deckTagField.text == nil || [self.frontTextCell.frontTextField.text isEqualToString:@""] || self.frontTextCell.frontTextField.text == nil) {
         [self.navigationItem.rightBarButtonItem setEnabled:NO];
@@ -138,7 +137,7 @@
     return self.cells[indexPath.row];
 }
 
-#pragma mark - custom cell heights
+#pragma mark - Delegate Method
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
@@ -171,5 +170,6 @@
 - (void)backButtonAction {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 
 @end
