@@ -75,6 +75,12 @@
     [copyButton setTitle:@"📝" forState:UIControlStateNormal];
     [copyButton addTarget:self action:@selector(copy:) forControlEvents:UIControlEventTouchUpInside];
     //    [self addSubview:copyButton];
+    
+    UIButton *clearButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [clearButton setTitle:@"X" forState:UIControlStateNormal];
+    [clearButton addTarget:self action:@selector(clear) forControlEvents:UIControlEventTouchUpInside];
+    [clearButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self addSubview:clearButton];
 
     UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [doneButton setTitle:@"⌨" forState:UIControlStateNormal];
@@ -83,9 +89,9 @@
     [self addSubview:doneButton];
 
     // AUTOLAYOUT
-    NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(indentButton, insertBulletButton, insertNumberButton, leftArrowButton, rightArrowButton, doneButton);
+    NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(indentButton, insertBulletButton, insertNumberButton, leftArrowButton, rightArrowButton, clearButton, doneButton);
 
-    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(==20)-[indentButton]-(==50)-[insertBulletButton]-[insertNumberButton]-(==40)-[leftArrowButton][rightArrowButton]-[doneButton]-(==20)-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
+    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(==20)-[indentButton]-(==50)-[insertBulletButton]-[insertNumberButton]-(==40)-[leftArrowButton][rightArrowButton]-[clearButton]-[doneButton]-(==20)-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
     [self addConstraints:constraints];
 
     constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[indentButton]-|" options:0 metrics:nil views:viewsDictionary];
@@ -151,6 +157,10 @@
     UITextRange *selectedTextRange = [self.delegate selectedTextRange];
     NSString *selectedText = [self.delegate textInRange:selectedTextRange];
     [[UIPasteboard generalPasteboard] setString:selectedText];
+}
+
+- (void)clear {
+    [(UITextView *)self.delegate setText:@""];
 }
 
 - (IBAction)done:(id)sender {
