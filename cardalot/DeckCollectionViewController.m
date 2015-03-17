@@ -154,7 +154,12 @@ static NSString * const launchCountKey = @"launchCount";
 #pragma mark - Drawer Method
 
 - (void)open {
-    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+    if (self.drawerController.openSide) {
+        NSLog(@"pressed");
+        [self.drawerController closeDrawerAnimated:YES completion:nil];
+    } else {
+        [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+    }
 }
 
 #pragma mark - Collection View Delegate Methods
