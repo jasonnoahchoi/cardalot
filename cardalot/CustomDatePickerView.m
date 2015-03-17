@@ -56,7 +56,7 @@ typedef enum : NSInteger {
         self.layer.borderWidth = 1.0;
         
         self.reminderLabel = [[UILabel alloc] initWithFrame:CGRectMake(46, 9, 188, 21)];
-        self.reminderLabel.text =[NSString stringWithFormat:@"%@ at 1:00 AM", self.frequency];
+        self.reminderLabel.text =[NSString stringWithFormat:@"%@ at %@", self.frequency, [NSDateFormatter localizedStringFromDate:[self selectedTime] dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle]];
         self.reminderLabel.textAlignment = NSTextAlignmentCenter;
         self.reminderLabel.textColor = [UIColor whiteColor];
         [self addSubview:self.reminderLabel];
