@@ -25,7 +25,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
     
     UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 300, 80)];
     tempLabel.numberOfLines = 0;
@@ -71,8 +71,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)open {
-    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+- (void)done {
+//    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
