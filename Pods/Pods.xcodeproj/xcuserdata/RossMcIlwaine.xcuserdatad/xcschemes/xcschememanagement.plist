@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-cardalot-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-cardalot-Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-cardalot-IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-cardalot-Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-cardalot.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>317AF8F25FF3CD98FAC6698B</key>
+		<key>0118FAC9FA21289D42571BC4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A203AC7536CC479DE30B367</key>
+		<key>47B6A0052729267FE75FBB29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B11CC7AE8563785759AA351C</key>
+		<key>7B5473FFE5442551C568F875</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBB9F474C6AB760A80C1CF67</key>
+		<key>9BEEC2B3167D0CCAD756FEE8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F68003B0DB7676A42EE8AD80</key>
+		<key>A8590E200AD232B324763AE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3777255DE5D39BFF124B4C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3EC7D876629F125604B19A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D508D5D1AF25D237E04112D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
