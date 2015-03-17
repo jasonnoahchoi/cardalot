@@ -91,7 +91,7 @@
     // AUTOLAYOUT
     NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(indentButton, insertBulletButton, insertNumberButton, leftArrowButton, rightArrowButton, clearButton, doneButton);
 
-    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(==20)-[indentButton]-(==50)-[insertBulletButton]-[insertNumberButton]-(==40)-[leftArrowButton][rightArrowButton]-[clearButton]-[doneButton]-(==20)-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
+    NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(==20)-[indentButton]-[insertBulletButton]-[insertNumberButton]-[leftArrowButton][rightArrowButton]-[clearButton]-[doneButton]-(==20)-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
     [self addConstraints:constraints];
 
     constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[indentButton]-|" options:0 metrics:nil views:viewsDictionary];
