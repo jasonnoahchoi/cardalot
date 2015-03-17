@@ -26,6 +26,8 @@
 @property (nonatomic, strong) UINavigationController *navVC;
 @end
 
+static NSString * const launchCountKey = @"launchCount";
+
 @implementation AppDelegate
 
 + (void)initialize
@@ -37,6 +39,11 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self trackLaunches];
+    
+    NSInteger launchCount = [[NSUserDefaults standardUserDefaults] integerForKey:launchCountKey];
+    
     // [Optional] Power your app with Local Datastore. For more info, go to
     // https://parse.com/docs/ios_guide#localdatastore/iOS
     [Parse enableLocalDatastore];
@@ -55,7 +62,8 @@
     // Override point for customization after application launch.
     [AppearanceController setupDefaultAppearance];
 
-    //DeckCollectionViewController *deckCollectionVC = [[DeckCollectionViewController alloc] init];
+    DeckCollectionViewController *deckCollectionVC = [[DeckCollectionViewController alloc] init];
+    UINavigationController *deckNavController = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
 
     MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
@@ -66,10 +74,14 @@
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:fbLoginVC];
 
     //self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
-
-    MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
-    fbLoginVC.drawerController = drawerController;
-
+    MMDrawerController *drawerController = [[MMDrawerController alloc] init];
+    [drawerController setLeftDrawerViewController:settingsVC];
+    if (launchCount == 1) {
+        [drawerController setCenterViewController:navVC];
+        fbLoginVC.drawerController = drawerController;
+    } else {
+        [drawerController setCenterViewController:deckNavController];
+    }
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -103,6 +115,23 @@
         //[loginView setTitle:@"Log in with Facebook" forState:UIControlStateNormal];
     }
     self.window.rootViewController = drawerController;
+    
+    if (launchCount == 3) {
+        UIAlertController *rateAppAlertController = [UIAlertController alertControllerWithTitle:@"Rate the app" message:@"We hope you love the app as much as we do. Please consider rating the app on the App Store." preferredStyle:UIAlertControllerStyleAlert];
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Rate app" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+            NSLog(@"rate app");
+        }]];
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"No, I am not a fan of this app." style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            NSLog(@"Cancel");
+            RateAppViewController *rateAppVC = [[RateAppViewController alloc] init];
+            UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rateAppVC];
+            [self.window.rootViewController presentViewController:navController animated:YES completion:nil];
+        }]];
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            
+        }]];
+        [self.window.rootViewController presentViewController:rateAppAlertController animated:YES completion:nil];
+    }
 
     return YES;
 }
@@ -250,6 +279,28 @@
             }
         }
     }];
+}
+
+#pragma mark - Launch Tracker
+- (void)trackLaunches {
+    NSInteger launchCount = [[NSUserDefaults standardUserDefaults] integerForKey:launchCountKey];
+    
+    if (launchCount) {
+        launchCount++;
+    } else {
+        launchCount = 1;
+    }
+    
+    NSLog(@"%ld", (long) launchCount);
+    
+    [[NSUserDefaults standardUserDefaults] setInteger:launchCount forKey:launchCountKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    if (launchCount == 0) {
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    }
+    
+    
 }
 
 @end
