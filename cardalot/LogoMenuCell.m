@@ -32,7 +32,6 @@
         self.decktagLabel.textColor = [UIColor whiteColor];
         self.decktagLabel.font = [UIFont systemFontOfSize:16.0];
 
-        
         // sets cell background
         self.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
         
