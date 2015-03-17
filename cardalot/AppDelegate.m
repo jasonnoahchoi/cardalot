@@ -79,8 +79,10 @@ static NSString * const launchCountKey = @"launchCount";
     if (launchCount == 1) {
         [drawerController setCenterViewController:navVC];
         fbLoginVC.drawerController = drawerController;
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
     } else {
         [drawerController setCenterViewController:deckNavController];
+        deckCollectionVC.drawerController = drawerController;
     }
 
     self.window.backgroundColor = [UIColor whiteColor];
@@ -295,12 +297,6 @@ static NSString * const launchCountKey = @"launchCount";
     
     [[NSUserDefaults standardUserDefaults] setInteger:launchCount forKey:launchCountKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    if (launchCount == 0) {
-        [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    }
-    
-    
 }
 
 @end
