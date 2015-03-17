@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logoblue" translatesAutoresizingMaskIntoConstraints="NO" id="han-QW-HAS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="han-QW-HAS">
                                 <rect key="frame" x="222" y="101" width="157" height="149"/>
                             </imageView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37T-5I-wK9" customClass="FBLoginView">
@@ -61,6 +61,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logoblue" width="316" height="299"/>
+        <image name="LogoBlue" width="316" height="299"/>
     </resources>
 </document>
