@@ -72,20 +72,25 @@ static NSString * const cellIdentifier = @"cell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     if (indexPath.row == [RemindersController sharedInstance].reminders.count) {
-        CustomDatePickerView *datePickerView = [[CustomDatePickerView alloc] initWithFrame:CGRectMake(45, -280, 280, 250)]; // 6
-        //    CustomDatePickerView *datePickerView = [[CustomDatePickerView alloc] initWithFrame:CGRectMake(20, -280, 280, 250)]; // 5/5s/4s
-        //    CustomDatePickerView *datePickerView = [[CustomDatePickerView alloc] initWithFrame:CGRectMake(65, -280, 280, 250)]; // 6+
-        [self.tableView addSubview:datePickerView];
+        CustomDatePickerView *datePickerView = [[CustomDatePickerView alloc] init];
         datePickerView.tableView = self.tableView;
-        [UIView animateWithDuration:1.0 animations:^{
-            datePickerView.center = CGPointMake(datePickerView.center.x, datePickerView.center.y + 433);
-        }]; // 6
-        //    [UIView animateWithDuration:1.0 animations:^{
-        //        datePickerView.center = CGPointMake(datePickerView.center.x, datePickerView.center.y + 380);
-        //    }]; // 4s/5/5s
-        //    [UIView animateWithDuration:1.0 animations:^{
-        //        datePickerView.center = CGPointMake(datePickerView.center.x, datePickerView.center.y + 500);
-        //    }]; // 6+
+        [self.tableView addSubview:datePickerView];
+        if ([[UIScreen mainScreen] bounds].size.width == 375) {
+            datePickerView.frame = CGRectMake(45, -280, 280, 250); // 6
+            [UIView animateWithDuration:1.0 animations:^{
+                datePickerView.center = CGPointMake(datePickerView.center.x, datePickerView.center.y + 433);
+            }]; // 6
+        } else if ([[UIScreen mainScreen] bounds].size.width > 375) {
+            datePickerView.frame = CGRectMake(65, -280, 280, 250); // 6+
+            [UIView animateWithDuration:1.0 animations:^{
+                datePickerView.center = CGPointMake(datePickerView.center.x, datePickerView.center.y + 500);
+            }]; // 6+
+        } else {
+            datePickerView.frame = CGRectMake(20, -280, 280, 250); // 5/5s/4s
+            [UIView animateWithDuration:1.0 animations:^{
+                datePickerView.center = CGPointMake(datePickerView.center.x, datePickerView.center.y + 380);
+            }]; // 4s/5/5s
+        }
     }
 }
 
