@@ -8,7 +8,7 @@
 
 #import "BackTextCell.h"
 
-@implementation BackTextCell
+@implementation BackTextCell 
 
 - (void)awakeFromNib {
     // Initialization code
@@ -24,7 +24,8 @@
         
         // modification
         self.backTextView.font = [UIFont boldSystemFontOfSize:16.0];
-        self.backTextView.textColor = [UIColor blackColor];
+        self.backTextView.textColor = [UIColor lightGrayColor];
+        //self.backTextView.text = @"Enter details for back of card";
         self.backTextView.layer.borderWidth = 1.0f;
         self.backTextView.layer.cornerRadius = 8.0;
         self.backTextView.layer.borderColor = [[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1] CGColor];
@@ -66,17 +67,44 @@
 }
 
 #pragma mark - textView placeholder text
-//-(void)textViewDidBeginEditing:(UITextView *)textView {
-//    if ([textView.text isEqualToString:@”TextView Placeholder Text”]) {
-//        textView.text = @”“;
+//
+//- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+//   // textView = self.backTextView;
+//    //textView.textColor = [UIColor lightGrayColor];
+//    if (textView.tag == 1) {
+//        self.backTextView = textView;
+//        textView.text = @"";
+//        [textView setTextColor:[UIColor blackColor]];
+//        textView.tag = 2;
+//    }
+//    //[textView becomeFirstResponder];
+//    return YES;
+//}
+//
+//- (void)textViewDidChange:(UITextView *)textView
+//{
+//    if([textView.text length] == 0)
+//    {
+//        textView.text = @"Foobar placeholder";
 //        textView.textColor = [UIColor lightGrayColor];
+//        textView.tag = 1;
+//    }
+//}
+
+
+//-(void)textViewDidBeginEditing:(UITextView *)textView {
+//    self.backTextView = textView;
+//    textView.textColor = [UIColor lightGrayColor];
+//    if ([textView.text isEqualToString:@"Enter details for back of card"]) {
+//        textView.text = @"";
+//        [textView setTextColor:[UIColor blackColor]];
 //    }
 //    [textView becomeFirstResponder];
 //}
 //
 //-(void)textViewDidEndEditing:(UITextView *)textView {
-//    if ([textView.text isEqualToString:@”“]) {
-//        textView.text = @”TextView Placeholder Text”;
+//    if ([textView.text isEqualToString:@""]) {
+//        textView.text = @"Enter details for back of card";
 //        textView.textColor = [UIColor lightGrayColor];
 //    }
 //    [textView resignFirstResponder];

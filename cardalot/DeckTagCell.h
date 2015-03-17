@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) UILabel *hashTagLabel;
 @property (nonatomic, strong) UITextField *deckTagField;
+@property (nonatomic, strong) UIImageView *imageView;
 
 @end
