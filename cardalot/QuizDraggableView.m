@@ -98,52 +98,20 @@ static CGFloat yFromCenter;
 - (void)handleTap:(UITapGestureRecognizer *)sender {
     if (sender.state == UIGestureRecognizerStateEnded) {
 
-        [UIView transitionWithView:self.frontView
-                          duration:1
+//        [self flipView];
+        [UIView transitionWithView:self
+                          duration:0.5
                            options:UIViewAnimationOptionTransitionFlipFromLeft
                         animations:^{
-                            if (!self.flipped) {
-                                self.flipped = YES;
-                                 [self.frontView setHidden:NO];
-                                //[self.frontView setHidden:YES];
-                                //  [self.draggableViewBackground addSubview:self.draggableViewBackground.draggableView.frontView];
-                                //  [self.draggableView.backView setHidden:NO];
-                                //[self.frontView removeFromSuperview];
-
-                                [self addSubview:self.backView];
-                                [self bringSubviewToFront:self.backView];
-                                [self sendSubviewToBack:self.frontView];
-                                // [self.backView didMoveToSuperview];
-
-                                //  [self.backView setHidden:YES];
-                                //  [self.draggableView bringSubviewToFront:self.draggableView.backView];
-                                //  [self.draggableViewBackground.draggableView.frontView removeFromSuperview];
-                                // [self addSubview:self.draggableView.backView];
-                                //  [self.draggableView.backView setAlpha:1];
-                                //  [self.draggableViewBackground.draggableView.backView setHidden:NO];
-                                //  NSLog(@"%d", self.draggableView.frontView.hidden);
-
-                            } else {
-                                self.flipped = NO;
-                                //
-                                //[self.draggableViewBackground.draggableView.backView setHidden:NO];
-                                //   [self.draggableView.frontView setHidden:YES];
-                                //  [self.draggableView.frontView removeFromSuperview];
-
-                                // [self.draggableViewBackground bringSubviewToFront:self.draggableViewBackground.draggableView.backView];
-                                //[self.draggableView.frontView setAlpha:1];
-                                //[self.backView removeFromSuperview];
-                                [self addSubview:self.frontView];
-                                [self bringSubviewToFront:self.frontView];
-                                [self sendSubviewToBack:self.backView];
-
-                                // [self.frontView setHidden:YES];
-                                // [self.backView setHidden:NO];
-
-                            }
                         }
                         completion:^(BOOL finished) {
-
+                            if (!self.flipped) {
+                                self.flipped = YES;
+                                [self bringSubviewToFront:self.backView];
+                            } else {
+                                self.flipped = NO;
+                                [self bringSubviewToFront:self.frontView];
+                            }
                         }];
     }
 }
@@ -273,5 +241,28 @@ static CGFloat yFromCenter;
     // Drawing code
 }
 */
+
+- (void)flipView {
+    [self performSelector:@selector(performFlip) withObject:nil afterDelay:0.1];
+
+}
+
+- (void)performFlip {
+    [UIView transitionWithView:self
+                      duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                    animations:^{
+                    }
+                    completion:^(BOOL finished) {
+                        if (!self.flipped) {
+                            self.flipped = YES;
+                            [self bringSubviewToFront:self.backView];
+                        } else {
+                            self.flipped = NO;
+                            [self bringSubviewToFront:self.frontView];
+                        }
+                    }];
+    
+}
 
 @end
