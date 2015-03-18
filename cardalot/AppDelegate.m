@@ -23,7 +23,7 @@
 @interface AppDelegate ()
 
 @property (nonatomic, strong) LoginViewController *loginVC;
-@property (nonatomic, strong) UINavigationController *navVC;
+@property (nonatomic, strong) IBOutlet UINavigationController *navVC;
 @end
 
 static NSString * const launchCountKey = @"launchCount";
@@ -56,8 +56,6 @@ static NSString * const remindLaterKey = @"remind";
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
-   // [FBLoginView class];
-
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     // Override point for customization after application launch.
@@ -68,9 +66,9 @@ static NSString * const remindLaterKey = @"remind";
 
     MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    FBLoginViewController *fbLoginVC = [storyboard instantiateInitialViewController];
-    self.loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController"
-                                                           bundle:nil];
+    FBLoginViewController *fbLoginVC = [storyboard instantiateViewControllerWithIdentifier:@"fbloginvc"];
+    //self.loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController"
+      //                                                     bundle:nil]
    // LoginViewController *loginVC = [[LoginViewController alloc] init];
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:fbLoginVC];
 
@@ -79,6 +77,7 @@ static NSString * const remindLaterKey = @"remind";
     [drawerController setLeftDrawerViewController:settingsVC];
     if (launchCount == 1) {
         [drawerController setCenterViewController:navVC];
+      //  deckCollectionVC.drawerController = drawerController;
         fbLoginVC.drawerController = drawerController;
         [[UIApplication sharedApplication] cancelAllLocalNotifications];
     } else {
@@ -88,6 +87,7 @@ static NSString * const remindLaterKey = @"remind";
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    self.window.rootViewController = drawerController;
     
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 
@@ -115,22 +115,23 @@ static NSString * const remindLaterKey = @"remind";
         // If there's no cached session, we will show a login button
     } else {
         [self.loginVC loginView];
-        //[loginView setTitle:@"Log in with Facebook" forState:UIControlStateNormal];
+        NSLog(@"Not logged in");
+        //[FBLoginView setTitle:@"Log in with Facebook" forState:UIControlStateNormal];
     }
-    self.window.rootViewController = drawerController;
+
     
     if (launchCount == 3) {
-        UIAlertController *rateAppAlertController = [UIAlertController alertControllerWithTitle:@"Rate the app" message:@"We hope you love the app as much as we do. Please consider rating the app on the App Store." preferredStyle:UIAlertControllerStyleAlert];
-        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Rate app" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        UIAlertController *rateAppAlertController = [UIAlertController alertControllerWithTitle:@"Rate Cardalot" message:@"If you enjoy using Cardalot, would you mind taking a moment to rate it? It won't take more than a minute. Thanks for your support!" preferredStyle:UIAlertControllerStyleAlert];
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Rate It Now" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"rate app");
         }]];
-        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"No, I am not a fan of this app." style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Not a Fan" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"Cancel");
             RateAppViewController *rateAppVC = [[RateAppViewController alloc] init];
             UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rateAppVC];
             [self.window.rootViewController presentViewController:navController animated:YES completion:nil];
         }]];
-        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Remind me later." style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Remind Me Later" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:remindLaterKey];
         }]];
         [self.window.rootViewController presentViewController:rateAppAlertController animated:YES completion:nil];
@@ -138,17 +139,17 @@ static NSString * const remindLaterKey = @"remind";
     
     BOOL remind = [[NSUserDefaults standardUserDefaults] boolForKey:remindLaterKey];
     if (launchCount == 8 && remind) {
-        UIAlertController *rateAppAlertController = [UIAlertController alertControllerWithTitle:@"Rate the app" message:@"You have been using this app for some time and we hope you enjpy using it. Please consider rating the app on the App Store." preferredStyle:UIAlertControllerStyleAlert];
-        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Rate app" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        UIAlertController *rateAppAlertController = [UIAlertController alertControllerWithTitle:@"Rate Cardalot" message:@"If you enjoy using Cardalot, would you mind taking a moment to rate it? It won't take more than a minute. Thanks for your support!" preferredStyle:UIAlertControllerStyleAlert];
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Rate It Now" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"rate app");
         }]];
-        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"No, I am not a fan of this app." style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Not a Fan" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"Cancel");
             RateAppViewController *rateAppVC = [[RateAppViewController alloc] init];
             UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rateAppVC];
             [self.window.rootViewController presentViewController:navController animated:YES completion:nil];
         }]];
-        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
         }]];
         [self.window.rootViewController presentViewController:rateAppAlertController animated:YES completion:nil];
     }
@@ -256,7 +257,7 @@ static NSString * const remindLaterKey = @"remind";
     }
 }
 
-// Show the user the logged-out UI
+ //Show the user the logged-out UI
 - (void)userLoggedOut
 {
     // Set the button title as "Log in with Facebook"

@@ -215,7 +215,7 @@ static int studyMode;
 
 - (void)createNewDeckAlertController {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"New Deck"
-                                                                             message:@"Enter tag of new deck"
+                                                                             message:@"Choose a name for your new deck"
                                                                       preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:nil];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Save"
