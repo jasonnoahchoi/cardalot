@@ -100,7 +100,7 @@
 
     // adds right bar button item
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];     // will want to dismiss to detail card collection view
-    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor customBlueColor]];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
 }
 
 

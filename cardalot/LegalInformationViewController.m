@@ -26,6 +26,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
     
     // Create tableView

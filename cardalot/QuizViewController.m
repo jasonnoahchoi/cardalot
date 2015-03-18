@@ -94,7 +94,7 @@
 
     UIImage *backIcon = [UIImage imageNamed:@"backbutton"];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:backIcon target:self action:@selector(backButtonAction)];
-    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor customBlueColor]];
+   // [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
 
     UIImage *quizIconOrange = [UIImage imageNamed:@"Qorangeicon"];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem quizButtonWithImage:quizIconOrange target:nil action:nil];
