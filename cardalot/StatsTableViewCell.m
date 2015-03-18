@@ -28,7 +28,7 @@
     self.lineChartView.delegate = self;
     [self.lineChartView setMaximumValue:1];
     [self.lineChartView setMinimumValue:0];
-    self.lineChartView.backgroundColor = [UIColor customGrayColor];
+    self.lineChartView.backgroundColor = [[UIColor customGrayColor] colorWithAlphaComponent:0.9];
     
     self.lineChartView.layer.borderWidth = 3.0;
     self.lineChartView.layer.cornerRadius = 5;
