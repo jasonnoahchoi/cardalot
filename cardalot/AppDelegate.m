@@ -27,6 +27,7 @@
 @end
 
 static NSString * const launchCountKey = @"launchCount";
+static NSString * const remindLaterKey = @"remind";
 
 @implementation AppDelegate
 
@@ -129,8 +130,25 @@ static NSString * const launchCountKey = @"launchCount";
             UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rateAppVC];
             [self.window.rootViewController presentViewController:navController animated:YES completion:nil];
         }]];
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Remind me later." style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:remindLaterKey];
+        }]];
+        [self.window.rootViewController presentViewController:rateAppAlertController animated:YES completion:nil];
+    }
+    
+    BOOL remind = [[NSUserDefaults standardUserDefaults] boolForKey:remindLaterKey];
+    if (launchCount == 8 && remind) {
+        UIAlertController *rateAppAlertController = [UIAlertController alertControllerWithTitle:@"Rate the app" message:@"You have been using this app for some time and we hope you enjpy using it. Please consider rating the app on the App Store." preferredStyle:UIAlertControllerStyleAlert];
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Rate app" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+            NSLog(@"rate app");
+        }]];
+        [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"No, I am not a fan of this app." style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            NSLog(@"Cancel");
+            RateAppViewController *rateAppVC = [[RateAppViewController alloc] init];
+            UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rateAppVC];
+            [self.window.rootViewController presentViewController:navController animated:YES completion:nil];
+        }]];
         [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"No thanks." style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-            
         }]];
         [self.window.rootViewController presentViewController:rateAppAlertController animated:YES completion:nil];
     }
