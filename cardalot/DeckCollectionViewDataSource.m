@@ -35,7 +35,9 @@ static NSString * const cellIdentifier = @"cell";
         NSInteger index = [DeckController sharedInstance].decks.count;
     
     if (indexPath.item == index) {
-        cell.subjectLabel.text = @"Insert Deck Name";
+        cell.subjectLabel.text = @"Enter a New Deck";
+        cell.subjectLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        cell.subjectLabel.numberOfLines = 0;
         cell.subjectLabel.textColor = [UIColor whiteColor];
         cell.subjectLabel.textAlignment = NSTextAlignmentCenter;
         [cell.contentView addSubview:cell.subjectLabel];
