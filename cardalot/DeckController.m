@@ -34,6 +34,8 @@ static NSString * const sessionEntity = @"Session";
 
 - (NSArray *)decks {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:deckEntity];
+    // set a limit to 5 decks for FREE version
+    [fetchRequest setFetchLimit:5];
     return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:NULL];
 }
 

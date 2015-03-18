@@ -28,10 +28,10 @@
     self.lineChartView.delegate = self;
     [self.lineChartView setMaximumValue:1];
     [self.lineChartView setMinimumValue:0];
-    self.lineChartView.backgroundColor = [UIColor customGrayColor];
+    self.lineChartView.backgroundColor = [UIColor whiteColor];
     
     self.lineChartView.layer.borderWidth = 3.0;
-    self.lineChartView.layer.cornerRadius = 5;
+    self.lineChartView.layer.cornerRadius = 3;
     self.lineChartView.layer.borderColor = [[UIColor customBlueColor] CGColor];
     
     [self.containerView addSubview:self.lineChartView];
