@@ -29,26 +29,27 @@ BOOL viewIsVisible;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView
-{
-    if (viewIsVisible) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        DeckCollectionViewController *deckVC = [storyboard instantiateViewControllerWithIdentifier:@"deckVC"];
-        //[self performSegueWithIdentifier:@"loginsegue" sender:loginView];
-        MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
-
-        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckVC];
-        MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
-        
-        deckVC.drawerController = drawerController;
-
-        [self presentViewController:drawerController animated:YES completion:nil];
-
-        // Disable/Enable Drawer Gestures
-        drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
-        drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
-
-    }
+- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+   if (viewIsVisible) {
+////        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+////        DeckCollectionViewController *deckVC = [storyboard instantiateViewControllerWithIdentifier:@"deckVC"];
+       [self performSegueWithIdentifier:@"loginsegue" sender:loginView];
+////        MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
+////
+////        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckVC];
+////        MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
+////        
+////        deckVC.drawerController = drawerController;
+////
+////        [self presentViewController:drawerController animated:YES completion:nil];
+////
+////        // Disable/Enable Drawer Gestures
+////        drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+////        drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
+//
+//    }
+//}
+   }
 }
 
 - (void)viewDidLoad {

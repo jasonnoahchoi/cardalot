@@ -22,7 +22,7 @@
 @implementation StatsTableViewCell
 
 - (void)awakeFromNib {
-    
+    self.backgroundColor = [UIColor backgroundGrayColor];
     self.lineChartView = [[JBLineChartView alloc] init];
     self.lineChartView.dataSource = self;
     self.lineChartView.delegate = self;

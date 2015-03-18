@@ -85,7 +85,7 @@
         self.logoMenuCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return self.logoMenuCell;
     } else {  // for string with format add the itentifier for account type
-        NSArray *menuListArray = @[[NSString stringWithFormat:@"Account Type: FREE"], @"History/Stats", @"Rate App", @"Go Premium", @"Refer Friends", @"Settings"];
+        NSArray *menuListArray = @[[NSString stringWithFormat:@"Account Type: FREE"], @"Progress", @"Rate App", @"Go Premium", @"Refer Friends", @"Settings"];
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
         cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
         NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 1] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:16.0]}];

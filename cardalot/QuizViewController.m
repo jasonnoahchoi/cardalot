@@ -89,8 +89,8 @@
 }
 
 - (void)layoutNavigationBarItems {
-   // NSString *string = [NSString stringWithFormat:@"Studying %@", self.deck.nameTag];
-    self.navigationItem.title = @"Quiz Mode";
+    NSString *string = [NSString stringWithFormat:@"Quiz: %@", self.deck.nameTag];
+    self.navigationItem.title = string;
 
     UIImage *backIcon = [UIImage imageNamed:@"backbutton"];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:backIcon target:self action:@selector(backButtonAction)];
