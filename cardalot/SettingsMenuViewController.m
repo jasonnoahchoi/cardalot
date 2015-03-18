@@ -187,10 +187,10 @@
 }
 
 - (void)goBack {
-//    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     DeckCollectionViewController *deckCollectionVC = [[DeckCollectionViewController alloc] init];
     deckCollectionVC.drawerController = self.drawerController;
-    [self.navigationController pushViewController:deckCollectionVC animated:YES];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
+    [self.drawerController setCenterViewController:navController];
 }
 
 - (void)didReceiveMemoryWarning {
