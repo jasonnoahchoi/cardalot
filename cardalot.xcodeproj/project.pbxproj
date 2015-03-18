@@ -251,6 +251,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0825C91F1AB8FAC200232D6F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				08D250621AB67F1C00A716D2 /* LoginViewController.h */,
+				08D250631AB67F1C00A716D2 /* LoginViewController.m */,
+				08D250641AB67F1C00A716D2 /* LoginViewController.xib */,
+				08CA60111AB72C7F00FAC558 /* FBLoginViewController.h */,
+				08CA60121AB72C7F00FAC558 /* FBLoginViewController.m */,
+				08D250671AB6BCB700A716D2 /* Settings.h */,
+				08D250681AB6BCB700A716D2 /* Settings.m */,
+				08D2506A1AB6BD0400A716D2 /* ErrorHandler.h */,
+				08D2506B1AB6BD0400A716D2 /* ErrorHandler.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		0825C9201AB8FAD500232D6F /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				72C1E1A31AB278E10041E2C8 /* StatsViewController.h */,
+				72C1E1A41AB278E10041E2C8 /* StatsViewController.m */,
+				72C1E1AC1AB27BAB0041E2C8 /* StatsTableViewCell.h */,
+				72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */,
+				72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */,
+				72C1E1A61AB279E60041E2C8 /* StatsTableViewDataSource.h */,
+				72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */,
+			);
+			name = Stats;
+			sourceTree = "<group>";
+		};
+		0825C9211AB8FAE200232D6F /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				723D96BE1AB784E100121C55 /* RemindersController.h */,
+				723D96BF1AB784E100121C55 /* RemindersController.m */,
+				723D96C11AB785AE00121C55 /* Reminder.h */,
+				723D96C21AB785AE00121C55 /* Reminder.m */,
+				72C1E1F21AB5036E0041E2C8 /* CustomDatePickerView.h */,
+				72C1E1F31AB5036E0041E2C8 /* CustomDatePickerView.m */,
+				72C1E1F51AB505D30041E2C8 /* RemindersViewController.h */,
+				72C1E1F61AB505D30041E2C8 /* RemindersViewController.m */,
+				72C1E1F81AB506AB0041E2C8 /* RemindersTableViewDataSource.h */,
+				72C1E1F91AB506AB0041E2C8 /* RemindersTableViewDataSource.m */,
+			);
+			name = Reminders;
+			sourceTree = "<group>";
+		};
 		0832BEE81AB517E000213071 /* QuizViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,15 +357,7 @@
 		08FE1E721AAA5F570068F0C9 /* cardalot */ = {
 			isa = PBXGroup;
 			children = (
-				08D250621AB67F1C00A716D2 /* LoginViewController.h */,
-				08D250631AB67F1C00A716D2 /* LoginViewController.m */,
-				08D250641AB67F1C00A716D2 /* LoginViewController.xib */,
-				08CA60111AB72C7F00FAC558 /* FBLoginViewController.h */,
-				08CA60121AB72C7F00FAC558 /* FBLoginViewController.m */,
-				08D250671AB6BCB700A716D2 /* Settings.h */,
-				08D250681AB6BCB700A716D2 /* Settings.m */,
-				08D2506A1AB6BD0400A716D2 /* ErrorHandler.h */,
-				08D2506B1AB6BD0400A716D2 /* ErrorHandler.m */,
+				0825C91F1AB8FAC200232D6F /* Login */,
 				08FE1E771AAA5F570068F0C9 /* AppDelegate.h */,
 				08FE1E781AAA5F570068F0C9 /* AppDelegate.m */,
 				08977A131AABCB6C00E525D0 /* AppearanceController.h */,
@@ -329,19 +368,8 @@
 				083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */,
 				7200D0EE1AB1393E00E84D55 /* CustomInputAccessoryView.h */,
 				7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */,
-				72C1E1A31AB278E10041E2C8 /* StatsViewController.h */,
-				72C1E1A41AB278E10041E2C8 /* StatsViewController.m */,
-				72C1E1AC1AB27BAB0041E2C8 /* StatsTableViewCell.h */,
-				72C1E1AD1AB27BAB0041E2C8 /* StatsTableViewCell.m */,
-				72C1E1AE1AB27BAB0041E2C8 /* StatsTableViewCell.xib */,
-				72C1E1A61AB279E60041E2C8 /* StatsTableViewDataSource.h */,
-				72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */,
-				72C1E1F21AB5036E0041E2C8 /* CustomDatePickerView.h */,
-				72C1E1F31AB5036E0041E2C8 /* CustomDatePickerView.m */,
-				72C1E1F51AB505D30041E2C8 /* RemindersViewController.h */,
-				72C1E1F61AB505D30041E2C8 /* RemindersViewController.m */,
-				72C1E1F81AB506AB0041E2C8 /* RemindersTableViewDataSource.h */,
-				72C1E1F91AB506AB0041E2C8 /* RemindersTableViewDataSource.m */,
+				0825C9201AB8FAD500232D6F /* Stats */,
+				0825C9211AB8FAE200232D6F /* Reminders */,
 				FF8F0AD81AAE592200BDD975 /* Deck Collection View */,
 				FF8F0AD91AAE594000BDD975 /* Card Collection View */,
 				FF8F0AC41AAE577F00BDD975 /* Card Entry View */,
@@ -351,10 +379,6 @@
 				7200CEB21AACE66000E84D55 /* CompletionViewController.m */,
 				725180F11AAA7AFE00C446E5 /* DeckController.h */,
 				725180F21AAA7AFE00C446E5 /* DeckController.m */,
-				723D96BE1AB784E100121C55 /* RemindersController.h */,
-				723D96BF1AB784E100121C55 /* RemindersController.m */,
-				723D96C11AB785AE00121C55 /* Reminder.h */,
-				723D96C21AB785AE00121C55 /* Reminder.m */,
 				FF32B3A31AB230D40098EFA5 /* Menu Drawer View Controller */,
 				FF8F0ADA1AAE597200BDD975 /* Model */,
 				08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */,
