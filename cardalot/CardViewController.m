@@ -184,6 +184,18 @@
 #pragma mark - Navigation Methods
 - (IBAction)done:(id)sender {
     [[DeckController sharedInstance] addCardWithTitle:self.frontTextCell.frontTextField.text andAnswer:self.backTextCell.backTextView.text toDeckWithNameTag:self.deckTagCell.deckTagField.text];
+    if ([DeckController sharedInstance].decks.count >= 5) {
+        UIAlertController *deckLimitAlert = [UIAlertController alertControllerWithTitle:@"You've reached your limit!" message:@"You can get unlimited decks with more features coming soon by upgrading to our pro version!" preferredStyle:UIAlertControllerStyleAlert];
+        // [deckLimitAlert addTextFieldWithConfigurationHandler:nil];
+        [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+#warning Store Kit Insert!
+            // Store Kit Code
+        }]];
+        [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            NSLog(@"Not buying pro");
+        }]];
+        [self presentViewController:deckLimitAlert animated:YES completion:nil];
+    }
     [[DeckController sharedInstance] save];
 
     [self.navigationController popViewControllerAnimated:YES];

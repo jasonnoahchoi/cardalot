@@ -219,11 +219,24 @@ static int studyMode;
                                                                       preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:nil];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Save"
-                                                        style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction *action) {
+
         self.deckTitle = ((UITextField *)[alertController.textFields objectAtIndex:0]).text;
         [[DeckController sharedInstance] addDeckWithName:self.deckTitle];
+        if ([DeckController sharedInstance].decks.count >= 5) {
+            UIAlertController *deckLimitAlert = [UIAlertController alertControllerWithTitle:@"You've reached your limit!" message:@"You can get unlimited decks with more features coming soon by upgrading to our pro version!" preferredStyle:UIAlertControllerStyleAlert];
+                                                              // [deckLimitAlert addTextFieldWithConfigurationHandler:nil];
+            [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+#warning Store Kit Insert!
+                                                                  // Store Kit Code
+            }]];
+            [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                NSLog(@"Not buying pro");
+            }]];
+            [self presentViewController:deckLimitAlert animated:YES completion:nil];
+            }
         [[DeckController sharedInstance] save];
-
         [self.collectionView reloadData];
     }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"

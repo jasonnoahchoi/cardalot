@@ -54,6 +54,9 @@ static NSString * const sessionEntity = @"Session";
 
 #pragma mark Deck stuff
 - (void)addDeckWithName:(NSString *)nameTag {
+    if (self.decks.count == 5) {
+        return;
+    }
     Deck *deck = [NSEntityDescription insertNewObjectForEntityForName:deckEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     deck.nameTag = nameTag;
     
