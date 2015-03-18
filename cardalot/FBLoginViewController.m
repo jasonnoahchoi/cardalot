@@ -56,7 +56,7 @@ BOOL viewIsVisible;
     [super viewDidLoad];
     //self.imageView =
     self.view.backgroundColor = [UIColor whiteColor];
-    self.drawerController = [[MMDrawerController alloc] init];
+//    self.drawerController = [[MMDrawerController alloc] init];
     self.loginView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     self.loginView.delegate = self;
 
@@ -144,5 +144,10 @@ BOOL viewIsVisible;
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DeckCollectionViewController *deckVC = (DeckCollectionViewController *)[segue destinationViewController];
+    deckVC.drawerController = self.drawerController;
+}
 
 @end
