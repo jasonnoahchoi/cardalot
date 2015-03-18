@@ -93,7 +93,7 @@
 
 - (void)layoutNavBarItems {
     // Set Title of card
-    self.title = @"Add a New Card";
+    self.title = @"Add Card";
 
     UIImage *image = [UIImage imageNamed:@"backbutton"];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:image target:self action:@selector(backButtonAction)];

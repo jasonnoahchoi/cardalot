@@ -7,6 +7,7 @@
 //
 
 #import "DeckTagCell.h"
+#import "UIColor+Colors.h"
 
 @implementation DeckTagCell
 
@@ -36,7 +37,10 @@
 
         self.deckTagField.placeholder = @"Enter Deck Name";
         self.deckTagField.font = [UIFont boldSystemFontOfSize:18.0];
-        self.deckTagField.tintColor = [UIColor blackColor];
+        //self.deckTagField.tintColor = [UIColor blackColor];
+        self.deckTagField.layer.cornerRadius = 3;
+        self.deckTagField.layer.borderWidth = 1.0f;
+        [self.deckTagField.layer setBorderColor:[UIColor customBlueColor].CGColor];
         self.deckTagField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         self.deckTagField.returnKeyType = UIReturnKeyNext;
         self.deckTagField.borderStyle = UITextBorderStyleRoundedRect;

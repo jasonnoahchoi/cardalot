@@ -43,12 +43,13 @@ static CGFloat yFromCenter;
         self.frontView = [[QuizFrontView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
         //self.frontView.backgroundColor = [UIColor redColor];
         //self.backgroundColor = [UIColor clearColor];
-        self.backgroundColor = [UIColor customBlueColor];
-        self.layer.borderColor = [UIColor whiteColor].CGColor;
-        self.layer.borderWidth = 4.0f;
+       // self.backgroundColor = [UIColor customBlueColor];
+        //self.layer.borderColor = [UIColor whiteColor].CGColor;
+        //self.layer.borderWidth = 4.0f;
         //self.layer.masksToBounds = YES;
-
         self.backView = [[QuizBackView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+
+
         //self.backView.hidden = NO;
        // self.frontView.hidden = NO;
         //self.backView.backgroundColor = [UIColor orangeColor];
@@ -108,6 +109,7 @@ static CGFloat yFromCenter;
                             if (!self.flipped) {
                                 self.flipped = YES;
                                 [self bringSubviewToFront:self.backView];
+
                             } else {
                                 self.flipped = NO;
                                 [self bringSubviewToFront:self.frontView];

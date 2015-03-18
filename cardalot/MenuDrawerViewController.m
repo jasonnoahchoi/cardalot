@@ -41,6 +41,7 @@
     
     // Disable/Enable selection cell highlight
     self.tableView.allowsSelection = YES;
+    //self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 
     
     // Removes seperator lines
@@ -56,8 +57,10 @@
 
     // Add to view
     [self.view addSubview:self.tableView];
-    
-    
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

@@ -14,6 +14,7 @@
 + (void)setupDefaultAppearance {
     [[UINavigationBar appearance] setBarTintColor:[UIColor customBlueColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
 
   //  [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0]];
 

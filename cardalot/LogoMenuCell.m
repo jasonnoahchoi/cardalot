@@ -28,7 +28,7 @@
         self.logoImage.image = [UIImage imageNamed:@"logoMenu"];
         
         // sets label text
-        self.decktagLabel.text = @"My Decktags";
+        self.decktagLabel.text = @"My Decks";
         self.decktagLabel.textColor = [UIColor whiteColor];
         self.decktagLabel.font = [UIFont systemFontOfSize:16.0];
 

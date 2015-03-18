@@ -28,9 +28,9 @@
     _mode = mode;
 
     if (mode == GGOverlayViewModeLeft) {
-        self.imageView.image = [UIImage imageNamed:@"noButton"];
+        self.imageView.image = [UIImage imageNamed:@"redx"];
     } else {
-        self.imageView.image = [UIImage imageNamed:@"yesButton"];
+        self.imageView.image = [UIImage imageNamed:@"greencheck"];
     }
 }
 

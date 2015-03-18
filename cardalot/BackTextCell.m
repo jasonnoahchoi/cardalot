@@ -7,6 +7,7 @@
 //
 
 #import "BackTextCell.h"
+#import "UIColor+Colors.h"
 
 @implementation BackTextCell 
 
@@ -24,11 +25,12 @@
         
         // modification
         self.backTextView.font = [UIFont boldSystemFontOfSize:16.0];
-        self.backTextView.textColor = [UIColor lightGrayColor];
+        self.backTextView.textColor = [UIColor blackColor];
         //self.backTextView.text = @"Enter details for back of card";
         self.backTextView.layer.borderWidth = 1.0f;
-        self.backTextView.layer.cornerRadius = 8.0;
-        self.backTextView.layer.borderColor = [[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1] CGColor];
+        self.backTextView.layer.cornerRadius = 5.0;
+        [self.backTextView.layer setBorderColor:[UIColor customBlueColor].CGColor];
+        //self.backTextView.layer.borderColor = [[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1] CGColor];
         [self.backTextView setTranslatesAutoresizingMaskIntoConstraints:NO];
         
         // setting delegate

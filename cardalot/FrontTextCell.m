@@ -7,6 +7,7 @@
 //
 
 #import "FrontTextCell.h"
+#import "UIColor+Colors.h"
 
 @implementation FrontTextCell
 
@@ -24,8 +25,11 @@
         
         // modification
         self.frontTextField.font = [UIFont boldSystemFontOfSize:16.0];
-        self.frontTextField.tintColor = [UIColor blackColor];
+        //self.frontTextField.tintColor = [UIColor blackColor];
         self.frontTextField.placeholder = @"front of card text";
+        [self.frontTextField.layer setBorderColor:[UIColor customBlueColor].CGColor];
+        [self.frontTextField.layer setBorderWidth:1.0f];
+        self.frontTextField.layer.cornerRadius = 5;
         self.frontTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         self.frontTextField.textAlignment = NSTextAlignmentCenter;
         self.frontTextField.returnKeyType = UIReturnKeyNext;

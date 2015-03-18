@@ -16,13 +16,13 @@
     if (self) {
         //self.backTextView = [[UITextView alloc] init];
         self.backTextView = [[UILabel alloc] initWithFrame:CGRectMake(15, 15, self.frame.size.width-30, self.frame.size.height-30)];
-        self.backgroundColor = [UIColor orangeColor];
+        self.backgroundColor = [UIColor whiteColor];
         //[self.backTextView sizeToFit];
-        self.backTextView.textColor = [UIColor blueColor];
+        self.backTextView.textColor = [UIColor blackColor];
         self.backTextView.text = @"Sample back text";
         self.backTextView.numberOfLines = 0;
         //self.backTextView.editable = NO;
-        self.backTextView.font = [UIFont systemFontOfSize:24];
+        self.backTextView.font = [UIFont systemFontOfSize:18];
         [self addSubview:self.backTextView];
 
         //self.backgroundColor = [UIColor whiteColor];

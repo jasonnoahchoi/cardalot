@@ -73,7 +73,7 @@ static int studyMode;
 #pragma mark - Navigation Items
 
 - (void)loadBarButtonItems {
-    self.title = @"Decktags";
+    self.title = @"Decks";
 
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"]
                                                                              style:UIBarButtonItemStylePlain
