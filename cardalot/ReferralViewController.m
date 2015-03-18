@@ -25,6 +25,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
     UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 80, 280, 50)];
     tempLabel.text = @"Referral View Controller";

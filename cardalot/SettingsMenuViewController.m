@@ -32,6 +32,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(goBack)];
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
     // using icon8 image:  <a href="http://icons8.com/web-app/5771/Appointment-Reminders">Free icons by Icons8</a>
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reminder"] style:UIBarButtonItemStylePlain target:self action:nil]; ////// set action to dropdown alerts from reminders

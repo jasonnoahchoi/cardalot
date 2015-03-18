@@ -28,6 +28,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
     UILabel *rateAppMessageLabel = [[UILabel alloc] init];
     rateAppMessageLabel.text = @"We are sorry that you decide not to rate our app. We are constantly looking for ways to improve in order to provide you with the best experience possible. Please consider sending us a support email to let us know where and how we can improve.";

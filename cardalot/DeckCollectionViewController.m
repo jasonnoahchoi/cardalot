@@ -80,7 +80,7 @@ static NSString * const launchCountKey = @"launchCount";
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self
                                                                             action:@selector(open)];
-    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor customBlueColor]];
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
 
     UIImage *studyIconGray = [UIImage imageNamed:@"Syellowicon"];
     UIImage *quizIconGray = [UIImage imageNamed:@"Qorangeicon"];
@@ -93,11 +93,11 @@ static NSString * const launchCountKey = @"launchCount";
                                                        style:UIBarButtonItemStylePlain
                                                       target:self
                                                       action:@selector(quizMode)];
-    [self.studyButton setTintColor:[UIColor customGrayColor]];
-    [self.quizButton setTintColor:[UIColor customGrayColor]];
+    [self.studyButton setTintColor:[UIColor lightGrayColor]];
+    [self.quizButton setTintColor:[UIColor lightGrayColor]];
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
-    [addButton setTintColor:[UIColor customBlueColor]];
+    [addButton setTintColor:[UIColor whiteColor]];
 
     self.navigationItem.rightBarButtonItems = @[addButton, self.quizButton, self.studyButton];
 }

@@ -24,8 +24,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
-    
-    
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
+
     UIView *containerView = [[UIView alloc] init];
     [containerView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:containerView];

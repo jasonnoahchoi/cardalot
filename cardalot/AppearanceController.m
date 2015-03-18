@@ -12,8 +12,8 @@
 @implementation AppearanceController
 
 + (void)setupDefaultAppearance {
-    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor customBlueColor]}];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor customBlueColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 
   //  [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithHue:204.0/360 saturation:.78 brightness:.66 alpha:1.0]];
 

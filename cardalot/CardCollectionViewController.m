@@ -93,9 +93,9 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewCards:)];
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(toggleEditingMode:)];
-    [editButton setTintColor:[UIColor customBlueColor]];
+    [editButton setTintColor:[UIColor whiteColor]];
     self.navigationItem.rightBarButtonItems = @[addButton, editButton];
-    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor customBlueColor]];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:backButton target:self action:@selector(backButtonAction)];
 
 }
