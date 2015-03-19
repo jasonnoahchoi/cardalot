@@ -30,7 +30,7 @@
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
     UILabel *referFriendsLabel = [[UILabel alloc] init];
-    referFriendsLabel.text = @"Referral View Controller";
+    referFriendsLabel.text = @"If you enjoy using Cardalot, would you mind taking a moment to tell your friends about it? This would be very helpful for them as Cardalot would help them learn stuff the way it has helped you. So please consider telling your friends about Cardalot.";
     [referFriendsLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:referFriendsLabel];
     
