@@ -35,7 +35,7 @@
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
     // using icon8 image:  <a href="http://icons8.com/web-app/5771/Appointment-Reminders">Free icons by Icons8</a>
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reminder"] style:UIBarButtonItemStylePlain target:self action:nil]; ////// set action to dropdown alerts from reminders
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reminder"] style:UIBarButtonItemStylePlain target:self action:nil]; ////// set action to dropdown alerts from reminders
     
     // Create tableView
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
