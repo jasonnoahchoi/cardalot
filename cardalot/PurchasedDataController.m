@@ -86,7 +86,7 @@ static NSString * const kGoPro = @"goPro";
     
     NSString *productIdentifer = notification.userInfo[kProductIDKey];
     
-    if ([productIdentifer isEqualToString:@"com.weekendconcept.cardalot.gopro"]) {
+    if ([productIdentifer isEqualToString:@"com.cardalot.cardalot.goPro"]) {
         self.goPro = YES;
     }
 

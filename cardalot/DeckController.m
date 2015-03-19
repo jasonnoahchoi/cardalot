@@ -67,6 +67,10 @@ static NSString * const sessionEntity = @"Session";
     } else if (self.decks.count == 5) {
         return;
     }
+    Deck *deck = [NSEntityDescription insertNewObjectForEntityForName:deckEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    deck.nameTag = nameTag;
+
+    [self save];
 }
 
 - (void)removeDeck:(Deck *)deck {

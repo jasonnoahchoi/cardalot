@@ -64,38 +64,40 @@ static NSString * const cellIdentifier = @"cell";
 }
 
 - (void)longPress:(UILongPressGestureRecognizer *)gr {
-    if (gr.state == UIGestureRecognizerStateBegan) {
-        
-        DeckCollectionViewCell *cell = (DeckCollectionViewCell *)gr.view;
-        cell.closeButton.hidden = NO;
+    if (![DeckController sharedInstance].decks.count + 1) {
+        if (gr.state == UIGestureRecognizerStateBegan) {
 
-        [cell startJiggling];
-        
-        NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
-        
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Are you sure you want to remove #?"
-                                                                                 message:@"All cards inside the deck will be erased."
-                                                                          preferredStyle:UIAlertControllerStyleActionSheet];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Remove"
-                                                            style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+            DeckCollectionViewCell *cell = (DeckCollectionViewCell *)gr.view;
+            cell.closeButton.hidden = NO;
+
+            [cell startJiggling];
+
+            NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Are you sure you want to remove #?"
+                                                                                     message:@"All cards inside the deck will be erased."
+                                                                              preferredStyle:UIAlertControllerStyleActionSheet];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"Remove"
+                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+
+                                                                    Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+                                                                    [[DeckController sharedInstance] removeDeck:deck];
+                                                                    [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+
+                                                                    [self.collectionView reloadData];
+                                                                }]];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction *action) {
+                                                                  [cell stopJiggling];
+                                                                  cell.closeButton.hidden = YES;
+                                                                  NSLog(@"cancel");
+                                                              }]];
+            [self.deckCollectionVC presentViewController:alertController animated:YES completion:nil];
             
-            Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
-            [[DeckController sharedInstance] removeDeck:deck];
-            [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
-            
-            [self.collectionView reloadData];
-        }]];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction *action) {
-            [cell stopJiggling];
-            cell.closeButton.hidden = YES;
-            NSLog(@"cancel");
-        }]];
-        [self.deckCollectionVC presentViewController:alertController animated:YES completion:nil];
-        
-        // [self.collectionView.visibleCells makeObjectsPerformSelector:@selector(startJiggling)];
-        NSLog(@"Close Button");
+            // [self.collectionView.visibleCells makeObjectsPerformSelector:@selector(startJiggling)];
+            NSLog(@"Close Button");
+        }
     }
 }
 
