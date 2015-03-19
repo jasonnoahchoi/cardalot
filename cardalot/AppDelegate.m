@@ -75,7 +75,7 @@ static NSString * const remindLaterKey = @"remind";
     //self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
     MMDrawerController *drawerController = [[MMDrawerController alloc] init];
     [drawerController setLeftDrawerViewController:settingsVC];
-    if (launchCount == 1) {
+    if (launchCount == 1 || FBSession.activeSession.state != FBSessionStateCreatedTokenLoaded) {
         [drawerController setCenterViewController:navVC];
       //  deckCollectionVC.drawerController = drawerController;
         fbLoginVC.drawerController = drawerController;
