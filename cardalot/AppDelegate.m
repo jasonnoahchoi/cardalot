@@ -41,8 +41,6 @@ static NSString * const remindLaterKey = @"remind";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [self trackLaunches];
-    
     NSInteger launchCount = [[NSUserDefaults standardUserDefaults] integerForKey:launchCountKey];
     
     // [Optional] Power your app with Local Datastore. For more info, go to
@@ -75,12 +73,13 @@ static NSString * const remindLaterKey = @"remind";
     //self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
     MMDrawerController *drawerController = [[MMDrawerController alloc] init];
     [drawerController setLeftDrawerViewController:settingsVC];
-    if (launchCount == 1 || FBSession.activeSession.state != FBSessionStateCreatedTokenLoaded) {
+    if (FBSession.activeSession.state != FBSessionStateCreatedTokenLoaded) {
         [drawerController setCenterViewController:navVC];
       //  deckCollectionVC.drawerController = drawerController;
         fbLoginVC.drawerController = drawerController;
         [[UIApplication sharedApplication] cancelAllLocalNotifications];
     } else {
+        [self trackLaunches];
         [drawerController setCenterViewController:deckNavController];
         deckCollectionVC.drawerController = drawerController;
     }
