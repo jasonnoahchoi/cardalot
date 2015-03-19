@@ -138,6 +138,17 @@
     [self.tableView setContentOffset:contentOffset animated:YES];
 }
 
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    if ([textView.superview.superview isKindOfClass:[UITableViewCell class]])
+    {
+        UITableViewCell *cell = (UITableViewCell*)textView.superview.superview;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:TRUE];
+    }
+
+}
+
 #pragma mark - UITextFieldDelegate
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     [self checkTextFields];
