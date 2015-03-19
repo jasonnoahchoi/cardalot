@@ -637,11 +637,11 @@
 				TargetAttributes = {
 					08FE1E6F1AAA5F570068F0C9 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = GQHC8CPYGZ;
+						DevelopmentTeam = D5E8L77H65;
 					};
 					08FE1E881AAA5F570068F0C9 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = GQHC8CPYGZ;
+						DevelopmentTeam = D5E8L77H65;
 						TestTargetID = 08FE1E6F1AAA5F570068F0C9;
 					};
 				};
