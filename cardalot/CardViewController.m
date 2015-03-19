@@ -118,19 +118,23 @@
     NSLog(@"%@", self.backTextCell.backTextView.text);
 }
 
-- (void)textViewDidChange:(UITextView *)textView {
-    [self checkTextFields];
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    [self checkTextFields];
-}
-
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
 
+#pragma mark - UITextViewDelegate
+- (void)textViewDidChange:(UITextView *)textView {
+    [self checkTextFields];
+}
 
+#pragma mark - UITextFieldDelegate
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [self checkTextFields];
+}
+
+
+
+#pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return self.cells[indexPath.row];
 }
@@ -143,7 +147,7 @@
     return self.cells.count;
 }
 
-#pragma mark - Delegate Method
+#pragma mark - UITableViewDelegate Method
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
