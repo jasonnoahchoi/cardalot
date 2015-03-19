@@ -12,7 +12,7 @@
 #import "UIColor+Colors.h"
 @import MessageUI;
 
-@interface ReferralViewController ()
+@interface ReferralViewController () <MFMessageComposeViewControllerDelegate>
 
 @end
 
@@ -38,6 +38,7 @@
     [sendMessageButton setTitle:@"Send Message" forState:UIControlStateNormal];
     [sendMessageButton setTitleColor:[UIColor customBlueColor] forState:UIControlStateNormal];
     [sendMessageButton setTitleColor:[[UIColor customBlueColor] colorWithAlphaComponent:0.7] forState:UIControlStateHighlighted];
+    [sendMessageButton addTarget:self action:@selector(composeMessage) forControlEvents:UIControlEventTouchUpInside];
     [sendMessageButton setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:sendMessageButton];
     
@@ -68,6 +69,20 @@
     } else {
         [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     }
+}
+
+- (void)composeMessage {
+    MFMessageComposeViewController *messageComposeViewController = [[MFMessageComposeViewController alloc] init];
+    messageComposeViewController.messageComposeDelegate = self;
+    
+    if ([MFMessageComposeViewController canSendText]) {
+        [self presentViewController:messageComposeViewController animated:YES completion:nil];
+    }
+}
+
+#pragma mark - MFMessageComposeViewControllerDelegate
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
