@@ -7,6 +7,7 @@
 //
 
 #import "AdvancedSettingsViewController.h"
+#import "CardViewController.h"
 #import <MMDrawerController/UIViewController+MMDrawerController.h>
 
 @interface AdvancedSettingsViewController () <UITableViewDelegate>
@@ -27,6 +28,9 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCard)];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
     
 //    UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 80, 280, 50)];
 //    tempLabel.text = @"Here will be the advanced Settinfs";
@@ -107,11 +111,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-
+- (void)addCard {
+    CardViewController *cardVC = [[CardViewController alloc] init];
+    [self.navigationController pushViewController:cardVC animated:YES];
 }
-
 
 @end
