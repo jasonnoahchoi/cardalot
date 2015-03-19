@@ -21,7 +21,9 @@
 #import "UIColor+Colors.h"
 #import "Session.h"
 #import "RateAppViewController.h"
+#import "StorePurchaseController.h"
 
+@import StoreKit;
 #import <MMDrawerController.h>
 
 static NSString * const cellIdentifier = @"cell";
@@ -63,11 +65,35 @@ static int studyMode;
     self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
     [self loadBarButtonItems];
+    [self inAppPurchase];
     
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.collectionView reloadData];
+}
+#pragma mark - In App Purchases
+- (void)inAppPurchase {
+    [[StorePurchaseController sharedInstance] requestProducts];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productsRequested:) name:kInAppPurchaseFetchedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productsPurchased:) name:kInAppPurchaseCompletedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productsRestored:) name:kInAppPurchaseRestoredNotification object:nil];
+}
+
+- (void)productsRequested:(NSNotification *)notification {
+    [self.collectionView reloadData];
+}
+
+- (void)productsPurchased:(NSNotification *)notification {
+
+}
+
+- (void)productsRestored:(NSNotification *)notification {
+
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Navigation Items
@@ -226,16 +252,16 @@ static int studyMode;
         [[DeckController sharedInstance] addDeckWithName:self.deckTitle];
         if ([DeckController sharedInstance].decks.count >= 5) {
             UIAlertController *deckLimitAlert = [UIAlertController alertControllerWithTitle:@"You've reached your limit!" message:@"You can get unlimited decks with more features coming soon by upgrading to our pro version!" preferredStyle:UIAlertControllerStyleAlert];
-                                                              // [deckLimitAlert addTextFieldWithConfigurationHandler:nil];
             [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-#warning Store Kit Insert!
-                                                                  // Store Kit Code
+                [[StorePurchaseController sharedInstance] requestProducts];
             }]];
+
             [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 NSLog(@"Not buying pro");
             }]];
+
             [self presentViewController:deckLimitAlert animated:YES completion:nil];
-            }
+        }
         [[DeckController sharedInstance] save];
         [self.collectionView reloadData];
     }]];

@@ -12,6 +12,8 @@
 #import "UIBarButtonItem+CustomButtons.h"
 #import "UIColor+Colors.h"
 #import "Deck.h"
+#import "StorePurchaseController.h"
+@import StoreKit;
 
 @interface CardViewController () <UITextViewDelegate, UITextFieldDelegate>
 
@@ -190,6 +192,7 @@
         [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
 #warning Store Kit Insert!
             // Store Kit Code
+             [[StorePurchaseController sharedInstance] requestProducts];
         }]];
         [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"Not buying pro");

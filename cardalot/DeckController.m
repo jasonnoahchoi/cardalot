@@ -10,6 +10,7 @@
 #import "Deck.h"
 #import "Card.h"
 #import "Stack.h"
+#import "PurchasedDataController.h"
 
 @interface DeckController ()
 
@@ -34,9 +35,13 @@ static NSString * const sessionEntity = @"Session";
 
 - (NSArray *)decks {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:deckEntity];
-    // set a limit to 5 decks for FREE version
-    [fetchRequest setFetchLimit:5];
-    return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:NULL];
+    if ([PurchasedDataController sharedInstance].goPro) {
+        return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:NULL];
+    } else {
+        // set a limit to 5 decks for FREE version
+        [fetchRequest setFetchLimit:5];
+        return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:NULL];
+    }
 }
 
 - (NSArray *)nameTags {
@@ -54,13 +59,14 @@ static NSString * const sessionEntity = @"Session";
 
 #pragma mark Deck stuff
 - (void)addDeckWithName:(NSString *)nameTag {
-    if (self.decks.count == 5) {
+    if ([PurchasedDataController sharedInstance].goPro) {
+        Deck *deck = [NSEntityDescription insertNewObjectForEntityForName:deckEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+        deck.nameTag = nameTag;
+
+        [self save];
+    } else if (self.decks.count == 5) {
         return;
     }
-    Deck *deck = [NSEntityDescription insertNewObjectForEntityForName:deckEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-    deck.nameTag = nameTag;
-    
-    [self save];
 }
 
 - (void)removeDeck:(Deck *)deck {
@@ -103,5 +109,24 @@ static NSString * const sessionEntity = @"Session";
     [session.managedObjectContext deleteObject:session];
     [self save];
 }
+
+- (void)configureWithPurchases {
+    if ([PurchasedDataController sharedInstance].goPro) {
+        NSLog(@"Go Pro!");
+    }
+}
+
+- (void)purchasesUpdated:(NSNotification *)notification {
+    [self configureWithPurchases];
+}
+
+- (void)registerForPurchaseNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(purchasesUpdated:) name:kPurchasedContentUpdated object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kPurchasedContentUpdated object:nil];
+}
+
 
 @end
