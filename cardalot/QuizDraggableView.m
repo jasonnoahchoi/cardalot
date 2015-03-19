@@ -28,6 +28,7 @@ static CGFloat yFromCenter;
 @interface QuizDraggableView ()
 
 @property (nonatomic, strong) QuizDraggableViewBackground *background;
+@property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
 @end
 
@@ -40,6 +41,8 @@ static CGFloat yFromCenter;
 
         self.flipped = NO;
 
+        UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
+        [self addSubview:containerView];
         self.frontView = [[QuizFrontView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
         //self.frontView.backgroundColor = [UIColor redColor];
         //self.backgroundColor = [UIColor clearColor];
@@ -49,17 +52,11 @@ static CGFloat yFromCenter;
         //self.layer.masksToBounds = YES;
         self.backView = [[QuizBackView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 
-
-        //self.backView.hidden = NO;
-       // self.frontView.hidden = NO;
-        //self.backView.backgroundColor = [UIColor orangeColor];
-
         self.panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(beingDragged:)];
 
         [self addGestureRecognizer:self.panGestureRecognizer];
-        [self addSubview:self.backView];
-        [self addSubview:self.frontView];
-        //[self bringSubviewToFront:self.backView];
+        [containerView addSubview:self.backView];
+        [containerView addSubview:self.frontView];
 
         self.overlayView = [[StudyOverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width / 2 - 50, 100, 100, 100)];
         self.overlayView.alpha = 0;
@@ -79,12 +76,12 @@ static CGFloat yFromCenter;
         NSLayoutConstraint *centerYBackView = [NSLayoutConstraint constraintWithItem:self.backView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
         [self addConstraint:centerYBackView];
 
-      //  self.flipped = NO;
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-        tapGesture.numberOfTapsRequired = 2;
+        self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap)];
+        self.tapGesture.numberOfTapsRequired = 1;
+//        [self addGestureRecognizer:self.tapGesture];
+        [self.frontView addGestureRecognizer:self.tapGesture];
+        [self addGestureRecognizer:self.tapGesture];
 
-        [self addGestureRecognizer:tapGesture];
-        
 
         
     }
@@ -96,25 +93,17 @@ static CGFloat yFromCenter;
     
 }
 
-- (void)handleTap:(UITapGestureRecognizer *)sender {
-    if (sender.state == UIGestureRecognizerStateEnded) {
-
-//        [self flipView];
-        [UIView transitionWithView:self
-                          duration:0.5
-                           options:UIViewAnimationOptionTransitionFlipFromLeft
-                        animations:^{
-                        }
-                        completion:^(BOOL finished) {
-                            if (!self.flipped) {
-                                self.flipped = YES;
-                                [self bringSubviewToFront:self.backView];
-
-                            } else {
-                                self.flipped = NO;
-                                [self bringSubviewToFront:self.frontView];
-                            }
-                        }];
+- (void)handleTap {
+    if (self.flipped) {
+        [UIView transitionFromView:self.backView toView:self.frontView duration:1.0 options:UIViewAnimationOptionTransitionFlipFromLeft | UIViewAnimationOptionShowHideTransitionViews completion:^(BOOL finished) {
+            self.flipped = !self.flipped;
+            [self.frontView addGestureRecognizer:self.tapGesture];
+        }];
+    } else {
+        [UIView transitionFromView:self.frontView toView:self.backView duration:1.0 options:UIViewAnimationOptionTransitionFlipFromRight | UIViewAnimationOptionShowHideTransitionViews completion:^(BOOL finished) {
+            self.flipped = !self.flipped;
+            [self.backView addGestureRecognizer:self.tapGesture];
+        }];
     }
 }
 
@@ -243,28 +232,5 @@ static CGFloat yFromCenter;
     // Drawing code
 }
 */
-
-- (void)flipView {
-    [self performSelector:@selector(performFlip) withObject:nil afterDelay:0.1];
-
-}
-
-- (void)performFlip {
-    [UIView transitionWithView:self
-                      duration:0.5
-                       options:UIViewAnimationOptionTransitionFlipFromLeft
-                    animations:^{
-                    }
-                    completion:^(BOOL finished) {
-                        if (!self.flipped) {
-                            self.flipped = YES;
-                            [self bringSubviewToFront:self.backView];
-                        } else {
-                            self.flipped = NO;
-                            [self bringSubviewToFront:self.frontView];
-                        }
-                    }];
-    
-}
 
 @end

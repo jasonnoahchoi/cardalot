@@ -29,7 +29,7 @@
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
-    self.tableView.rowHeight = 150;
+    self.tableView.rowHeight = 180;
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.view addSubview:self.tableView];
     
