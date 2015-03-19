@@ -7,6 +7,7 @@
 //
 
 #import "CustomInputAccessoryView.h"
+@import AudioToolbox;
 
 @interface CustomInputAccessoryView ()
 
@@ -100,14 +101,17 @@
 }
 
 - (IBAction)indent:(id)sender {
+    AudioServicesPlaySystemSound(1104);
     [self.delegate insertText:@"     "];
 }
 
 - (IBAction)insertBullet:(id)sender {
+    AudioServicesPlaySystemSound(1104);
     [self.delegate insertText:@"•  "];
 }
 
 - (IBAction)insertNumber:(id)sender {
+    AudioServicesPlaySystemSound(1104);
     [self.delegate insertText:[NSString stringWithFormat:@"%ld. ", (long)self.index]];
     self.index++;
 }
@@ -126,6 +130,7 @@
 }
 
 - (IBAction)moveLeft:(id)sender {
+    AudioServicesPlaySystemSound(1104);
     UITextRange *selectedRange = [self.delegate selectedTextRange];
     UITextPosition *startPosition = [self.delegate positionFromPosition:[(UITextView *)self.delegate beginningOfDocument] offset:0];
     
@@ -138,6 +143,7 @@
 }
 
 - (IBAction)moveRight:(id)sender {
+    AudioServicesPlaySystemSound(1104);
     UITextRange *selectedRange = [self.delegate selectedTextRange];
     UITextPosition *startPosition = [self.delegate positionFromPosition:[(UITextView *)self.delegate beginningOfDocument] offset:0];
     
@@ -160,10 +166,12 @@
 }
 
 - (void)clear {
+    AudioServicesPlaySystemSound(1104);
     [(UITextView *)self.delegate setText:@""];
 }
 
 - (IBAction)done:(id)sender {
+    AudioServicesPlaySystemSound(1104);
     [(UITextView *)self.delegate resignFirstResponder];
 }
 
