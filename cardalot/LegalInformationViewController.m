@@ -8,6 +8,7 @@
 
 #import "LegalInformationViewController.h"
 #import <MMDrawerController.h>
+@import WebKit;
 
 @interface LegalInformationViewController () <UITableViewDelegate>
 
@@ -107,23 +108,21 @@
         }
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
-            UIView *privacyView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-            [self.view addSubview:privacyView];
-            UILabel *privacyLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 75, self.view.frame.size.width - 20, self.view.frame.size.height - 90)];
-            privacyLabel.text = @"";
-            privacyLabel.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
-            privacyLabel.numberOfLines = 0;
-            [privacyView addSubview:privacyLabel];
+            
+            WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
+            NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"privacy" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
+            [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"privacy" withExtension:@"html"]];
+            
+            [self.view addSubview:webView];
         }
     } else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
-            UIView *termsView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-            [self.view addSubview:termsView];
-            UILabel *termsLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 75, self.view.frame.size.width - 20, self.view.frame.size.height - 90)];
-            termsLabel.text = @"";
-            termsLabel.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
-            termsLabel.numberOfLines = 0;
-            [termsView addSubview:termsLabel];
+            
+            WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
+            NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"terms" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
+            [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"terms" withExtension:@"html"]];
+            
+            [self.view addSubview:webView];
         }
     }
 }

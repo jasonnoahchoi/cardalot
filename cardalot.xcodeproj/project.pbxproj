@@ -189,6 +189,7 @@
 		725180F21AAA7AFE00C446E5 /* DeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckController.m; sourceTree = "<group>"; };
 		725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewDataSource.h; sourceTree = "<group>"; };
 		725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewDataSource.m; sourceTree = "<group>"; };
+		729C44281ABA2008005E23CF /* DataWithSampleDeck.xcappdata */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DataWithSampleDeck.xcappdata; sourceTree = "<group>"; };
 		72C1E1A31AB278E10041E2C8 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		72C1E1A41AB278E10041E2C8 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		72C1E1A61AB279E60041E2C8 /* StatsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTableViewDataSource.h; sourceTree = "<group>"; };
@@ -390,6 +391,7 @@
 				7200CEB21AACE66000E84D55 /* CompletionViewController.m */,
 				725180F11AAA7AFE00C446E5 /* DeckController.h */,
 				725180F21AAA7AFE00C446E5 /* DeckController.m */,
+				729C44281ABA2008005E23CF /* DataWithSampleDeck.xcappdata */,
 				082097D11ABA935400B65511 /* StorePurchaseController.h */,
 				082097D21ABA935400B65511 /* StorePurchaseController.m */,
 				082097D31ABA935400B65511 /* PurchasedDataController.h */,
