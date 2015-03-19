@@ -132,7 +132,16 @@
     [self checkTextFields];
 }
 
-
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    CGPoint pointInTable = [textField.superview convertPoint:textField.frame.origin toView:self.tableView];
+    CGPoint contentOffset = self.tableView.contentOffset;
+    
+    contentOffset.y = (pointInTable.y - textField.inputAccessoryView.frame.size.height) - 100;
+    
+    NSLog(@"contentOffset is: %@", NSStringFromCGPoint(contentOffset));
+    
+    [self.tableView setContentOffset:contentOffset animated:YES];
+}
 
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
