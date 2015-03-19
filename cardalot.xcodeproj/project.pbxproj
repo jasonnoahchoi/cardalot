@@ -34,6 +34,7 @@
 		08D250691AB6BCB700A716D2 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D250681AB6BCB700A716D2 /* Settings.m */; };
 		08D2506C1AB6BD0400A716D2 /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D2506B1AB6BD0400A716D2 /* ErrorHandler.m */; };
 		08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */; };
+		08DBF9191ABAA02100BE69A1 /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = 08DBF9181ABAA02100BE69A1 /* Products.json */; };
 		08F5EA2E1AB4F31700D00A3F /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F5EA2D1AB4F31700D00A3F /* Session.m */; };
 		08F5EA311AB4F45600D00A3F /* Stat.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F5EA301AB4F45600D00A3F /* Stat.m */; };
 		08F5EA341AB4F45700D00A3F /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F5EA331AB4F45700D00A3F /* Deck.m */; };
@@ -146,6 +147,7 @@
 		08D2506B1AB6BD0400A716D2 /* ErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorHandler.m; sourceTree = "<group>"; };
 		08D8F8CC1AACE7670015A4BD /* DeckCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewLayout.h; sourceTree = "<group>"; };
 		08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewLayout.m; sourceTree = "<group>"; };
+		08DBF9181ABAA02100BE69A1 /* Products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
 		08F5EA2C1AB4F31700D00A3F /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
 		08F5EA2D1AB4F31700D00A3F /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
 		08F5EA2F1AB4F45600D00A3F /* Stat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stat.h; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				082097D21ABA935400B65511 /* StorePurchaseController.m */,
 				082097D31ABA935400B65511 /* PurchasedDataController.h */,
 				082097D41ABA935400B65511 /* PurchasedDataController.m */,
+				08DBF9181ABAA02100BE69A1 /* Products.json */,
 				FF32B3A31AB230D40098EFA5 /* Menu Drawer View Controller */,
 				FF8F0ADA1AAE597200BDD975 /* Model */,
 				08FE1E7D1AAA5F570068F0C9 /* Main.storyboard */,
@@ -664,6 +667,7 @@
 				08D250661AB67F1C00A716D2 /* LoginViewController.xib in Resources */,
 				08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */,
 				FF8F0AD41AAE579A00BDD975 /* DeckTagCell.xib in Resources */,
+				08DBF9191ABAA02100BE69A1 /* Products.json in Resources */,
 				0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */,
 				08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */,
 				08FE1E811AAA5F570068F0C9 /* Images.xcassets in Resources */,
