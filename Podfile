@@ -6,7 +6,6 @@ target 'cardalot' do
 pod 'MMDrawerController', '~> 0.5.7'
 pod 'JBChartView', '~> 2.8.10'
 pod 'MTCardLayout', '~> 1.0.3'
-pod 'IQKeyboardManager', '~> 3.2.1.1'
 pod 'Parse', '~> 1.6.4'
 pod 'Facebook-iOS-SDK', '~>3.23.1'
 
