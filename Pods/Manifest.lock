@@ -2,7 +2,6 @@ PODS:
   - Bolts (1.1.4)
   - Facebook-iOS-SDK (3.23.1):
     - Bolts (~> 1.0)
-  - IQKeyboardManager (3.2.1.1)
   - JBChartView (2.8.10)
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core (= 0.5.7)
@@ -22,7 +21,6 @@ PODS:
 
 DEPENDENCIES:
   - Facebook-iOS-SDK (~> 3.23.1)
-  - IQKeyboardManager (~> 3.2.1.1)
   - JBChartView (~> 2.8.10)
   - MMDrawerController (~> 0.5.7)
   - MTCardLayout (~> 1.0.3)
@@ -31,7 +29,6 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Bolts: dd9fb8433d67f5acc3b6b4d1379bbc5513d716c1
   Facebook-iOS-SDK: 89dae50e975ebab95a01b0962d27277fc9cf08fd
-  IQKeyboardManager: 4e83eef847c6f5edbd670284e50c7e3d643ebdb5
   JBChartView: 50b221ef68d0934f5aea417a369a5b02167848a9
   MMDrawerController: c3ab7a318ddc7e2bcd133139c3161af08c6e1197
   MTCardLayout: cccc3913687fe6c84007e04730e02c6c0d699995

@@ -120,19 +120,66 @@
     NSLog(@"%@", self.backTextCell.backTextView.text);
 }
 
-- (void)textViewDidChange:(UITextView *)textView {
-    [self checkTextFields];
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    [self checkTextFields];
-}
-
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
 
+#pragma mark - UITextViewDelegate
+- (void)textViewDidChange:(UITextView *)textView {
+    [self checkTextFields];
+    
+    CGRect caret = [textView caretRectForPosition:textView.selectedTextRange.end];
+    CGPoint contentOffset = CGPointMake(0, CGRectGetMaxY(caret) + 120);
+    if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 480) {
+        if (contentOffset.y < CGRectGetMaxY(textView.frame) + 50) {
+            [self.tableView setContentOffset:contentOffset animated:YES];
+        }
+    } else if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 568) {
+        if (contentOffset.y < CGRectGetMaxY(textView.frame)) {
+            [self.tableView setContentOffset:contentOffset animated:YES];
+        }
+    }
+}
 
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    CGPoint pointInTable = [textView.superview convertPoint:textView.frame.origin toView:self.tableView];
+    CGPoint contentOffset = self.tableView.contentOffset;
+    
+    contentOffset.y = (pointInTable.y - textView.inputAccessoryView.frame.size.height) - 60;
+    
+    NSLog(@"contentOffset is: %@", NSStringFromCGPoint(contentOffset));
+    
+    [self.tableView setContentOffset:contentOffset animated:YES];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    if ([textView.superview.superview isKindOfClass:[UITableViewCell class]])
+    {
+        UITableViewCell *cell = (UITableViewCell*)textView.superview.superview;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:TRUE];
+    }
+
+}
+
+#pragma mark - UITextFieldDelegate
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [self checkTextFields];
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    CGPoint pointInTable = [textField.superview convertPoint:textField.frame.origin toView:self.tableView];
+    CGPoint contentOffset = self.tableView.contentOffset;
+    
+    contentOffset.y = (pointInTable.y - textField.inputAccessoryView.frame.size.height) - 100;
+    
+    NSLog(@"contentOffset is: %@", NSStringFromCGPoint(contentOffset));
+    
+    [self.tableView setContentOffset:contentOffset animated:YES];
+}
+
+#pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return self.cells[indexPath.row];
 }
@@ -145,7 +192,7 @@
     return self.cells.count;
 }
 
-#pragma mark - Delegate Method
+#pragma mark - UITableViewDelegate Method
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {

@@ -18,13 +18,6 @@
 #define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 23
 #define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 1
 
-// IQKeyboardManager
-#define COCOAPODS_POD_AVAILABLE_IQKeyboardManager
-// This library does not follow semantic-versioning,
-// so we were not able to define version macros.
-// Please contact the author.
-// Version: 3.2.1.1.
-
 // JBChartView
 #define COCOAPODS_POD_AVAILABLE_JBChartView
 #define COCOAPODS_VERSION_MAJOR_JBChartView 2
