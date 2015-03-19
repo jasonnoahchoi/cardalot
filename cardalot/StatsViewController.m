@@ -9,6 +9,7 @@
 #import "StatsViewController.h"
 #import "StatsTableViewDataSource.h"
 #import "DeckCollectionViewController.h"
+#import "CardViewController.h"
 #import <MMDrawerController.h>
 
 @interface StatsViewController ()
@@ -28,6 +29,9 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCard)];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
     self.tableView.rowHeight = 180;
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -46,6 +50,11 @@
     } else {
         [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     }
+}
+
+- (void)addCard {
+    CardViewController *cardVC = [[CardViewController alloc] init];
+    [self.navigationController pushViewController:cardVC animated:YES];
 }
 
 @end
