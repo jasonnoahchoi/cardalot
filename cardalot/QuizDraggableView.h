@@ -27,5 +27,6 @@
 @property (nonatomic, strong) QuizFrontView *frontView;
 @property (nonatomic, strong) QuizBackView *backView;
 @property (nonatomic, assign) BOOL flipped;
+- (void)handleTap;
 
 @end

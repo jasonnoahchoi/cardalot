@@ -44,53 +44,11 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         self.allCards = [[NSMutableArray alloc] init];
         self.cardsLoadedIndex = 0;
                 //[self loadCards];
-        //self.flipped = NO;
-
-//        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-//        tapGesture.numberOfTapsRequired = 2;
-//
-//        [self addGestureRecognizer:tapGesture];
+  
     }
 
     return self;
 }
-
-//- (void)handleTap:(UITapGestureRecognizer *)sender {
-//    if (sender.state == UIGestureRecognizerStateEnded) {
-//        //  [UIView transitionFromView:self.draggableViewBackground.draggableView.frontView toView:self.draggableViewBackground.draggableView.backView duration:1 options:UIViewAnimationOptionTransitionFlipFromRight
-//        //       completion:nil];
-//        [UIView transitionWithView:self
-//                          duration:1
-//                           options:UIViewAnimationOptionTransitionFlipFromTop|UIViewAnimationCurveEaseIn
-//                        animations:^{
-//                            if (!self.flipped) {
-//                                [self.draggableView.frontView setHidden:NO];
-//                                //  [self.draggableViewBackground addSubview:self.draggableViewBackground.draggableView.frontView];
-//                              //  [self.draggableView.backView setHidden:NO];
-////                                [self addSubview:self.draggableView.backView];
-//                               //  [self.draggableView bringSubviewToFront:self.draggableView.backView];
-//                                //  [self.draggableViewBackground.draggableView.frontView removeFromSuperview];
-//                               // [self addSubview:self.draggableView.backView];
-//                              //  [self.draggableView.backView setAlpha:1];
-//                                //  [self.draggableViewBackground.draggableView.backView setHidden:NO];
-//                              //  NSLog(@"%d", self.draggableView.frontView.hidden);
-//                                self.flipped = YES;
-//                            } else {
-//                                //                                [self.draggableViewBackground.draggableView.backView setHidden:NO];
-//                             //   [self.draggableView.frontView setHidden:YES];
-//                              //  [self.draggableView.frontView removeFromSuperview];
-//
-//                               // [self.draggableViewBackground bringSubviewToFront:self.draggableViewBackground.draggableView.backView];
-//                                //[self.draggableView.frontView setAlpha:1];
-//                                [self.draggableView.frontView setHidden:YES];
-////                                [self.draggableView.backView removeFromSuperview];
-//                                self.flipped = NO;
-//                            }
-//                        }
-//                        completion:nil];
-//    }
-//}
-
 
 - (void)setFrameOfViewBackground {
     if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 480) {

@@ -17,7 +17,6 @@
         self.backgroundColor = [UIColor customBlueColor];
         self.frontLabel.backgroundColor = [UIColor customBlueColor];
 //        self.frontLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
-//        [self.frontLabel sizeToFit];
         self.frontLabel = [UILabel new];
         self.frontLabel.textColor = [UIColor whiteColor];
         //self.frontLabel.layer.masksToBounds = YES;

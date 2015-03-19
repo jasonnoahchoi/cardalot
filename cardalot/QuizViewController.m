@@ -21,10 +21,11 @@
 @interface QuizViewController ()
 
 @property (nonatomic, strong) DeckCollectionViewController *deckCollectionVC;
-//@property (nonatomic, assign) BOOL flipped;
+@property (nonatomic, assign) BOOL flipped;
 @property (nonatomic, strong) QuizFrontView *frontView;
 @property (nonatomic, strong) QuizBackView *backView;
 @property (nonatomic, strong) QuizDraggableView *draggableView;
+@property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
 @end
 
@@ -32,50 +33,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.flipped = NO;
     [self layoutNavigationBarItems];
     [self layoutSubviews];
-
-//    self.flipped = NO;
-//
-//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-//    tapGesture.numberOfTapsRequired = 2;
-//
-//    [self.draggableViewBackground addGestureRecognizer:tapGesture];
-
-
 }
-
-//- (void)handleTap:(UITapGestureRecognizer *)sender {
-//    if (sender.state == UIGestureRecognizerStateEnded) {
-//      //  [UIView transitionFromView:self.draggableViewBackground.draggableView.frontView toView:self.draggableViewBackground.draggableView.backView duration:1 options:UIViewAnimationOptionTransitionFlipFromRight
-//                 //       completion:nil];
-//        [UIView transitionWithView:self.draggableViewBackground
-//                          duration:1
-//                           options:UIViewAnimationOptionTransitionFlipFromTop|UIViewAnimationCurveEaseIn
-//                        animations:^{
-//                            if (!self.flipped) {
-//                                [self.draggableViewBackground.draggableView.frontView setHidden:NO];
-//                              //  [self.draggableViewBackground addSubview:self.draggableViewBackground.draggableView.frontView];
-//                               // [self.draggableViewBackground bringSubviewToFront:self.draggableViewBackground.draggableView.backView];
-//                              //  [self.draggableViewBackground.draggableView.frontView removeFromSuperview];
-////                                [self.draggableViewBackground addSubview:self.draggableViewBackground.draggableView.backView];
-//                              //  [self.draggableViewBackground.draggableView.backView setHidden:NO];
-//                                self.flipped = YES;
-//                            } else {
-////                                [self.draggableViewBackground.draggableView.backView setHidden:NO];
-//                                [self.draggableViewBackground.draggableView.frontView setHidden:YES];
-//                                [self.draggableViewBackground.draggableView.frontView removeFromSuperview];
-//
-//                                //[self.draggableViewBackground bringSubviewToFront:self.draggableViewBackground.draggableView.backView];
-//                               // [self.draggableViewBackground.draggableView.backView removeFromSuperview];
-//                               // [self.draggableViewBackground.draggableView.frontView setHidden:NO];
-//                                self.flipped = NO;
-//                            }
-//                        }
-//                        completion:nil];
-//    }
-//}
 - (void)layoutSubviews {
     self.view.backgroundColor = [UIColor backgroundGrayColor];
     self.draggableViewBackground = [[QuizDraggableViewBackground alloc] initWithFrame:self.view.bounds];
@@ -98,10 +59,6 @@
 
     UIImage *quizIconOrange = [UIImage imageNamed:@"Qorangeicon"];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem quizButtonWithImage:quizIconOrange target:nil action:nil];
-}
-
-- (void)test {
-    NSLog(@"Button");
 }
 
 - (void)backButtonAction {
