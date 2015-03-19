@@ -23,12 +23,54 @@
                                 <rect key="frame" x="200" y="421" width="200" height="77"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="By clicking log in, you agree to our " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7k-w0-FY4">
+                                <rect key="frame" x="163" y="516" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyG-g9-Bwh">
+                                <rect key="frame" x="359" y="512" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyButton:" destination="8lc-zb-IGy" eventType="touchUpInside" id="POg-3m-E4h"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="and our" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFp-mT-GA2">
+                                <rect key="frame" x="163" y="540" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgF-9X-F1A">
+                                <rect key="frame" x="212" y="534" width="74" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Terms of Use">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="termsButton:" destination="8lc-zb-IGy" eventType="touchUpInside" id="xgw-fJ-T1K"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="YyG-g9-Bwh" firstAttribute="leading" secondItem="t7k-w0-FY4" secondAttribute="trailing" id="7iV-qs-lZ3"/>
                             <constraint firstAttribute="centerX" secondItem="han-QW-HAS" secondAttribute="centerX" constant="-0.5" id="8b3-Pz-POS"/>
+                            <constraint firstAttribute="centerX" secondItem="XFp-mT-GA2" secondAttribute="centerX" constant="113.5" id="947-5b-vTa"/>
                             <constraint firstItem="dUM-tz-U77" firstAttribute="top" secondItem="37T-5I-wK9" secondAttribute="bottom" constant="102" id="DNu-ZQ-1EK"/>
+                            <constraint firstItem="zgF-9X-F1A" firstAttribute="top" secondItem="t7k-w0-FY4" secondAttribute="bottom" constant="-3" id="DUP-O6-vOO"/>
+                            <constraint firstAttribute="centerX" secondItem="t7k-w0-FY4" secondAttribute="centerX" constant="39" id="Jar-wD-5mw"/>
+                            <constraint firstItem="XFp-mT-GA2" firstAttribute="top" secondItem="t7k-w0-FY4" secondAttribute="bottom" constant="3" id="Ob8-Z5-s5R"/>
                             <constraint firstItem="han-QW-HAS" firstAttribute="top" secondItem="Ujb-YL-hcL" secondAttribute="bottom" constant="81" id="feM-bD-59M"/>
+                            <constraint firstItem="t7k-w0-FY4" firstAttribute="top" secondItem="37T-5I-wK9" secondAttribute="bottom" constant="18" id="gbS-3Y-gET"/>
+                            <constraint firstItem="YyG-g9-Bwh" firstAttribute="top" secondItem="37T-5I-wK9" secondAttribute="bottom" constant="11" id="geC-5r-zqd"/>
+                            <constraint firstItem="t7k-w0-FY4" firstAttribute="leading" secondItem="zgF-9X-F1A" secondAttribute="trailing" constant="-121" id="hKU-N0-G7t"/>
+                            <constraint firstItem="zgF-9X-F1A" firstAttribute="leading" secondItem="XFp-mT-GA2" secondAttribute="trailing" constant="2" id="lcT-bh-lbe"/>
                             <constraint firstAttribute="centerX" secondItem="37T-5I-wK9" secondAttribute="centerX" id="uVE-0q-iey"/>
                         </constraints>
                     </view>

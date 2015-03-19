@@ -11,6 +11,7 @@
 #import "MenuDrawerViewController.h"
 #import "Settings.h"
 #import "ErrorHandler.h"
+@import WebKit;
 
 BOOL viewDidAppear;
 BOOL viewIsVisible;
@@ -66,6 +67,22 @@ BOOL viewIsVisible;
     //    loginView.center = CGPointMake(self.view.center.x, self.view.center.y + 100);
     //    [self.view addSubview:loginView];
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)privacyButton:(id)sender {
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
+    NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"privacy" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
+    [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"privacy" withExtension:@"html"]];
+
+    [self.view addSubview:webView];
+
+}
+- (IBAction)termsButton:(id)sender {
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
+    NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"terms" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
+    [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"terms" withExtension:@"html"]];
+
+    [self.view addSubview:webView];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
