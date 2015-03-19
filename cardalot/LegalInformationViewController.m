@@ -8,6 +8,7 @@
 
 #import "LegalInformationViewController.h"
 #import <MMDrawerController.h>
+#import "CardViewController.h"
 @import WebKit;
 
 @interface LegalInformationViewController () <UITableViewDelegate>
@@ -29,6 +30,8 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCard)];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
     
     // Create tableView
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -141,6 +144,11 @@
 - (void)done {
 //    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addCard {
+    CardViewController *cardVC = [[CardViewController alloc] init];
+    [self.navigationController pushViewController:cardVC animated:YES];
 }
 
 @end
