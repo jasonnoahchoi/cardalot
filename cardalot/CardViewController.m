@@ -129,7 +129,7 @@
     [self checkTextFields];
     
     CGRect caret = [textView caretRectForPosition:textView.selectedTextRange.end];
-    CGPoint contentOffset = CGPointMake(caret.origin.x, CGRectGetMaxY(caret) + 100);
+    CGPoint contentOffset = CGPointMake(0, CGRectGetMaxY(caret) + 120);
     if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 480) {
         if (contentOffset.y < CGRectGetMaxY(textView.frame) + 50) {
             [self.tableView setContentOffset:contentOffset animated:YES];
