@@ -169,9 +169,9 @@
 //        return 64;
 //    }
     if (indexPath.row == 0) {
-        return 125;
+        return 135;
     } else {
-        return 38;
+        return 44;
     }
 }
 
