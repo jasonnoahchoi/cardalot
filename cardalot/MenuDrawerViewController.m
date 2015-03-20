@@ -168,7 +168,7 @@
     if (indexPath.row == 0) {
         return 135;
     } else {
-        return 44;
+        return 54;
     }
 }
 
