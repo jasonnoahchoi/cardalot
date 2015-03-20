@@ -76,6 +76,7 @@
 		FF0C44DD1AB5FE7F007C7544 /* AdvancedSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C44DC1AB5FE7F007C7544 /* AdvancedSettingsViewController.m */; };
 		FF0C44E01AB604B4007C7544 /* FAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C44DF1AB604B4007C7544 /* FAQViewController.m */; };
 		FF25CC901ABBE69C00F4E6BF /* attributions.html in Resources */ = {isa = PBXBuildFile; fileRef = FF25CC8F1ABBE69C00F4E6BF /* attributions.html */; };
+		FF25CC921ABBFC8400F4E6BF /* FAQ.html in Resources */ = {isa = PBXBuildFile; fileRef = FF25CC911ABBFC8400F4E6BF /* FAQ.html */; };
 		FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */; };
 		FF32B39D1AB230A80098EFA5 /* LogoMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */; };
 		FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3961AB230A80098EFA5 /* MenuDrawerViewController.m */; };
@@ -234,6 +235,7 @@
 		FF0C44DE1AB604B4007C7544 /* FAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQViewController.h; sourceTree = "<group>"; };
 		FF0C44DF1AB604B4007C7544 /* FAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQViewController.m; sourceTree = "<group>"; };
 		FF25CC8F1ABBE69C00F4E6BF /* attributions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = attributions.html; sourceTree = "<group>"; };
+		FF25CC911ABBFC8400F4E6BF /* FAQ.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = FAQ.html; sourceTree = "<group>"; };
 		FF32B3921AB230A80098EFA5 /* LogoMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoMenuCell.h; sourceTree = "<group>"; };
 		FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoMenuCell.m; sourceTree = "<group>"; };
 		FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoMenuCell.xib; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 		08FE1E731AAA5F570068F0C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FF25CC911ABBFC8400F4E6BF /* FAQ.html */,
 				FF25CC8F1ABBE69C00F4E6BF /* attributions.html */,
 				08FF236D1ABB85A3006B55CD /* privacy.html */,
 				08FF236E1ABB85A3006B55CD /* terms.html */,
@@ -704,6 +707,7 @@
 				FF25CC901ABBE69C00F4E6BF /* attributions.html in Resources */,
 				08FF236F1ABB85A3006B55CD /* privacy.html in Resources */,
 				08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */,
+				FF25CC921ABBFC8400F4E6BF /* FAQ.html in Resources */,
 				FF8F0AD41AAE579A00BDD975 /* DeckTagCell.xib in Resources */,
 				08DBF9191ABAA02100BE69A1 /* Products.json in Resources */,
 				0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */,
