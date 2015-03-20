@@ -15,10 +15,12 @@
 #import "AdvancedSettingsViewController.h"
 #import "FAQViewController.h"
 #import "CardViewController.h"
+@import WebKit;
 
 @interface SettingsMenuViewController () <UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIView *faqContainerView;
 
 @end
 
@@ -148,13 +150,24 @@
         }
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
-            FAQViewController *faqVC = [FAQViewController new];
-//            faqVC.drawerController = self.mm_drawerController;
-            UINavigationController *faqNavController = [[UINavigationController alloc] initWithRootViewController:faqVC];
-//            [self.mm_drawerController setCenterViewController:faqNavController];
-//            [navigationController popToRootViewControllerAnimated:YES];
-//            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
-            [self presentViewController:faqNavController animated:YES completion:nil];
+//            FAQViewController *faqVC = [FAQViewController new];
+//            UINavigationController *faqNavController = [[UINavigationController alloc] initWithRootViewController:faqVC];
+//            [self presentViewController:faqNavController animated:YES completion:nil];
+            self.faqContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height)];
+            [self.view addSubview:self.faqContainerView];
+            WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height - 92)];
+            NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"FAQ" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
+            [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"FAQ" withExtension:@"html"]];
+            
+            UIButton *dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            [dismissButton setImage:[UIImage imageNamed:@"deletecircle"] forState:UIControlStateNormal];
+            dismissButton.frame = CGRectMake(CGRectGetMaxX(self.faqContainerView.frame) - 40, 32, 30, 30);
+            [dismissButton addTarget:self action:@selector(dismissFAQView) forControlEvents:UIControlEventTouchUpInside];
+            
+            [self.faqContainerView addSubview:webView];
+            [self.faqContainerView addSubview:dismissButton];
+        
+            
         } else if (indexPath.row == 1) {
             SupportViewController *supportVC = [SupportViewController new];
 //            supportVC.drawerController = self.mm_drawerController;
@@ -199,6 +212,10 @@
 - (void)addCard {
     CardViewController *cardVC = [[CardViewController alloc] init];
     [self.navigationController pushViewController:cardVC animated:YES];
+}
+
+- (void)dismissFAQView {
+    [self.faqContainerView removeFromSuperview];
 }
 
 @end
