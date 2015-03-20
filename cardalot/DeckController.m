@@ -117,6 +117,7 @@ static NSString * const sessionEntity = @"Session";
 - (void)configureWithPurchases {
     if ([PurchasedDataController sharedInstance].goPro) {
         NSLog(@"Go Pro!");
+        
     }
 }
 

@@ -211,6 +211,8 @@
             case SKPaymentTransactionStateDeferred:
                 NSLog(@"payment deferred");
                 break;
+
+            default: break;
         }
     }
 }

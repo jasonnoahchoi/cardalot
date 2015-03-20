@@ -662,7 +662,7 @@
 				TargetAttributes = {
 					08FE1E6F1AAA5F570068F0C9 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = D5E8L77H65;
+						DevelopmentTeam = GQHC8CPYGZ;
 					};
 					08FE1E881AAA5F570068F0C9 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -953,6 +953,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -967,6 +968,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
