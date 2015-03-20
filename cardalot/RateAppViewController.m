@@ -8,6 +8,7 @@
 
 #import "RateAppViewController.h"
 #import "DeckCollectionViewController.h"
+#import "CardViewController.h"
 #import <MMDrawerController.h>
 #import "UIColor+Colors.h"
 #import <MessageUI/MessageUI.h>
@@ -29,6 +30,9 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCard)];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
     
     UILabel *rateAppMessageLabel = [[UILabel alloc] init];
     rateAppMessageLabel.text = @"We are sorry that you decide not to rate our app. We are constantly looking for ways to improve in order to provide you with the best experience possible. Please consider sending us a support email to let us know where and how we can improve.";
@@ -67,6 +71,11 @@
 - (void)done {
 //    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addCard {
+    CardViewController *cardVC = [[CardViewController alloc] init];
+    [self.navigationController pushViewController:cardVC animated:YES];
 }
 
 - (void)sendFeedbackEmail:(id)sender {

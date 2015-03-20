@@ -8,6 +8,7 @@
 
 #import "SupportViewController.h"
 #import <MMDrawerController.h>
+#import "CardViewController.h"
 #import "UIColor+Colors.h"
 #import <MessageUI/MessageUI.h>
 @import MessageUI;
@@ -27,6 +28,8 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCard)];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
     
     UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 300, 80)];
     tempLabel.numberOfLines = 0;
@@ -77,6 +80,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
+- (void)addCard {
+    CardViewController *cardVC = [[CardViewController alloc] init];
+    [self.navigationController pushViewController:cardVC animated:YES];
+}
 
 @end
