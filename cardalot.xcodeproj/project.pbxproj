@@ -45,6 +45,10 @@
 		08FE1E811AAA5F570068F0C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FE1E801AAA5F570068F0C9 /* Images.xcassets */; };
 		08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08FE1E821AAA5F570068F0C9 /* LaunchScreen.xib */; };
 		08FE1E901AAA5F570068F0C9 /* cardalotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */; };
+		08FF236F1ABB85A3006B55CD /* privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = 08FF236D1ABB85A3006B55CD /* privacy.html */; };
+		08FF23701ABB85A3006B55CD /* terms.html in Resources */ = {isa = PBXBuildFile; fileRef = 08FF236E1ABB85A3006B55CD /* terms.html */; };
+		08FF23731ABB880A006B55CD /* TermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FF23721ABB880A006B55CD /* TermsViewController.m */; };
+		08FF23761ABB8813006B55CD /* PrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FF23751ABB8813006B55CD /* PrivacyViewController.m */; };
 		3B050E253021896E149A532F /* libPods-cardalot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8B54A570249508FE757348 /* libPods-cardalot.a */; };
 		7200CEB31AACE66000E84D55 /* CompletionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEB21AACE66000E84D55 /* CompletionViewController.m */; };
 		7200CEC21AAD1D9A00E84D55 /* CardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7200CEC11AAD1D9A00E84D55 /* CardCollectionViewController.m */; };
@@ -167,6 +171,12 @@
 		08FE1E891AAA5F570068F0C9 /* cardalotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cardalotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FE1E8E1AAA5F570068F0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cardalotTests.m; sourceTree = "<group>"; };
+		08FF236D1ABB85A3006B55CD /* privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy.html; sourceTree = "<group>"; };
+		08FF236E1ABB85A3006B55CD /* terms.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = terms.html; sourceTree = "<group>"; };
+		08FF23711ABB880A006B55CD /* TermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermsViewController.h; sourceTree = "<group>"; };
+		08FF23721ABB880A006B55CD /* TermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsViewController.m; sourceTree = "<group>"; };
+		08FF23741ABB8813006B55CD /* PrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyViewController.h; sourceTree = "<group>"; };
+		08FF23751ABB8813006B55CD /* PrivacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyViewController.m; sourceTree = "<group>"; };
 		1E0294E2F64F78E379287CCE /* Pods-cardalot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardalot.release.xcconfig"; path = "Pods/Target Support Files/Pods-cardalot/Pods-cardalot.release.xcconfig"; sourceTree = "<group>"; };
 		7200CEB11AACE66000E84D55 /* CompletionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletionViewController.h; sourceTree = "<group>"; };
 		7200CEB21AACE66000E84D55 /* CompletionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletionViewController.m; sourceTree = "<group>"; };
@@ -271,6 +281,10 @@
 				08D250641AB67F1C00A716D2 /* LoginViewController.xib */,
 				08CA60111AB72C7F00FAC558 /* FBLoginViewController.h */,
 				08CA60121AB72C7F00FAC558 /* FBLoginViewController.m */,
+				08FF23711ABB880A006B55CD /* TermsViewController.h */,
+				08FF23721ABB880A006B55CD /* TermsViewController.m */,
+				08FF23741ABB8813006B55CD /* PrivacyViewController.h */,
+				08FF23751ABB8813006B55CD /* PrivacyViewController.m */,
 				08D250671AB6BCB700A716D2 /* Settings.h */,
 				08D250681AB6BCB700A716D2 /* Settings.m */,
 				08D2506A1AB6BD0400A716D2 /* ErrorHandler.h */,
@@ -565,6 +579,8 @@
 		FF8F0ADA1AAE597200BDD975 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				08FF236D1ABB85A3006B55CD /* privacy.html */,
+				08FF236E1ABB85A3006B55CD /* terms.html */,
 				08F5EA321AB4F45700D00A3F /* Deck.h */,
 				08F5EA331AB4F45700D00A3F /* Deck.m */,
 				08F5EA2F1AB4F45600D00A3F /* Stat.h */,
@@ -667,12 +683,14 @@
 				FF8F0AD61AAE579A00BDD975 /* FrontTextCell.xib in Resources */,
 				72C1E1B01AB27BAB0041E2C8 /* StatsTableViewCell.xib in Resources */,
 				08D250661AB67F1C00A716D2 /* LoginViewController.xib in Resources */,
+				08FF236F1ABB85A3006B55CD /* privacy.html in Resources */,
 				08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */,
 				FF8F0AD41AAE579A00BDD975 /* DeckTagCell.xib in Resources */,
 				08DBF9191ABAA02100BE69A1 /* Products.json in Resources */,
 				0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */,
 				08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */,
 				08FE1E811AAA5F570068F0C9 /* Images.xcassets in Resources */,
+				08FF23701ABB85A3006B55CD /* terms.html in Resources */,
 				FF32B3A01AB230A80098EFA5 /* SearchCell.xib in Resources */,
 				FF8F0AD11AAE579A00BDD975 /* BackTextCell.xib in Resources */,
 				FF32B39D1AB230A80098EFA5 /* LogoMenuCell.xib in Resources */,
@@ -734,6 +752,7 @@
 				FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */,
 				72C1E1BC1AB3960B0041E2C8 /* Card.m in Sources */,
 				FF8F0AD01AAE579A00BDD975 /* BackTextCell.m in Sources */,
+				08FF23731ABB880A006B55CD /* TermsViewController.m in Sources */,
 				08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */,
 				08FE1E7C1AAA5F570068F0C9 /* DeckCollectionViewController.m in Sources */,
 				08F5EA311AB4F45600D00A3F /* Stat.m in Sources */,
@@ -758,6 +777,7 @@
 				08F5EA2E1AB4F31700D00A3F /* Session.m in Sources */,
 				08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */,
 				725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */,
+				08FF23761ABB8813006B55CD /* PrivacyViewController.m in Sources */,
 				08F5EA341AB4F45700D00A3F /* Deck.m in Sources */,
 				FF8F0AD31AAE579A00BDD975 /* DeckTagCell.m in Sources */,
 				08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */,

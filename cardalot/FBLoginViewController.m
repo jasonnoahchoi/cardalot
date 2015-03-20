@@ -11,6 +11,8 @@
 #import "MenuDrawerViewController.h"
 #import "Settings.h"
 #import "ErrorHandler.h"
+#import "TermsViewController.h"
+#import "PrivacyViewController.h"
 
 BOOL viewDidAppear;
 BOOL viewIsVisible;
@@ -66,6 +68,15 @@ BOOL viewIsVisible;
     //    loginView.center = CGPointMake(self.view.center.x, self.view.center.y + 100);
     //    [self.view addSubview:loginView];
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)privacyButton:(id)sender {
+    PrivacyViewController *privacyVC = [[PrivacyViewController alloc] init];
+    [self.navigationController pushViewController:privacyVC animated:YES];
+
+}
+- (IBAction)termsButton:(id)sender {
+    TermsViewController *termsVC = [[TermsViewController alloc] init];
+    [self.navigationController pushViewController:termsVC animated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated
