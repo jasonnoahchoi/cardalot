@@ -11,6 +11,7 @@
 #import "Deck.h"
 #import "Session.h"
 #import "UIColor+Colors.h"
+#import "DeckCollectionViewController.h"
 
 @interface CompletionViewController () <JBBarChartViewDataSource, JBBarChartViewDelegate>
 
@@ -43,8 +44,10 @@
     NSInteger markedWrong = self.deck.cards.count - [self.session.markedCorrect integerValue];
     leftLabel.text = [NSString stringWithFormat:@"%ld incorrect", (long)markedWrong];
     leftLabel.font = [UIFont systemFontOfSize:13];
+    leftLabel.numberOfLines = 0;
     leftLabel.textAlignment = NSTextAlignmentCenter;
     leftLabel.textColor = [UIColor customBlueColor];
+    leftLabel.lineBreakMode = NSLineBreakByWordWrapping;
     leftLabel.layer.borderWidth = 2.0;
     leftLabel.layer.cornerRadius = 2;
     leftLabel.layer.borderColor = [[UIColor customBlueColor] CGColor];
@@ -55,7 +58,9 @@
     rightLabel.text = [NSString stringWithFormat:@"%@ correct", self.session.markedCorrect];
     rightLabel.font = [UIFont systemFontOfSize:13];
     rightLabel.textAlignment = NSTextAlignmentCenter;
+    rightLabel.lineBreakMode = NSLineBreakByWordWrapping;
     rightLabel.textColor = [UIColor customBlueColor];
+    rightLabel.numberOfLines = 0;
     rightLabel.layer.borderWidth = 2.0;
     rightLabel.layer.cornerRadius = 2;
     rightLabel.layer.borderColor = [[UIColor customBlueColor] CGColor];
@@ -91,7 +96,9 @@
 }
 
 - (void)done {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    DeckCollectionViewController *deckVC = [self.navigationController.viewControllers objectAtIndex:1];
+
+    [self.navigationController popToViewController:deckVC animated:YES];
 }
 
 #pragma mark JBBarChartViewDataSource
