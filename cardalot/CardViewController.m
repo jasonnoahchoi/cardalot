@@ -252,7 +252,7 @@
 
         [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"Not buying pro");
-            [self.navigationController popViewControllerAnimated:YES];
+//            [self.navigationController popViewControllerAnimated:YES];
         }]];
         [self presentViewController:deckLimitAlert animated:YES completion:nil];
     }
