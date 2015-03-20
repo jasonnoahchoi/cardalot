@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIView *attributionContainerView;
+@property (nonatomic, strong) UIView *policyContainerView;
 
 @end
 
@@ -111,18 +112,25 @@
             UIButton *dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [dismissButton setImage:[UIImage imageNamed:@"deletecircle"] forState:UIControlStateNormal];
             dismissButton.frame = CGRectMake(CGRectGetMaxX(self.attributionContainerView.frame) - 40, 72, 30, 30);
-            [dismissButton addTarget:self action:@selector(dismissView) forControlEvents:UIControlEventTouchUpInside];
+            [dismissButton addTarget:self action:@selector(dismissAttributionView) forControlEvents:UIControlEventTouchUpInside];
             [self.attributionContainerView addSubview:dismissButton];
             [self.attributionContainerView addSubview:attributionLabel];
         }
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
-            
+            self.policyContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
+            [self.view addSubview:self.policyContainerView];
             WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
             NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"privacy" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
             [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"privacy" withExtension:@"html"]];
             
-            [self.view addSubview:webView];
+            UIButton *dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            [dismissButton setImage:[UIImage imageNamed:@"deletecircle"] forState:UIControlStateNormal];
+            dismissButton.frame = CGRectMake(CGRectGetMaxX(self.policyContainerView.frame) - 40, 42, 30, 30);
+            [dismissButton addTarget:self action:@selector(dismissPolicyView) forControlEvents:UIControlEventTouchUpInside];
+            
+            [self.policyContainerView addSubview:webView];
+            [self.policyContainerView addSubview:dismissButton];
         }
     } else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
@@ -157,8 +165,12 @@
     [self.navigationController pushViewController:cardVC animated:YES];
 }
 
-- (void)dismissView {
+- (void)dismissAttributionView {
     [self.attributionContainerView removeFromSuperview];
+}
+
+- (void)dismissPolicyView {
+    [self.policyContainerView removeFromSuperview];
 }
 
 @end
