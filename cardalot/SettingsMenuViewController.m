@@ -119,6 +119,7 @@
             case 0: return self.legalCell;
             case 1: return self.versionCell;
         }
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
 }

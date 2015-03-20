@@ -96,6 +96,7 @@
                 case 0: return self.termsOfServiceCell;
             }
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -103,31 +104,31 @@
     
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            self.attributionContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+            self.attributionContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height)];
             [self.view addSubview:self.attributionContainerView];
-            UILabel *attributionLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 105, self.view.frame.size.width - 20, self.view.frame.size.height - 120)];
-            attributionLabel.text = @"";
-            attributionLabel.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
-            attributionLabel.alpha = 0.9;
-            attributionLabel.numberOfLines = 0;
+            WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height - 92)];
+            NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"attributions" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
+            [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"attributions" withExtension:@"html"]];
+            
             UIButton *dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [dismissButton setImage:[UIImage imageNamed:@"deletecircle"] forState:UIControlStateNormal];
-            dismissButton.frame = CGRectMake(CGRectGetMaxX(self.attributionContainerView.frame) - 40, 72, 30, 30);
+            dismissButton.frame = CGRectMake(CGRectGetMaxX(self.attributionContainerView.frame) - 40, 32, 30, 30);
             [dismissButton addTarget:self action:@selector(dismissAttributionView) forControlEvents:UIControlEventTouchUpInside];
+            
+            [self.attributionContainerView addSubview:webView];
             [self.attributionContainerView addSubview:dismissButton];
-            [self.attributionContainerView addSubview:attributionLabel];
         }
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
-            self.policyContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
+            self.policyContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height)];
             [self.view addSubview:self.policyContainerView];
-            WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
+            WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height - 92)];
             NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"privacy" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
             [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"privacy" withExtension:@"html"]];
             
             UIButton *dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [dismissButton setImage:[UIImage imageNamed:@"deletecircle"] forState:UIControlStateNormal];
-            dismissButton.frame = CGRectMake(CGRectGetMaxX(self.policyContainerView.frame) - 40, 42, 30, 30);
+            dismissButton.frame = CGRectMake(CGRectGetMaxX(self.policyContainerView.frame) - 40, 32, 30, 30);
             [dismissButton addTarget:self action:@selector(dismissPolicyView) forControlEvents:UIControlEventTouchUpInside];
             
             [self.policyContainerView addSubview:webView];
@@ -135,21 +136,22 @@
         }
     } else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
-            self.termsContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
+            self.termsContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height)];
             [self.view addSubview:self.termsContainerView];
             
-            WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
+            WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height - 92)];
             NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"terms" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
             [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"terms" withExtension:@"html"]];
             
             UIButton *dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [dismissButton setImage:[UIImage imageNamed:@"deletecircle"] forState:UIControlStateNormal];
-            dismissButton.frame = CGRectMake(CGRectGetMaxX(self.termsContainerView.frame) - 40, 42, 30, 30);
+            dismissButton.frame = CGRectMake(CGRectGetMaxX(self.termsContainerView.frame) - 40, 32, 30, 30);
             [dismissButton addTarget:self action:@selector(dismissTermsView) forControlEvents:UIControlEventTouchUpInside];
             
             [self.termsContainerView addSubview:webView];
             [self.termsContainerView addSubview:dismissButton];
         }
+        
     }
 }
 
