@@ -14,6 +14,7 @@
 @interface LegalInformationViewController () <UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIView *attributionContainerView;
 
 @end
 
@@ -100,14 +101,19 @@
     
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            UIView *attributionsView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-            [self.view addSubview:attributionsView];
-            UILabel *attributionLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 75, self.view.frame.size.width - 20, self.view.frame.size.height - 90)];
+            self.attributionContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+            [self.view addSubview:self.attributionContainerView];
+            UILabel *attributionLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 105, self.view.frame.size.width - 20, self.view.frame.size.height - 120)];
             attributionLabel.text = @"";
             attributionLabel.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
             attributionLabel.alpha = 0.9;
             attributionLabel.numberOfLines = 0;
-            [attributionsView addSubview:attributionLabel];
+            UIButton *dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            [dismissButton setImage:[UIImage imageNamed:@"deletecircle"] forState:UIControlStateNormal];
+            dismissButton.frame = CGRectMake(CGRectGetMaxX(self.attributionContainerView.frame) - 40, 72, 30, 30);
+            [dismissButton addTarget:self action:@selector(dismissView) forControlEvents:UIControlEventTouchUpInside];
+            [self.attributionContainerView addSubview:dismissButton];
+            [self.attributionContainerView addSubview:attributionLabel];
         }
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
@@ -149,6 +155,10 @@
 - (void)addCard {
     CardViewController *cardVC = [[CardViewController alloc] init];
     [self.navigationController pushViewController:cardVC animated:YES];
+}
+
+- (void)dismissView {
+    [self.attributionContainerView removeFromSuperview];
 }
 
 @end
