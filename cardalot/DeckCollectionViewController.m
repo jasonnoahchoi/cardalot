@@ -22,6 +22,7 @@
 #import "Session.h"
 #import "RateAppViewController.h"
 #import "StorePurchaseController.h"
+#import "PurchasedDataController.h"
 
 @import StoreKit;
 #import <MMDrawerController.h>
@@ -30,6 +31,7 @@ static NSString * const cellIdentifier = @"cell";
 static int count = 0;
 static int quizMode;
 static int studyMode;
+BOOL goPro;
 
 @interface DeckCollectionViewController () <UICollectionViewDelegate, UIGestureRecognizerDelegate>
 
@@ -60,6 +62,7 @@ static int studyMode;
     self.dataSource.deckCollectionVC = self;
     
     self.collectionView.delegate = self;
+    goPro = [PurchasedDataController sharedInstance].goPro;
 
     // Disable/Enable Drawer Gestures
     self.drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
@@ -85,11 +88,13 @@ static int studyMode;
 }
 
 - (void)productsPurchased:(NSNotification *)notification {
-
+    goPro = YES;
+    [self.collectionView reloadData];
 }
 
 - (void)productsRestored:(NSNotification *)notification {
-
+    goPro = YES;
+    [self.collectionView reloadData];
 }
 
 - (void)dealloc {
@@ -250,21 +255,23 @@ static int studyMode;
 
         self.deckTitle = ((UITextField *)[alertController.textFields objectAtIndex:0]).text;
         [[DeckController sharedInstance] addDeckWithName:self.deckTitle];
-        if ([DeckController sharedInstance].decks.count >= 5) {
+        if ( [DeckController sharedInstance].decks.count >= 5 && [PurchasedDataController sharedInstance].goPro == NO) {
             UIAlertController *deckLimitAlert = [UIAlertController alertControllerWithTitle:@"You've reached your limit!" message:@"You can get unlimited decks with more features coming soon by upgrading to our pro version!" preferredStyle:UIAlertControllerStyleAlert];
             [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                [[StorePurchaseController sharedInstance] requestProducts];
+                [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
             }]];
 
             [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 NSLog(@"Not buying pro");
             }]];
-
             [self presentViewController:deckLimitAlert animated:YES completion:nil];
         }
+
         [[DeckController sharedInstance] save];
         [self.collectionView reloadData];
+
     }]];
+
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
                                                         style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         NSLog(@"cancel");
