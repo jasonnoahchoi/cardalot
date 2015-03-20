@@ -11,7 +11,8 @@
 #import "MenuDrawerViewController.h"
 #import "Settings.h"
 #import "ErrorHandler.h"
-@import WebKit;
+#import "TermsViewController.h"
+#import "PrivacyViewController.h"
 
 BOOL viewDidAppear;
 BOOL viewIsVisible;
@@ -69,20 +70,13 @@ BOOL viewIsVisible;
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)privacyButton:(id)sender {
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
-    NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"privacy" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
-    [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"privacy" withExtension:@"html"]];
-
-    [self.view addSubview:webView];
+    PrivacyViewController *privacyVC = [[PrivacyViewController alloc] init];
+    [self.navigationController pushViewController:privacyVC animated:YES];
 
 }
 - (IBAction)termsButton:(id)sender {
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
-    NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"terms" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
-    [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"terms" withExtension:@"html"]];
-
-    [self.view addSubview:webView];
-
+    TermsViewController *termsVC = [[TermsViewController alloc] init];
+    [self.navigationController pushViewController:termsVC animated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated
