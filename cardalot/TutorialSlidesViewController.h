@@ -10,4 +10,6 @@
 
 @interface TutorialSlidesViewController : UIViewController
 
+@property (assign, nonatomic) NSInteger index;
+
 @end
