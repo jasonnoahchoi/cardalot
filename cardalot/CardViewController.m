@@ -13,6 +13,7 @@
 #import "UIColor+Colors.h"
 #import "Deck.h"
 #import "StorePurchaseController.h"
+#import "PurchasedDataController.h"
 @import StoreKit;
 
 @interface CardViewController () <UITextViewDelegate, UITextFieldDelegate>
@@ -233,13 +234,10 @@
 #pragma mark - Navigation Methods
 - (IBAction)done:(id)sender {
     [[DeckController sharedInstance] addCardWithTitle:self.frontTextCell.frontTextField.text andAnswer:self.backTextCell.backTextView.text toDeckWithNameTag:self.deckTagCell.deckTagField.text];
-    if ([DeckController sharedInstance].decks.count >= 5) {
+    if ( [DeckController sharedInstance].decks.count >= 5 && [PurchasedDataController sharedInstance].goPro == NO) {
         UIAlertController *deckLimitAlert = [UIAlertController alertControllerWithTitle:@"You've reached your limit!" message:@"You can get unlimited decks with more features coming soon by upgrading to our pro version!" preferredStyle:UIAlertControllerStyleAlert];
-        // [deckLimitAlert addTextFieldWithConfigurationHandler:nil];
         [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-#warning Store Kit Insert!
-            // Store Kit Code
-             [[StorePurchaseController sharedInstance] requestProducts];
+            [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
         }]];
         [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"Not buying pro");
