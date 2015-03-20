@@ -80,19 +80,13 @@ static NSString * const sessionEntity = @"Session";
 
 #pragma mark Card stuff
 - (void)addCardWithTitle:(NSString *)title andAnswer:(NSString *)answer toDeckWithNameTag:(NSString *)nameTag {
-    Card *card = [NSEntityDescription insertNewObjectForEntityForName:cardEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-    card.title = title;
-    card.answer = answer;
-    
-    if (![self.nameTags containsObject:nameTag]) {
-        [self addDeckWithName:nameTag];
-    }
-    
-    for (Deck *deck in self.decks) {
-        if ([deck.nameTag isEqualToString:nameTag]) {
-            [card setDecks:[NSSet setWithObject:deck]];
-            [self save];
-        }
+    if ([PurchasedDataController sharedInstance].goPro == NO && self.decks.count == 5) {
+        return;
+    } else {
+        Deck *deck = [NSEntityDescription insertNewObjectForEntityForName:deckEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+        deck.nameTag = nameTag;
+
+        [self save];
     }
 }
 
