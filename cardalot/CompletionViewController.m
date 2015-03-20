@@ -42,7 +42,6 @@
     [leftLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     NSInteger markedWrong = self.deck.cards.count - [self.session.markedCorrect integerValue];
     leftLabel.text = [NSString stringWithFormat:@"%ld incorrect", (long)markedWrong];
-    leftLabel.font = [UIFont systemFontOfSize:13];
     leftLabel.textAlignment = NSTextAlignmentCenter;
     leftLabel.textColor = [UIColor customBlueColor];
     leftLabel.layer.borderWidth = 2.0;
@@ -53,7 +52,6 @@
     UILabel *rightLabel = [[UILabel alloc] init];
     [rightLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     rightLabel.text = [NSString stringWithFormat:@"%@ correct", self.session.markedCorrect];
-    rightLabel.font = [UIFont systemFontOfSize:13];
     rightLabel.textAlignment = NSTextAlignmentCenter;
     rightLabel.textColor = [UIColor customBlueColor];
     rightLabel.layer.borderWidth = 2.0;
@@ -62,6 +60,13 @@
 //    rightLabel.backgroundColor = [UIColor customBlueColor];
     [footerView addSubview:rightLabel];
     
+    if ([[UIScreen mainScreen] bounds].size.width == 375 || [[UIScreen mainScreen] bounds].size.width > 375) {
+        leftLabel.font = [UIFont systemFontOfSize:13];
+        rightLabel.font = [UIFont systemFontOfSize:13];
+    } else {
+        leftLabel.font = [UIFont systemFontOfSize:10];
+        rightLabel.font = [UIFont systemFontOfSize:10];
+    }
     barChartView.footerView = footerView;
     
     [barChartView reloadData];
