@@ -14,7 +14,7 @@
 #import "SupportViewController.h"
 #import "AdvancedSettingsViewController.h"
 #import "FAQViewController.h"
-#import "CardViewController.h"
+#import "DeckCollectionViewController.h"
 
 @interface SettingsMenuViewController () <UITableViewDelegate>
 
@@ -31,12 +31,11 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(goBack)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
     // using icon8 image:  <a href="http://icons8.com/web-app/5771/Appointment-Reminders">Free icons by Icons8</a>
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCard)];
-    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reminder"] style:UIBarButtonItemStylePlain target:self action:nil]; ////// set action to dropdown alerts from reminders
     
     // Create tableView
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -187,17 +186,17 @@
     return nil;
 }
 
-- (void)open {
-    if (self.drawerController.openSide) {
-        [self.drawerController closeDrawerAnimated:YES completion:nil];
-    } else {
-        [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
-    }
+- (void)goBack {
+    DeckCollectionViewController *deckCollectionVC = [[DeckCollectionViewController alloc] init];
+    deckCollectionVC.drawerController = self.drawerController;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
+    [self.drawerController setCenterViewController:navController];
 }
 
-- (void)addCard {
-    CardViewController *cardVC = [[CardViewController alloc] init];
-    [self.navigationController pushViewController:cardVC animated:YES];
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+
 }
+
 
 @end

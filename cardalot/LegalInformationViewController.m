@@ -8,11 +8,15 @@
 
 #import "LegalInformationViewController.h"
 #import <MMDrawerController.h>
+#import "CardViewController.h"
 @import WebKit;
 
 @interface LegalInformationViewController () <UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIView *attributionContainerView;
+@property (nonatomic, strong) UIView *policyContainerView;
+@property (nonatomic, strong) UIView *termsContainerView;
 
 @end
 
@@ -29,6 +33,8 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCard)];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
     
     // Create tableView
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -97,32 +103,52 @@
     
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            UIView *attributionsView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-            [self.view addSubview:attributionsView];
-            UILabel *attributionLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 75, self.view.frame.size.width - 20, self.view.frame.size.height - 90)];
+            self.attributionContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+            [self.view addSubview:self.attributionContainerView];
+            UILabel *attributionLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 105, self.view.frame.size.width - 20, self.view.frame.size.height - 120)];
             attributionLabel.text = @"";
             attributionLabel.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
             attributionLabel.alpha = 0.9;
             attributionLabel.numberOfLines = 0;
-            [attributionsView addSubview:attributionLabel];
+            UIButton *dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            [dismissButton setImage:[UIImage imageNamed:@"deletecircle"] forState:UIControlStateNormal];
+            dismissButton.frame = CGRectMake(CGRectGetMaxX(self.attributionContainerView.frame) - 40, 72, 30, 30);
+            [dismissButton addTarget:self action:@selector(dismissAttributionView) forControlEvents:UIControlEventTouchUpInside];
+            [self.attributionContainerView addSubview:dismissButton];
+            [self.attributionContainerView addSubview:attributionLabel];
         }
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
-            
+            self.policyContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
+            [self.view addSubview:self.policyContainerView];
             WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
             NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"privacy" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
             [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"privacy" withExtension:@"html"]];
             
-            [self.view addSubview:webView];
+            UIButton *dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            [dismissButton setImage:[UIImage imageNamed:@"deletecircle"] forState:UIControlStateNormal];
+            dismissButton.frame = CGRectMake(CGRectGetMaxX(self.policyContainerView.frame) - 40, 42, 30, 30);
+            [dismissButton addTarget:self action:@selector(dismissPolicyView) forControlEvents:UIControlEventTouchUpInside];
+            
+            [self.policyContainerView addSubview:webView];
+            [self.policyContainerView addSubview:dismissButton];
         }
     } else if (indexPath.section == 2) {
         if (indexPath.row == 0) {
+            self.termsContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
+            [self.view addSubview:self.termsContainerView];
             
             WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
             NSString *htmlForView = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"terms" withExtension:@"html"] encoding:NSStringEncodingConversionAllowLossy error:nil];
             [webView loadHTMLString:htmlForView baseURL:[[NSBundle mainBundle] URLForResource:@"terms" withExtension:@"html"]];
             
-            [self.view addSubview:webView];
+            UIButton *dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            [dismissButton setImage:[UIImage imageNamed:@"deletecircle"] forState:UIControlStateNormal];
+            dismissButton.frame = CGRectMake(CGRectGetMaxX(self.termsContainerView.frame) - 40, 42, 30, 30);
+            [dismissButton addTarget:self action:@selector(dismissTermsView) forControlEvents:UIControlEventTouchUpInside];
+            
+            [self.termsContainerView addSubview:webView];
+            [self.termsContainerView addSubview:dismissButton];
         }
     }
 }
@@ -141,6 +167,23 @@
 - (void)done {
 //    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addCard {
+    CardViewController *cardVC = [[CardViewController alloc] init];
+    [self.navigationController pushViewController:cardVC animated:YES];
+}
+
+- (void)dismissAttributionView {
+    [self.attributionContainerView removeFromSuperview];
+}
+
+- (void)dismissPolicyView {
+    [self.policyContainerView removeFromSuperview];
+}
+
+- (void)dismissTermsView {
+    [self.termsContainerView removeFromSuperview];
 }
 
 @end

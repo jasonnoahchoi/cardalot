@@ -8,6 +8,7 @@
 
 #import "ReferralViewController.h"
 #import "DeckCollectionViewController.h"
+#import "CardViewController.h"
 #import <MMDrawerController.h>
 #import "UIColor+Colors.h"
 @import MessageUI;
@@ -28,6 +29,9 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCard)];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
     
     UILabel *referFriendsLabel = [[UILabel alloc] init];
     referFriendsLabel.text = @"If you enjoy using Cardalot, would you mind taking a moment to tell your friends about it? This would be very helpful for them as Cardalot would help them learn stuff the way it has helped you. So please consider telling your friends about Cardalot.";
@@ -70,6 +74,11 @@
     } else {
         [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     }
+}
+
+- (void)addCard {
+    CardViewController *cardVC = [[CardViewController alloc] init];
+    [self.navigationController pushViewController:cardVC animated:YES];
 }
 
 - (void)composeMessage {

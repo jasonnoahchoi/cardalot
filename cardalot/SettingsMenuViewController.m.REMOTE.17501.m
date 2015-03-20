@@ -14,7 +14,7 @@
 #import "SupportViewController.h"
 #import "AdvancedSettingsViewController.h"
 #import "FAQViewController.h"
-#import "CardViewController.h"
+#import "DeckCollectionViewController.h"
 
 @interface SettingsMenuViewController () <UITableViewDelegate>
 
@@ -34,9 +34,8 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(open)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     
-    // using icon8 image:  <a href="http://icons8.com/web-app/5771/Appointment-Reminders">Free icons by Icons8</a>
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCard)];
-    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
+//    // using icon8 image:  <a href="http://icons8.com/web-app/5771/Appointment-Reminders">Free icons by Icons8</a>
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reminder"] style:UIBarButtonItemStylePlain target:self action:nil]; ////// set action to dropdown alerts from reminders
     
     // Create tableView
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -195,9 +194,10 @@
     }
 }
 
-- (void)addCard {
-    CardViewController *cardVC = [[CardViewController alloc] init];
-    [self.navigationController pushViewController:cardVC animated:YES];
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+
 }
+
 
 @end
