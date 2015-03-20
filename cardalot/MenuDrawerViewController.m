@@ -128,12 +128,15 @@
         [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 3) {
-        RateAppViewController *rateVC = [RateAppViewController new];
-        rateVC.drawerController = self.mm_drawerController;
-        UINavigationController *rateNavController = [[UINavigationController alloc] initWithRootViewController:rateVC];
-        [self.mm_drawerController setCenterViewController:rateNavController];
-        [navigationController popToRootViewControllerAnimated:YES];
-        [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+//        RateAppViewController *rateVC = [RateAppViewController new];
+//        rateVC.drawerController = self.mm_drawerController;
+//        UINavigationController *rateNavController = [[UINavigationController alloc] initWithRootViewController:rateVC];
+//        [self.mm_drawerController setCenterViewController:rateNavController];
+//        [navigationController popToRootViewControllerAnimated:YES];
+//        [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        NSString *appName = [NSString stringWithFormat:@"%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"]];
+        NSURL *appStoreURL = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.com/app/%@", [appName stringByReplacingOccurrencesOfString:@" " withString:@""]]];
+        [[UIApplication sharedApplication] openURL:appStoreURL];
     } else if (indexPath.row == 4) {
         PremiumUpgradeViewController *premiumVC = [PremiumUpgradeViewController new];
         premiumVC.drawerController = self.mm_drawerController;
@@ -168,7 +171,7 @@
     if (indexPath.row == 0) {
         return 135;
     } else {
-        return 44;
+        return 54;
     }
 }
 

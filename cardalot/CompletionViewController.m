@@ -40,11 +40,26 @@
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 30)];
     UILabel *leftLabel = [[UILabel alloc] init];
     [leftLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-    leftLabel.text = @"Left";
+    NSInteger markedWrong = self.deck.cards.count - [self.session.markedCorrect integerValue];
+    leftLabel.text = [NSString stringWithFormat:@"%ld incorrect", (long)markedWrong];
+    leftLabel.font = [UIFont systemFontOfSize:13];
+    leftLabel.textAlignment = NSTextAlignmentCenter;
+    leftLabel.textColor = [UIColor customBlueColor];
+    leftLabel.layer.borderWidth = 2.0;
+    leftLabel.layer.cornerRadius = 2;
+    leftLabel.layer.borderColor = [[UIColor customBlueColor] CGColor];
+//    leftLabel.backgroundColor = [UIColor customBlueColor];
     [footerView addSubview:leftLabel];
     UILabel *rightLabel = [[UILabel alloc] init];
     [rightLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-    rightLabel.text = @"Right";
+    rightLabel.text = [NSString stringWithFormat:@"%@ correct", self.session.markedCorrect];
+    rightLabel.font = [UIFont systemFontOfSize:13];
+    rightLabel.textAlignment = NSTextAlignmentCenter;
+    rightLabel.textColor = [UIColor customBlueColor];
+    rightLabel.layer.borderWidth = 2.0;
+    rightLabel.layer.cornerRadius = 2;
+    rightLabel.layer.borderColor = [[UIColor customBlueColor] CGColor];
+//    rightLabel.backgroundColor = [UIColor customBlueColor];
     [footerView addSubview:rightLabel];
     
     barChartView.footerView = footerView;
@@ -56,20 +71,23 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[containerView]|" options:NSLayoutFormatAlignAllCenterY metrics:0 views:viewDictionary]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[containerView]|" options:NSLayoutFormatAlignAllCenterX metrics:0 views:viewDictionary]];
     
-    NSLayoutConstraint *leadingConstraint = [NSLayoutConstraint constraintWithItem:leftLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:footerView attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:0];
+    NSLayoutConstraint *leadingConstraint = [NSLayoutConstraint constraintWithItem:leftLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:footerView attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:-8];
     [footerView addConstraint:leadingConstraint];
     
     NSLayoutConstraint *leftLabelCenterConstraint = [NSLayoutConstraint constraintWithItem:leftLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:footerView attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
     [footerView addConstraint:leftLabelCenterConstraint];
     
-    NSLayoutConstraint *trailingToRightLabelConstraint = [NSLayoutConstraint constraintWithItem:leftLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:rightLabel attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0];
+    NSLayoutConstraint *trailingToRightLabelConstraint = [NSLayoutConstraint constraintWithItem:leftLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:rightLabel attribute:NSLayoutAttributeLeading multiplier:1.0 constant:-10];
     [footerView addConstraint:trailingToRightLabelConstraint];
     
     NSLayoutConstraint *rightLabelCenterConstraint = [NSLayoutConstraint constraintWithItem:rightLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:footerView attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
     [footerView addConstraint:rightLabelCenterConstraint];
     
-    NSLayoutConstraint *trailingConstraint = [NSLayoutConstraint constraintWithItem:rightLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:footerView attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:0];
+    NSLayoutConstraint *trailingConstraint = [NSLayoutConstraint constraintWithItem:rightLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:footerView attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:8];
     [footerView addConstraint:trailingConstraint];
+    
+    NSLayoutConstraint *equalWidthConstraint = [NSLayoutConstraint constraintWithItem:leftLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:rightLabel attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0];
+    [footerView addConstraint:equalWidthConstraint];
 }
 
 - (void)done {

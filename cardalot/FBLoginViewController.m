@@ -13,6 +13,7 @@
 #import "ErrorHandler.h"
 #import "TermsViewController.h"
 #import "PrivacyViewController.h"
+#import "DeckController.h"
 
 BOOL viewDidAppear;
 BOOL viewIsVisible;
@@ -159,6 +160,10 @@ BOOL viewIsVisible;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     DeckCollectionViewController *deckVC = (DeckCollectionViewController *)[segue destinationViewController];
     deckVC.drawerController = self.drawerController;
+    
+    [[DeckController sharedInstance] addDeckWithName:@"Click here first!"];
+    [[DeckController sharedInstance] addCardWithTitle:@"How to Use Cardalot" andAnswer:@"We believe that you can master something if you review something over and over again. Studies show if you review something at least 7 times, you'll recall information better. It's just hard to do it! We have Study Mode by pressing the S at the top and Quiz Mode by pressing the Q. In Study Mode, we show you both the front and the back at the same time. In Quiz Mode, we only show you the front and you'll have to recall what's on the back. Afterwards, you can check your progress in the menu bar. When you're comfortable, feel free to delete this deck by holding your finger down on this deck. Happy studying!" toDeckWithNameTag:@"Click here first!"];
+    [[DeckController sharedInstance] addCardWithTitle:@"Cardalot" andAnswer:@"Need to memorize something? Getting ready for a big test? We've been there. Studying can be stressful. Take charge of your life and study your notes wherever you are and swipe them away when you're done!" toDeckWithNameTag:@"Click here first!"];
 }
 
 @end

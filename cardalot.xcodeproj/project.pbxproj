@@ -204,7 +204,6 @@
 		725180F21AAA7AFE00C446E5 /* DeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckController.m; sourceTree = "<group>"; };
 		725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewDataSource.h; sourceTree = "<group>"; };
 		725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewDataSource.m; sourceTree = "<group>"; };
-		729C44281ABA2008005E23CF /* DataWithSampleDeck.xcappdata */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DataWithSampleDeck.xcappdata; sourceTree = "<group>"; };
 		729C44631ABBBB50005E23CF /* TutorialSlidesPageViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialSlidesPageViewControllerDataSource.h; sourceTree = "<group>"; };
 		729C44641ABBBB50005E23CF /* TutorialSlidesPageViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialSlidesPageViewControllerDataSource.m; sourceTree = "<group>"; };
 		729C44661ABBBC67005E23CF /* TutorialSlidesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialSlidesViewController.h; sourceTree = "<group>"; };
@@ -424,7 +423,6 @@
 				7200CEB21AACE66000E84D55 /* CompletionViewController.m */,
 				725180F11AAA7AFE00C446E5 /* DeckController.h */,
 				725180F21AAA7AFE00C446E5 /* DeckController.m */,
-				729C44281ABA2008005E23CF /* DataWithSampleDeck.xcappdata */,
 				082097D11ABA935400B65511 /* StorePurchaseController.h */,
 				082097D21ABA935400B65511 /* StorePurchaseController.m */,
 				082097D31ABA935400B65511 /* PurchasedDataController.h */,
@@ -668,7 +666,7 @@
 				TargetAttributes = {
 					08FE1E6F1AAA5F570068F0C9 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = GQHC8CPYGZ;
+						DevelopmentTeam = D5E8L77H65;
 					};
 					08FE1E881AAA5F570068F0C9 = {
 						CreatedOnToolsVersion = 6.1.1;
