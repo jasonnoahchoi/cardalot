@@ -13,17 +13,6 @@
 
 @implementation TutorialSlidesPageViewControllerDataSource
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    NSInteger index = ((TutorialSlidesViewController *)viewController).index + 1;
-    TutorialSlidesViewController *tutorialVC = (TutorialSlidesViewController *)[self viewControllerAtIndex:index];
-    return tutorialVC;
-}
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    NSInteger index = ((TutorialSlidesViewController *)viewController).index - 1;
-    TutorialSlidesViewController *tutorialVC = (TutorialSlidesViewController *)[self viewControllerAtIndex:index];
-    return tutorialVC;
-}
 
 - (TutorialSlidesViewController *)initialViewController {
     TutorialSlidesViewController *tutorialVC = [[TutorialSlidesViewController alloc] init];
@@ -35,14 +24,30 @@
     if (index < 0 || index >= [ImageController sharedInstance].images.count + 1) {
         return nil;
     } else if (index == 5) {
-        FBLoginViewController *fbLogin = [[FBLoginViewController alloc] init];
-        return fbLogin;
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        FBLoginViewController *fbLoginVC = [storyboard instantiateViewControllerWithIdentifier:@"fbloginvc"];
+        return fbLoginVC;
     }
 
     TutorialSlidesViewController *tutorialVC = [[TutorialSlidesViewController alloc] init];
     tutorialVC.index = index;
     tutorialVC.image = [ImageController sharedInstance].images[index];
     return tutorialVC;
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+    NSInteger index = ((TutorialSlidesViewController *)viewController).index + 1;
+    if (index == 5) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        FBLoginViewController *fbLoginVC = [storyboard instantiateViewControllerWithIdentifier:@"fbloginvc"];
+        return fbLoginVC;
+    }
+    return [self viewControllerAtIndex:index];
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
+    NSInteger index = ((TutorialSlidesViewController *)viewController).index - 1;
+    return [self viewControllerAtIndex:index];
 }
 
 //- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {

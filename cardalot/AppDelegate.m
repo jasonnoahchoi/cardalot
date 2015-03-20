@@ -19,6 +19,7 @@
 #import "Settings.h"
 #import "ErrorHandler.h"
 #import "FBLoginViewController.h"
+#import "TutorialSlidesContainerViewController.h"
 
 @interface AppDelegate ()
 
@@ -65,9 +66,9 @@ static NSString * const remindLaterKey = @"remind";
     MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     FBLoginViewController *fbLoginVC = [storyboard instantiateViewControllerWithIdentifier:@"fbloginvc"];
-    //self.loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController"
-      //                                                     bundle:nil]
-   // LoginViewController *loginVC = [[LoginViewController alloc] init];
+
+    TutorialSlidesContainerViewController *slidesVC = [[TutorialSlidesContainerViewController alloc] init];
+
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:fbLoginVC];
 
     //self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
@@ -86,6 +87,12 @@ static NSString * const remindLaterKey = @"remind";
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+    /// NOT SURE WHAT TO DO TO START SLIDE SHOW
+    
+//    if (launchCount == 1) {
+//        self.window.rootViewController = slidesVC;
+//    }
     self.window.rootViewController = drawerController;
     
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
