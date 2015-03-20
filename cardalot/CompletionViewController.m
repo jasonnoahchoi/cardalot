@@ -8,6 +8,7 @@
 
 #import "CompletionViewController.h"
 #import <JBChartView/JBBarChartView.h>
+#import "DeckCollectionViewController.h"
 #import "Deck.h"
 #import "Session.h"
 #import "UIColor+Colors.h"
@@ -16,6 +17,8 @@
 @interface CompletionViewController () <JBBarChartViewDataSource, JBBarChartViewDelegate>
 
 @end
+
+static NSString * const launchCountKey = @"launchCount";
 
 @implementation CompletionViewController
 
@@ -96,9 +99,13 @@
 }
 
 - (void)done {
-    DeckCollectionViewController *deckVC = [self.navigationController.viewControllers objectAtIndex:1];
-
-    [self.navigationController popToViewController:deckVC animated:YES];
+    NSInteger launchCount = [[NSUserDefaults standardUserDefaults] integerForKey:launchCountKey];
+    if (!launchCount)  {
+        DeckCollectionViewController *deckVC = [self.navigationController.viewControllers objectAtIndex:1];
+        [self.navigationController popToViewController:deckVC animated:YES];
+    } else {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark JBBarChartViewDataSource
