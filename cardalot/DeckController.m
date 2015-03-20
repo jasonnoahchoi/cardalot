@@ -59,18 +59,14 @@ static NSString * const sessionEntity = @"Session";
 
 #pragma mark Deck stuff
 - (void)addDeckWithName:(NSString *)nameTag {
-    if ([PurchasedDataController sharedInstance].goPro) {
+    if ([PurchasedDataController sharedInstance].goPro == NO && self.decks.count == 5) {
+        return;
+    } else {
         Deck *deck = [NSEntityDescription insertNewObjectForEntityForName:deckEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
         deck.nameTag = nameTag;
 
         [self save];
-    } else if (self.decks.count == 5) {
-        return;
     }
-    Deck *deck = [NSEntityDescription insertNewObjectForEntityForName:deckEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-    deck.nameTag = nameTag;
-
-    [self save];
 }
 
 - (void)removeDeck:(Deck *)deck {
@@ -80,13 +76,19 @@ static NSString * const sessionEntity = @"Session";
 
 #pragma mark Card stuff
 - (void)addCardWithTitle:(NSString *)title andAnswer:(NSString *)answer toDeckWithNameTag:(NSString *)nameTag {
-    if ([PurchasedDataController sharedInstance].goPro == NO && self.decks.count == 5) {
-        return;
-    } else {
-        Deck *deck = [NSEntityDescription insertNewObjectForEntityForName:deckEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-        deck.nameTag = nameTag;
-
-        [self save];
+    Card *card = [NSEntityDescription insertNewObjectForEntityForName:cardEntity inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    card.title = title;
+    card.answer = answer;
+    
+    if (![self.nameTags containsObject:nameTag]) {
+        [self addDeckWithName:nameTag];
+    }
+    
+    for (Deck *deck in self.decks) {
+        if ([deck.nameTag isEqualToString:nameTag]) {
+            [card setDecks:[NSSet setWithObject:deck]];
+            [self save];
+        }
     }
 }
 

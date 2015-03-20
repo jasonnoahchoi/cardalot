@@ -161,7 +161,6 @@
         
         [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:TRUE];
     }
-
 }
 
 #pragma mark - UITextFieldDelegate
@@ -179,6 +178,17 @@
     
     [self.tableView setContentOffset:contentOffset animated:YES];
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.deckTagCell.deckTagField) {
+        [self.frontTextCell.frontTextField becomeFirstResponder];
+    }
+    if (textField == self.frontTextCell.frontTextField) {
+        [self.backTextCell.backTextView becomeFirstResponder];
+    }
+    return YES;
+}
+
 
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -239,8 +249,10 @@
         [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
         }]];
+
         [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"Not buying pro");
+            [self.navigationController popViewControllerAnimated:YES];
         }]];
         [self presentViewController:deckLimitAlert animated:YES completion:nil];
     }
