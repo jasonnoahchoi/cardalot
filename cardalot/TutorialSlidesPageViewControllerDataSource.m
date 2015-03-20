@@ -8,18 +8,20 @@
 
 #import "TutorialSlidesPageViewControllerDataSource.h"
 #import "TutorialSlidesViewController.h"
+#import "ImageController.h"
+#import "FBLoginViewController.h"
 
 @implementation TutorialSlidesPageViewControllerDataSource
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     NSInteger index = ((TutorialSlidesViewController *)viewController).index + 1;
-    TutorialSlidesViewController *tutorialVC = [self viewControllerAtIndex:index];
+    TutorialSlidesViewController *tutorialVC = (TutorialSlidesViewController *)[self viewControllerAtIndex:index];
     return tutorialVC;
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     NSInteger index = ((TutorialSlidesViewController *)viewController).index - 1;
-    TutorialSlidesViewController *tutorialVC = [self viewControllerAtIndex:index];
+    TutorialSlidesViewController *tutorialVC = (TutorialSlidesViewController *)[self viewControllerAtIndex:index];
     return tutorialVC;
 }
 
@@ -29,21 +31,26 @@
     return tutorialVC;
 }
 
-- (TutorialSlidesViewController *)viewControllerAtIndex:(NSInteger)index {
-    if (index < 0 || index >= 6) {
+- (UIViewController *)viewControllerAtIndex:(NSInteger)index {
+    if (index < 0 || index >= [ImageController sharedInstance].images.count + 1) {
         return nil;
+    } else if (index == 5) {
+        FBLoginViewController *fbLogin = [[FBLoginViewController alloc] init];
+        return fbLogin;
     }
+
     TutorialSlidesViewController *tutorialVC = [[TutorialSlidesViewController alloc] init];
     tutorialVC.index = index;
+    tutorialVC.image = [ImageController sharedInstance].images[index];
     return tutorialVC;
 }
 
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
-    return 6;
-}
-
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
-    return 0;
-}
+//- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
+//    return 6;
+//}
+//
+//- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
+//    return 0;
+//}
 
 @end

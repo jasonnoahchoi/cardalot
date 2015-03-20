@@ -10,6 +10,8 @@
 
 @interface TutorialSlidesViewController : UIViewController
 
-@property (assign, nonatomic) NSInteger index;
+@property (nonatomic, assign) NSInteger index;
+@property (nonatomic, strong) UIImage *image;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

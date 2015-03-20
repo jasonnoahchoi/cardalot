@@ -7,6 +7,7 @@
 //
 
 #import "TutorialSlidesViewController.h"
+#import "ImageController.h"
 
 @interface TutorialSlidesViewController ()
 
@@ -18,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LogoBlue"]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[ImageController sharedInstance].images[self.index]];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     [imageView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:imageView];

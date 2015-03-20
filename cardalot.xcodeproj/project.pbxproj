@@ -17,6 +17,7 @@
 		0832BEF71AB5195700213071 /* QuizDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0832BEF51AB5195700213071 /* QuizDraggableView.m */; };
 		0832BEFA1AB5243100213071 /* LegalInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0832BEF91AB5243100213071 /* LegalInformationViewController.m */; };
 		083C0EDB1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */; };
+		0863B1F81ABBE54800771293 /* ImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0863B1F71ABBE54800771293 /* ImageController.m */; };
 		08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */; };
 		08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED41AAF9CC000BE440E /* StudyDraggableView.m */; };
 		08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662ED71AAF9CD400BE440E /* StudySubjectView.m */; };
@@ -123,6 +124,8 @@
 		0832BEF91AB5243100213071 /* LegalInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegalInformationViewController.m; sourceTree = "<group>"; };
 		083C0ED91AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CustomButtons.h"; sourceTree = "<group>"; };
 		083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CustomButtons.m"; sourceTree = "<group>"; };
+		0863B1F61ABBE54800771293 /* ImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageController.h; sourceTree = "<group>"; };
+		0863B1F71ABBE54800771293 /* ImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageController.m; sourceTree = "<group>"; };
 		08662ED01AAF9CA100BE440E /* StudyDraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDraggableViewBackground.h; sourceTree = "<group>"; };
 		08662ED11AAF9CA100BE440E /* StudyDraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDraggableViewBackground.m; sourceTree = "<group>"; };
 		08662ED31AAF9CC000BE440E /* StudyDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDraggableView.h; sourceTree = "<group>"; };
@@ -409,6 +412,8 @@
 				729C44671ABBBC67005E23CF /* TutorialSlidesViewController.m */,
 				729C44691ABBBF00005E23CF /* TutorialSlidesContainerViewController.h */,
 				729C446A1ABBBF00005E23CF /* TutorialSlidesContainerViewController.m */,
+				0863B1F61ABBE54800771293 /* ImageController.h */,
+				0863B1F71ABBE54800771293 /* ImageController.m */,
 				0825C9201AB8FAD500232D6F /* Stats */,
 				0825C9211AB8FAE200232D6F /* Reminders */,
 				FF8F0AD81AAE592200BDD975 /* Deck Collection View */,
@@ -775,6 +780,7 @@
 				723D96C01AB784E100121C55 /* RemindersController.m in Sources */,
 				72C1E1F41AB5036E0041E2C8 /* CustomDatePickerView.m in Sources */,
 				08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */,
+				0863B1F81ABBE54800771293 /* ImageController.m in Sources */,
 				08D2506C1AB6BD0400A716D2 /* ErrorHandler.m in Sources */,
 				08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */,
 				FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */,
