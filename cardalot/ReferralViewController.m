@@ -34,7 +34,7 @@
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
     
     UILabel *referFriendsLabel = [[UILabel alloc] init];
-    referFriendsLabel.text = @"If you enjoy using Cardalot, would you mind taking a moment to tell your friends about it? This would be very helpful for them as Cardalot would help them learn stuff the way it has helped you. So please consider telling your friends about Cardalot.";
+    referFriendsLabel.text = @"If you enjoy using Cardalot, would you mind taking a moment to tell your friends about it? We hope it helps them as much as it has helped you!";
     referFriendsLabel.numberOfLines = 0;
     [referFriendsLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:referFriendsLabel];
