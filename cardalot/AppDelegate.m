@@ -64,20 +64,21 @@ static NSString * const remindLaterKey = @"remind";
     UINavigationController *deckNavController = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
 
     MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    FBLoginViewController *fbLoginVC = [storyboard instantiateViewControllerWithIdentifier:@"fbloginvc"];
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//    FBLoginViewController *fbLoginVC = [storyboard instantiateViewControllerWithIdentifier:@"fbloginvc"];
 
     TutorialSlidesContainerViewController *slidesVC = [[TutorialSlidesContainerViewController alloc] init];
 
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:fbLoginVC];
+//    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:fbLoginVC];
 
     //self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:navVC leftDrawerViewController:settingsVC];
     MMDrawerController *drawerController = [[MMDrawerController alloc] init];
     [drawerController setLeftDrawerViewController:settingsVC];
     if (FBSession.activeSession.state != FBSessionStateCreatedTokenLoaded) {
         [drawerController setCenterViewController:slidesVC];
+        slidesVC.drawerController = drawerController;
       //  deckCollectionVC.drawerController = drawerController;
-        fbLoginVC.drawerController = drawerController;
+//        fbLoginVC.drawerController = drawerController;
         [[UIApplication sharedApplication] cancelAllLocalNotifications];
     } else {
         [self trackLaunches];

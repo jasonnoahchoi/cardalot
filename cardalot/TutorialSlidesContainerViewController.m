@@ -66,7 +66,9 @@
     } else {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         self.fbLoginVC = [storyboard instantiateViewControllerWithIdentifier:@"fbloginvc"];
-        return self.fbLoginVC;
+        self.fbLoginVC.drawerController = self.drawerController;
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.fbLoginVC];
+        return navController;
     }
 }
 

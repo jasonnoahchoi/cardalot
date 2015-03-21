@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MMDrawerController/MMDrawerController.h>
 
 @interface TutorialSlidesContainerViewController : UIViewController
+
+@property (nonatomic, strong) MMDrawerController *drawerController;
 
 @end
