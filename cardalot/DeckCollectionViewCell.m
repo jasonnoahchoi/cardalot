@@ -21,9 +21,6 @@
     self.layer.borderWidth = 5.0f;
     self.layer.rasterizationScale = [UIScreen mainScreen].scale;
     self.layer.shouldRasterize = YES;
-
-    [self.contentView addSubview:self.closeButton];
-    self.closeButton.hidden = YES;
     
 }
 
