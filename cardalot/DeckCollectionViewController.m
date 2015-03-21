@@ -33,7 +33,7 @@ static int quizMode;
 static int studyMode;
 BOOL goPro;
 
-@interface DeckCollectionViewController () <UICollectionViewDelegate, UIGestureRecognizerDelegate>
+@interface DeckCollectionViewController () <UICollectionViewDelegate, UIGestureRecognizerDelegate, UITextFieldDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
@@ -248,10 +248,14 @@ BOOL goPro;
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"New Deck"
                                                                              message:@"Choose a name for your new deck"
                                                                       preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addTextFieldWithConfigurationHandler:nil];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Save"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction *action) {
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.delegate = self;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(alertTextFieldDidChange:) name:UITextFieldTextDidChangeNotification object:textField];
+        textField.autocapitalizationType = UITextAutocapitalizationTypeWords;
+    }];
+    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction *action) {
 
         self.deckTitle = ((UITextField *)[alertController.textFields objectAtIndex:0]).text;
         [[DeckController sharedInstance] addDeckWithName:self.deckTitle];
@@ -263,19 +267,62 @@ BOOL goPro;
 
             [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 NSLog(@"Not buying pro");
+                
             }]];
             [self presentViewController:deckLimitAlert animated:YES completion:nil];
         }
 
         [[DeckController sharedInstance] save];
         [self.collectionView reloadData];
-
-    }]];
-
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:nil];
+    }];
+    [alertController addAction:saveAction];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
                                                         style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         NSLog(@"cancel");
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:nil];
     }]];
+    saveAction.enabled = NO;
     [self presentViewController:alertController animated:YES completion:nil];
 }
+
+- (void)alertTextFieldDidChange:(NSNotification *)notification
+{
+    UIAlertController *alertController = (UIAlertController *)self.presentedViewController;
+    if (alertController)
+    {
+        UITextField *deckNameField = alertController.textFields.firstObject;
+        UIAlertAction *saveAction = alertController.actions.firstObject;
+        saveAction.enabled = deckNameField.text.length > 0;
+    }
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    UIAlertController *alertController = (UIAlertController *)self.presentedViewController;
+    if (alertController) {
+        [self dismissViewControllerAnimated:YES completion:^{
+            self.deckTitle = ((UITextField *)[alertController.textFields objectAtIndex:0]).text;
+            [[DeckController sharedInstance] addDeckWithName:self.deckTitle];
+            if ( [DeckController sharedInstance].decks.count >= 5 && [PurchasedDataController sharedInstance].goPro == NO) {
+                UIAlertController *deckLimitAlert = [UIAlertController alertControllerWithTitle:@"You've reached your limit!" message:@"You can get unlimited decks with more features coming soon by upgrading to our pro version!" preferredStyle:UIAlertControllerStyleAlert];
+                [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                    [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
+                }]];
+                
+                [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                    NSLog(@"Not buying pro");
+                    
+                }]];
+                [self presentViewController:deckLimitAlert animated:YES completion:nil];
+            }
+            
+            [[DeckController sharedInstance] save];
+            [self.collectionView reloadData];
+        }];
+    }
+    return YES;
+}
+
 @end
