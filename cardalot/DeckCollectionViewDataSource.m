@@ -64,11 +64,10 @@ static NSString * const cellIdentifier = @"cell";
 }
 
 - (void)longPress:(UILongPressGestureRecognizer *)gr {
-    if (![DeckController sharedInstance].decks.count + 1) {
+    DeckCollectionViewCell *cell = (DeckCollectionViewCell *)gr.view;
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    if (indexPath.item != [DeckController sharedInstance].decks.count) {
         if (gr.state == UIGestureRecognizerStateBegan) {
-
-            DeckCollectionViewCell *cell = (DeckCollectionViewCell *)gr.view;
-            cell.closeButton.hidden = NO;
 
             [cell startJiggling];
 
@@ -90,7 +89,6 @@ static NSString * const cellIdentifier = @"cell";
                                                                 style:UIAlertActionStyleDefault
                                                               handler:^(UIAlertAction *action) {
                                                                   [cell stopJiggling];
-                                                                  cell.closeButton.hidden = YES;
                                                                   NSLog(@"cancel");
                                                               }]];
             [self.deckCollectionVC presentViewController:alertController animated:YES completion:nil];
