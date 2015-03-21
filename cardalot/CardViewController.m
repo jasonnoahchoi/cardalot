@@ -178,17 +178,17 @@
     
     [self.tableView setContentOffset:contentOffset animated:YES];
 }
-
+// to overcome xcode bug
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField == self.deckTagCell.deckTagField) {
         [self.frontTextCell.frontTextField becomeFirstResponder];
     }
     if (textField == self.frontTextCell.frontTextField) {
-        [self.backTextCell.backTextView becomeFirstResponder];
+       // [self.backTextCell.backTextView becomeFirstResponder];
+        [self.backTextCell.backTextView performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.0];
     }
     return YES;
 }
-
 
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

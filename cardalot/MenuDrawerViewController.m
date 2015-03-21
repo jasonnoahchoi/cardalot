@@ -8,7 +8,10 @@
 
 #import "MenuDrawerViewController.h"
 #import "PurchasedDataController.h"
+#import "StorePurchaseController.h"
 #import <MMDrawerController/UIViewController+MMDrawerController.h>
+
+static NSString * const kGoPro = @"goPro";
 
 @interface MenuDrawerViewController () <UITableViewDelegate>
 
@@ -73,7 +76,29 @@
     return 7;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)inAppPurchase {
+    [[StorePurchaseController sharedInstance] requestProducts];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productsRequested:) name:kInAppPurchaseFetchedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productsPurchased:) name:kInAppPurchaseCompletedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productsRestored:) name:kInAppPurchaseRestoredNotification object:nil];
+}
+
+- (void)productsRequested:(NSNotification *)notification {
+
+}
+
+- (void)productsPurchased:(NSNotification *)notification {
+   // [self.tableView reloadData];
+}
+
+- (void)productsRestored:(NSNotification *)notification {
+  //  [self.tableView reloadData];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
 //    if (indexPath.row == 0) {
 //        self.searchCell = [[SearchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell1"];
@@ -86,7 +111,8 @@
         self.logoMenuCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return self.logoMenuCell;
     } else {  // for string with format add the itentifier for account type
-        if ([PurchasedDataController sharedInstance].goPro == YES) {
+        BOOL goPro = [[NSUserDefaults standardUserDefaults] boolForKey:kGoPro];
+        if (goPro) {
             NSArray *menuListArray = @[@"Account Type: PRO", @"Progress", @"Rate App", @"Go Premium", @"Refer Friends", @"Settings"];
             UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
             cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
@@ -94,6 +120,7 @@
             cell.textLabel.attributedText = attText;
             // removes highlighting of cells when selecting
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//            [tableView reloadData];
             return cell;
         } else {
             NSArray *menuListArray = @[[NSString stringWithFormat:@"Account Type: FREE"], @"Progress", @"Rate App", @"Go Premium", @"Refer Friends", @"Settings"];
@@ -140,9 +167,11 @@
     } else if (indexPath.row == 4) {
         PremiumUpgradeViewController *premiumVC = [PremiumUpgradeViewController new];
         premiumVC.drawerController = self.mm_drawerController;
-        UINavigationController *premiumUpgradeNavController = [[UINavigationController alloc] initWithRootViewController:premiumVC];
-        [self.mm_drawerController setCenterViewController:premiumUpgradeNavController];
-        [navigationController popToRootViewControllerAnimated:YES];
+          [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
+        
+//        UINavigationController *premiumUpgradeNavController = [[UINavigationController alloc] initWithRootViewController:premiumVC];
+       // [self.mm_drawerController setCenterViewController:premiumUpgradeNavController];
+
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 5) {
         ReferralViewController *referralVC = [ReferralViewController new];
