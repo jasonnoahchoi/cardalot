@@ -132,50 +132,34 @@ BOOL goPro;
                                                                             action:@selector(open)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
 
-//    UIImage *studyIconGray = [UIImage imageNamed:@"Syellowicon"];
-//    UIImage *quizIconGray = [UIImage imageNamed:@"Qorangeicon"];
-
-//    self.studyButton = [[UIBarButtonItem alloc] initWithImage:studyIconGray
-//                                                        style:UIBarButtonItemStylePlain
-//                                                       target:self
-//                                                       action:@selector(studyMode)];
-//    self.quizButton = [[UIBarButtonItem alloc] initWithImage:quizIconGray
-//                                                       style:UIBarButtonItemStylePlain
-//                                                      target:self
-//                                                      action:@selector(quizMode)];
-//    [self.studyButton setTintColor:[UIColor lightGrayColor]];
-//    [self.quizButton setTintColor:[UIColor lightGrayColor]];
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
     [addButton setTintColor:[UIColor whiteColor]];
 
     self.navigationItem.rightBarButtonItem = addButton;
 
     UIView *containerView = [[UIView alloc] init];
-    //view.backgroundColor = [UIColor redColor];
     [self.view addSubview:containerView];
 
-    [containerView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    NSArray *viewConstraint = [NSLayoutConstraint
-                           constraintsWithVisualFormat:@"H:|-[containerView]-|"
-                           options:NSLayoutFormatAlignAllCenterX
-                           metrics:nil
-                           views:NSDictionaryOfVariableBindings(containerView)];
-    [self.view addConstraints:viewConstraint];
-
-    NSLayoutConstraint *topConstraint = [NSLayoutConstraint constraintWithItem:containerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:70];
-    [self.view addConstraint:topConstraint];
-
-   // UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 124, 320, 1)];
-   // bottomView.backgroundColor = [UIColor orangeColor];
-   // [self.view addSubview:bottomView];
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Prepare", @"Study", @"Quiz"]];
     [segmentedControl sizeToFit];
     [segmentedControl setTintColor:[UIColor customBlueColor]];
     [segmentedControl setBackgroundColor:[UIColor whiteColor]];
     segmentedControl.selectedSegmentIndex = 0;
-    //
+
     [containerView addSubview:segmentedControl];
-    //segmentedControl.frame = CGRectMake(10, 10, 300, 40);
+    [segmentedControl addTarget:self action:@selector(modeChanged:) forControlEvents:UIControlEventValueChanged];
+
+    [containerView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSArray *viewConstraint = [NSLayoutConstraint
+                               constraintsWithVisualFormat:@"H:|-[containerView]-|"
+                               options:NSLayoutFormatAlignAllCenterX
+                               metrics:nil
+                               views:NSDictionaryOfVariableBindings(containerView)];
+    [self.view addConstraints:viewConstraint];
+
+    NSLayoutConstraint *topConstraint = [NSLayoutConstraint constraintWithItem:containerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:70];
+    [self.view addConstraint:topConstraint];
+
     [segmentedControl setTranslatesAutoresizingMaskIntoConstraints:NO];
     NSArray *constraint = [NSLayoutConstraint
                            constraintsWithVisualFormat:@"H:|-[segmentedControl]-|"
@@ -189,10 +173,6 @@ BOOL goPro;
                            metrics:nil
                            views:NSDictionaryOfVariableBindings(segmentedControl)];
     [containerView addConstraints:constraintV];
-
-
-    [segmentedControl addTarget:self action:@selector(modeChanged:) forControlEvents:UIControlEventValueChanged];
-
 }
 
 - (void)modeChanged:(UISegmentedControl *)segment {
@@ -230,44 +210,44 @@ BOOL goPro;
 #pragma mark - Collection View Delegate Methods
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-        if (indexPath.item == [DeckController sharedInstance].decks.count) {
-            NSLog(@"Create a new deck");
-            [self createNewDeckAlertController];
-        } else {
-            NSLog(@"A cell has been pressed");
-            if (studyMode) {
-                NSLog(@"Study Mode");
+    if (indexPath.item == [DeckController sharedInstance].decks.count) {
+        NSLog(@"Create a new deck");
+        [self createNewDeckAlertController];
+    } else {
+        NSLog(@"A cell has been pressed");
+        if (studyMode) {
+            NSLog(@"Study Mode");
 
-                Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
-                [[DeckController sharedInstance] addSessionToDeck:deck withMode:kStudyMode];
-                Session *session = [deck.sessions lastObject];
-             //   session.mode = [NSNumber numberWithInt:kStudyMode];
+            Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+            [[DeckController sharedInstance] addSessionToDeck:deck withMode:kStudyMode];
+            Session *session = [deck.sessions lastObject];
+            //   session.mode = [NSNumber numberWithInt:kStudyMode];
 
-                StudyViewController *studyVC = [[StudyViewController alloc] init];
+            StudyViewController *studyVC = [[StudyViewController alloc] init];
 
-                studyVC.deck = deck;
-                studyVC.session = session;
+            studyVC.deck = deck;
+            studyVC.session = session;
 
-                [self.navigationController pushViewController:studyVC animated:YES];
-            } else if (quizMode) {
-                NSLog(@"QuizMode");
-                Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
-                [[DeckController sharedInstance] addSessionToDeck:deck withMode:kQuizMode];
-                Session *session = [deck.sessions lastObject];
+            [self.navigationController pushViewController:studyVC animated:YES];
+        } else if (quizMode) {
+            NSLog(@"QuizMode");
+            Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+            [[DeckController sharedInstance] addSessionToDeck:deck withMode:kQuizMode];
+            Session *session = [deck.sessions lastObject];
 
-                QuizViewController *quizVC = [[QuizViewController alloc] init];
+            QuizViewController *quizVC = [[QuizViewController alloc] init];
 
-                quizVC.deck = deck;
-                quizVC.session = session;
-                [self.navigationController pushViewController:quizVC animated:YES];
+            quizVC.deck = deck;
+            quizVC.session = session;
+            [self.navigationController pushViewController:quizVC animated:YES];
 
-            } else if (!studyMode && !quizMode) {
-                CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
-                Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
-                cardCollectionVC.deck = deck;
-                [self.navigationController pushViewController:cardCollectionVC animated:YES];
-            }
+        } else if (!studyMode && !quizMode) {
+            CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
+            Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+            cardCollectionVC.deck = deck;
+            [self.navigationController pushViewController:cardCollectionVC animated:YES];
         }
+    }
 }
 
 #pragma mark - Add button
@@ -286,9 +266,13 @@ BOOL goPro;
                                                                       preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.delegate = self;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(alertTextFieldDidChange:) name:UITextFieldTextDidChangeNotification object:textField];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(alertTextFieldDidChange:)
+                                                     name:UITextFieldTextDidChangeNotification
+                                                   object:textField];
         textField.autocapitalizationType = UITextAutocapitalizationTypeWords;
     }];
+
     UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save"
                                                          style:UIAlertActionStyleDefault
                                                        handler:^(UIAlertAction *action) {
@@ -296,14 +280,20 @@ BOOL goPro;
         self.deckTitle = ((UITextField *)[alertController.textFields objectAtIndex:0]).text;
         [[DeckController sharedInstance] addDeckWithName:self.deckTitle];
         if ( [DeckController sharedInstance].decks.count >= 5 && [PurchasedDataController sharedInstance].goPro == NO) {
-            UIAlertController *deckLimitAlert = [UIAlertController alertControllerWithTitle:@"You've reached your limit!" message:@"You can get unlimited decks with more features coming soon by upgrading to our pro version!" preferredStyle:UIAlertControllerStyleAlert];
-            [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            UIAlertController *deckLimitAlert = [UIAlertController
+                                                 alertControllerWithTitle:@"Go Pro for Unlimited Decks!"
+                                                 message:@"You have unlimited cards so if you rather not, hold down on a deck to delete it."
+                                                 preferredStyle:UIAlertControllerStyleAlert];
+            [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro"
+                                                               style:UIAlertActionStyleDefault
+                                                             handler:^(UIAlertAction *action) {
                 [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
             }]];
 
-            [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks"
+                                                               style:UIAlertActionStyleDefault
+                                                             handler:^(UIAlertAction *action) {
                 NSLog(@"Not buying pro");
-                
             }]];
             [self presentViewController:deckLimitAlert animated:YES completion:nil];
         }
@@ -311,23 +301,27 @@ BOOL goPro;
         [[DeckController sharedInstance] save];
         [self.collectionView reloadData];
         
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:UITextFieldTextDidChangeNotification
+                                                      object:nil];
     }];
     [alertController addAction:saveAction];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
-                                                        style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction *action) {
         NSLog(@"cancel");
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:UITextFieldTextDidChangeNotification
+                                                      object:nil];
     }]];
+
     saveAction.enabled = NO;
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-- (void)alertTextFieldDidChange:(NSNotification *)notification
-{
+- (void)alertTextFieldDidChange:(NSNotification *)notification {
     UIAlertController *alertController = (UIAlertController *)self.presentedViewController;
-    if (alertController)
-    {
+    if (alertController) {
         UITextField *deckNameField = alertController.textFields.firstObject;
         UIAlertAction *saveAction = alertController.actions.firstObject;
         saveAction.enabled = deckNameField.text.length > 0;
@@ -342,15 +336,22 @@ BOOL goPro;
             self.deckTitle = ((UITextField *)[alertController.textFields objectAtIndex:0]).text;
             [[DeckController sharedInstance] addDeckWithName:self.deckTitle];
             if ( [DeckController sharedInstance].decks.count >= 5 && [PurchasedDataController sharedInstance].goPro == NO) {
-                UIAlertController *deckLimitAlert = [UIAlertController alertControllerWithTitle:@"You've reached your limit!" message:@"You can get unlimited decks with more features coming soon by upgrading to our pro version!" preferredStyle:UIAlertControllerStyleAlert];
-                [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                UIAlertController *deckLimitAlert = [UIAlertController
+                                                     alertControllerWithTitle:@"You've reached your limit!"
+                                                     message:@"You can get unlimited decks with more features coming soon by upgrading to our pro version!"
+                                                     preferredStyle:UIAlertControllerStyleAlert];
+                [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro"
+                                                                   style:UIAlertActionStyleDefault
+                                                                 handler:^(UIAlertAction *action) {
                     [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
                 }]];
                 
-                [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks"
+                                                                   style:UIAlertActionStyleDefault
+                                                                 handler:^(UIAlertAction *action) {
                     NSLog(@"Not buying pro");
-                    
                 }]];
+
                 [self presentViewController:deckLimitAlert animated:YES completion:nil];
             }
             

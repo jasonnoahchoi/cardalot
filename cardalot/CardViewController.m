@@ -245,7 +245,7 @@
 - (IBAction)done:(id)sender {
     [[DeckController sharedInstance] addCardWithTitle:self.frontTextCell.frontTextField.text andAnswer:self.backTextCell.backTextView.text toDeckWithNameTag:self.deckTagCell.deckTagField.text];
     if ( [DeckController sharedInstance].decks.count >= 5 && [PurchasedDataController sharedInstance].goPro == NO && ![[DeckController sharedInstance].nameTags containsObject:self.deckTagCell.deckTagField.text]) {
-        UIAlertController *deckLimitAlert = [UIAlertController alertControllerWithTitle:@"You've reached your limit!" message:@"You can get unlimited decks with more features coming soon by upgrading to our pro version!" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *deckLimitAlert = [UIAlertController alertControllerWithTitle:@"Go Pro for Unlimited Decks!" message:@"You have unlimited cards so if you rather not, hold down on a deck to delete it."preferredStyle:UIAlertControllerStyleAlert];
         [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
         }]];
