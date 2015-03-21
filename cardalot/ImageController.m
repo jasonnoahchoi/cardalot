@@ -7,7 +7,6 @@
 //
 
 #import "ImageController.h"
-#import "TutorialSlidesPageViewControllerDataSource.h"
 
 @interface ImageController ()
 
@@ -24,7 +23,7 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[ImageController alloc] init];
 
-        sharedInstance.images = @[[UIImage imageNamed:@"Screenshot1"], [UIImage imageNamed:@"Screenshot2"], [UIImage imageNamed:@"Screenshot3"], [UIImage imageNamed:@"Screenshot4"], [UIImage imageNamed:@"Screenshot5"]];
+        sharedInstance.images = @[@"Screenshot1", @"Screenshot2", @"Screenshot3"@"Screenshot4", @"Screenshot5"];
     });
     return sharedInstance;
 }

@@ -94,7 +94,7 @@ static NSString * const remindLaterKey = @"remind";
 //        self.window.rootViewController = slidesVC;
 //    }
 /////    self.window.rootViewController = drawerController;
-    self.window.rootViewController = slidesVC;
+    self.window.rootViewController = drawerController;
     
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 
