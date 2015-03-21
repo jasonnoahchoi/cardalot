@@ -39,8 +39,9 @@ BOOL goPro;
 @property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
 @property (nonatomic, strong) DeckCollectionViewLayout *deckLayout;
 @property (nonatomic, strong) DeckCollectionViewCell *deckCell;
-@property (nonatomic, strong) UIBarButtonItem *studyButton;
-@property (nonatomic, strong) UIBarButtonItem *quizButton;
+//@property (nonatomic, strong) UIBarButtonItem *studyButton;
+//@property (nonatomic, strong) UIBarButtonItem *quizButton;
+@property (nonatomic, strong) UISegmentedControl *segmentedControl;
 
 @end
 
@@ -69,8 +70,27 @@ BOOL goPro;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
     [self loadBarButtonItems];
     [self inAppPurchase];
-    [self.collectionView setContentInset:UIEdgeInsetsMake(0, 0, 100, 0)];
-}
+    [self.collectionView setContentInset:UIEdgeInsetsMake(35, 0, 100, 0)];
+
+//    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"A", @"B"]];
+//   // self.segmentedControl.frame = CGRectMake(0, 0, 200, 20);
+//    [self.view addSubview:self.segmentedControl];
+//    [self.segmentedControl setTranslatesAutoresizingMaskIntoConstraints:NO];
+//
+//    NSLayoutConstraint *middleConstraint = [NSLayoutConstraint constraintWithItem:self.segmentedControl attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
+//
+//    [self.view addConstraint:middleConstraint];
+//
+//
+//    NSLayoutConstraint *leadingConstraint = [NSLayoutConstraint constraintWithItem:self.segmentedControl attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:15];
+//
+//    [self.view addConstraint:leadingConstraint];
+//
+//    NSLayoutConstraint *trailingConstraint = [NSLayoutConstraint constraintWithItem:self.segmentedControl attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:15];
+//
+//    [self.view addConstraint:trailingConstraint];
+
+    }
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.collectionView reloadData];
@@ -112,71 +132,58 @@ BOOL goPro;
                                                                             action:@selector(open)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
 
-    UIImage *studyIconGray = [UIImage imageNamed:@"Syellowicon"];
-    UIImage *quizIconGray = [UIImage imageNamed:@"Qorangeicon"];
+//    UIImage *studyIconGray = [UIImage imageNamed:@"Syellowicon"];
+//    UIImage *quizIconGray = [UIImage imageNamed:@"Qorangeicon"];
 
-    self.studyButton = [[UIBarButtonItem alloc] initWithImage:studyIconGray
-                                                        style:UIBarButtonItemStylePlain
-                                                       target:self
-                                                       action:@selector(studyMode)];
-    self.quizButton = [[UIBarButtonItem alloc] initWithImage:quizIconGray
-                                                       style:UIBarButtonItemStylePlain
-                                                      target:self
-                                                      action:@selector(quizMode)];
-    [self.studyButton setTintColor:[UIColor lightGrayColor]];
-    [self.quizButton setTintColor:[UIColor lightGrayColor]];
-
+//    self.studyButton = [[UIBarButtonItem alloc] initWithImage:studyIconGray
+//                                                        style:UIBarButtonItemStylePlain
+//                                                       target:self
+//                                                       action:@selector(studyMode)];
+//    self.quizButton = [[UIBarButtonItem alloc] initWithImage:quizIconGray
+//                                                       style:UIBarButtonItemStylePlain
+//                                                      target:self
+//                                                      action:@selector(quizMode)];
+//    [self.studyButton setTintColor:[UIColor lightGrayColor]];
+//    [self.quizButton setTintColor:[UIColor lightGrayColor]];
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
     [addButton setTintColor:[UIColor whiteColor]];
 
-    self.navigationItem.rightBarButtonItems = @[addButton, self.quizButton, self.studyButton];
+    self.navigationItem.rightBarButtonItem = addButton;
+
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 64, 320, 60)];
+    [self.view addSubview:view];
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 124, 320, 1)];
+    bottomView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:bottomView];
+    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Prepare", @"Study", @"Quiz"]];
+    [segmentedControl sizeToFit];
+    [segmentedControl setTintColor:[UIColor customBlueColor]];
+    [segmentedControl setBackgroundColor:[UIColor whiteColor]];
+    [view addSubview:segmentedControl];
+    segmentedControl.frame = CGRectMake(10, 10, 300, 40);
+
+    [segmentedControl addTarget:self action:@selector(modeChanged:) forControlEvents:UIControlEventValueChanged];
+
 }
 
-#pragma mark - Mode State Methods
+- (void)modeChanged:(UISegmentedControl *)segment {
 
-- (int)quizModeFalse {
-    quizMode = !kQuizMode;
-    [self.quizButton setTintColor:[UIColor customOrangeColor]];
-    [self.studyButton setEnabled:NO];
-    return quizMode;
-}
-
-- (int)quizModeTrue {
-    quizMode = kQuizMode;
-    [self.quizButton setTintColor:[UIColor customGrayColor]];
-    [self.studyButton setEnabled:YES];
-    return quizMode;
-}
-
-- (int)studyModeTrue {
-    studyMode = kStudyMode;
-    [self.studyButton setTintColor:[UIColor customYellowColor]];
-    [self.quizButton setEnabled:NO];
-    return studyMode;
-}
-
-- (int)studyModeFalse {
-    studyMode = !kStudyMode;
-    [self.studyButton setTintColor:[UIColor customGrayColor]];
-    [self.quizButton setEnabled:YES];
-    return studyMode;
-}
-
-- (void)studyMode {
-    count++;
-    if (count % 2 != 0) {
-        [self studyModeTrue];
-    } else {
-        [self studyModeFalse];
-    }
-}
-
-- (IBAction)quizMode {
-    count++;
-    if (count % 2 != 0) {
-        [self quizModeFalse];
-    } else {
-        [self quizModeTrue];
+    switch (segment.selectedSegmentIndex) {
+        case 0:{
+            quizMode = kQuizMode;
+            studyMode = !kStudyMode;
+            break;
+        }
+        case 1:{
+            studyMode = kStudyMode;
+            quizMode = !kQuizMode;
+            break;
+        }
+        case 2:{
+            studyMode = !kStudyMode;
+            quizMode = !kQuizMode;
+            break;
+        }
     }
 }
 
