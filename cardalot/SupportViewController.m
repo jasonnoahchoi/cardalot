@@ -63,6 +63,7 @@
     
     [mailComposeViewController setToRecipients:@[@"weekendconcept@gmail.com"]];
     [mailComposeViewController setSubject:@""];
+    [mailComposeViewController.navigationBar setTintColor:[UIColor whiteColor]];
     
     if ([MFMailComposeViewController canSendMail]) {
         [self presentViewController:mailComposeViewController animated:YES completion:nil];
