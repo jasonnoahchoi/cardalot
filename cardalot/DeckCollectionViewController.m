@@ -150,18 +150,46 @@ BOOL goPro;
 
     self.navigationItem.rightBarButtonItem = addButton;
 
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 64, 320, 60)];
-    [self.view addSubview:view];
-    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 124, 320, 1)];
-    bottomView.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:bottomView];
+    UIView *containerView = [[UIView alloc] init];
+    //view.backgroundColor = [UIColor redColor];
+    [self.view addSubview:containerView];
+
+    [containerView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSArray *viewConstraint = [NSLayoutConstraint
+                           constraintsWithVisualFormat:@"H:|-[containerView]-|"
+                           options:NSLayoutFormatAlignAllCenterX
+                           metrics:nil
+                           views:NSDictionaryOfVariableBindings(containerView)];
+    [self.view addConstraints:viewConstraint];
+
+    NSLayoutConstraint *topConstraint = [NSLayoutConstraint constraintWithItem:containerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:70];
+    [self.view addConstraint:topConstraint];
+
+   // UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 124, 320, 1)];
+   // bottomView.backgroundColor = [UIColor orangeColor];
+   // [self.view addSubview:bottomView];
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Prepare", @"Study", @"Quiz"]];
     [segmentedControl sizeToFit];
     [segmentedControl setTintColor:[UIColor customBlueColor]];
     [segmentedControl setBackgroundColor:[UIColor whiteColor]];
     segmentedControl.selectedSegmentIndex = 0;
-    [view addSubview:segmentedControl];
-    segmentedControl.frame = CGRectMake(10, 10, 300, 40);
+    //
+    [containerView addSubview:segmentedControl];
+    //segmentedControl.frame = CGRectMake(10, 10, 300, 40);
+    [segmentedControl setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSArray *constraint = [NSLayoutConstraint
+                           constraintsWithVisualFormat:@"H:|-[segmentedControl]-|"
+                           options:NSLayoutFormatAlignAllCenterX
+                           metrics:nil
+                           views:NSDictionaryOfVariableBindings(segmentedControl)];
+    [containerView addConstraints:constraint];
+    NSArray *constraintV = [NSLayoutConstraint
+                           constraintsWithVisualFormat:@"V:|-[segmentedControl]-|"
+                           options:NSLayoutFormatAlignAllCenterY
+                           metrics:nil
+                           views:NSDictionaryOfVariableBindings(segmentedControl)];
+    [containerView addConstraints:constraintV];
+
 
     [segmentedControl addTarget:self action:@selector(modeChanged:) forControlEvents:UIControlEventValueChanged];
 
