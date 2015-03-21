@@ -11,6 +11,6 @@
 
 @interface TutorialSlidesPageViewControllerDataSource : NSObject <UIPageViewControllerDataSource>
 
-- (TutorialSlidesViewController *)initialViewController;
+- (UIViewController *)viewControllerAtIndex:(NSInteger)index;
 
 @end

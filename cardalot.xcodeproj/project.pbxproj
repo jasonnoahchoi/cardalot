@@ -27,6 +27,11 @@
 		0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0868F52E1AABDD58008CA47D /* DeckCollectionViewCell.m */; };
 		0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */; };
 		08977A151AABCB6C00E525D0 /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08977A141AABCB6C00E525D0 /* AppearanceController.m */; };
+		08C0FE6A1ABD1E11003D8C03 /* SlideOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C0FE691ABD1E11003D8C03 /* SlideOneViewController.m */; };
+		08C0FE6D1ABD1E18003D8C03 /* SlideTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C0FE6C1ABD1E18003D8C03 /* SlideTwoViewController.m */; };
+		08C0FE701ABD1E1F003D8C03 /* SlideThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C0FE6F1ABD1E1F003D8C03 /* SlideThreeViewController.m */; };
+		08C0FE731ABD1E27003D8C03 /* SlideFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C0FE721ABD1E27003D8C03 /* SlideFourViewController.m */; };
+		08C0FE761ABD1E2E003D8C03 /* SlideFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C0FE751ABD1E2E003D8C03 /* SlideFiveViewController.m */; };
 		08C8830E1AAD289200DFE40E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C8830D1AAD289200DFE40E /* QuartzCore.framework */; };
 		08CA60131AB72C7F00FAC558 /* FBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CA60121AB72C7F00FAC558 /* FBLoginViewController.m */; };
 		08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CA76641AB2660B00292997 /* UIColor+Colors.m */; };
@@ -145,6 +150,16 @@
 		0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeckCollectionViewCell.xib; sourceTree = "<group>"; };
 		08977A131AABCB6C00E525D0 /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceController.h; sourceTree = "<group>"; };
 		08977A141AABCB6C00E525D0 /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceController.m; sourceTree = "<group>"; };
+		08C0FE681ABD1E11003D8C03 /* SlideOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideOneViewController.h; sourceTree = "<group>"; };
+		08C0FE691ABD1E11003D8C03 /* SlideOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideOneViewController.m; sourceTree = "<group>"; };
+		08C0FE6B1ABD1E18003D8C03 /* SlideTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideTwoViewController.h; sourceTree = "<group>"; };
+		08C0FE6C1ABD1E18003D8C03 /* SlideTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideTwoViewController.m; sourceTree = "<group>"; };
+		08C0FE6E1ABD1E1F003D8C03 /* SlideThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideThreeViewController.h; sourceTree = "<group>"; };
+		08C0FE6F1ABD1E1F003D8C03 /* SlideThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideThreeViewController.m; sourceTree = "<group>"; };
+		08C0FE711ABD1E27003D8C03 /* SlideFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideFourViewController.h; sourceTree = "<group>"; };
+		08C0FE721ABD1E27003D8C03 /* SlideFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideFourViewController.m; sourceTree = "<group>"; };
+		08C0FE741ABD1E2E003D8C03 /* SlideFiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideFiveViewController.h; sourceTree = "<group>"; };
+		08C0FE751ABD1E2E003D8C03 /* SlideFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideFiveViewController.m; sourceTree = "<group>"; };
 		08C8830D1AAD289200DFE40E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		08CA60111AB72C7F00FAC558 /* FBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginViewController.h; sourceTree = "<group>"; };
 		08CA60121AB72C7F00FAC558 /* FBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginViewController.m; sourceTree = "<group>"; };
@@ -415,6 +430,16 @@
 				729C44671ABBBC67005E23CF /* TutorialSlidesViewController.m */,
 				729C44691ABBBF00005E23CF /* TutorialSlidesContainerViewController.h */,
 				729C446A1ABBBF00005E23CF /* TutorialSlidesContainerViewController.m */,
+				08C0FE681ABD1E11003D8C03 /* SlideOneViewController.h */,
+				08C0FE691ABD1E11003D8C03 /* SlideOneViewController.m */,
+				08C0FE6B1ABD1E18003D8C03 /* SlideTwoViewController.h */,
+				08C0FE6C1ABD1E18003D8C03 /* SlideTwoViewController.m */,
+				08C0FE6E1ABD1E1F003D8C03 /* SlideThreeViewController.h */,
+				08C0FE6F1ABD1E1F003D8C03 /* SlideThreeViewController.m */,
+				08C0FE711ABD1E27003D8C03 /* SlideFourViewController.h */,
+				08C0FE721ABD1E27003D8C03 /* SlideFourViewController.m */,
+				08C0FE741ABD1E2E003D8C03 /* SlideFiveViewController.h */,
+				08C0FE751ABD1E2E003D8C03 /* SlideFiveViewController.m */,
 				0863B1F61ABBE54800771293 /* ImageController.h */,
 				0863B1F71ABBE54800771293 /* ImageController.m */,
 				0825C9201AB8FAD500232D6F /* Stats */,
@@ -773,6 +798,7 @@
 				729C446B1ABBBF00005E23CF /* TutorialSlidesContainerViewController.m in Sources */,
 				0832BEE71AB5170600213071 /* QuizBackView.m in Sources */,
 				08662ED81AAF9CD400BE440E /* StudySubjectView.m in Sources */,
+				08C0FE731ABD1E27003D8C03 /* SlideFourViewController.m in Sources */,
 				72C1E1AF1AB27BAB0041E2C8 /* StatsTableViewCell.m in Sources */,
 				FF0C44DD1AB5FE7F007C7544 /* AdvancedSettingsViewController.m in Sources */,
 				725180E71AAA6FAE00C446E5 /* Stack.m in Sources */,
@@ -787,6 +813,7 @@
 				72C1E1F41AB5036E0041E2C8 /* CustomDatePickerView.m in Sources */,
 				08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */,
 				0863B1F81ABBE54800771293 /* ImageController.m in Sources */,
+				08C0FE6D1ABD1E18003D8C03 /* SlideTwoViewController.m in Sources */,
 				08D2506C1AB6BD0400A716D2 /* ErrorHandler.m in Sources */,
 				08662EDE1AAF9CE800BE440E /* StudyOverlayView.m in Sources */,
 				FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */,
@@ -798,6 +825,8 @@
 				72C1E1FA1AB506AB0041E2C8 /* RemindersTableViewDataSource.m in Sources */,
 				0832BEF61AB5195700213071 /* QuizDraggableViewBackground.m in Sources */,
 				08662EDB1AAF9CDF00BE440E /* StudyDescriptionView.m in Sources */,
+				08C0FE761ABD1E2E003D8C03 /* SlideFiveViewController.m in Sources */,
+				08C0FE701ABD1E1F003D8C03 /* SlideThreeViewController.m in Sources */,
 				FF32B39F1AB230A80098EFA5 /* SearchCell.m in Sources */,
 				082097D61ABA935400B65511 /* PurchasedDataController.m in Sources */,
 				0832BEEB1AB5180500213071 /* QuizViewController.m in Sources */,
@@ -815,6 +844,7 @@
 				FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
 				7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */,
+				08C0FE6A1ABD1E11003D8C03 /* SlideOneViewController.m in Sources */,
 				FF32B3AA1AB231080098EFA5 /* PremiumUpgradeViewController.m in Sources */,
 				0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */,
 				08662ED51AAF9CC000BE440E /* StudyDraggableView.m in Sources */,

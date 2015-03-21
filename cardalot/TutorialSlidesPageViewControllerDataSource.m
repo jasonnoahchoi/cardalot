@@ -13,13 +13,6 @@
 
 @implementation TutorialSlidesPageViewControllerDataSource
 
-
-- (TutorialSlidesViewController *)initialViewController {
-    TutorialSlidesViewController *tutorialVC = [[TutorialSlidesViewController alloc] init];
-    tutorialVC.index = 0;
-    return tutorialVC;
-}
-
 - (UIViewController *)viewControllerAtIndex:(NSInteger)index {
     if (index < 0 || index >= [ImageController sharedInstance].images.count + 1) {
         return nil;
