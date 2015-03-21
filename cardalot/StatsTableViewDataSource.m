@@ -24,7 +24,7 @@ static NSString * const cellIdentifier = @"cell";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Study: Orange | Quiz: Blue";
+    return @"Study: Blue | Quiz: Orange";
 }
 
 #pragma mark UITableViewDataSource

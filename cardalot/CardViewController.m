@@ -13,6 +13,7 @@
 #import "UIColor+Colors.h"
 #import "Deck.h"
 #import "StorePurchaseController.h"
+#import "PurchasedDataController.h"
 @import StoreKit;
 
 @interface CardViewController () <UITextViewDelegate, UITextFieldDelegate>
@@ -160,7 +161,6 @@
         
         [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:TRUE];
     }
-
 }
 
 #pragma mark - UITextFieldDelegate
@@ -177,6 +177,17 @@
     NSLog(@"contentOffset is: %@", NSStringFromCGPoint(contentOffset));
     
     [self.tableView setContentOffset:contentOffset animated:YES];
+}
+// to overcome xcode bug
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.deckTagCell.deckTagField) {
+        [self.frontTextCell.frontTextField becomeFirstResponder];
+    }
+    if (textField == self.frontTextCell.frontTextField) {
+       // [self.backTextCell.backTextView becomeFirstResponder];
+        [self.backTextCell.backTextView performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.0];
+    }
+    return YES;
 }
 
 #pragma mark - UITableViewDataSource
@@ -233,16 +244,15 @@
 #pragma mark - Navigation Methods
 - (IBAction)done:(id)sender {
     [[DeckController sharedInstance] addCardWithTitle:self.frontTextCell.frontTextField.text andAnswer:self.backTextCell.backTextView.text toDeckWithNameTag:self.deckTagCell.deckTagField.text];
-    if ([DeckController sharedInstance].decks.count >= 5) {
+    if ( [DeckController sharedInstance].decks.count >= 5 && [PurchasedDataController sharedInstance].goPro == NO && ![[DeckController sharedInstance].nameTags containsObject:self.deckTagCell.deckTagField.text]) {
         UIAlertController *deckLimitAlert = [UIAlertController alertControllerWithTitle:@"You've reached your limit!" message:@"You can get unlimited decks with more features coming soon by upgrading to our pro version!" preferredStyle:UIAlertControllerStyleAlert];
-        // [deckLimitAlert addTextFieldWithConfigurationHandler:nil];
         [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-#warning Store Kit Insert!
-            // Store Kit Code
-             [[StorePurchaseController sharedInstance] requestProducts];
+            [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
         }]];
+
         [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"Not buying pro");
+//            [self.navigationController popViewControllerAnimated:YES];
         }]];
         [self presentViewController:deckLimitAlert animated:YES completion:nil];
     }

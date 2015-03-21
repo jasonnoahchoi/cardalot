@@ -16,6 +16,7 @@
 @interface DeckController : NSObject
 
 @property (nonatomic, strong, readonly) NSArray *decks;
+@property (nonatomic, strong, readonly) NSArray *nameTags;
 
 + (DeckController *)sharedInstance;
 

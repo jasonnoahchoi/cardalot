@@ -39,13 +39,7 @@ static NSString * const kGoPro = @"goPro";
 
 - (void)loadFromDefaults {
         
-    self.goPro = [[NSUserDefaults standardUserDefaults] integerForKey:kGoPro];
-//    self.goldStar = [[NSUserDefaults standardUserDefaults] boolForKey:kGoldStarKey];
-//    self.adsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:kAdsRemovedKey];
-//
-//    if (!self.gold) {
-//        self.gold = 0;
-//    }
+    self.goPro = [[NSUserDefaults standardUserDefaults] boolForKey:kGoPro];
 
     if (!self.goPro) {
         self.goPro = NO;
@@ -59,26 +53,6 @@ static NSString * const kGoPro = @"goPro";
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-//- (void)setGold:(NSInteger)gold {
-//    _gold = gold;
-//    
-//    [[NSUserDefaults standardUserDefaults] setInteger:gold forKey:kGoldKey];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
-//}
-//
-//- (void)setGoldStar:(BOOL)goldStar {
-//    _goldStar = goldStar;
-//    
-//    [[NSUserDefaults standardUserDefaults] setBool:goldStar forKey:kGoldStarKey];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
-//}
-//
-//- (void)setAdsRemoved:(BOOL)adsRemoved {
-//    _adsRemoved = adsRemoved;
-//    
-//    [[NSUserDefaults standardUserDefaults] setBool:adsRemoved forKey:kAdsRemovedKey];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
-//}
 
 #pragma mark - Handle Purchase Notification
 

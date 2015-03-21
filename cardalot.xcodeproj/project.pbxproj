@@ -76,6 +76,8 @@
 		FF0C44DA1AB5FD3A007C7544 /* SupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C44D91AB5FD3A007C7544 /* SupportViewController.m */; };
 		FF0C44DD1AB5FE7F007C7544 /* AdvancedSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C44DC1AB5FE7F007C7544 /* AdvancedSettingsViewController.m */; };
 		FF0C44E01AB604B4007C7544 /* FAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C44DF1AB604B4007C7544 /* FAQViewController.m */; };
+		FF25CC901ABBE69C00F4E6BF /* attributions.html in Resources */ = {isa = PBXBuildFile; fileRef = FF25CC8F1ABBE69C00F4E6BF /* attributions.html */; };
+		FF25CC921ABBFC8400F4E6BF /* FAQ.html in Resources */ = {isa = PBXBuildFile; fileRef = FF25CC911ABBFC8400F4E6BF /* FAQ.html */; };
 		FF32B39C1AB230A80098EFA5 /* LogoMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */; };
 		FF32B39D1AB230A80098EFA5 /* LogoMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */; };
 		FF32B39E1AB230A80098EFA5 /* MenuDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32B3961AB230A80098EFA5 /* MenuDrawerViewController.m */; };
@@ -205,7 +207,6 @@
 		725180F21AAA7AFE00C446E5 /* DeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckController.m; sourceTree = "<group>"; };
 		725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewDataSource.h; sourceTree = "<group>"; };
 		725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewDataSource.m; sourceTree = "<group>"; };
-		729C44281ABA2008005E23CF /* DataWithSampleDeck.xcappdata */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DataWithSampleDeck.xcappdata; sourceTree = "<group>"; };
 		729C44631ABBBB50005E23CF /* TutorialSlidesPageViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialSlidesPageViewControllerDataSource.h; sourceTree = "<group>"; };
 		729C44641ABBBB50005E23CF /* TutorialSlidesPageViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialSlidesPageViewControllerDataSource.m; sourceTree = "<group>"; };
 		729C44661ABBBC67005E23CF /* TutorialSlidesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialSlidesViewController.h; sourceTree = "<group>"; };
@@ -235,6 +236,8 @@
 		FF0C44DC1AB5FE7F007C7544 /* AdvancedSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedSettingsViewController.m; sourceTree = "<group>"; };
 		FF0C44DE1AB604B4007C7544 /* FAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQViewController.h; sourceTree = "<group>"; };
 		FF0C44DF1AB604B4007C7544 /* FAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQViewController.m; sourceTree = "<group>"; };
+		FF25CC8F1ABBE69C00F4E6BF /* attributions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = attributions.html; sourceTree = "<group>"; };
+		FF25CC911ABBFC8400F4E6BF /* FAQ.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = FAQ.html; sourceTree = "<group>"; };
 		FF32B3921AB230A80098EFA5 /* LogoMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoMenuCell.h; sourceTree = "<group>"; };
 		FF32B3931AB230A80098EFA5 /* LogoMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoMenuCell.m; sourceTree = "<group>"; };
 		FF32B3941AB230A80098EFA5 /* LogoMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoMenuCell.xib; sourceTree = "<group>"; };
@@ -425,7 +428,6 @@
 				7200CEB21AACE66000E84D55 /* CompletionViewController.m */,
 				725180F11AAA7AFE00C446E5 /* DeckController.h */,
 				725180F21AAA7AFE00C446E5 /* DeckController.m */,
-				729C44281ABA2008005E23CF /* DataWithSampleDeck.xcappdata */,
 				082097D11ABA935400B65511 /* StorePurchaseController.h */,
 				082097D21ABA935400B65511 /* StorePurchaseController.m */,
 				082097D31ABA935400B65511 /* PurchasedDataController.h */,
@@ -444,6 +446,10 @@
 		08FE1E731AAA5F570068F0C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FF25CC911ABBFC8400F4E6BF /* FAQ.html */,
+				FF25CC8F1ABBE69C00F4E6BF /* attributions.html */,
+				08FF236D1ABB85A3006B55CD /* privacy.html */,
+				08FF236E1ABB85A3006B55CD /* terms.html */,
 				08FE1E741AAA5F570068F0C9 /* Info.plist */,
 				08FE1E751AAA5F570068F0C9 /* main.m */,
 			);
@@ -599,8 +605,6 @@
 		FF8F0ADA1AAE597200BDD975 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				08FF236D1ABB85A3006B55CD /* privacy.html */,
-				08FF236E1ABB85A3006B55CD /* terms.html */,
 				08F5EA321AB4F45700D00A3F /* Deck.h */,
 				08F5EA331AB4F45700D00A3F /* Deck.m */,
 				08F5EA2F1AB4F45600D00A3F /* Stat.h */,
@@ -703,8 +707,10 @@
 				FF8F0AD61AAE579A00BDD975 /* FrontTextCell.xib in Resources */,
 				72C1E1B01AB27BAB0041E2C8 /* StatsTableViewCell.xib in Resources */,
 				08D250661AB67F1C00A716D2 /* LoginViewController.xib in Resources */,
+				FF25CC901ABBE69C00F4E6BF /* attributions.html in Resources */,
 				08FF236F1ABB85A3006B55CD /* privacy.html in Resources */,
 				08FE1E7F1AAA5F570068F0C9 /* Main.storyboard in Resources */,
+				FF25CC921ABBFC8400F4E6BF /* FAQ.html in Resources */,
 				FF8F0AD41AAE579A00BDD975 /* DeckTagCell.xib in Resources */,
 				08DBF9191ABAA02100BE69A1 /* Products.json in Resources */,
 				0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */,
