@@ -46,7 +46,6 @@ static NSString * const launchCountKey = @"launchCount";
     [leftLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     NSInteger markedWrong = self.deck.cards.count - [self.session.markedCorrect integerValue];
     leftLabel.text = [NSString stringWithFormat:@"%ld incorrect", (long)markedWrong];
-    leftLabel.font = [UIFont systemFontOfSize:13];
     leftLabel.numberOfLines = 0;
     leftLabel.textAlignment = NSTextAlignmentCenter;
     leftLabel.textColor = [UIColor customBlueColor];
@@ -59,7 +58,6 @@ static NSString * const launchCountKey = @"launchCount";
     UILabel *rightLabel = [[UILabel alloc] init];
     [rightLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     rightLabel.text = [NSString stringWithFormat:@"%@ correct", self.session.markedCorrect];
-    rightLabel.font = [UIFont systemFontOfSize:13];
     rightLabel.textAlignment = NSTextAlignmentCenter;
     rightLabel.lineBreakMode = NSLineBreakByWordWrapping;
     rightLabel.textColor = [UIColor customBlueColor];
@@ -69,6 +67,14 @@ static NSString * const launchCountKey = @"launchCount";
     rightLabel.layer.borderColor = [[UIColor customBlueColor] CGColor];
 //    rightLabel.backgroundColor = [UIColor customBlueColor];
     [footerView addSubview:rightLabel];
+    
+    if ([[UIScreen mainScreen] bounds].size.width >= 375) {
+        leftLabel.font = [UIFont systemFontOfSize:13];
+        rightLabel.font = [UIFont systemFontOfSize:13];
+    } else {
+        leftLabel.font = [UIFont systemFontOfSize:10];
+        rightLabel.font = [UIFont systemFontOfSize:10];
+    }
     
     barChartView.footerView = footerView;
     
