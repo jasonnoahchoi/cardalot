@@ -159,6 +159,7 @@ BOOL goPro;
     [segmentedControl sizeToFit];
     [segmentedControl setTintColor:[UIColor customBlueColor]];
     [segmentedControl setBackgroundColor:[UIColor whiteColor]];
+    segmentedControl.selectedSegmentIndex = 0;
     [view addSubview:segmentedControl];
     segmentedControl.frame = CGRectMake(10, 10, 300, 40);
 
