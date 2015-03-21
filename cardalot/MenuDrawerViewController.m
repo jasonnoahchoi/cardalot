@@ -113,7 +113,7 @@ static NSString * const kGoPro = @"goPro";
     } else {  // for string with format add the itentifier for account type
         BOOL goPro = [[NSUserDefaults standardUserDefaults] boolForKey:kGoPro];
         if (goPro) {
-            NSArray *menuListArray = @[@"Account Type: PRO", @"Progress", @"Rate App", @"Go Premium", @"Refer Friends", @"Settings"];
+            NSArray *menuListArray = @[@"Account Type: PRO", @"Progress", @"Rate App", @"Go Pro", @"Refer Friends", @"Settings"];
             UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
             cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
             NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 1] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:16.0]}];
@@ -123,7 +123,7 @@ static NSString * const kGoPro = @"goPro";
 //            [tableView reloadData];
             return cell;
         } else {
-            NSArray *menuListArray = @[[NSString stringWithFormat:@"Account Type: FREE"], @"Progress", @"Rate App", @"Go Premium", @"Refer Friends", @"Settings"];
+            NSArray *menuListArray = @[@"Account Type: FREE", @"Progress", @"Rate App", @"Go Pro", @"Refer Friends", @"Settings"];
             UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
             cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
             NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 1] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:16.0]}];
