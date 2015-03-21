@@ -67,8 +67,6 @@
 		725180EA1AAA751600C446E5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725180E81AAA751600C446E5 /* Model.xcdatamodeld */; };
 		725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F21AAA7AFE00C446E5 /* DeckController.m */; };
 		725180F61AAA965900C446E5 /* DeckCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */; };
-		729C44651ABBBB50005E23CF /* TutorialSlidesPageViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 729C44641ABBBB50005E23CF /* TutorialSlidesPageViewControllerDataSource.m */; };
-		729C44681ABBBC67005E23CF /* TutorialSlidesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729C44671ABBBC67005E23CF /* TutorialSlidesViewController.m */; };
 		729C446B1ABBBF00005E23CF /* TutorialSlidesContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729C446A1ABBBF00005E23CF /* TutorialSlidesContainerViewController.m */; };
 		72C1E1A51AB278E10041E2C8 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A41AB278E10041E2C8 /* StatsViewController.m */; };
 		72C1E1A81AB279E60041E2C8 /* StatsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1A71AB279E60041E2C8 /* StatsTableViewDataSource.m */; };
@@ -222,10 +220,6 @@
 		725180F21AAA7AFE00C446E5 /* DeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckController.m; sourceTree = "<group>"; };
 		725180F41AAA965800C446E5 /* DeckCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckCollectionViewDataSource.h; sourceTree = "<group>"; };
 		725180F51AAA965900C446E5 /* DeckCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckCollectionViewDataSource.m; sourceTree = "<group>"; };
-		729C44631ABBBB50005E23CF /* TutorialSlidesPageViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialSlidesPageViewControllerDataSource.h; sourceTree = "<group>"; };
-		729C44641ABBBB50005E23CF /* TutorialSlidesPageViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialSlidesPageViewControllerDataSource.m; sourceTree = "<group>"; };
-		729C44661ABBBC67005E23CF /* TutorialSlidesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialSlidesViewController.h; sourceTree = "<group>"; };
-		729C44671ABBBC67005E23CF /* TutorialSlidesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialSlidesViewController.m; sourceTree = "<group>"; };
 		729C44691ABBBF00005E23CF /* TutorialSlidesContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialSlidesContainerViewController.h; sourceTree = "<group>"; };
 		729C446A1ABBBF00005E23CF /* TutorialSlidesContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialSlidesContainerViewController.m; sourceTree = "<group>"; };
 		72C1E1A31AB278E10041E2C8 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
@@ -424,10 +418,6 @@
 				083C0EDA1AB295B600F42CE0 /* UIBarButtonItem+CustomButtons.m */,
 				7200D0EE1AB1393E00E84D55 /* CustomInputAccessoryView.h */,
 				7200D0EF1AB1393E00E84D55 /* CustomInputAccessoryView.m */,
-				729C44631ABBBB50005E23CF /* TutorialSlidesPageViewControllerDataSource.h */,
-				729C44641ABBBB50005E23CF /* TutorialSlidesPageViewControllerDataSource.m */,
-				729C44661ABBBC67005E23CF /* TutorialSlidesViewController.h */,
-				729C44671ABBBC67005E23CF /* TutorialSlidesViewController.m */,
 				729C44691ABBBF00005E23CF /* TutorialSlidesContainerViewController.h */,
 				729C446A1ABBBF00005E23CF /* TutorialSlidesContainerViewController.m */,
 				08C0FE681ABD1E11003D8C03 /* SlideOneViewController.h */,
@@ -835,12 +825,10 @@
 				08662ED21AAF9CA100BE440E /* StudyDraggableViewBackground.m in Sources */,
 				725180F31AAA7AFE00C446E5 /* DeckController.m in Sources */,
 				08FF23761ABB8813006B55CD /* PrivacyViewController.m in Sources */,
-				729C44681ABBBC67005E23CF /* TutorialSlidesViewController.m in Sources */,
 				08F5EA341AB4F45700D00A3F /* Deck.m in Sources */,
 				FF8F0AD31AAE579A00BDD975 /* DeckTagCell.m in Sources */,
 				08D8F8CE1AACE7670015A4BD /* DeckCollectionViewLayout.m in Sources */,
 				723D96C31AB785AE00121C55 /* Reminder.m in Sources */,
-				729C44651ABBBB50005E23CF /* TutorialSlidesPageViewControllerDataSource.m in Sources */,
 				FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
 				7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */,

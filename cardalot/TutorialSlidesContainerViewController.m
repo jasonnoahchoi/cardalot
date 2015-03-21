@@ -8,7 +8,6 @@
 //
 
 #import "TutorialSlidesContainerViewController.h"
-#import "TutorialSlidesPageViewControllerDataSource.h"
 #import "UIColor+Colors.h"
 #import "SlideFiveViewController.h"
 #import "SlideFourViewController.h"
