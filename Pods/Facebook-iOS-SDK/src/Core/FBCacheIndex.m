@@ -464,7 +464,7 @@ static void releaseStatement(sqlite3_stmt *statement, sqlite3 *database)
     }
 
     initializeStatement(_database, &selectStatement, query);
-    NSString *wildcardKeyFragment = [NSString stringWithFormat:@"%%%@%%", keyFragment];
+    NSString *wildcardKeyFragment = [NSString stringWithFormat:@"@%%", keyFragment];
 
     CHECK_SQLITE_SUCCESS(fbdfl_sqlite3_bind_text(
                                                  selectStatement,

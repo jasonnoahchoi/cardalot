@@ -49,8 +49,6 @@
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:backIcon target:self action:@selector(backButtonAction)];
     [self.navigationItem.leftBarButtonItem setTintColor:[UIColor customBlueColor]];
 
-    UIImage *studyIconYellow = [UIImage imageNamed:@"Syellowicon"];
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem studyButtonWithImage:studyIconYellow target:nil action:@selector(test)];
 }
 
 - (void)test {
