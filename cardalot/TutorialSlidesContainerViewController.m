@@ -15,6 +15,7 @@
 #import "SlideTwoViewController.h"
 #import "SlideOneViewController.h"
 #import "FBLoginViewController.h"
+#import <UIViewController+MMDrawerController.h>
 
 @interface TutorialSlidesContainerViewController () <UIPageViewControllerDataSource>
 
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) SlideFourViewController *fourVC;
 @property (nonatomic, strong) SlideFiveViewController *fiveVC;
 @property (nonatomic, strong) FBLoginViewController *fbLoginVC;
+@property (nonatomic, strong) UINavigationController *navController;
 
 @end
 
@@ -52,7 +54,6 @@
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
 }
-
 
 -(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     if (viewController == self.oneVC) {
