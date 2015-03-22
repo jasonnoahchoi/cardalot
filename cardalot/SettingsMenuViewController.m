@@ -48,10 +48,10 @@
     self.tableView.delegate = self;
     
 #pragma mark - sets static settings cells
-    self.advancedSettingsCell = [UITableViewCell new];
-    self.advancedSettingsCell.textLabel.text = @"Advanced Settings";
-    self.advancedSettingsCell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
+//    self.advancedSettingsCell = [UITableViewCell new];
+//    self.advancedSettingsCell.textLabel.text = @"Advanced Settings";
+//    self.advancedSettingsCell.selectionStyle = UITableViewCellSelectionStyleNone;
+   
     self.reminderCell = [UITableViewCell new];
     self.reminderCell.textLabel.text = @"Reminders";
     self.reminderCell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -94,7 +94,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     switch(section) {
-        case 0:  return 2;  // section 0 has 2 rows
+        case 0:  return 1;  // section 0 has 2 rows
         case 1:  return 2;  // section 1 has 2 row
         case 2: return 2;  // section 2 has 2 row
         default: return 0;

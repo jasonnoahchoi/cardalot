@@ -14,8 +14,8 @@
 
 @interface QuizDraggableViewBackground : UIView <QuizDraggableViewDelegate>
 
-@property (strong, nonatomic) NSArray *topCardInDeck; //%%% the labels the cards
-@property (retain, nonatomic) NSMutableArray *allCards; //%%% the labels the cards
+@property (strong, nonatomic) NSArray *topCardInDeck; // the labels the cards
+@property (retain, nonatomic) NSMutableArray *allCards; // the labels the cards
 @property (strong, nonatomic) Deck *deck;
 @property (strong, nonatomic) Session *session;
 @property (nonatomic, strong) QuizDraggableView *draggableView;

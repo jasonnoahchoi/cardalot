@@ -70,7 +70,7 @@ BOOL goPro;
     self.drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
     [self loadBarButtonItems];
     [self inAppPurchase];
-    [self.collectionView setContentInset:UIEdgeInsetsMake(35, 0, 100, 0)];
+    [self.collectionView setContentInset:UIEdgeInsetsMake(40, 0, 100, 0)];
 
 //    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"A", @"B"]];
 //   // self.segmentedControl.frame = CGRectMake(0, 0, 200, 20);

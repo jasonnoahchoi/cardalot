@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Screenshot 1.jpg"
+      "filename" : "Screenshot 1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Screenshot 1@2x.jpg"
+      "filename" : "Screenshot 1@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "Screenshot 1@3x.jpg"
+      "filename" : "Screenshot 1@3x.png"
     }
   ],
   "info" : {

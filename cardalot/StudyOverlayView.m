@@ -29,7 +29,8 @@
 
     if (mode == GGOverlayViewModeLeft) {
         self.imageView.image = [UIImage imageNamed:@"redx"];
-    } else {
+    }
+    if (mode == GGOverlayViewModeRight) {
         self.imageView.image = [UIImage imageNamed:@"greencheck"];
     }
 }
