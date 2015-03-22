@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "95DA6E0D917D9C95CDF7A98B"
+               BlueprintIdentifier = "E34B21C93C78636BBAA2AE3C"
                BuildableName = "libPods-cardalot-JBChartView.a"
                BlueprintName = "Pods-cardalot-JBChartView"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "95DA6E0D917D9C95CDF7A98B"
+            BlueprintIdentifier = "E34B21C93C78636BBAA2AE3C"
             BuildableName = "libPods-cardalot-JBChartView.a"
             BlueprintName = "Pods-cardalot-JBChartView"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DA599CA11C7BABF317A72AD7"
+               BlueprintIdentifier = "EFE690D96A98147EA4450C73"
                BuildableName = "libPods-cardalot-MMDrawerController.a"
                BlueprintName = "Pods-cardalot-MMDrawerController"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DA599CA11C7BABF317A72AD7"
+            BlueprintIdentifier = "EFE690D96A98147EA4450C73"
             BuildableName = "libPods-cardalot-MMDrawerController.a"
             BlueprintName = "Pods-cardalot-MMDrawerController"
             ReferencedContainer = "container:Pods.xcodeproj">
