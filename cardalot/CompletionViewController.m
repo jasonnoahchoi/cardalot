@@ -105,13 +105,13 @@ static NSString * const launchCountKey = @"launchCount";
 }
 
 - (void)done {
-    NSInteger launchCount = [[NSUserDefaults standardUserDefaults] integerForKey:launchCountKey];
-    if (!launchCount)  {
-        DeckCollectionViewController *deckVC = [self.navigationController.viewControllers objectAtIndex:1];
-        [self.navigationController popToViewController:deckVC animated:YES];
-    } else {
+//    NSInteger launchCount = [[NSUserDefaults standardUserDefaults] integerForKey:launchCountKey];
+//    if (!launchCount)  {
+//        DeckCollectionViewController *deckVC = [self.navigationController.viewControllers objectAtIndex:1];
+//        [self.navigationController popToViewController:deckVC animated:YES];
+//    } else {
         [self.navigationController popToRootViewControllerAnimated:YES];
-    }
+//    }
 }
 
 #pragma mark JBBarChartViewDataSource
