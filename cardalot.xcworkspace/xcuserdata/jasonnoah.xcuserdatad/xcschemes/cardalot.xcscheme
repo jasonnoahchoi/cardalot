@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "08FE1E6F1AAA5F570068F0C9"
-               BuildableName = "cardalot.app"
-               BlueprintName = "cardalot"
-               ReferencedContainer = "container:cardalot.xcodeproj">
+               BuildableName = "Cardalot.temp_caseinsensitive_rename.app"
+               BlueprintName = "Cardalot"
+               ReferencedContainer = "container:Cardalot.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "08FE1E881AAA5F570068F0C9"
-               BuildableName = "cardalotTests.xctest"
-               BlueprintName = "cardalotTests"
-               ReferencedContainer = "container:cardalot.xcodeproj">
+               BuildableName = "Cardalot.temp_caseinsensitive_renameTests.xctest"
+               BlueprintName = "CardalotTests"
+               ReferencedContainer = "container:Cardalot.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "08FE1E881AAA5F570068F0C9"
-               BuildableName = "cardalotTests.xctest"
-               BlueprintName = "cardalotTests"
-               ReferencedContainer = "container:cardalot.xcodeproj">
+               BuildableName = "Cardalot.temp_caseinsensitive_renameTests.xctest"
+               BlueprintName = "CardalotTests"
+               ReferencedContainer = "container:Cardalot.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "08FE1E6F1AAA5F570068F0C9"
-            BuildableName = "cardalot.app"
-            BlueprintName = "cardalot"
-            ReferencedContainer = "container:cardalot.xcodeproj">
+            BuildableName = "Cardalot.temp_caseinsensitive_rename.app"
+            BlueprintName = "Cardalot"
+            ReferencedContainer = "container:Cardalot.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "08FE1E6F1AAA5F570068F0C9"
-            BuildableName = "cardalot.app"
-            BlueprintName = "cardalot"
-            ReferencedContainer = "container:cardalot.xcodeproj">
+            BuildableName = "Cardalot.temp_caseinsensitive_rename.app"
+            BlueprintName = "Cardalot"
+            ReferencedContainer = "container:Cardalot.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -99,9 +99,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "08FE1E6F1AAA5F570068F0C9"
-            BuildableName = "cardalot.app"
-            BlueprintName = "cardalot"
-            ReferencedContainer = "container:cardalot.xcodeproj">
+            BuildableName = "Cardalot.temp_caseinsensitive_rename.app"
+            BlueprintName = "Cardalot"
+            ReferencedContainer = "container:Cardalot.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

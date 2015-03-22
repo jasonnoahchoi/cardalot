@@ -179,7 +179,7 @@
 		08F5EA301AB4F45600D00A3F /* Stat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stat.m; sourceTree = "<group>"; };
 		08F5EA321AB4F45700D00A3F /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		08F5EA331AB4F45700D00A3F /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
-		08FE1E701AAA5F570068F0C9 /* cardalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08FE1E701AAA5F570068F0C9 /* Cardalot.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardalot.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FE1E741AAA5F570068F0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FE1E751AAA5F570068F0C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08FE1E771AAA5F570068F0C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		08FE1E7E1AAA5F570068F0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08FE1E801AAA5F570068F0C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		08FE1E831AAA5F570068F0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		08FE1E891AAA5F570068F0C9 /* cardalotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cardalotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		08FE1E891AAA5F570068F0C9 /* Cardalot.temp_caseinsensitive_renameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Cardalot.temp_caseinsensitive_renameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FE1E8E1AAA5F570068F0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cardalotTests.m; sourceTree = "<group>"; };
 		08FF236D1ABB85A3006B55CD /* privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy.html; sourceTree = "<group>"; };
@@ -398,8 +398,8 @@
 		08FE1E711AAA5F570068F0C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				08FE1E701AAA5F570068F0C9 /* cardalot.app */,
-				08FE1E891AAA5F570068F0C9 /* cardalotTests.xctest */,
+				08FE1E701AAA5F570068F0C9 /* Cardalot.temp_caseinsensitive_rename.app */,
+				08FE1E891AAA5F570068F0C9 /* Cardalot.temp_caseinsensitive_renameTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -638,9 +638,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		08FE1E6F1AAA5F570068F0C9 /* cardalot */ = {
+		08FE1E6F1AAA5F570068F0C9 /* Cardalot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 08FE1E931AAA5F570068F0C9 /* Build configuration list for PBXNativeTarget "cardalot" */;
+			buildConfigurationList = 08FE1E931AAA5F570068F0C9 /* Build configuration list for PBXNativeTarget "Cardalot" */;
 			buildPhases = (
 				6AE9804A54213E9D2730F29C /* Check Pods Manifest.lock */,
 				08FE1E6C1AAA5F570068F0C9 /* Sources */,
@@ -652,14 +652,14 @@
 			);
 			dependencies = (
 			);
-			name = cardalot;
+			name = Cardalot;
 			productName = cardalot;
-			productReference = 08FE1E701AAA5F570068F0C9 /* cardalot.app */;
+			productReference = 08FE1E701AAA5F570068F0C9 /* Cardalot.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
-		08FE1E881AAA5F570068F0C9 /* cardalotTests */ = {
+		08FE1E881AAA5F570068F0C9 /* CardalotTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 08FE1E961AAA5F570068F0C9 /* Build configuration list for PBXNativeTarget "cardalotTests" */;
+			buildConfigurationList = 08FE1E961AAA5F570068F0C9 /* Build configuration list for PBXNativeTarget "CardalotTests" */;
 			buildPhases = (
 				08FE1E851AAA5F570068F0C9 /* Sources */,
 				08FE1E861AAA5F570068F0C9 /* Frameworks */,
@@ -670,9 +670,9 @@
 			dependencies = (
 				08FE1E8B1AAA5F570068F0C9 /* PBXTargetDependency */,
 			);
-			name = cardalotTests;
+			name = CardalotTests;
 			productName = cardalotTests;
-			productReference = 08FE1E891AAA5F570068F0C9 /* cardalotTests.xctest */;
+			productReference = 08FE1E891AAA5F570068F0C9 /* Cardalot.temp_caseinsensitive_renameTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -695,7 +695,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 08FE1E6B1AAA5F570068F0C9 /* Build configuration list for PBXProject "cardalot" */;
+			buildConfigurationList = 08FE1E6B1AAA5F570068F0C9 /* Build configuration list for PBXProject "Cardalot" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -708,8 +708,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				08FE1E6F1AAA5F570068F0C9 /* cardalot */,
-				08FE1E881AAA5F570068F0C9 /* cardalotTests */,
+				08FE1E6F1AAA5F570068F0C9 /* Cardalot */,
+				08FE1E881AAA5F570068F0C9 /* CardalotTests */,
 			);
 		};
 /* End PBXProject section */
@@ -871,7 +871,7 @@
 /* Begin PBXTargetDependency section */
 		08FE1E8B1AAA5F570068F0C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 08FE1E6F1AAA5F570068F0C9 /* cardalot */;
+			target = 08FE1E6F1AAA5F570068F0C9 /* Cardalot */;
 			targetProxy = 08FE1E8A1AAA5F570068F0C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -982,7 +982,7 @@
 				INFOPLIST_FILE = cardalot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cardalot.temp_caseinsensitive_rename;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -998,7 +998,7 @@
 				INFOPLIST_FILE = cardalot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cardalot.temp_caseinsensitive_rename;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1018,7 +1018,7 @@
 				);
 				INFOPLIST_FILE = cardalotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cardalot.temp_caseinsensitive_renameTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cardalot.app/cardalot";
 			};
 			name = Debug;
@@ -1033,7 +1033,7 @@
 				);
 				INFOPLIST_FILE = cardalotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cardalot.temp_caseinsensitive_renameTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cardalot.app/cardalot";
 			};
 			name = Release;
@@ -1041,7 +1041,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		08FE1E6B1AAA5F570068F0C9 /* Build configuration list for PBXProject "cardalot" */ = {
+		08FE1E6B1AAA5F570068F0C9 /* Build configuration list for PBXProject "Cardalot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08FE1E911AAA5F570068F0C9 /* Debug */,
@@ -1050,7 +1050,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		08FE1E931AAA5F570068F0C9 /* Build configuration list for PBXNativeTarget "cardalot" */ = {
+		08FE1E931AAA5F570068F0C9 /* Build configuration list for PBXNativeTarget "Cardalot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08FE1E941AAA5F570068F0C9 /* Debug */,
@@ -1059,7 +1059,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		08FE1E961AAA5F570068F0C9 /* Build configuration list for PBXNativeTarget "cardalotTests" */ = {
+		08FE1E961AAA5F570068F0C9 /* Build configuration list for PBXNativeTarget "CardalotTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08FE1E971AAA5F570068F0C9 /* Debug */,
