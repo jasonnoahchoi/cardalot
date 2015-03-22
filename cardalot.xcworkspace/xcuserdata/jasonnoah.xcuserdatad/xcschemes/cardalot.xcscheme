@@ -110,7 +110,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "cardalot1.0"
+      customArchiveName = "Cardalot"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

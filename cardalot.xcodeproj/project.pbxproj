@@ -179,7 +179,7 @@
 		08F5EA301AB4F45600D00A3F /* Stat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stat.m; sourceTree = "<group>"; };
 		08F5EA321AB4F45700D00A3F /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		08F5EA331AB4F45700D00A3F /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
-		08FE1E701AAA5F570068F0C9 /* Cardalot.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardalot.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08FE1E701AAA5F570068F0C9 /* Cardalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FE1E741AAA5F570068F0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FE1E751AAA5F570068F0C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08FE1E771AAA5F570068F0C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		08FE1E7E1AAA5F570068F0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08FE1E801AAA5F570068F0C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		08FE1E831AAA5F570068F0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		08FE1E891AAA5F570068F0C9 /* Cardalot.temp_caseinsensitive_renameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Cardalot.temp_caseinsensitive_renameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		08FE1E891AAA5F570068F0C9 /* CardalotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardalotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FE1E8E1AAA5F570068F0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FE1E8F1AAA5F570068F0C9 /* cardalotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cardalotTests.m; sourceTree = "<group>"; };
 		08FF236D1ABB85A3006B55CD /* privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy.html; sourceTree = "<group>"; };
@@ -398,8 +398,8 @@
 		08FE1E711AAA5F570068F0C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				08FE1E701AAA5F570068F0C9 /* Cardalot.temp_caseinsensitive_rename.app */,
-				08FE1E891AAA5F570068F0C9 /* Cardalot.temp_caseinsensitive_renameTests.xctest */,
+				08FE1E701AAA5F570068F0C9 /* Cardalot.app */,
+				08FE1E891AAA5F570068F0C9 /* CardalotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -654,7 +654,7 @@
 			);
 			name = Cardalot;
 			productName = cardalot;
-			productReference = 08FE1E701AAA5F570068F0C9 /* Cardalot.temp_caseinsensitive_rename.app */;
+			productReference = 08FE1E701AAA5F570068F0C9 /* Cardalot.app */;
 			productType = "com.apple.product-type.application";
 		};
 		08FE1E881AAA5F570068F0C9 /* CardalotTests */ = {
@@ -672,7 +672,7 @@
 			);
 			name = CardalotTests;
 			productName = cardalotTests;
-			productReference = 08FE1E891AAA5F570068F0C9 /* Cardalot.temp_caseinsensitive_renameTests.xctest */;
+			productReference = 08FE1E891AAA5F570068F0C9 /* CardalotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -982,7 +982,7 @@
 				INFOPLIST_FILE = cardalot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Cardalot.temp_caseinsensitive_rename;
+				PRODUCT_NAME = Cardalot;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -998,7 +998,7 @@
 				INFOPLIST_FILE = cardalot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Cardalot.temp_caseinsensitive_rename;
+				PRODUCT_NAME = Cardalot;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1018,7 +1018,7 @@
 				);
 				INFOPLIST_FILE = cardalotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Cardalot.temp_caseinsensitive_renameTests;
+				PRODUCT_NAME = CardalotTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cardalot.app/cardalot";
 			};
 			name = Debug;
@@ -1033,7 +1033,7 @@
 				);
 				INFOPLIST_FILE = cardalotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Cardalot.temp_caseinsensitive_renameTests;
+				PRODUCT_NAME = CardalotTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cardalot.app/cardalot";
 			};
 			name = Release;
