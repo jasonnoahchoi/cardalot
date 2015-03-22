@@ -38,6 +38,7 @@
     
     // Create tableView
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+   // self.tableView.allowsSelection = NO;
     
     // Datasource
     self.tableView.dataSource = self;
@@ -54,14 +55,13 @@
     self.termsOfServiceCell.textLabel.text = @"Terms of Use";
     
     // Disable/Enable selection
-    self.tableView.allowsSelection = YES;
+    //self.tableView.allowsSelection = YES;
     
     // Add to view
     [self.view addSubview:self.tableView];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return 3;
 }
 
@@ -101,6 +101,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
@@ -151,7 +152,6 @@
             [self.termsContainerView addSubview:webView];
             [self.termsContainerView addSubview:dismissButton];
         }
-        
     }
 }
 

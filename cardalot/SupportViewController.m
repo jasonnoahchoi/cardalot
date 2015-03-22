@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"Supportalot";
+    self.title = @"Support";
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -33,13 +33,15 @@
     
     UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 300, 80)];
     tempLabel.numberOfLines = 0;
-    tempLabel.text = @"Please feel free to reachout to your cardalot team";
+    tempLabel.text = @"Let us know if you have any questions or suggestions.";
     
     
     // Sets email compose
     UIButton *composeEmailButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 350, 180, 80)];
     composeEmailButton.tintColor = [UIColor lightGrayColor];
     composeEmailButton.layer.borderWidth = 1.0;
+    composeEmailButton.layer.cornerRadius = 3;
+    composeEmailButton.layer.borderColor = [UIColor customBlueColor].CGColor;
     [composeEmailButton setTitle:@"Send feedback" forState:UIControlStateNormal];
     [composeEmailButton setTitleColor:[UIColor customBlueColor] forState:UIControlStateNormal];
     [composeEmailButton addTarget:self action:@selector(sendFeedbackEmail:) forControlEvents:UIControlEventTouchUpInside];
