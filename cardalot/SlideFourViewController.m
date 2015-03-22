@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[ImageController sharedInstance].images[3]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[ImageController sharedInstance].images[3]]];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     [imageView setTranslatesAutoresizingMaskIntoConstraints:NO];
     imageView.frame = self.view.bounds;
