@@ -282,7 +282,7 @@ BOOL goPro;
         if ( [DeckController sharedInstance].decks.count >= 5 && [PurchasedDataController sharedInstance].goPro == NO) {
             UIAlertController *deckLimitAlert = [UIAlertController
                                                  alertControllerWithTitle:@"Go Pro for Unlimited Decks!"
-                                                 message:@"You have unlimited cards so if you rather not, hold down on a deck to delete it."
+                                                 message:@"You have unlimited cards so if you rather not go pro, hold down on a deck to delete it."
                                                  preferredStyle:UIAlertControllerStyleAlert];
             [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"Go Pro"
                                                                style:UIAlertActionStyleDefault
