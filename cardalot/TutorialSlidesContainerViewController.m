@@ -56,6 +56,9 @@
 }
 
 -(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+    if (viewController == self.fbLoginVC) {
+        return nil;
+    }
     if (viewController == self.oneVC) {
         return self.twoVC;
     } else if (viewController == self.twoVC) {
@@ -64,12 +67,13 @@
         return self.fourVC;
     } else if (viewController == self.fourVC) {
         return self.fiveVC;
-    } else {
+    } else if (viewController == self.fiveVC) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         self.fbLoginVC = [storyboard instantiateViewControllerWithIdentifier:@"fbloginvc"];
         self.fbLoginVC.drawerController = self.drawerController;
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.fbLoginVC];
-        return navController;
+        return self.fbLoginVC;
+    } else {
+        return nil;
     }
 }
 
