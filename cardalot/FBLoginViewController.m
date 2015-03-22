@@ -14,6 +14,7 @@
 #import "TermsViewController.h"
 #import "PrivacyViewController.h"
 #import "DeckController.h"
+#import <UIViewController+MMDrawerController.h>
 
 BOOL viewDidAppear;
 BOOL viewIsVisible;
@@ -36,6 +37,7 @@ BOOL viewIsVisible;
    if (viewIsVisible) {
 ////        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
 ////        DeckCollectionViewController *deckVC = [storyboard instantiateViewControllerWithIdentifier:@"deckVC"];
+       [self.drawerController setCenterViewController:self];
        [self performSegueWithIdentifier:@"loginsegue" sender:loginView];
 ////        MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
 ////
@@ -158,8 +160,12 @@ BOOL viewIsVisible;
 */
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    DeckCollectionViewController *deckVC = (DeckCollectionViewController *)[segue destinationViewController];
+    
+    DeckCollectionViewController *deckVC = [[DeckCollectionViewController alloc] init];
     deckVC.drawerController = self.drawerController;
+    UINavigationController *navController = (UINavigationController *)[segue destinationViewController];
+    [navController setViewControllers:@[deckVC]];
+    [self.drawerController setCenterViewController:navController];
     
     [[DeckController sharedInstance] addDeckWithName:@"Click here first!"];
     [[DeckController sharedInstance] addCardWithTitle:@"Study Tips" andAnswer:@"We believe that you can master something if you review something over and over again. Studies show if you review something at least 7 times, you'll recall information better. It's just hard to do it! \n\nAfterwards, you can check your progress in the menu bar. When you're comfortable, feel free to delete this deck by holding your finger down on this deck. Happy studying!" toDeckWithNameTag:@"Click here first!"];

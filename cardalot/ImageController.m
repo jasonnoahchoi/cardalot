@@ -23,7 +23,7 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[ImageController alloc] init];
 
-        sharedInstance.images = @[@"Screenshot1", @"Screenshot2", @"Screenshot3"@"Screenshot4", @"Screenshot5"];
+        sharedInstance.images = @[@"Screenshot1", @"Screenshot2", @"Screenshot3", @"Screenshot4", @"Screenshot5"];
     });
     return sharedInstance;
 }

@@ -15,6 +15,7 @@
 #import "SlideTwoViewController.h"
 #import "SlideOneViewController.h"
 #import "FBLoginViewController.h"
+#import <UIViewController+MMDrawerController.h>
 
 @interface TutorialSlidesContainerViewController () <UIPageViewControllerDataSource>
 
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) SlideFourViewController *fourVC;
 @property (nonatomic, strong) SlideFiveViewController *fiveVC;
 @property (nonatomic, strong) FBLoginViewController *fbLoginVC;
+@property (nonatomic, strong) UINavigationController *navController;
 
 @end
 
@@ -53,7 +55,6 @@
     [self.pageViewController didMoveToParentViewController:self];
 }
 
-
 -(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     if (viewController == self.oneVC) {
         return self.twoVC;
@@ -66,7 +67,9 @@
     } else {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         self.fbLoginVC = [storyboard instantiateViewControllerWithIdentifier:@"fbloginvc"];
-        return self.fbLoginVC;
+        self.fbLoginVC.drawerController = self.drawerController;
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.fbLoginVC];
+        return navController;
     }
 }
 
