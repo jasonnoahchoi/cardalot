@@ -9,6 +9,8 @@
 #import "MenuDrawerViewController.h"
 #import "PurchasedDataController.h"
 #import "StorePurchaseController.h"
+#import "IAPViewController.h"
+#import "RemindersViewController.h"
 #import <MMDrawerController/UIViewController+MMDrawerController.h>
 
 static NSString * const kGoPro = @"goPro";
@@ -113,7 +115,7 @@ static NSString * const kGoPro = @"goPro";
     } else {  // for string with format add the itentifier for account type
         BOOL goPro = [[NSUserDefaults standardUserDefaults] boolForKey:kGoPro];
         if (goPro) {
-            NSArray *menuListArray = @[@"Account Type: PRO", @"Progress", @"Rate App", @"Go Pro", @"Refer Friends", @"Settings"];
+            NSArray *menuListArray = @[@"Account Type: PRO", @"Progress", @"Rate App", @"Reminders", @"Refer Friends", @"Settings"];
             UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
             cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
             NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 1] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:16.0]}];
@@ -123,7 +125,7 @@ static NSString * const kGoPro = @"goPro";
 //            [tableView reloadData];
             return cell;
         } else {
-            NSArray *menuListArray = @[@"Account Type: FREE", @"Progress", @"Rate App", @"Go Pro", @"Refer Friends", @"Settings"];
+            NSArray *menuListArray = @[@"Account Type: FREE", @"Progress", @"Rate App", @"Reminders", @"Refer Friends", @"Settings"];
             UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
             cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
             NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 1] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:16.0]}];
@@ -147,6 +149,16 @@ static NSString * const kGoPro = @"goPro";
         [self.mm_drawerController setCenterViewController:deckHomeNavController];
         [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+    } else if (indexPath.row == 1) {
+        //PremiumUpgradeViewController *premiumVC = [PremiumUpgradeViewController new];
+        // premiumVC.drawerController = self.mm_drawerController;
+        IAPViewController *vc = [[IAPViewController alloc] init];
+        vc.drawerController = self.mm_drawerController;
+        UINavigationController *iapNavVC = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self.mm_drawerController setCenterViewController:iapNavVC];
+        [navigationController popToRootViewControllerAnimated:YES];
+        [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+
     } else if (indexPath.row == 2) {
         StatsViewController *statsVC = [StatsViewController new];
         statsVC.drawerController = self.mm_drawerController;
@@ -165,13 +177,13 @@ static NSString * const kGoPro = @"goPro";
         NSURL *appStoreURL = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.com/app/%@", [appName stringByReplacingOccurrencesOfString:@" " withString:@""]]];
         [[UIApplication sharedApplication] openURL:appStoreURL];
     } else if (indexPath.row == 4) {
-        PremiumUpgradeViewController *premiumVC = [PremiumUpgradeViewController new];
-        premiumVC.drawerController = self.mm_drawerController;
-          [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
-        
-//        UINavigationController *premiumUpgradeNavController = [[UINavigationController alloc] initWithRootViewController:premiumVC];
-       // [self.mm_drawerController setCenterViewController:premiumUpgradeNavController];
-
+        RemindersViewController *reminderVC = [RemindersViewController new];
+        //            reminderVC.drawerController = self.mm_drawerController;
+        UINavigationController *reminderNavController = [[UINavigationController alloc] initWithRootViewController:reminderVC];
+        //            [self.mm_drawerController setCenterViewController:reminderNavController];
+        //            [navigationController popToRootViewControllerAnimated:YES];
+        //            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        [self presentViewController:reminderNavController animated:YES completion:nil];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 5) {
         ReferralViewController *referralVC = [ReferralViewController new];
