@@ -150,6 +150,11 @@ static NSString * const kGoPro = @"goPro";
         [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 1) {
+<<<<<<< HEAD
+        PremiumUpgradeViewController *premiumVC = [PremiumUpgradeViewController new];
+        premiumVC.drawerController = self.mm_drawerController;
+        [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
+=======
         //PremiumUpgradeViewController *premiumVC = [PremiumUpgradeViewController new];
         // premiumVC.drawerController = self.mm_drawerController;
         IAPViewController *vc = [[IAPViewController alloc] init];
@@ -159,6 +164,7 @@ static NSString * const kGoPro = @"goPro";
         [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
 
+>>>>>>> 151ba140a2bbf4d8d44a9a67e6c6f1b90c927247
     } else if (indexPath.row == 2) {
         StatsViewController *statsVC = [StatsViewController new];
         statsVC.drawerController = self.mm_drawerController;

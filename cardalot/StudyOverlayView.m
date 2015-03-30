@@ -26,7 +26,9 @@
     }
 
     _mode = mode;
-
+    if (mode == GGOverlayViewModeNone) {
+        return;
+    }
     if (mode == GGOverlayViewModeLeft) {
         self.imageView.image = [UIImage imageNamed:@"redx"];
     }
