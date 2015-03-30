@@ -70,7 +70,7 @@
     
     self.versionCell = [UITableViewCell new];
     self.versionLabel = [[UILabel alloc] initWithFrame:CGRectInset(self.versionCell.contentView.bounds, 15, 0)];
-    self.versionLabel.text = @"Version ";
+    self.versionLabel.text = @"Version";
     self.versionCell.selectionStyle = UITableViewCellSelectionStyleNone;
     [self.versionCell addSubview:self.versionLabel];
     UILabel *versionNumber = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];

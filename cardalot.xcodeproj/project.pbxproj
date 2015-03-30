@@ -35,6 +35,7 @@
 		08C8830E1AAD289200DFE40E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C8830D1AAD289200DFE40E /* QuartzCore.framework */; };
 		08CA60131AB72C7F00FAC558 /* FBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CA60121AB72C7F00FAC558 /* FBLoginViewController.m */; };
 		08CA76651AB2660B00292997 /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CA76641AB2660B00292997 /* UIColor+Colors.m */; };
+		08CC1FD11AC9F2270083B861 /* IAPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CC1FD01AC9F2270083B861 /* IAPViewController.m */; };
 		08D250651AB67F1C00A716D2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D250631AB67F1C00A716D2 /* LoginViewController.m */; };
 		08D250661AB67F1C00A716D2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08D250641AB67F1C00A716D2 /* LoginViewController.xib */; };
 		08D250691AB6BCB700A716D2 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D250681AB6BCB700A716D2 /* Settings.m */; };
@@ -163,6 +164,8 @@
 		08CA60121AB72C7F00FAC558 /* FBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginViewController.m; sourceTree = "<group>"; };
 		08CA76631AB2660B00292997 /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Colors.h"; sourceTree = "<group>"; };
 		08CA76641AB2660B00292997 /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colors.m"; sourceTree = "<group>"; };
+		08CC1FCF1AC9F2270083B861 /* IAPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPViewController.h; sourceTree = "<group>"; };
+		08CC1FD01AC9F2270083B861 /* IAPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPViewController.m; sourceTree = "<group>"; };
 		08D250621AB67F1C00A716D2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		08D250631AB67F1C00A716D2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		08D250641AB67F1C00A716D2 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -553,6 +556,8 @@
 			children = (
 				FF32B3A61AB231080098EFA5 /* RateAppViewController.h */,
 				FF32B3A71AB231080098EFA5 /* RateAppViewController.m */,
+				08CC1FCF1AC9F2270083B861 /* IAPViewController.h */,
+				08CC1FD01AC9F2270083B861 /* IAPViewController.m */,
 				FF32B3A41AB231080098EFA5 /* PremiumUpgradeViewController.h */,
 				FF32B3A51AB231080098EFA5 /* PremiumUpgradeViewController.m */,
 				FF32B3A81AB231080098EFA5 /* ReferralViewController.h */,
@@ -832,6 +837,7 @@
 				FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
 				7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */,
+				08CC1FD11AC9F2270083B861 /* IAPViewController.m in Sources */,
 				08C0FE6A1ABD1E11003D8C03 /* SlideOneViewController.m in Sources */,
 				FF32B3AA1AB231080098EFA5 /* PremiumUpgradeViewController.m in Sources */,
 				0868F5301AABDD58008CA47D /* DeckCollectionViewCell.m in Sources */,
