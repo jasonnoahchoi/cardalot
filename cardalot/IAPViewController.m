@@ -64,7 +64,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
     switch (indexPath.row) {
         case kFirstCell:
             return self.purchaseCell;
