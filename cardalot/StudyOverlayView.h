@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
+    GGOverlayViewModeNone,
     GGOverlayViewModeLeft,
-    GGOverlayViewModeRight
+    GGOverlayViewModeRight,
 } GGOverlayViewMode;
 
 @interface StudyOverlayView : UIView
