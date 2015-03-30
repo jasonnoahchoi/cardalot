@@ -177,6 +177,7 @@ static NSString * const kGoPro = @"goPro";
         NSURL *appStoreURL = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.com/app/%@", [appName stringByReplacingOccurrencesOfString:@" " withString:@""]]];
         [[UIApplication sharedApplication] openURL:appStoreURL];
     } else if (indexPath.row == 4) {
+        
         RemindersViewController *reminderVC = [RemindersViewController new];
         //            reminderVC.drawerController = self.mm_drawerController;
         UINavigationController *reminderNavController = [[UINavigationController alloc] initWithRootViewController:reminderVC];
@@ -184,7 +185,23 @@ static NSString * const kGoPro = @"goPro";
         //            [navigationController popToRootViewControllerAnimated:YES];
         //            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
         [self presentViewController:reminderNavController animated:YES completion:nil];
-        [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+        
+//        UINavigationController *premiumUpgradeNavController = [[UINavigationController alloc] initWithRootViewController:premiumVC];
+       // [self.mm_drawerController setCenterViewController:premiumUpgradeNavController];
+
+        
+//        RemindersViewController *reminderVC = [RemindersViewController new];
+//        reminderVC.drawerController = self.mm_drawerController;
+//        [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
+        
+//        PremiumUpgradeViewController *premiumVC = [PremiumUpgradeViewController new];
+//        premiumVC.drawerController = self.mm_drawerController;
+//          [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
+        
+//        UINavigationController *premiumUpgradeNavController = [[UINavigationController alloc] initWithRootViewController:premiumVC];
+       // [self.mm_drawerController setCenterViewController:premiumUpgradeNavController];
+
+//        [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 5) {
         ReferralViewController *referralVC = [ReferralViewController new];
         referralVC.drawerController = self.mm_drawerController;
