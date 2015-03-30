@@ -88,15 +88,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 3;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     switch(section) {
-        case 0:  return 1;  // section 0 has 2 rows
-        case 1:  return 2;  // section 1 has 2 row
-        case 2: return 2;  // section 2 has 2 row
+//        case 0:  return 1;  // section 0 has 2 rows
+        case 0:  return 2;  // section 1 has 2 row
+        case 1: return 2;  // section 2 has 2 row
         default: return 0;
     };
 }
@@ -110,17 +110,17 @@
 //    cell.textLabel.attributedText = attText;
 
     switch(indexPath.section) {
+//        case 0:
+//            switch(indexPath.row) {
+//            case 0: return self.reminderCell;
+//            case 1: return self.advancedSettingsCell;
+//        }
         case 0:
-            switch(indexPath.row) {
-            case 0: return self.reminderCell;
-            case 1: return self.advancedSettingsCell;
-        }
-        case 1:
             switch(indexPath.row) {
             case 0: return self.howToUseCell;
             case 1: return self.supportCell;
         }
-        case 2:
+        case 1:
             switch (indexPath.row) {
             case 0: return self.legalCell;
             case 1: return self.versionCell;
@@ -134,25 +134,25 @@
     
 //    UINavigationController *navigationController = (UINavigationController *)self.mm_drawerController.centerViewController;
     
+//    if (indexPath.section == 0) {
+//        if (indexPath.row == 0) {
+//            RemindersViewController *reminderVC = [RemindersViewController new];
+////            reminderVC.drawerController = self.mm_drawerController;
+//            UINavigationController *reminderNavController = [[UINavigationController alloc] initWithRootViewController:reminderVC];
+////            [self.mm_drawerController setCenterViewController:reminderNavController];
+////            [navigationController popToRootViewControllerAnimated:YES];
+////            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+//            [self presentViewController:reminderNavController animated:YES completion:nil];
+//        } else if (indexPath.row == 1) {
+//            AdvancedSettingsViewController *advancedSettingVC = [AdvancedSettingsViewController new];
+////            advancedSettingVC.drawerController = self.mm_drawerController;
+//            UINavigationController *advancedSettingNavController = [[UINavigationController alloc] initWithRootViewController:advancedSettingVC];
+////            [self.mm_drawerController setCenterViewController:advancedSettingNavController];
+////            [navigationController popToRootViewControllerAnimated:YES];
+////            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+//            [self presentViewController:advancedSettingNavController animated:YES completion:nil];
+//        }
     if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
-            RemindersViewController *reminderVC = [RemindersViewController new];
-//            reminderVC.drawerController = self.mm_drawerController;
-            UINavigationController *reminderNavController = [[UINavigationController alloc] initWithRootViewController:reminderVC];
-//            [self.mm_drawerController setCenterViewController:reminderNavController];
-//            [navigationController popToRootViewControllerAnimated:YES];
-//            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
-            [self presentViewController:reminderNavController animated:YES completion:nil];
-        } else if (indexPath.row == 1) {
-            AdvancedSettingsViewController *advancedSettingVC = [AdvancedSettingsViewController new];
-//            advancedSettingVC.drawerController = self.mm_drawerController;
-            UINavigationController *advancedSettingNavController = [[UINavigationController alloc] initWithRootViewController:advancedSettingVC];
-//            [self.mm_drawerController setCenterViewController:advancedSettingNavController];
-//            [navigationController popToRootViewControllerAnimated:YES];
-//            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
-            [self presentViewController:advancedSettingNavController animated:YES completion:nil];
-        }
-    } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
 //            FAQViewController *faqVC = [FAQViewController new];
 //            UINavigationController *faqNavController = [[UINavigationController alloc] initWithRootViewController:faqVC];
@@ -181,7 +181,7 @@
 //            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
             [self presentViewController:supportNavController animated:YES completion:nil];
         }
-    } else if (indexPath.section == 2) {
+    } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
             LegalInformationViewController *legalVC = [LegalInformationViewController new];
 //            legalVC.drawerController = self.mm_drawerController;
@@ -198,9 +198,9 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     switch(section) {
-        case 0: return @"Settings";
-        case 1: return @"Help";
-        case 2: return @"About";
+//        case 0: return @"Settings";
+        case 0: return @"Help";
+        case 1: return @"About";
     }
     return nil;
 }
