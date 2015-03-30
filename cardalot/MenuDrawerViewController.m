@@ -147,6 +147,10 @@ static NSString * const kGoPro = @"goPro";
         [self.mm_drawerController setCenterViewController:deckHomeNavController];
         [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
+    } else if (indexPath.row == 1) {
+        PremiumUpgradeViewController *premiumVC = [PremiumUpgradeViewController new];
+        premiumVC.drawerController = self.mm_drawerController;
+        [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
     } else if (indexPath.row == 2) {
         StatsViewController *statsVC = [StatsViewController new];
         statsVC.drawerController = self.mm_drawerController;
