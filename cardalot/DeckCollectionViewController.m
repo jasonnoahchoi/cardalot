@@ -28,7 +28,7 @@
 #import <MMDrawerController.h>
 
 static NSString * const cellIdentifier = @"cell";
-static int count = 0;
+//static int count = 0;
 static int quizMode;
 static int studyMode;
 BOOL goPro;

@@ -107,7 +107,7 @@ BOOL viewIsVisible;
     if (viewIsVisible) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         DeckCollectionViewController *deckCollectionVC = [storyboard instantiateViewControllerWithIdentifier:@"deckVC"];
-        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
+//        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:deckCollectionVC];
 
 
         MenuDrawerViewController *settingsVC = [[MenuDrawerViewController alloc] init];
