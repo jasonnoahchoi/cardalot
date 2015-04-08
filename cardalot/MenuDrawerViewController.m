@@ -173,9 +173,10 @@ static NSString * const kGoPro = @"goPro";
 //        [self.mm_drawerController setCenterViewController:rateNavController];
 //        [navigationController popToRootViewControllerAnimated:YES];
 //        [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
-        NSString *appName = [NSString stringWithFormat:@"%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"]];
-        NSURL *appStoreURL = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.com/app/%@", [appName stringByReplacingOccurrencesOfString:@" " withString:@""]]];
+        NSString *appID = @"979032668";
+        NSURL *appStoreURL = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.com/app/id%@", appID]];
         [[UIApplication sharedApplication] openURL:appStoreURL];
+        NSLog(@"NSSTRING: %@, NSURL: %@", appID, appStoreURL);
     } else if (indexPath.row == 4) {
         
         RemindersViewController *reminderVC = [RemindersViewController new];
