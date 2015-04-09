@@ -52,7 +52,7 @@
     CGRect footerRect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2);
     UIView *view = [[UIView alloc] initWithFrame:footerRect];
     view.backgroundColor = [UIColor customBlueColor];
-    UILabel *tableFooterLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 50, self.view.frame.size.width-30, 100)];
+    UILabel *tableFooterLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 50, self.view.frame.size.width-30, 150)];
     [view addSubview:tableFooterLabel];
     tableFooterLabel.backgroundColor = [UIColor customBlueColor];
     tableFooterLabel.numberOfLines = 0;
@@ -63,8 +63,8 @@
     tableFooterLabel.layer.masksToBounds = YES;
     tableFooterLabel.textAlignment = NSTextAlignmentCenter;
     tableFooterLabel.textColor = [UIColor whiteColor];
-    tableFooterLabel.text = @"By going pro, you'll have access to unlimited decks with many more features coming soon";
-    tableFooterLabel.font = [UIFont boldSystemFontOfSize:19];
+    tableFooterLabel.text = @"By going pro for $2.99, you'll have access to unlimited decks with many more features coming soon. Please contact us via support to let us know how we can help you learn better!";
+    tableFooterLabel.font = [UIFont boldSystemFontOfSize:20];
     return view;
 }
 
