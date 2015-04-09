@@ -10,6 +10,7 @@
 #import "CustomDatePickerView.h"
 #import "RemindersController.h"
 #import "Reminder.h"
+#import "UIColor+Colors.h"
 
 static NSString * const cellIdentifier = @"cell";
 
@@ -39,6 +40,13 @@ static NSString * const cellIdentifier = @"cell";
     NSInteger index = [RemindersController sharedInstance].reminders.count;
     if (indexPath.row == index) {
         cell.textLabel.text = @"Add Reminder";
+        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.backgroundColor = [UIColor customGrayColor];
+//        cell.textLabel.layer.cornerRadius = 3;
+//        cell.textLabel.layer.borderWidth = 2.0;
+//        cell.textLabel.layer.shouldRasterize = YES;
+//        cell.textLabel.layer.masksToBounds = YES;
+//        cell.textLabel.layer.borderColor = [UIColor whiteColor].CGColor;
     } else {
         Reminder *reminder = [[RemindersController sharedInstance].reminders objectAtIndex:indexPath.row];
         cell.textLabel.text = [NSString stringWithFormat:@"%@ at %@", reminder.frequency, [NSDateFormatter localizedStringFromDate:reminder.date dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle]];

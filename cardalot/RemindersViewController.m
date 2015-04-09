@@ -9,6 +9,7 @@
 #import "RemindersViewController.h"
 #import "RemindersTableViewDataSource.h"
 #import <MMDrawerController.h>
+#import "UIBarButtonItem+CustomButtons.h"
 
 @interface RemindersViewController ()
 
@@ -23,9 +24,10 @@
     [super viewDidLoad];
     
     self.title = @"Reminders";
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
-    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
+     UIImage *backButton = [UIImage imageNamed:@"backbutton"];
+    //self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:backButton target:self action:@selector(done)];
+    //[self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
     

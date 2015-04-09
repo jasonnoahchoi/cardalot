@@ -9,6 +9,7 @@
 #import "IAPViewController.h"
 #import "StorePurchaseController.h"
 #import <MMDrawerController.h>
+#import "UIColor+Colors.h"
 
 @interface IAPViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -23,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Account Type";
+    self.view.backgroundColor = [UIColor customBlueColor];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.tableView];
     self.tableView.dataSource = self;
@@ -44,6 +46,30 @@
     } else {
         [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    CGRect footerRect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2);
+    UIView *view = [[UIView alloc] initWithFrame:footerRect];
+    view.backgroundColor = [UIColor customBlueColor];
+    UILabel *tableFooterLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 50, self.view.frame.size.width-30, 100)];
+    [view addSubview:tableFooterLabel];
+    tableFooterLabel.backgroundColor = [UIColor customBlueColor];
+    tableFooterLabel.numberOfLines = 0;
+    tableFooterLabel.layer.cornerRadius = 10;
+    tableFooterLabel.layer.borderColor = [UIColor whiteColor].CGColor;
+    tableFooterLabel.layer.borderWidth = 3;
+    tableFooterLabel.layer.shouldRasterize = YES;
+    tableFooterLabel.layer.masksToBounds = YES;
+    tableFooterLabel.textAlignment = NSTextAlignmentCenter;
+    tableFooterLabel.textColor = [UIColor whiteColor];
+    tableFooterLabel.text = @"By going pro, you'll have access to unlimited decks with many more features coming soon";
+    tableFooterLabel.font = [UIFont boldSystemFontOfSize:19];
+    return view;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return self.view.bounds.size.height - self.purchaseCell.frame.size.height - self.restoreCell.frame.size.height - 64;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

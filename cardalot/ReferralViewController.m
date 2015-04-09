@@ -85,7 +85,7 @@
     MFMessageComposeViewController *messageComposeViewController = [[MFMessageComposeViewController alloc] init];
     messageComposeViewController.messageComposeDelegate = self;
     
-    [messageComposeViewController setBody:@"Hey check out this cool app called Cardalot! It will help you with learning stuff!"];
+    [messageComposeViewController setBody:@"Hey check out this cool app called Cardalot! It will help you learn easily! https://appsto.re/us/CPTw6.i"];
     [messageComposeViewController.navigationBar setTintColor:[UIColor whiteColor]];
     
     if ([MFMessageComposeViewController canSendText]) {
