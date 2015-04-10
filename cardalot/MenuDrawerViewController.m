@@ -174,7 +174,7 @@ static NSString * const kGoPro = @"goPro";
 //        [navigationController popToRootViewControllerAnimated:YES];
 //        [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
         NSString *appID = @"979032668";
-        NSURL *appStoreURL = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.com/app/id%@", appID]];
+        NSURL *appStoreURL = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", appID]];
         [[UIApplication sharedApplication] openURL:appStoreURL];
         NSLog(@"NSSTRING: %@, NSURL: %@", appID, appStoreURL);
     } else if (indexPath.row == 4) {

@@ -132,8 +132,8 @@ static NSString * const remindLaterKey = @"remind";
         UIAlertController *rateAppAlertController = [UIAlertController alertControllerWithTitle:@"Rate Cardalot" message:@"If you enjoy using Cardalot, would you mind taking a moment to rate it? It won't take more than a minute. Thanks for your support!" preferredStyle:UIAlertControllerStyleAlert];
         [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Rate It Now" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"rate app");
-            NSString *appName = [NSString stringWithFormat:@"%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"]];
-            NSURL *appStoreURL = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.com/app/%@", [appName stringByReplacingOccurrencesOfString:@" " withString:@""]]];
+            NSString *appID = @"979032668";
+            NSURL *appStoreURL = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", appID]];
             [[UIApplication sharedApplication] openURL:appStoreURL];
         }]];
         [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Not a Fan" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -154,7 +154,7 @@ static NSString * const remindLaterKey = @"remind";
         [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Rate It Now" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"rate app");
             NSString *appName = @"id979032668";
-            NSURL *appStoreURL = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.com/app/%@", appName]];
+            NSURL *appStoreURL = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/%@", appName]];
             [[UIApplication sharedApplication] openURL:appStoreURL];
         }]];
         [rateAppAlertController addAction:[UIAlertAction actionWithTitle:@"Not a Fan" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
