@@ -22,4 +22,6 @@
 
 //@property (nonatomic, strong) MMDrawerController *drawerController;
 
+@property (nonatomic, strong) UITableViewCell *profilePictureCell;
+
 @end

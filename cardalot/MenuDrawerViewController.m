@@ -12,6 +12,7 @@
 #import "IAPViewController.h"
 #import "RemindersViewController.h"
 #import <MMDrawerController/UIViewController+MMDrawerController.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 static NSString * const kGoPro = @"goPro";
 
@@ -60,6 +61,10 @@ static NSString * const kGoPro = @"goPro";
     // Background Color of TableView
     self.tableView.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
     
+# pragma profile pic cell
+
+    
+    
 
     // Add to view
     [self.view addSubview:self.tableView];
@@ -75,7 +80,7 @@ static NSString * const kGoPro = @"goPro";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 7;
+    return 8;
 }
 
 - (void)inAppPurchase {
@@ -112,6 +117,26 @@ static NSString * const kGoPro = @"goPro";
         self.logoMenuCell = [[LogoMenuCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
         self.logoMenuCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return self.logoMenuCell;
+    } else if (indexPath.row == 7) {
+#pragma Mark - sets Facebook User profile and name
+        self.profilePictureCell = [UITableViewCell new];
+        self.profilePictureCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.profilePictureCell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
+        [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+            self.profilePictureCell.textLabel.text = [NSString stringWithFormat:@"%@ \n%@", result[@"first_name"], result[@"last_name"]];
+            NSString *url = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", result[@"id"]];
+            NSData *pictureData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+            UIImage *profilePicture = [UIImage imageWithData:pictureData];
+            self.profilePictureCell.imageView.image = profilePicture;
+            self.profilePictureCell.contentMode = UIViewContentModeScaleAspectFit;
+//            self.profilePictureCell.imageView.layer.cornerRadius = 20.0;
+//            self.profilePictureCell.imageView.layer.borderWidth = 17;
+//            self.profilePictureCell.imageView.layer.borderColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1].CGColor;
+            self.profilePictureCell.textLabel.font = [UIFont systemFontOfSize:14.0];
+            self.profilePictureCell.textLabel.textColor = [UIColor whiteColor];
+            self.profilePictureCell.textLabel.numberOfLines = 0;
+        }];
+        return self.profilePictureCell;
     } else {  // for string with format add the itentifier for account type
         BOOL goPro = [[NSUserDefaults standardUserDefaults] boolForKey:kGoPro];
         if (goPro) {
@@ -233,7 +258,6 @@ static NSString * const kGoPro = @"goPro";
         return 54;
     }
 }
-
 
 
 

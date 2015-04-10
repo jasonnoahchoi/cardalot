@@ -27,6 +27,7 @@
 @property (nonatomic, strong) SlideFiveViewController *fiveVC;
 @property (nonatomic, strong) FBLoginViewController *fbLoginVC;
 @property (nonatomic, strong) UINavigationController *navController;
+@property (nonatomic, strong) UIPageControl *pageControl;
 
 @end
 
@@ -46,13 +47,20 @@
     
     //self.dataSource = [[TutorialSlidesPageViewControllerDataSource alloc] init];
     self.pageViewController.dataSource = self;
+//    self.pageViewController.delegate = self;
 
     [self.pageViewController setViewControllers:@[self.oneVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
    // [self.pageViewController setViewControllers:@[[self.dataSource viewControllerAtIndex:0]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     
+    
+    
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
+    
+//    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 40, self.view.frame.size.width, 40)];
+//    [self.view addSubview:self.pageControl];
+//    self.pageControl.numberOfPages = 6;
 }
 
 -(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
@@ -92,5 +100,35 @@
         return nil;
     }
 }
+
+//-(void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers {
+//    
+//    SlideOneViewController *oneVC = pendingViewControllers[0];
+//    self.pageControl.currentPage = oneVC.inde
+
+//    SlideTwoViewController *twoVC = pendingViewControllers[1];
+//    SlideThreeViewController *threeVC = pendingViewControllers[2];
+//    SlideFourViewController *fourVC = pendingViewControllers[3];
+//    SlideFiveViewController *fiveVC = pendingViewControllers[4];
+//    FBLoginViewController *fbVC = pendingViewControllers[5];
+//}
+
+//-(void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
+//    
+//    FBLoginViewController *fbVC = previousViewControllers[0];
+//    SlideFiveViewController *fiveVC = previousViewControllers[1];
+//    SlideFourViewController *fourVC = previousViewControllers[2];
+//    SlideThreeViewController *threeVC = previousViewControllers[3];
+//    SlideTwoViewController *twoVC = previousViewControllers[4];
+//    SlideOneViewController *oneVC = previousViewControllers[5];
+//}
+
+//- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
+//    return 6;
+//}
+//
+//- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
+//    return 0;
+//}
 
 @end
