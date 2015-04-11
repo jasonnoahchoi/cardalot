@@ -250,6 +250,13 @@ typedef enum : NSInteger {
 
 - (IBAction)setDateButtonPressed:(id)sender {
     NSDate *selectedDate = [self selectedTime];
+    
+    for (UILocalNotification *notification in [UIApplication sharedApplication].scheduledLocalNotifications) {
+        if ([selectedDate isEqualToDate:notification.fireDate]) {
+            return;
+        }
+    }
+    
     Reminder *reminder = [[Reminder alloc] init];
     reminder.date = selectedDate;
     reminder.frequency = self.frequency;
