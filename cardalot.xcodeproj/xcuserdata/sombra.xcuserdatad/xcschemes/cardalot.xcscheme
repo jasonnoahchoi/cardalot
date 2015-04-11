@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "08FE1E6F1AAA5F570068F0C9"
-               BuildableName = "cardalot.app"
-               BlueprintName = "cardalot"
+               BuildableName = "Cardalot.app"
+               BlueprintName = "Cardalot"
                ReferencedContainer = "container:cardalot.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "08FE1E881AAA5F570068F0C9"
-               BuildableName = "cardalotTests.xctest"
-               BlueprintName = "cardalotTests"
+               BuildableName = "CardalotTests.xctest"
+               BlueprintName = "CardalotTests"
                ReferencedContainer = "container:cardalot.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "08FE1E881AAA5F570068F0C9"
-               BuildableName = "cardalotTests.xctest"
-               BlueprintName = "cardalotTests"
+               BuildableName = "CardalotTests.xctest"
+               BlueprintName = "CardalotTests"
                ReferencedContainer = "container:cardalot.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "08FE1E6F1AAA5F570068F0C9"
-            BuildableName = "cardalot.app"
-            BlueprintName = "cardalot"
+            BuildableName = "Cardalot.app"
+            BlueprintName = "Cardalot"
             ReferencedContainer = "container:cardalot.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "08FE1E6F1AAA5F570068F0C9"
-            BuildableName = "cardalot.app"
-            BlueprintName = "cardalot"
+            BuildableName = "Cardalot.app"
+            BlueprintName = "Cardalot"
             ReferencedContainer = "container:cardalot.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -94,8 +94,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "08FE1E6F1AAA5F570068F0C9"
-            BuildableName = "cardalot.app"
-            BlueprintName = "cardalot"
+            BuildableName = "Cardalot.app"
+            BlueprintName = "Cardalot"
             ReferencedContainer = "container:cardalot.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
