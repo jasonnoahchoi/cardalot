@@ -236,16 +236,26 @@ BOOL goPro;
 
             [self.navigationController pushViewController:studyVC animated:YES];
         } else if (quizMode) {
-            NSLog(@"QuizMode");
             Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
             [[DeckController sharedInstance] addSessionToDeck:deck withMode:kQuizMode];
             Session *session = [deck.sessions lastObject];
-
+            
             QuizViewController *quizVC = [[QuizViewController alloc] init];
-
+            
             quizVC.deck = deck;
             quizVC.session = session;
-            [self.navigationController pushViewController:quizVC animated:YES];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Quiz Type" message:@"Which side you want to test yourself?" preferredStyle:UIAlertControllerStyleActionSheet];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"Front" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                quizVC.type = @"front";
+                [self.navigationController pushViewController:quizVC animated:YES];
+            }]];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"Back" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                quizVC.type = @"back";
+                [self.navigationController pushViewController:quizVC animated:YES];
+            }]];
+            NSLog(@"QuizMode");
+            
+            [self presentViewController:alertController animated:YES completion:nil];
 
         } else if (!studyMode && !quizMode) {
             if (self.segmentedControl.selectedSegmentIndex == 0) {

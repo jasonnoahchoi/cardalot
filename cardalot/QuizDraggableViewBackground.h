@@ -21,6 +21,7 @@
 @property (nonatomic, strong) QuizDraggableView *draggableView;
 @property (nonatomic, strong) QuizViewController *quizVC;
 @property (nonatomic, strong) NSArray *cards;
+@property (nonatomic, strong) NSString *type;
 
 //methods called in DraggableView
 - (void)cardSwipedLeft:(UIView *)card;
