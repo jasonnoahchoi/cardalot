@@ -43,6 +43,7 @@
     self.draggableViewBackground.deck = self.deck;
     [self.draggableViewBackground setCards:[self.deck.cards.set allObjects]];
     [self.draggableViewBackground setTopCardInDeck:[self.draggableViewBackground shuffleCards:self.draggableViewBackground.cards]];
+    self.draggableViewBackground.type = self.type;
     self.draggableViewBackground.session = self.session;
     self.draggableViewBackground.quizVC = self;
     [self.draggableViewBackground loadCards];

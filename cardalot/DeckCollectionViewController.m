@@ -23,12 +23,13 @@
 #import "RateAppViewController.h"
 #import "StorePurchaseController.h"
 #import "PurchasedDataController.h"
+#import "DeckSettingsViewController.h"
 
 @import StoreKit;
 #import <MMDrawerController.h>
 
 static NSString * const cellIdentifier = @"cell";
-static int count = 0;
+//static int count = 0;
 static int quizMode;
 static int studyMode;
 BOOL goPro;
@@ -140,14 +141,14 @@ BOOL goPro;
     UIView *containerView = [[UIView alloc] init];
     [self.view addSubview:containerView];
 
-    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Prepare", @"Study", @"Quiz"]];
-    [segmentedControl sizeToFit];
-    [segmentedControl setTintColor:[UIColor customBlueColor]];
-    [segmentedControl setBackgroundColor:[UIColor whiteColor]];
-    segmentedControl.selectedSegmentIndex = 0;
+    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Prepare", @"Study", @"Quiz", @"Settings"]];
+    [self.segmentedControl sizeToFit];
+    [self.segmentedControl setTintColor:[UIColor customBlueColor]];
+    [self.segmentedControl setBackgroundColor:[UIColor whiteColor]];
+    self.segmentedControl.selectedSegmentIndex = 0;
 
-    [containerView addSubview:segmentedControl];
-    [segmentedControl addTarget:self action:@selector(modeChanged:) forControlEvents:UIControlEventValueChanged];
+    [containerView addSubview:self.segmentedControl];
+    [self.segmentedControl addTarget:self action:@selector(modeChanged:) forControlEvents:UIControlEventValueChanged];
 
     [containerView setTranslatesAutoresizingMaskIntoConstraints:NO];
     NSArray *viewConstraint = [NSLayoutConstraint
@@ -160,18 +161,18 @@ BOOL goPro;
     NSLayoutConstraint *topConstraint = [NSLayoutConstraint constraintWithItem:containerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:70];
     [self.view addConstraint:topConstraint];
 
-    [segmentedControl setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.segmentedControl setTranslatesAutoresizingMaskIntoConstraints:NO];
     NSArray *constraint = [NSLayoutConstraint
-                           constraintsWithVisualFormat:@"H:|-[segmentedControl]-|"
+                           constraintsWithVisualFormat:@"H:|-[_segmentedControl]-|"
                            options:NSLayoutFormatAlignAllCenterX
                            metrics:nil
-                           views:NSDictionaryOfVariableBindings(segmentedControl)];
+                           views:NSDictionaryOfVariableBindings(_segmentedControl)];
     [containerView addConstraints:constraint];
     NSArray *constraintV = [NSLayoutConstraint
-                           constraintsWithVisualFormat:@"V:|-[segmentedControl]-|"
+                           constraintsWithVisualFormat:@"V:|-[_segmentedControl]-|"
                            options:NSLayoutFormatAlignAllCenterY
                            metrics:nil
-                           views:NSDictionaryOfVariableBindings(segmentedControl)];
+                           views:NSDictionaryOfVariableBindings(_segmentedControl)];
     [containerView addConstraints:constraintV];
 }
 
@@ -191,6 +192,11 @@ BOOL goPro;
         case 2:{
             studyMode = !kStudyMode;
             quizMode = !kQuizMode;
+            break;
+        }
+        case 3: {
+            quizMode = kQuizMode;
+            studyMode = !kStudyMode;
             break;
         }
     }
@@ -230,22 +236,39 @@ BOOL goPro;
 
             [self.navigationController pushViewController:studyVC animated:YES];
         } else if (quizMode) {
-            NSLog(@"QuizMode");
             Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
             [[DeckController sharedInstance] addSessionToDeck:deck withMode:kQuizMode];
             Session *session = [deck.sessions lastObject];
-
+            
             QuizViewController *quizVC = [[QuizViewController alloc] init];
-
+            
             quizVC.deck = deck;
             quizVC.session = session;
-            [self.navigationController pushViewController:quizVC animated:YES];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Quiz Type" message:@"Which side you want to test yourself?" preferredStyle:UIAlertControllerStyleActionSheet];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"Front" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                quizVC.type = @"front";
+                [self.navigationController pushViewController:quizVC animated:YES];
+            }]];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"Back" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                quizVC.type = @"back";
+                [self.navigationController pushViewController:quizVC animated:YES];
+            }]];
+            NSLog(@"QuizMode");
+            
+            [self presentViewController:alertController animated:YES completion:nil];
 
         } else if (!studyMode && !quizMode) {
-            CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
-            Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
-            cardCollectionVC.deck = deck;
-            [self.navigationController pushViewController:cardCollectionVC animated:YES];
+            if (self.segmentedControl.selectedSegmentIndex == 0) {
+                CardCollectionViewController *cardCollectionVC = [[CardCollectionViewController alloc] init];
+                Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+                cardCollectionVC.deck = deck;
+                [self.navigationController pushViewController:cardCollectionVC animated:YES];
+            } else {
+                DeckSettingsViewController *deckSettingsVC = [[DeckSettingsViewController alloc] init];
+                Deck *deck = [DeckController sharedInstance].decks[indexPath.item];
+                deckSettingsVC.deck = deck;
+                [self.navigationController pushViewController:deckSettingsVC animated:YES];
+            }
         }
     }
 }

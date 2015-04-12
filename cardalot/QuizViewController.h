@@ -16,5 +16,6 @@
 @property (nonatomic, strong) Deck *deck;
 @property (nonatomic, strong) Session *session;
 @property (nonatomic, strong) QuizDraggableViewBackground *draggableViewBackground;
+@property (nonatomic, strong) NSString *type;
 
 @end

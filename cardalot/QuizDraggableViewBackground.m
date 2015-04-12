@@ -106,8 +106,16 @@ static const float CARD_WIDTH = 290; // width of the draggable card
     //StudyDraggableView *draggableView = [[StudyDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
 //    draggableView.subjectView.titleLabel.text = [self.exampleCardLabels objectAtIndex:index]; // placeholder for card-specific information
     Card *card = [self.topCardInDeck objectAtIndex:index];
-    self.draggableView.frontView.frontLabel.text = card.title;
-    self.draggableView.backView.backTextView.text = card.answer;
+    if ([self.type isEqualToString:@"front"]) {
+        self.draggableView.frontView.frontLabel.text = card.title;
+        self.draggableView.backView.backTextView.text = card.answer;
+    } else {
+        self.draggableView.frontView.frontLabel.text = card.answer;
+        self.draggableView.frontView.frontLabel.font = [UIFont systemFontOfSize:18];
+        self.draggableView.backView.backTextView.text = card.title;
+        self.draggableView.backView.backTextView.font = [UIFont systemFontOfSize:32];
+    }
+    
     self.draggableView.delegate = self;
 
     return self.draggableView;
