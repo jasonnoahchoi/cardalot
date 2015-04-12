@@ -77,6 +77,8 @@
 		72C1E1F41AB5036E0041E2C8 /* CustomDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1F31AB5036E0041E2C8 /* CustomDatePickerView.m */; };
 		72C1E1F71AB505D30041E2C8 /* RemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1F61AB505D30041E2C8 /* RemindersViewController.m */; };
 		72C1E1FA1AB506AB0041E2C8 /* RemindersTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C1E1F91AB506AB0041E2C8 /* RemindersTableViewDataSource.m */; };
+		72FBD8471AD9ECED00A5468B /* DeckSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FBD8461AD9ECED00A5468B /* DeckSettingsViewController.m */; };
+		72FBD84A1AD9ED7200A5468B /* DeckSettingsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FBD8491AD9ED7200A5468B /* DeckSettingsDataSource.m */; };
 		FF0C44DA1AB5FD3A007C7544 /* SupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C44D91AB5FD3A007C7544 /* SupportViewController.m */; };
 		FF0C44DD1AB5FE7F007C7544 /* AdvancedSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C44DC1AB5FE7F007C7544 /* AdvancedSettingsViewController.m */; };
 		FF0C44E01AB604B4007C7544 /* FAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C44DF1AB604B4007C7544 /* FAQViewController.m */; };
@@ -240,6 +242,10 @@
 		72C1E1F61AB505D30041E2C8 /* RemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersViewController.m; sourceTree = "<group>"; };
 		72C1E1F81AB506AB0041E2C8 /* RemindersTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersTableViewDataSource.h; sourceTree = "<group>"; };
 		72C1E1F91AB506AB0041E2C8 /* RemindersTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersTableViewDataSource.m; sourceTree = "<group>"; };
+		72FBD8451AD9ECED00A5468B /* DeckSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckSettingsViewController.h; sourceTree = "<group>"; };
+		72FBD8461AD9ECED00A5468B /* DeckSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckSettingsViewController.m; sourceTree = "<group>"; };
+		72FBD8481AD9ED7200A5468B /* DeckSettingsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckSettingsDataSource.h; sourceTree = "<group>"; };
+		72FBD8491AD9ED7200A5468B /* DeckSettingsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckSettingsDataSource.m; sourceTree = "<group>"; };
 		D497B0555BFD87161A2C78C4 /* Pods-cardalot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cardalot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cardalot/Pods-cardalot.debug.xcconfig"; sourceTree = "<group>"; };
 		EC8B54A570249508FE757348 /* libPods-cardalot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardalot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0C44D81AB5FD3A007C7544 /* SupportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportViewController.h; sourceTree = "<group>"; };
@@ -605,6 +611,10 @@
 				0868F52F1AABDD58008CA47D /* DeckCollectionViewCell.xib */,
 				08D8F8CC1AACE7670015A4BD /* DeckCollectionViewLayout.h */,
 				08D8F8CD1AACE7670015A4BD /* DeckCollectionViewLayout.m */,
+				72FBD8451AD9ECED00A5468B /* DeckSettingsViewController.h */,
+				72FBD8461AD9ECED00A5468B /* DeckSettingsViewController.m */,
+				72FBD8481AD9ED7200A5468B /* DeckSettingsDataSource.h */,
+				72FBD8491AD9ED7200A5468B /* DeckSettingsDataSource.m */,
 			);
 			name = "Deck Collection View";
 			sourceTree = "<group>";
@@ -700,7 +710,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 08FE1E6B1AAA5F570068F0C9 /* Build configuration list for PBXProject "Cardalot" */;
+			buildConfigurationList = 08FE1E6B1AAA5F570068F0C9 /* Build configuration list for PBXProject "cardalot" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -821,6 +831,7 @@
 				0832BEF61AB5195700213071 /* QuizDraggableViewBackground.m in Sources */,
 				08662EDB1AAF9CDF00BE440E /* StudyDescriptionView.m in Sources */,
 				08C0FE761ABD1E2E003D8C03 /* SlideFiveViewController.m in Sources */,
+				72FBD84A1AD9ED7200A5468B /* DeckSettingsDataSource.m in Sources */,
 				08C0FE701ABD1E1F003D8C03 /* SlideThreeViewController.m in Sources */,
 				FF32B39F1AB230A80098EFA5 /* SearchCell.m in Sources */,
 				082097D61ABA935400B65511 /* PurchasedDataController.m in Sources */,
@@ -836,6 +847,7 @@
 				723D96C31AB785AE00121C55 /* Reminder.m in Sources */,
 				FF32B3AC1AB231080098EFA5 /* ReferralViewController.m in Sources */,
 				08FE1E761AAA5F570068F0C9 /* main.m in Sources */,
+				72FBD8471AD9ECED00A5468B /* DeckSettingsViewController.m in Sources */,
 				7200D0F01AB1393E00E84D55 /* CustomInputAccessoryView.m in Sources */,
 				08CC1FD11AC9F2270083B861 /* IAPViewController.m in Sources */,
 				08C0FE6A1ABD1E11003D8C03 /* SlideOneViewController.m in Sources */,
@@ -1047,7 +1059,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		08FE1E6B1AAA5F570068F0C9 /* Build configuration list for PBXProject "Cardalot" */ = {
+		08FE1E6B1AAA5F570068F0C9 /* Build configuration list for PBXProject "cardalot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08FE1E911AAA5F570068F0C9 /* Debug */,
