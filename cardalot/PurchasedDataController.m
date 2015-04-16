@@ -38,7 +38,7 @@ static NSString * const kGoPro = @"goPro";
 #pragma mark - Properties to/from NSUserDefaults
 
 - (void)loadFromDefaults {
-        
+
     self.goPro = [[NSUserDefaults standardUserDefaults] boolForKey:kGoPro];
 
     if (!self.goPro) {
@@ -52,7 +52,6 @@ static NSString * const kGoPro = @"goPro";
     [[NSUserDefaults standardUserDefaults] setBool:goPro forKey:kGoPro];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
-
 
 #pragma mark - Handle Purchase Notification
 

@@ -10,6 +10,7 @@
 		082097D51ABA935400B65511 /* StorePurchaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 082097D21ABA935400B65511 /* StorePurchaseController.m */; };
 		082097D61ABA935400B65511 /* PurchasedDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 082097D41ABA935400B65511 /* PurchasedDataController.m */; };
 		082097D81ABA9A2E00B65511 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 082097D71ABA9A2E00B65511 /* StoreKit.framework */; };
+		0827B94A1ADCBDEA004F5235 /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = 0827B9491ADCBDEA004F5235 /* Products.json */; };
 		0832BEE61AB5170600213071 /* QuizFrontView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0832BEE31AB5170600213071 /* QuizFrontView.m */; };
 		0832BEE71AB5170600213071 /* QuizBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0832BEE51AB5170600213071 /* QuizBackView.m */; };
 		0832BEEB1AB5180500213071 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0832BEEA1AB5180500213071 /* QuizViewController.m */; };
@@ -118,6 +119,7 @@
 		082097D31ABA935400B65511 /* PurchasedDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchasedDataController.h; sourceTree = "<group>"; };
 		082097D41ABA935400B65511 /* PurchasedDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchasedDataController.m; sourceTree = "<group>"; };
 		082097D71ABA9A2E00B65511 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0827B9491ADCBDEA004F5235 /* Products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
 		0832BEE21AB5170600213071 /* QuizFrontView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizFrontView.h; sourceTree = "<group>"; };
 		0832BEE31AB5170600213071 /* QuizFrontView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizFrontView.m; sourceTree = "<group>"; };
 		0832BEE41AB5170600213071 /* QuizBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizBackView.h; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 				08C0FE751ABD1E2E003D8C03 /* SlideFiveViewController.m */,
 				0863B1F61ABBE54800771293 /* ImageController.h */,
 				0863B1F71ABBE54800771293 /* ImageController.m */,
+				0827B9491ADCBDEA004F5235 /* Products.json */,
 				0825C9201AB8FAD500232D6F /* Stats */,
 				0825C9211AB8FAE200232D6F /* Reminders */,
 				FF8F0AD81AAE592200BDD975 /* Deck Collection View */,
@@ -743,6 +746,7 @@
 				FF25CC921ABBFC8400F4E6BF /* FAQ.html in Resources */,
 				FF8F0AD41AAE579A00BDD975 /* DeckTagCell.xib in Resources */,
 				08DBF9191ABAA02100BE69A1 /* Products.json in Resources */,
+				0827B94A1ADCBDEA004F5235 /* Products.json in Resources */,
 				0868F5311AABDD58008CA47D /* DeckCollectionViewCell.xib in Resources */,
 				08FE1E841AAA5F570068F0C9 /* LaunchScreen.xib in Resources */,
 				08FE1E811AAA5F570068F0C9 /* Images.xcassets in Resources */,

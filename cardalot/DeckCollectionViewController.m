@@ -141,7 +141,7 @@ BOOL goPro;
     UIView *containerView = [[UIView alloc] init];
     [self.view addSubview:containerView];
 
-    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Prepare", @"Study", @"Quiz", @"Settings"]];
+    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Prepare", @"Study", @"Quiz", @"Rename"]];
     [self.segmentedControl sizeToFit];
     [self.segmentedControl setTintColor:[UIColor customBlueColor]];
     [self.segmentedControl setBackgroundColor:[UIColor whiteColor]];

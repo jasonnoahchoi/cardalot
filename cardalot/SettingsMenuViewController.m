@@ -74,7 +74,7 @@
     self.versionCell.selectionStyle = UITableViewCellSelectionStyleNone;
     [self.versionCell addSubview:self.versionLabel];
     UILabel *versionNumber = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    versionNumber.text = @"1.0.2";
+    versionNumber.text = @"1.0.3";
     versionNumber.textColor = [UIColor lightGrayColor];
     self.versionCell.accessoryView = versionNumber;
     
