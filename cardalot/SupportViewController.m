@@ -79,7 +79,6 @@
 }
 
 - (void)done {
-//    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

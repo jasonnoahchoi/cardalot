@@ -26,18 +26,11 @@
         self.deckTagField = [[UITextField alloc] init];
         
         // label/field modification
-        //self.imageView = [[UIImageView alloc] init];
         self.imageView.image = [UIImage imageNamed:@"Hashtag 4"];
         [self.contentView addSubview:self.imageView];
-//        self.hashTagLabel.text = @"#";
-//        [self.hashTagLabel setFont:[UIFont boldSystemFontOfSize:26.0]];
-//        [self.hashTagLabel setTextAlignment:NSTextAlignmentCenter];
-//        [self.hashTagLabel setTextColor:[UIColor blackColor]];
-//        [self.hashTagLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
 
         self.deckTagField.placeholder = @"Enter Deck Name";
         self.deckTagField.font = [UIFont boldSystemFontOfSize:18.0];
-        //self.deckTagField.tintColor = [UIColor blackColor];
         self.deckTagField.layer.cornerRadius = 3;
         self.deckTagField.layer.borderWidth = 1.0f;
         [self.deckTagField.layer setBorderColor:[UIColor customBlueColor].CGColor];
@@ -47,7 +40,6 @@
         [self.deckTagField setTranslatesAutoresizingMaskIntoConstraints:NO];
         
         // Add to View
-//        [self.contentView addSubview:self.hashTagLabel];
         [self.contentView addSubview:self.deckTagField];
         
         // AUTOLAYOUT
@@ -56,15 +48,6 @@
         [self.contentView addConstraints:constraints];
         NSArray *constraintsVertical = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_deckTagField]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:viewsDictionary];
         [self.contentView addConstraints:constraintsVertical];
-
-//        NSLayoutConstraint *centerYConstraint = [NSLayoutConstraint constraintWithItem:self.deckTagField attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
-//        [self.contentView addConstraint:centerYConstraint];
-
-//        NSLayoutConstraint *topConstraint = [NSLayoutConstraint constraintWithItem:self.hashTagLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:0];
-//        [self.contentView addConstraint:topConstraint];
-//        
-//        NSLayoutConstraint *leadingConstraint = [NSLayoutConstraint constraintWithItem:self.hashTagLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:0];
-//        [self.contentView addConstraint:leadingConstraint];
     }
 
     return self;

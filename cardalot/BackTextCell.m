@@ -26,11 +26,9 @@
         // modification
         self.backTextView.font = [UIFont boldSystemFontOfSize:16.0];
         self.backTextView.textColor = [UIColor blackColor];
-        //self.backTextView.text = @"Enter details for back of card";
         self.backTextView.layer.borderWidth = 1.0f;
         self.backTextView.layer.cornerRadius = 5.0;
         [self.backTextView.layer setBorderColor:[UIColor customBlueColor].CGColor];
-        //self.backTextView.layer.borderColor = [[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1] CGColor];
         [self.backTextView setTranslatesAutoresizingMaskIntoConstraints:NO];
         
         // setting delegate
@@ -67,50 +65,6 @@
     
     return YES;
 }
-
-#pragma mark - textView placeholder text
-//
-//- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
-//   // textView = self.backTextView;
-//    //textView.textColor = [UIColor lightGrayColor];
-//    if (textView.tag == 1) {
-//        self.backTextView = textView;
-//        textView.text = @"";
-//        [textView setTextColor:[UIColor blackColor]];
-//        textView.tag = 2;
-//    }
-//    //[textView becomeFirstResponder];
-//    return YES;
-//}
-//
-//- (void)textViewDidChange:(UITextView *)textView
-//{
-//    if([textView.text length] == 0)
-//    {
-//        textView.text = @"Foobar placeholder";
-//        textView.textColor = [UIColor lightGrayColor];
-//        textView.tag = 1;
-//    }
-//}
-
-
-//-(void)textViewDidBeginEditing:(UITextView *)textView {
-//    self.backTextView = textView;
-//    textView.textColor = [UIColor lightGrayColor];
-//    if ([textView.text isEqualToString:@"Enter details for back of card"]) {
-//        textView.text = @"";
-//        [textView setTextColor:[UIColor blackColor]];
-//    }
-//    [textView becomeFirstResponder];
-//}
-//
-//-(void)textViewDidEndEditing:(UITextView *)textView {
-//    if ([textView.text isEqualToString:@""]) {
-//        textView.text = @"Enter details for back of card";
-//        textView.textColor = [UIColor lightGrayColor];
-//    }
-//    [textView resignFirstResponder];
-//}
 
 
 @end

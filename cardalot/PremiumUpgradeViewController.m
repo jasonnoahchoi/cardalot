@@ -32,8 +32,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIImage *background = [UIImage imageNamed: @"GoPremiumInProcess.png"];
-    
-//    UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
+
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
     imageView.image = background;
     

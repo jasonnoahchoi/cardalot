@@ -56,7 +56,6 @@
 
     UIImage *backIcon = [UIImage imageNamed:@"backbutton"];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:backIcon target:self action:@selector(backButtonAction)];
-   // [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
 }
 
 - (void)backButtonAction {

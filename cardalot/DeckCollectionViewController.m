@@ -29,7 +29,6 @@
 #import <MMDrawerController.h>
 
 static NSString * const cellIdentifier = @"cell";
-//static int count = 0;
 static int quizMode;
 static int studyMode;
 BOOL goPro;
@@ -40,8 +39,6 @@ BOOL goPro;
 @property (nonatomic, strong) DeckCollectionViewDataSource *dataSource;
 @property (nonatomic, strong) DeckCollectionViewLayout *deckLayout;
 @property (nonatomic, strong) DeckCollectionViewCell *deckCell;
-//@property (nonatomic, strong) UIBarButtonItem *studyButton;
-//@property (nonatomic, strong) UIBarButtonItem *quizButton;
 @property (nonatomic, strong) UISegmentedControl *segmentedControl;
 
 @end
@@ -72,25 +69,6 @@ BOOL goPro;
     [self loadBarButtonItems];
     [self inAppPurchase];
     [self.collectionView setContentInset:UIEdgeInsetsMake(40, 0, 100, 0)];
-
-//    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"A", @"B"]];
-//   // self.segmentedControl.frame = CGRectMake(0, 0, 200, 20);
-//    [self.view addSubview:self.segmentedControl];
-//    [self.segmentedControl setTranslatesAutoresizingMaskIntoConstraints:NO];
-//
-//    NSLayoutConstraint *middleConstraint = [NSLayoutConstraint constraintWithItem:self.segmentedControl attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
-//
-//    [self.view addConstraint:middleConstraint];
-//
-//
-//    NSLayoutConstraint *leadingConstraint = [NSLayoutConstraint constraintWithItem:self.segmentedControl attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:15];
-//
-//    [self.view addConstraint:leadingConstraint];
-//
-//    NSLayoutConstraint *trailingConstraint = [NSLayoutConstraint constraintWithItem:self.segmentedControl attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:15];
-//
-//    [self.view addConstraint:trailingConstraint];
-
     }
 
 - (void)viewWillAppear:(BOOL)animated {

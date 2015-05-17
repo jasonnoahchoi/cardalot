@@ -20,12 +20,9 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
-        // position/size
         self.frontTextField = [[UITextField alloc] init];
-        
-        // modification
+
         self.frontTextField.font = [UIFont boldSystemFontOfSize:16.0];
-        //self.frontTextField.tintColor = [UIColor blackColor];
         self.frontTextField.placeholder = @"front of card text";
         [self.frontTextField.layer setBorderColor:[UIColor customBlueColor].CGColor];
         [self.frontTextField.layer setBorderWidth:1.0f];
@@ -36,10 +33,8 @@
         self.frontTextField.borderStyle = UITextBorderStyleRoundedRect;
         [self.frontTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
         
-        // add to view
         [self.contentView addSubview:self.frontTextField];
-        
-        // AUTOLAYOUT
+
         NSLayoutConstraint *topConstraint = [NSLayoutConstraint constraintWithItem:self.frontTextField attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:0];
         [self.contentView addConstraint:topConstraint];
         

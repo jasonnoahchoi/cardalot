@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.title = @"Refer Friends";
     
@@ -93,11 +92,10 @@
 }
 
 - (void)composeMessage {
-    ///CHANGE THISSSS
     NSString *shareString = self.textView.text;
 
 
-    NSArray * itemsArray = @[[NSString stringWithFormat:@"%@",shareString]];//if you want to share image here pass url of image in the array.
+    NSArray * itemsArray = @[[NSString stringWithFormat:@"%@",shareString]];//if you want to share image here pass
 
     NSArray * applicationActivities = nil;
     UIActivityViewController * AVC = [[UIActivityViewController alloc] initWithActivityItems:itemsArray applicationActivities:applicationActivities];
@@ -130,16 +128,6 @@
              
          }
      }];
-
-//    MFMessageComposeViewController *messageComposeViewController = [[MFMessageComposeViewController alloc] init];
-//    messageComposeViewController.messageComposeDelegate = self;
-//    
-//    [messageComposeViewController setBody:@"Hey check out this cool app called Cardalot! It will help you learn easily! https://appsto.re/us/CPTw6.i"];
-//    [messageComposeViewController.navigationBar setTintColor:[UIColor whiteColor]];
-//    
-//    if ([MFMessageComposeViewController canSendText]) {
-//        [self presentViewController:messageComposeViewController animated:YES completion:nil];
-
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

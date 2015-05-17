@@ -101,34 +101,4 @@
     }
 }
 
-//-(void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers {
-//    
-//    SlideOneViewController *oneVC = pendingViewControllers[0];
-//    self.pageControl.currentPage = oneVC.inde
-
-//    SlideTwoViewController *twoVC = pendingViewControllers[1];
-//    SlideThreeViewController *threeVC = pendingViewControllers[2];
-//    SlideFourViewController *fourVC = pendingViewControllers[3];
-//    SlideFiveViewController *fiveVC = pendingViewControllers[4];
-//    FBLoginViewController *fbVC = pendingViewControllers[5];
-//}
-
-//-(void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
-//    
-//    FBLoginViewController *fbVC = previousViewControllers[0];
-//    SlideFiveViewController *fiveVC = previousViewControllers[1];
-//    SlideFourViewController *fourVC = previousViewControllers[2];
-//    SlideThreeViewController *threeVC = previousViewControllers[3];
-//    SlideTwoViewController *twoVC = previousViewControllers[4];
-//    SlideOneViewController *oneVC = previousViewControllers[5];
-//}
-
-//- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
-//    return 6;
-//}
-//
-//- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
-//    return 0;
-//}
-
 @end

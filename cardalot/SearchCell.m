@@ -19,24 +19,14 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
-//        CGSize size = self.contentView.frame.size;
-        
-        // positioning
         self.searchField = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 20, 180, 44)];
-        
-        // modifications
-//        self.searchField.tintColor = [UIColor lightGrayColor];
+
         self.searchField.backgroundColor = [UIColor lightGrayColor];
         [self.searchField setBackgroundImage:[UIImage new]];
         [self.searchField setTranslucent:YES];
-        
-//        [self.searchField setBackgroundImage:[UIImage imageNamed:@"search_bar"] forState:UIControlStateNormal];
-        
-        
-        // set delegate
+
         self.searchField.delegate = self;
-        
-        // add to view
+
         [self.contentView addSubview:self.searchField];
     }
     return self;
