@@ -35,7 +35,6 @@ static const float CARD_WIDTH = 290; // width of the draggable card
        [super layoutSubviews];
         [self setupView];
         [self setFrameOfViewBackground];
-       // self.flipped = NO;
         self.layer.borderColor = [UIColor whiteColor].CGColor;
         self.layer.cornerRadius = 3;
 
@@ -43,8 +42,6 @@ static const float CARD_WIDTH = 290; // width of the draggable card
         self.loadedCards = [[NSMutableArray alloc] init];
         self.allCards = [[NSMutableArray alloc] init];
         self.cardsLoadedIndex = 0;
-                //[self loadCards];
-  
     }
 
     return self;
@@ -88,23 +85,6 @@ static const float CARD_WIDTH = 290; // width of the draggable card
         self.draggableView = [[QuizDraggableView alloc] initWithFrame:CGRectMake((self.bounds.size.width - CARD_WIDTH)/2, (self.frame.size.height - 460)/2, CARD_WIDTH , 460)];
     }
 
-//    NSLayoutConstraint *bottomOfCardToBottomMarginConstraint = [NSLayoutConstraint constraintWithItem:draggableView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottomMargin multiplier:1.0 constant:5];
-//    [self addConstraint:bottomOfCardToBottomMarginConstraint];
-//
-//    NSLayoutConstraint *topOfCardToTopMarginConstraint = [NSLayoutConstraint constraintWithItem:draggableView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:5];
-//    [self addConstraint:topOfCardToTopMarginConstraint];
-//
-//    //NSLayoutConstraint *centerOfCardToCenterOfView = [NSLayoutConstraint constraintWithItem:draggableView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:1];
-//    //[self addConstraint:centerOfCardToCenterOfView];
-//
-//    NSLayoutConstraint *leftOfCardToLeftMarginConstraint = [NSLayoutConstraint constraintWithItem:draggableView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:5];
-//    [self addConstraint:leftOfCardToLeftMarginConstraint];
-//
-//    NSLayoutConstraint *rightOfCardToRightMarginConstraint = [NSLayoutConstraint constraintWithItem:draggableView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:5];
-//    [self addConstraint:rightOfCardToRightMarginConstraint];
-
-    //StudyDraggableView *draggableView = [[StudyDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
-//    draggableView.subjectView.titleLabel.text = [self.exampleCardLabels objectAtIndex:index]; // placeholder for card-specific information
     Card *card = [self.topCardInDeck objectAtIndex:index];
     if ([self.type isEqualToString:@"front"]) {
         self.draggableView.frontView.frontLabel.text = card.title;
@@ -158,8 +138,6 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 // This should be customized with your own action
 - (void)cardSwipedLeft:(UIView *)card {
     //do whatever you want with the card that was swiped
-    //    DraggableView *c = (DraggableView *)card;
-
     [self.loadedCards removeObjectAtIndex:0]; // card was swiped, so it's no longer a "loaded card"
 
     if (self.cardsLoadedIndex < [self.allCards count]) { // if we haven't reached the end of all cards, put another into the loaded cards
@@ -180,7 +158,6 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 // This should be customized with your own action
 - (void)cardSwipedRight:(UIView *)card {
     //do whatever you want with the card that was swiped
-    //    DraggableView *c = (DraggableView *)card;
 
     [self.loadedCards removeObjectAtIndex:0]; // card was swiped, so it's no longer a "loaded card"
 

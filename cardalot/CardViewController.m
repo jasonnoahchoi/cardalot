@@ -113,11 +113,9 @@
     if ([self.backTextCell.backTextView.text isEqualToString:@""] || self.backTextCell.backTextView.text == nil || [self.deckTagCell.deckTagField.text isEqualToString:@""] || self.deckTagCell.deckTagField.text == nil || [self.frontTextCell.frontTextField.text isEqualToString:@""] || self.frontTextCell.frontTextField.text == nil) {
         [self.navigationItem.rightBarButtonItem setEnabled:NO];
     } else {
-//    if ([self.backTextCell.backTextView.text isEqualToString:@""] || self.backTextCell.backTextView.text == nil || [self.deckTagCell.deckTagField.text isEqualToString:@""] || self.deckTagCell.deckTagField.text == nil || [self.frontTextCell.frontTextField.text isEqualToString:@""] || self.frontTextCell.frontTextField.text == nil) {
 
     [self.navigationItem.rightBarButtonItem setEnabled:YES];
     }
-    //[self.backTextCell.backTextView.text up]
     NSLog(@"%@", self.backTextCell.backTextView.text);
 }
 
@@ -184,7 +182,6 @@
         [self.frontTextCell.frontTextField becomeFirstResponder];
     }
     if (textField == self.frontTextCell.frontTextField) {
-       // [self.backTextCell.backTextView becomeFirstResponder];
         [self.backTextCell.backTextView performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.0];
     }
     return YES;
@@ -222,18 +219,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
 
     [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
-//    float verticalContentOffset  = tableView.contentOffset.y;
-//
-//    [tableView setContentOffset:CGPointMake(0, verticalContentOffset + 300)];
-    
-//        CGPoint tableViewCenter = [tableView contentOffset];
-//        tableViewCenter.y += tableView.frame.size.height/2;
 
-//        [tableView setContentOffset:CGPointMake(0, cell.center.y + 300) animated:YES];
-//        [tableView reloadData];
 }
 
 
@@ -252,7 +240,6 @@
 
         [deckLimitAlert addAction:[UIAlertAction actionWithTitle:@"No, thanks" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             NSLog(@"Not buying pro");
-//            [self.navigationController popViewControllerAnimated:YES];
         }]];
         [self presentViewController:deckLimitAlert animated:YES completion:nil];
     }

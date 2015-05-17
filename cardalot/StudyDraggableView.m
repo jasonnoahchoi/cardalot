@@ -51,14 +51,7 @@ static CGFloat yFromCenter;
         [self addSubview:self.overlayView];
 
         [self.subjectView setTranslatesAutoresizingMaskIntoConstraints:NO];
-            //    NSArray *constraint = [NSLayoutConstraint
-//                               constraintsWithVisualFormat:@"H:|-[_subjectView]-|"
-//                               options:NSLayoutFormatAlignAllCenterY
-//                               metrics:nil
-//                               views:NSDictionaryOfVariableBindings(_subjectView)];
-     //   [self addConstraints:constraint];
 
-        //[self.descriptionView setTranslatesAutoresizingMaskIntoConstraints:NO];
         NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:self.subjectView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationLessThanOrEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0];
         [self addConstraint:width];
 

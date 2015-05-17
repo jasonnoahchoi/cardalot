@@ -36,15 +36,12 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCard)];
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
     
-    // Create tableView
+
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-   // self.tableView.allowsSelection = NO;
     
-    // Datasource
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    
-    // Sets static cells
+
     self.attributionCell = [UITableViewCell new];
     self.attributionCell.textLabel.text = @"Attributions";
     
@@ -53,11 +50,7 @@
     
     self.termsOfServiceCell = [UITableViewCell new];
     self.termsOfServiceCell.textLabel.text = @"Terms of Use";
-    
-    // Disable/Enable selection
-    //self.tableView.allowsSelection = YES;
-    
-    // Add to view
+
     [self.view addSubview:self.tableView];
 }
 
@@ -78,9 +71,6 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    //    cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
-    //    NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"Marion-Bold" size:16]}];
-    //    cell.textLabel.attributedText = attText;
     
     switch(indexPath.section) {
         case 0:
@@ -167,7 +157,6 @@
 }
 
 - (void)done {
-//    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

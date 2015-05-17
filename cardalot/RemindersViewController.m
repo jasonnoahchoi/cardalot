@@ -25,9 +25,8 @@
     
     self.title = @"Reminders";
      UIImage *backButton = [UIImage imageNamed:@"backbutton"];
-    //self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
+
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem backButtonWithImage:backButton target:self action:@selector(done)];
-    //[self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
     
@@ -43,7 +42,6 @@
 }
 
 - (void)done {
-//    [self.drawerController openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

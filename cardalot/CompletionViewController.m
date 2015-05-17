@@ -53,7 +53,6 @@ static NSString * const launchCountKey = @"launchCount";
     leftLabel.layer.borderWidth = 2.0;
     leftLabel.layer.cornerRadius = 2;
     leftLabel.layer.borderColor = [[UIColor customBlueColor] CGColor];
-//    leftLabel.backgroundColor = [UIColor customBlueColor];
     [footerView addSubview:leftLabel];
     UILabel *rightLabel = [[UILabel alloc] init];
     [rightLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -65,7 +64,6 @@ static NSString * const launchCountKey = @"launchCount";
     rightLabel.layer.borderWidth = 2.0;
     rightLabel.layer.cornerRadius = 2;
     rightLabel.layer.borderColor = [[UIColor customBlueColor] CGColor];
-//    rightLabel.backgroundColor = [UIColor customBlueColor];
     [footerView addSubview:rightLabel];
     
     if ([[UIScreen mainScreen] bounds].size.width >= 375) {
@@ -105,13 +103,8 @@ static NSString * const launchCountKey = @"launchCount";
 }
 
 - (void)done {
-//    NSInteger launchCount = [[NSUserDefaults standardUserDefaults] integerForKey:launchCountKey];
-//    if (!launchCount)  {
-//        DeckCollectionViewController *deckVC = [self.navigationController.viewControllers objectAtIndex:1];
-//        [self.navigationController popToViewController:deckVC animated:YES];
-//    } else {
-        [self.navigationController popToRootViewControllerAnimated:YES];
-//    }
+    [self.navigationController popToRootViewControllerAnimated:YES];
+
 }
 
 #pragma mark JBBarChartViewDataSource

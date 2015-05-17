@@ -55,17 +55,14 @@
         [self.textField.layer setBorderColor:[UIColor whiteColor].CGColor];
         [self.contentView addSubview:self.textField];
         [self.textField setEnabled:NO];
-        //NSLayoutConstraint *topOfTextFieldToTopMargin = [NSLayoutConstraint constraintWithItem:self.textField attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTopMargin multiplier:1 constant:15];
-
         self.textView = [[UITextView alloc] init];
-        //[self.textView layoutIfNeeded];
         self.textView = [[UITextView alloc] initWithFrame:CGRectMake(20, 70, self.contentView.frame.size.width - 40, 290)];
         self.textView.text = @"this is a text view";
         self.textView.font = [UIFont systemFontOfSize:17];
         [self.textView.layer setBorderWidth:3.0f];
         [self.textView.layer setBorderColor:[UIColor customBlueColor].CGColor];
         [self.textView.layer setCornerRadius:10];
-        //[self.textView.layer setBorderColor:[UIColor whiteColor].CGColor];
+
         [self.contentView addSubview:self.textView];
         self.textView.editable = NO;
     }

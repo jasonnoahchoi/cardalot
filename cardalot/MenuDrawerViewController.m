@@ -26,47 +26,25 @@ static NSString * const kGoPro = @"goPro";
 
 @implementation MenuDrawerViewController
 
-// sets conent offset for search bar pull down
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    self.tableView.contentOffset = CGPointMake(0, self.searchCell.frame.size.height);
-//}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Set title
+
     self.title = @"Cardalot";
-    
-    // Create tableView
+
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    
-    // Dismiss keyboard on scroll
+
     [self.view endEditing:YES];
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
-    
-    // Disable/Enable selection cell highlight
-    self.tableView.allowsSelection = YES;
-    //self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 
-    
-    // Removes seperator lines
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    // Datasource
+    self.tableView.allowsSelection = YES;
+
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    
-    // Background Color of TableView
+
     self.tableView.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
     
 # pragma profile pic cell
-
-    
-    
-
-    // Add to view
     [self.view addSubview:self.tableView];
 }
 
@@ -95,24 +73,15 @@ static NSString * const kGoPro = @"goPro";
 }
 
 - (void)productsPurchased:(NSNotification *)notification {
-   // [self.tableView reloadData];
 }
 
 - (void)productsRestored:(NSNotification *)notification {
-  //  [self.tableView reloadData];
 }
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-//    if (indexPath.row == 0) {
-//        self.searchCell = [[SearchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell1"];
-//        self.searchCell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
-//        self.searchCell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        return self.searchCell;
-    //}
     if (indexPath.row == 0) {
         self.logoMenuCell = [[LogoMenuCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell2"];
         self.logoMenuCell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -129,9 +98,6 @@ static NSString * const kGoPro = @"goPro";
             UIImage *profilePicture = [UIImage imageWithData:pictureData];
             self.profilePictureCell.imageView.image = profilePicture;
             self.profilePictureCell.contentMode = UIViewContentModeScaleAspectFit;
-//            self.profilePictureCell.imageView.layer.cornerRadius = 20.0;
-//            self.profilePictureCell.imageView.layer.borderWidth = 17;
-//            self.profilePictureCell.imageView.layer.borderColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1].CGColor;
             self.profilePictureCell.textLabel.font = [UIFont systemFontOfSize:14.0];
             self.profilePictureCell.textLabel.textColor = [UIColor whiteColor];
             self.profilePictureCell.textLabel.numberOfLines = 0;
@@ -145,9 +111,8 @@ static NSString * const kGoPro = @"goPro";
             cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
             NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 1] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:16.0]}];
             cell.textLabel.attributedText = attText;
-            // removes highlighting of cells when selecting
+
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//            [tableView reloadData];
             return cell;
         } else {
             NSArray *menuListArray = @[@"Account Type: FREE", @"Progress", @"Rate App", @"Reminders", @"Refer Friends", @"Settings"];
@@ -155,7 +120,7 @@ static NSString * const kGoPro = @"goPro";
             cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
             NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row - 1] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:16.0]}];
             cell.textLabel.attributedText = attText;
-            // removes highlighting of cells when selecting
+
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
@@ -175,8 +140,6 @@ static NSString * const kGoPro = @"goPro";
         [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 1) {
-        //PremiumUpgradeViewController *premiumVC = [PremiumUpgradeViewController new];
-        // premiumVC.drawerController = self.mm_drawerController;
         IAPViewController *vc = [[IAPViewController alloc] init];
         vc.drawerController = self.mm_drawerController;
         UINavigationController *iapNavVC = [[UINavigationController alloc] initWithRootViewController:vc];
@@ -192,12 +155,6 @@ static NSString * const kGoPro = @"goPro";
         [navigationController popToRootViewControllerAnimated:YES];
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 3) {
-//        RateAppViewController *rateVC = [RateAppViewController new];
-//        rateVC.drawerController = self.mm_drawerController;
-//        UINavigationController *rateNavController = [[UINavigationController alloc] initWithRootViewController:rateVC];
-//        [self.mm_drawerController setCenterViewController:rateNavController];
-//        [navigationController popToRootViewControllerAnimated:YES];
-//        [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
         NSString *appID = @"979032668";
         NSURL *appStoreURL = [NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", appID]];
         [[UIApplication sharedApplication] openURL:appStoreURL];
@@ -205,29 +162,9 @@ static NSString * const kGoPro = @"goPro";
     } else if (indexPath.row == 4) {
         
         RemindersViewController *reminderVC = [RemindersViewController new];
-        //            reminderVC.drawerController = self.mm_drawerController;
         UINavigationController *reminderNavController = [[UINavigationController alloc] initWithRootViewController:reminderVC];
-        //            [self.mm_drawerController setCenterViewController:reminderNavController];
-        //            [navigationController popToRootViewControllerAnimated:YES];
-        //            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
         [self presentViewController:reminderNavController animated:YES completion:nil];
-        
-//        UINavigationController *premiumUpgradeNavController = [[UINavigationController alloc] initWithRootViewController:premiumVC];
-       // [self.mm_drawerController setCenterViewController:premiumUpgradeNavController];
 
-        
-//        RemindersViewController *reminderVC = [RemindersViewController new];
-//        reminderVC.drawerController = self.mm_drawerController;
-//        [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
-        
-//        PremiumUpgradeViewController *premiumVC = [PremiumUpgradeViewController new];
-//        premiumVC.drawerController = self.mm_drawerController;
-//          [[StorePurchaseController sharedInstance] purchaseOptionSelectedObjectIndex:0];
-        
-//        UINavigationController *premiumUpgradeNavController = [[UINavigationController alloc] initWithRootViewController:premiumVC];
-       // [self.mm_drawerController setCenterViewController:premiumUpgradeNavController];
-
-//        [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     } else if (indexPath.row == 5) {
         ReferralViewController *referralVC = [ReferralViewController new];
         referralVC.drawerController = self.mm_drawerController;
@@ -248,10 +185,6 @@ static NSString * const kGoPro = @"goPro";
 
 #pragma mark - custom menu cell height
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-//    if (indexPath.row == 0) {
-//        return 64;
-//    }
     if (indexPath.row == 0) {
         return 135;
     } else {

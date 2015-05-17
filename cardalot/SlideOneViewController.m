@@ -24,9 +24,6 @@
     imageView.frame = self.view.bounds;
     [self.view addSubview:imageView];
 
-//    NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(imageView);
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[imageView]-|" options:0 metrics:0 views:viewDictionary]];
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[imageView]-|" options:0 metrics:0 views:viewDictionary]];
 }
 
 

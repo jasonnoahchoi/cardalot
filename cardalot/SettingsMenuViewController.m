@@ -48,10 +48,6 @@
     self.tableView.delegate = self;
     
 #pragma mark - sets static settings cells
-//    self.advancedSettingsCell = [UITableViewCell new];
-//    self.advancedSettingsCell.textLabel.text = @"Advanced Settings";
-//    self.advancedSettingsCell.selectionStyle = UITableViewCellSelectionStyleNone;
-   
     self.reminderCell = [UITableViewCell new];
     self.reminderCell.textLabel.text = @"Reminders";
     self.reminderCell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -105,16 +101,8 @@
 
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
 
-//    cell.backgroundColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1];
-//    NSAttributedString *attText = [[NSAttributedString alloc]initWithString:menuListArray[indexPath.row] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"Marion-Bold" size:16]}];
-//    cell.textLabel.attributedText = attText;
-
     switch(indexPath.section) {
-//        case 0:
-//            switch(indexPath.row) {
-//            case 0: return self.reminderCell;
-//            case 1: return self.advancedSettingsCell;
-//        }
+
         case 0:
             switch(indexPath.row) {
             case 0: return self.howToUseCell;
@@ -132,31 +120,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    UINavigationController *navigationController = (UINavigationController *)self.mm_drawerController.centerViewController;
-    
-//    if (indexPath.section == 0) {
-//        if (indexPath.row == 0) {
-//            RemindersViewController *reminderVC = [RemindersViewController new];
-////            reminderVC.drawerController = self.mm_drawerController;
-//            UINavigationController *reminderNavController = [[UINavigationController alloc] initWithRootViewController:reminderVC];
-////            [self.mm_drawerController setCenterViewController:reminderNavController];
-////            [navigationController popToRootViewControllerAnimated:YES];
-////            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
-//            [self presentViewController:reminderNavController animated:YES completion:nil];
-//        } else if (indexPath.row == 1) {
-//            AdvancedSettingsViewController *advancedSettingVC = [AdvancedSettingsViewController new];
-////            advancedSettingVC.drawerController = self.mm_drawerController;
-//            UINavigationController *advancedSettingNavController = [[UINavigationController alloc] initWithRootViewController:advancedSettingVC];
-////            [self.mm_drawerController setCenterViewController:advancedSettingNavController];
-////            [navigationController popToRootViewControllerAnimated:YES];
-////            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
-//            [self presentViewController:advancedSettingNavController animated:YES completion:nil];
-//        }
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-//            FAQViewController *faqVC = [FAQViewController new];
-//            UINavigationController *faqNavController = [[UINavigationController alloc] initWithRootViewController:faqVC];
-//            [self presentViewController:faqNavController animated:YES completion:nil];
             self.faqContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height)];
             [self.view addSubview:self.faqContainerView];
             WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height - 92)];
@@ -174,21 +139,13 @@
             
         } else if (indexPath.row == 1) {
             SupportViewController *supportVC = [SupportViewController new];
-//            supportVC.drawerController = self.mm_drawerController;
             UINavigationController *supportNavController = [[UINavigationController alloc] initWithRootViewController:supportVC];
-//            [self.mm_drawerController setCenterViewController:supportNavController];
-//            [navigationController popToRootViewControllerAnimated:YES];
-//            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
             [self presentViewController:supportNavController animated:YES completion:nil];
         }
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
             LegalInformationViewController *legalVC = [LegalInformationViewController new];
-//            legalVC.drawerController = self.mm_drawerController;
             UINavigationController *legalNavController = [[UINavigationController alloc] initWithRootViewController:legalVC];
-//            [self.mm_drawerController setCenterViewController:legalNavController];
-//            [navigationController popToRootViewControllerAnimated:YES];
-//            [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
             [self presentViewController:legalNavController animated:YES completion:nil];
         }
     }
@@ -198,7 +155,6 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     switch(section) {
-//        case 0: return @"Settings";
         case 0: return @"Help";
         case 1: return @"About";
     }

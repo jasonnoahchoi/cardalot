@@ -54,7 +54,6 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 // to get rid of it (eg: if you are building cards from data from the internet)
 - (StudyDraggableView *)createDraggableViewWithDataAtIndex:(NSInteger)index {
 
-    // couldn't figure out autolayout so did it this way
     if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 480) {
         self.draggableView = [[StudyDraggableView alloc] initWithFrame:CGRectMake((self.bounds.size.width - 250)/2, (self.frame.size.height - 280)/2, 250, 330)];
     } else if ([[UIScreen mainScreen] bounds].size.width == 320 && [[UIScreen mainScreen] bounds].size.height == 568) {
@@ -64,24 +63,6 @@ static const float CARD_WIDTH = 290; // width of the draggable card
     } else if ([[UIScreen mainScreen] bounds].size.width > 375) {
         self.draggableView = [[StudyDraggableView alloc] initWithFrame:CGRectMake((self.bounds.size.width - CARD_WIDTH)/2, (self.frame.size.height - 460)/2, CARD_WIDTH , 460)];
     }
-
-//    NSLayoutConstraint *bottomOfCardToBottomMarginConstraint = [NSLayoutConstraint constraintWithItem:draggableView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottomMargin multiplier:1.0 constant:5];
-//    [self addConstraint:bottomOfCardToBottomMarginConstraint];
-//
-//    NSLayoutConstraint *topOfCardToTopMarginConstraint = [NSLayoutConstraint constraintWithItem:draggableView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:5];
-//    [self addConstraint:topOfCardToTopMarginConstraint];
-//
-//    //NSLayoutConstraint *centerOfCardToCenterOfView = [NSLayoutConstraint constraintWithItem:draggableView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:1];
-//    //[self addConstraint:centerOfCardToCenterOfView];
-//
-//    NSLayoutConstraint *leftOfCardToLeftMarginConstraint = [NSLayoutConstraint constraintWithItem:draggableView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:5];
-//    [self addConstraint:leftOfCardToLeftMarginConstraint];
-//
-//    NSLayoutConstraint *rightOfCardToRightMarginConstraint = [NSLayoutConstraint constraintWithItem:draggableView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:5];
-//    [self addConstraint:rightOfCardToRightMarginConstraint];
-
-    //StudyDraggableView *draggableView = [[StudyDraggableView alloc] initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
-//    draggableView.subjectView.titleLabel.text = [self.exampleCardLabels objectAtIndex:index]; // placeholder for card-specific information
     Card *card = [self.topCardInDeck objectAtIndex:index];
     self.draggableView.subjectView.titleLabel.text = card.title;
     self.draggableView.descriptionView.descriptionTextView.text = card.answer;
@@ -148,8 +129,6 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 // action called when the card goes to the right.
 // This should be customized with your own action
 - (void)cardSwipedRight:(UIView *)card {
-    //do whatever you want with the card that was swiped
-    //    DraggableView *c = (DraggableView *)card;
 
     [self.loadedCards removeObjectAtIndex:0]; // card was swiped, so it's no longer a "loaded card"
 
